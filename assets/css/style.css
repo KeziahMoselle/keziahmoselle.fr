@@ -1,0 +1,190 @@
+.purple {background-color: #ED145B !important;}
+.black {background-color: #1F1D20 !important;}
+.dark {background-color: #222023 !important;}
+
+/* FORMATAGES */
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #222023;
+        color: #FFF;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    main {
+    flex: 1 0 auto;
+    }
+
+    h1, h2, h3 {
+        margin: 0;
+        font-weight: 300;
+    }
+
+    main {
+        margin: 40px 0 0 0;
+    }
+
+    tr {
+        border-bottom: 0;
+    }
+
+/* HEADER */
+
+    @media only screen and (max-width: 599px)
+    {
+        .banner {
+            height: 300px;
+            width: 100%;
+            box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+        }
+        .banner h1,h2 {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            font-size: 40px;
+        }
+        .banner h2 {
+            font-weight: 100;
+        }
+
+        .logo {
+            position: absolute;
+            top: 225px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 128px;
+            width: 128px;
+        }
+    }
+    @media only screen and (min-width: 600px)
+    {
+        .banner {
+            height: 400px;
+            width: 100%;
+            box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+        }
+        .banner h1,h2 {
+            line-height: 400px;
+            text-align: center;
+        }
+        .banner h1 {
+            font-size: 60px;
+        }
+        .banner h2 {
+            font-weight: 100;
+        }
+
+        .logo {
+            position: absolute;
+            top: 325px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 128px;
+            width: 128px;
+        }
+    }
+
+/* MAIN */
+
+    /* CARDS */
+
+    .card {
+        background-color: #1F1D20;
+        margin-bottom: 40px;
+    }
+
+    @media only screen and (min-width: 992px)
+    {
+        .card .text {
+            padding: 36px 140px 36px 140px;
+        }
+    }
+
+    .card .card-content h3 {
+        text-align: center;
+        font-weight: 200;
+        font-size: 36px;
+        margin-bottom: 36px;
+    }
+
+    .card .card-content p {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .card .card-image img {
+        filter: brightness(50%);
+        -webkit-filter: brightness(50%);
+        -moz-filter: brightness(50%);
+        -o-filter: brightness(50%);
+        -ms-filter: brightness(50%);
+    }
+
+    .card .card-content {
+        padding: 14px;
+        border-radius: 0 0 2px 2px;
+        min-height: 82px;
+    }
+
+    /* SKILLS IMG & SVG */
+
+    .card .text img {
+        height: 64px;
+        width: auto;
+    }
+
+/* FOOTER */
+
+    footer a img {
+        padding: 0 10px 0 10px;
+        height: 32px;
+        width: auto;
+    }
+
+
+/* FORMS */
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #ED145B;
+  box-shadow: 0 1px 0 0 #ED145B;
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=url]:focus:not([readonly]) + label,
+input[type=time]:focus:not([readonly]) + label,
+input[type=date]:focus:not([readonly]) + label,
+input[type=datetime]:focus:not([readonly]) + label,
+input[type=datetime-local]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=number]:focus:not([readonly]) + label,
+input[type=search]:focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #ED145B;
+}
+
+/* SCROLLBAR */
+
+body::-webkit-scrollbar {background-color: #222023; width: 0.5em;}
+body::-webkit-scrollbar-thumb {background-color: #ED145B;}
+
+::-moz-selection {background: #ED145B;}
+::selection {background: #ED145B;}
