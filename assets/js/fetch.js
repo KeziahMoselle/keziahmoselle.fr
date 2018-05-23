@@ -17,7 +17,7 @@ if (Modernizr.promises && Modernizr.templatestrings && Modernizr.fetch && Modern
                         <span class="card-title">${repository.full_name}</span>
                         <a href="${repository.homepage}" class="btn-floating halfway-fab waves-effect waves-light pink"><i class="material-icons">open_in_new</i></a>
                     </div>
-                    <div class="card-content">
+                    <div class="project card-content">
                         <p>
                             ${repository.description}
                         </p>
