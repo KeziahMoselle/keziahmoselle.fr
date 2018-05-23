@@ -111,17 +111,21 @@
         margin-bottom: 36px;
     }
 
+    .card-title {
+        overflow: hidden;
+    }
+
     .card .card-content p {
         text-align: center;
         font-size: 18px;
     }
 
     .card .card-image img {
-        filter: brightness(50%);
-        -webkit-filter: brightness(50%);
-        -moz-filter: brightness(50%);
-        -o-filter: brightness(50%);
-        -ms-filter: brightness(50%);
+        filter: brightness(70%);
+        -webkit-filter: brightness(70%);
+        -moz-filter: brightness(70%);
+        -o-filter: brightness(70%);
+        -ms-filter: brightness(70%);
     }
 
     .card .card-content {
@@ -133,6 +137,7 @@
     .project.card-content {
         background-color: white;
         color: black;
+        border-radius: 0 0 5px 5px;
     }
 
     /* SKILLS IMG & SVG */

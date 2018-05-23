@@ -12,19 +12,17 @@
         <link type="text/css" rel="stylesheet" href="assets/css/style.css"  media="screen,projection"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-        <script defer src="assets/js/modernizr.js"></script>
-        <script defer src="assets/js/fetch.js"></script>
     </head>
 
     <body>
 
         <header>
             <div class="banner black">
-                <h1 class="show-on-medium-and-up">KEZIAH MOSELLE</h1>
+                <h1 class="hide-on-small-only">KEZIAH MOSELLE</h1>
             </div>
             <img class="logo" src="assets/icons/logo.svg" alt="logo">
             <div class="banner dark">
-                <h2 class="show-on-medium-and-up">WEB DEVELOPPER</h2>
+                <h2 class="hide-on-small-only">WEB DEVELOPPER</h2>
             </div>
         </header>
 
@@ -56,7 +54,7 @@
                     <div class="col s12">
                         <div class="card">
                             <div class="card-content text">
-                                <h3>What am I working with</h3>
+                                <h3>Working with</h3>
                                 <table class="centered">
                                     <tbody>
                                         <tr>
@@ -84,6 +82,51 @@
 
                 <div id="projects" class="col s12 m10 offset-m1">
 
+                    <div class="col s12 l4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./assets/icons/gelbooru.png">
+                                <span class="card-title">gelbooru-client</span>
+                                <a href="https://keziahmoselle.github.io/gelbooru-client/" class="btn-floating halfway-fab waves-effect waves-light pink"><i class="material-icons">open_in_new</i></a>
+                            </div>
+                            <div class="project card-content">
+                                <p class="center-align">
+                                    A material client to explore Gelbooru.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 l4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./assets/icons/osu!.png">
+                                <span class="card-title">osu-replay</span>
+                                <a href="http://osureplay.tk/" class="btn-floating halfway-fab waves-effect waves-light pink"><i class="material-icons">open_in_new</i></a>
+                            </div>
+                            <div class="project card-content">
+                                <p>
+                                    A platform to share your osu! replays
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 l4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./assets/icons/KeziahMoselle.png">
+                                <span class="card-title">undefined</span>
+                                <a href="#" class="btn-floating halfway-fab waves-effect waves-light pink"><i class="material-icons">open_in_new</i></a>
+                            </div>
+                            <div class="project card-content">
+                                <p>
+                                    Under construction
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -93,11 +136,15 @@
         <footer class="page-footer black">
             <div class="footer-copyright">
                 <div class="container center-align">
-                    <a class="grey-text text-lighten-4 center" href="https://github.com/KeziahMoselle"><img src="assets/icons/github-original.svg" alt="GitHub"></a>
-                    <a class="grey-text text-lighten-4 center" href="https://twitter.com/KeziahMoselle"><img src="assets/icons/twitter-original.svg" alt="Twitter"></a>
+                    <a href="https://github.com/KeziahMoselle"><img src="assets/icons/github-original.svg" alt="GitHub"></a>
+                    <a href="https://twitter.com/KeziahMoselle"><img src="assets/icons/twitter-original.svg" alt="Twitter"></a>
                 </div>
           </div>
         </footer>
+
+        <script>
+            M.AutoInit();
+        </script>
 
     </body>
   </html>
