@@ -1,14 +1,16 @@
-.purple {background-color: #ED145B !important;}
-.black {background-color: #1F1D20 !important;}
-.dark {background-color: #222023 !important;}
+:root {
+    --primary: #ED145B;
+    --black: #1F1D20;
+    --dark: #222023;
+}
 
 /* FORMATAGES */
 
     body {
         margin: 0;
         padding: 0;
-        background-color: #222023;
-        color: #FFF;
+        background-color: var(--dark);
+        color: white;
         display: flex;
         min-height: 100vh;
         flex-direction: column;
@@ -93,7 +95,7 @@
     /* CARDS */
 
     .card {
-        background-color: #1F1D20;
+        background-color: var(--black);
         margin-bottom: 40px;
     }
 
@@ -115,17 +117,44 @@
         overflow: hidden;
     }
 
-    .card .card-content p {
+    .card-content p {
         text-align: center;
         font-size: 18px;
     }
 
-    .card .card-image img {
+    .card-image img {
+        transition: filter 0.2s;
         filter: brightness(70%);
         -webkit-filter: brightness(70%);
         -moz-filter: brightness(70%);
         -o-filter: brightness(70%);
         -ms-filter: brightness(70%);
+    }
+
+    .card-image img:hover {
+        filter: brightness(20%);
+        -webkit-filter: brightness(20%);
+        -moz-filter: brightness(20%);
+        -o-filter: brightness(20%);
+        -ms-filter: brightness(20%);
+    }
+
+    .card-image img:hover + .on-hover {
+        display: block;
+    }
+
+    .on-hover {
+        display: none;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        padding: 30px;
+    }
+
+    .on-hover p {
+        font-size: 18px;
+        margin: 0;
     }
 
     .card .card-content {
@@ -171,8 +200,8 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #ED145B;
-  box-shadow: 0 1px 0 0 #ED145B;
+  border-bottom: 1px solid var(--accent);
+  box-shadow: 0 1px 0 0 var(--accent);
 }
 
 input:not([type]):focus:not([readonly]) + label,
@@ -188,13 +217,13 @@ input[type=tel]:focus:not([readonly]) + label,
 input[type=number]:focus:not([readonly]) + label,
 input[type=search]:focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #ED145B;
+  color: var(--accent);
 }
 
 /* SCROLLBAR */
 
-body::-webkit-scrollbar {background-color: #222023; width: 0.5em;}
-body::-webkit-scrollbar-thumb {background-color: #ED145B;}
+body::-webkit-scrollbar {background-color: var(--dark); width: 0.5em;}
+body::-webkit-scrollbar-thumb {background-color: var(--accent);}
 
-::-moz-selection {background: #ED145B;}
-::selection {background: #ED145B;}
+::-moz-selection {background: var(--accent);}
+::selection {background: var(--accent);}
