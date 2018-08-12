@@ -1,13 +1,1 @@
-<svg
-  id="Calque_1"
-  data-name="Calque 1"
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 248.48 241.71">
-  <defs>
-    <style>
-      .cls-1{stroke:#ed145b;stroke-miterlimit:10;}
-    </style>
-  </defs>
-  <title>M</title>
-  <rect style="fill:#ed145b;" class="cls-1" x="104.72" y="101.41" width="39.68" height="246.58" transform="translate(-101.13 345.21) rotate(-89.88)"/>
-  <polyline style="fill:#ed145b;" class="cls-1" points="0.63 170.04 247.63 170.56 247.98 1.13 124.48 113.59 0.98 0.62"/></svg>
+<?xml version="1.0" standalone="no"?><!-- Generator: Gravit.io --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 512 512" width="512" height="512"><path d=" M 0 0 L 0 362 L 512 362 L 512 0 L 257 239.989 L 0 0 Z " fill="rgb(255,255,255)"/><rect x="0" y="425" width="512" height="87" transform="matrix(1,0,0,1,0,0)" fill="rgb(255,255,255)"/></svg>

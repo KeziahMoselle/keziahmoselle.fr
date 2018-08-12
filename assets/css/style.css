@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
 .purple {background-color: #ED145B !important;}
 .black {background-color: #1F1D20 !important;}
 .dark {background-color: #222023 !important;}
@@ -15,7 +17,7 @@
     }
 
     main {
-    flex: 1 0 auto;
+        flex: 1 0 auto;
     }
 
     h1, h2, h3 {
@@ -105,9 +107,9 @@
     }
 
     .card .card-content h3 {
-        text-align: center;
-        font-weight: 200;
+        font-family: 'Roboto Mono', monospace;
         font-size: 36px;
+        text-align: center;
         margin-bottom: 36px;
     }
 
@@ -117,7 +119,7 @@
 
     .card .card-content p {
         text-align: center;
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .card .card-image img {
@@ -132,6 +134,10 @@
         padding: 14px;
         border-radius: 0 0 2px 2px;
         min-height: 82px;
+    }
+
+    .card .block.card-content {
+        padding: 60px;
     }
 
     .project.card-content {
@@ -149,8 +155,30 @@
 
 /* FOOTER */
 
-    footer a img {
+    .page-footer {
+        padding: 10px;
+    }
+
+    footer ul li {
+        display: inline-block;
         padding: 0 10px 0 10px;
+    }
+
+    footer a {
+        border-bottom: #000000 4px solid;
+        transition-duration: 200ms;
+    }
+
+    footer a:hover {
+        border-bottom: #FFFFFF 4px solid;
+    }
+
+    footer a img {
+        height: 32px;
+        width: auto;
+    }
+
+    footer a img:hover {
         height: 32px;
         width: auto;
     }
