@@ -146,6 +146,10 @@
         border-radius: 0 0 5px 5px;
     }
 
+    #projects .card .card-content {
+        max-height: 82px;
+    }
+
     /* SKILLS IMG & SVG */
 
     .card .text img {
