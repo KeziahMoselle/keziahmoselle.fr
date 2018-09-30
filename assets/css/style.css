@@ -157,6 +157,23 @@
         width: auto;
     }
 
+/* Wakatime integration */
+@media only screen and (max-width: 799px) {
+    .wakatime {
+        height: 400px;
+    }
+}
+@media only screen and (min-width: 800px) {
+    .wakatime {
+        height: 600px;
+    }
+}
+@media only screen and (min-width: 1199px) {
+    .wakatime {
+        height: 800px;
+    }  
+}
+
 /* FOOTER */
 
     .page-footer {
