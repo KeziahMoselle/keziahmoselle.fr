@@ -8,7 +8,7 @@
         <meta name="keywords" content="Keziah, Moselle, developper, web, développeur">
         <meta name="author" content="Keziah Moselle">
         <link href="assets/favicon.jpeg" rel="icon" type="image/x-icon" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="assets/css/style.css" rel="stylesheet" type="text/css"  media="screen"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
@@ -56,18 +56,18 @@
                                 <table class="centered">
                                     <tbody>
                                         <tr>
-                                            <td><img src="assets/icons/tech/html5.svg" alt="HTML"></td>
-                                            <td><img src="assets/icons/tech/css3.svg" alt="CSS"></td>
-                                            <td><img src="assets/icons/tech/javascript-original.svg" alt="JavaScript"></td>
+                                            <td><img class="tooltipped" data-position="left" data-tooltip="HTML5" src="assets/icons/tech/html5.svg" alt="HTML"></td>
+                                            <td><img class="tooltipped" data-position="left" data-tooltip="CSS3" src="assets/icons/tech/css3.svg" alt="CSS"></td>
+                                            <td><img class="tooltipped" data-position="left" data-tooltip="JavaScript" src="assets/icons/tech/javascript-original.svg" alt="JavaScript"></td>
                                         </tr>
                                         <tr>
-                                            <td><img src="assets/icons/tech/nodejs-original.svg" alt="NodeJS"></td>
-                                            <td><img src="assets/icons/tech/react-original.svg" alt="React Native"></td>
-                                            <td><img src="assets/icons/tech/electron-original.svg" alt="Electron"></td>
+                                            <td><img class="tooltipped" data-position="left" data-tooltip="NodeJS" src="assets/icons/tech/nodejs-original.svg" alt="NodeJS"></td>
+                                            <td><img class="tooltipped" data-position="left" data-tooltip="React Native" src="assets/icons/tech/react-original.svg" alt="React Native"></td>
+                                            <td><img class="tooltipped" data-position="left" data-tooltip="ElectronJS" src="assets/icons/tech/electron-original.svg" alt="Electron"></td>
                                         </tr>
                                         <tr>
-                                            <td><img src="assets/icons/tech/php.svg" alt="PHP"></td>
-                                            <td><img src="assets/icons/tech/mysql-original-wordmark.svg" alt="MySQL"></td>
+                                            <td><img class="tooltipped" data-position="left" data-tooltip="PHP" src="assets/icons/tech/php.svg" alt="PHP"></td>
+                                            <td><img class="tooltipped" data-position="left" data-tooltip="MySQL" src="assets/icons/tech/mysql-original-wordmark.svg" alt="MySQL"></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -81,7 +81,7 @@
                 <div id="projects" class="col s12 m10 offset-m1">
 
                     <div class="col s12 l4">
-                        <div class="card">
+                        <div class="card card-project">
                             <div class="card-image">
                                 <img src="./assets/icons/project/gelbooru.png" alt="gelbooru">
                                 <span class="card-title">gelbooru-client</span>
@@ -96,7 +96,7 @@
                     </div>
 
                     <div class="col s12 l4">
-                        <div class="card">
+                        <div class="card card-project">
                             <div class="card-image">
                                 <img src="./assets/icons/project/embosseuse_braille.png" alt="embosseusebraille">
                                 <span class="card-title">Embosseuse Braille</span>
@@ -111,7 +111,7 @@
                     </div>
 
                     <div class="col s12 l4">
-                        <div class="card">
+                        <div class="card card-project">
                             <div class="card-image">
                                 <img src="./assets/icons/project/osu!.png" alt="osu!">
                                 <span class="card-title">osu-replay</span>
@@ -126,7 +126,7 @@
                     </div>
 
                     <div class="col s12 l4">
-                        <div class="card">
+                        <div class="card card-project">
                             <div class="card-image">
                                 <img src="./assets/icons/project/vanessamoselle.png" alt="vanessamoselle">
                                 <span class="card-title">justbecause.vanessamoselle.com</span>
@@ -141,7 +141,7 @@
                     </div>
 
                     <div class="col s12 l4">
-                        <div class="card">
+                        <div class="card card-project">
                             <div class="card-image">
                                 <img src="./assets/icons/project/KeziahMoselle.png" alt="keziahmoselle">
                                 <span class="card-title">maelysm.fr</span>
@@ -156,7 +156,7 @@
                     </div>
 
                     <div class="col s12 l4">
-                        <div class="card">
+                        <div class="card card-project">
                             <div class="card-image">
                                 <img src="./assets/icons/project/KeziahMoselle.png" alt="keziahmoselle">
                                 <span class="card-title">GAS Colmar</span>
@@ -171,7 +171,7 @@
                     </div>
 
                     <div class="col s12 l4">
-                        <div class="card">
+                        <div class="card card-project">
                             <div class="card-image">
                                 <img src="./assets/icons/project/KeziahMoselle.png" alt="keziahmoselle">
                                 <span class="card-title">Vorrk</span>
@@ -186,7 +186,7 @@
                     </div>
 
                     <div class="col s12 l4">
-                        <div class="card">
+                        <div class="card card-project">
                             <div class="card-image">
                                 <img src="./assets/icons/project/discord.png" alt="discord">
                                 <span class="card-title">gelbooru-bot</span>
@@ -219,6 +219,21 @@
             </ul>
         </footer>
 
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+				<script defer src="https://unpkg.com/scrollreveal"></script>
+        <script defer src="./assets/js/materialize.js"></script>
+        <script defer src="./assets/js/scroll.js"></script>
+        <script>
+					document.addEventListener('DOMContentLoaded', () => {
+						M.AutoInit()
+
+						ScrollReveal({
+							reset: true
+						})
+
+						ScrollReveal().reveal('td img')
+						ScrollReveal().reveal('.card-project')
+					})
+        </script>
     </body>
   </html>
