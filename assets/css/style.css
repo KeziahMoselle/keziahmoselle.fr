@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
 .purple {background-color: #ED145B !important;}
 .black {background-color: #1F1D20 !important;}
@@ -20,7 +20,8 @@
         flex: 1 0 auto;
     }
 
-    h1, h2, h3 {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Inconsolata', sans-serif;
         margin: 0;
         font-weight: 300;
     }
@@ -92,6 +93,31 @@
 
 /* MAIN */
 
+    /* ABOUT ME */
+
+    .inline-link {
+        color: #FFFFFF;
+        border-bottom: 1px dashed #FFFFFF;
+        text-decoration: none;
+        transition: color 200ms;
+    }
+    .inline-link:hover {
+        color: #b2b2b2;
+    }
+
+    /* SKILLS */
+
+    table img {
+        height: 100px;
+        width: auto;
+        margin: 0 0 10px 0;
+    }
+
+    .chip {
+        font-size: 18px;
+        padding: 0 16px;
+    }
+
     /* CARDS */
 
     .card {
@@ -107,7 +133,6 @@
     }
 
     .card .card-content h3 {
-        font-family: 'Roboto Mono', monospace;
         font-size: 36px;
         text-align: center;
         margin-bottom: 36px;
@@ -148,13 +173,6 @@
 
     #projects .card .card-content {
         max-height: 82px;
-    }
-
-    /* SKILLS IMG & SVG */
-
-    .card .text img {
-        height: 64px;
-        width: auto;
     }
 
 /* Wakatime integration responsiveness */
