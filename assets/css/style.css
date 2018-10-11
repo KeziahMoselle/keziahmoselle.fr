@@ -151,11 +151,12 @@
 
     .card-title {
         overflow: hidden;
+        word-wrap: break-word;
     }
 
     .card .card-content p {
         text-align: center;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .card .card-image img {
