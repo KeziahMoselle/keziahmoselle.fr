@@ -7,6 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
       reset: true
   })
 
-  ScrollReveal().reveal('td img')
+  ScrollReveal().reveal('img')
   ScrollReveal().reveal('.card-project')
 })
