@@ -108,9 +108,20 @@
     /* SKILLS */
 
     table img {
-        height: 100px;
         width: auto;
-        margin: 0 0 10px 0;
+        margin-bottom: 10px;
+    }
+
+    @media only screen and (min-width: 451px) {
+        table img {
+            height: 100px;
+        }
+    }
+
+    @media only screen and (max-width: 450px) {
+        table img {
+            height: 64px;
+        }
     }
 
     .chip {
@@ -161,8 +172,16 @@
         min-height: 82px;
     }
 
-    .card .block.card-content {
-        padding: 60px;
+    @media only screen and (max-width: 450px) {
+        .card .block.card-content {
+            padding: 10px;
+        }
+    }
+
+    @media only screen and (min-width: 451px) {
+        .card .block.card-content {
+            padding: 60px;
+        }
     }
 
     .project.card-content {
