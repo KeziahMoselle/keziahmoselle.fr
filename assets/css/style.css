@@ -107,19 +107,22 @@
 
     /* SKILLS */
 
-    table img {
-        width: auto;
+    .skills {
         margin-bottom: 10px;
     }
 
+    .skills img {
+        width: auto;
+    }
+
     @media only screen and (min-width: 451px) {
-        table img {
+        .skills img {
             height: 100px;
         }
     }
 
     @media only screen and (max-width: 450px) {
-        table img {
+        .skills img {
             height: 64px;
         }
     }
