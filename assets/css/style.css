@@ -219,6 +219,17 @@
         transform: translateX(-50%);
     }
 
+    .project {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .project img {
+        height: 38px;
+        width: auto;
+    }
+
 /* Wakatime integration responsiveness */
 
 .wakatime {
