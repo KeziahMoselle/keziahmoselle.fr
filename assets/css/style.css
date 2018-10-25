@@ -132,6 +132,13 @@
         padding: 0 16px;
     }
 
+    /* BUTTONS */
+
+    .btn.dark:hover {
+        background-color: #FFFFFF !important;
+        color: #000000;
+    }
+
     /* CARDS */
 
     .card {
@@ -155,11 +162,6 @@
     .card-title {
         overflow: hidden;
         word-wrap: break-word;
-    }
-
-    .card .card-content p {
-        text-align: center;
-        font-size: 18px;
     }
 
     .card .card-image img {
@@ -252,6 +254,13 @@
 .modal.bottom-sheet {
     min-height: fit-content;
     border-radius: 10px;
+}
+
+@media screen and (min-width: 1300px) {
+    .modal.bottom-sheet {
+        width: 50%;
+        transform: translateX(50%);
+    }
 }
 
 .modal h2 {
