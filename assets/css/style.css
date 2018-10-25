@@ -41,7 +41,7 @@
         box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
     }
 
-    .banner h1,h2 {
+    .banner > h1, .banner h2 {
         position: relative;
         top: 50%;
         transform: translateY(-50%);
@@ -66,7 +66,7 @@
         .banner {
             height: 300px;
         }
-        .banner h1,h2 {
+        .banner > h1, .banner h2 {
             font-size: 40px;
         }
         
@@ -79,10 +79,10 @@
         .banner {
             height: 400px;
         }
-        .banner h1,h2 {
+        .banner > h1, .banner h2 {
             line-height: 400px;
         }
-        .banner h1 {
+        .banner > h1 {
             font-size: 60px;
         }
 
@@ -245,6 +245,32 @@
     max-height: 1000px;
     top: 0;
     left: 0;
+}
+
+/* MODAL */
+
+.modal.bottom-sheet {
+    min-height: fit-content;
+    border-radius: 10px;
+}
+
+.modal h2 {
+    font-size: 2.6rem;
+    text-align: left;
+}
+
+.modal h3 {
+    font-size: 1.4rem;
+    margin: 10px 0 30px 0;
+}
+
+.modal .modal-content {
+    padding: 50px 24px 36px 24px;
+    color: #000000;
+}
+
+.modal-links {
+    margin-bottom: 24px;
 }
 
 /* FOOTER */
