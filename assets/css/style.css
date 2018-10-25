@@ -95,13 +95,13 @@
 
     /* ABOUT ME */
 
-    .inline-link {
+    p > a {
         color: #FFFFFF;
         border-bottom: 1px dashed #FFFFFF;
         text-decoration: none;
         transition: color 200ms;
     }
-    .inline-link:hover {
+    p > a:hover {
         color: #b2b2b2;
     }
 
