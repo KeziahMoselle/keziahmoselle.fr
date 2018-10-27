@@ -146,6 +146,11 @@
         margin-bottom: 40px;
     }
 
+    .text p {
+        font-size: 16px;
+        text-align: center;
+    }
+
     @media only screen and (min-width: 992px)
     {
         .card .text {
@@ -253,7 +258,12 @@
 
 .modal.bottom-sheet {
     min-height: fit-content;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal.modal.bottom-sheet .modal-footer {
+    border-radius: 0;
 }
 
 @media screen and (min-width: 1300px) {
