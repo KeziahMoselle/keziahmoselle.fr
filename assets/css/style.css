@@ -185,7 +185,7 @@
 
     @media only screen and (max-width: 450px) {
         .card .block.card-content {
-            padding: 10px;
+            padding: 20px;
         }
     }
 
@@ -257,6 +257,7 @@
 /* MODAL */
 
 .modal.bottom-sheet {
+    overflow-x: hidden;
     min-height: fit-content;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -276,6 +277,7 @@
 .modal h2 {
     font-size: 2.6rem;
     text-align: left;
+    word-break: break-word;
 }
 
 .modal h3 {
