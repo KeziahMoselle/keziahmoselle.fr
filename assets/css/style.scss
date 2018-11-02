@@ -1,5 +1,7 @@
 @charset "utf-8";
+@import "../../node_modules/materialize-css/sass/materialize.scss";
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 $purple: #ED145B;
 $black: #1F1D20;
@@ -295,6 +297,46 @@ $dark: #222023;
     color: black;
 }
 
+.modal p {
+    font-size: 1.2rem;
+}
+
+.modal-header {
+    margin-bottom: 40px;
+    border-bottom: 1px solid black;
+}
+
+.modal-container h3 {
+    display: inline;
+    padding: 8px;
+    color: white;
+    background-color: $dark;
+    border-radius: 3px;
+}
+.modal-informations > p {
+    padding-left: 50px;
+}
+.modal-technologies {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.modal-technologies div {
+    display: inline-flex;
+    line-height: 56px;
+}
+.modal-technologies div > span {
+    margin-left: 10px;
+}
+.modal-technologies img {
+    height: 56px;
+    width: auto;
+}
+.modal-technologies span {
+    line-height: 56px;
+}
+
+
 .modal-links {
     margin-bottom: 24px;
 }
@@ -369,6 +411,8 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 
 body::-webkit-scrollbar {background-color: $dark; width: 0.5em;}
 body::-webkit-scrollbar-thumb {background-color: $purple;}
+
+/* SELECTION */
 
 ::-moz-selection {background: $purple;}
 ::selection {background: $purple;}

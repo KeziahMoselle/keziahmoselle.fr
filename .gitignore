@@ -1,3 +1,24 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build folder
+dist/*
+
+# Dependency
+node_modules/
+
+# Package Manager
+package-lock.json
+yarn.lock
+
+# dotenv environment variables file
+.env
+
+# OS / Softwares
 .DS_Store
-.vscode
-.node_modules
+.vscode/
+.idea/
