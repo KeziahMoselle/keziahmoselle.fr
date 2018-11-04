@@ -24,12 +24,29 @@ let vm = new Vue({
       } else if (!this.isMessageValid && this.isEmailValid) {
         M.toast({ html: 'You must type a message.' })
       } else {
-        M.toast({ html: 'Error, please fill the two fields.' })
+        M.toast({ html: 'Please fill the two fields.' })
       }
     },
     sendEmail: function () {
-      // Send Email
-      M.toast({ html: 'Your message has been sent !' })
+      const payload = JSON.stringify({
+        email: this.email,
+        message: this.message
+      })
+      fetch('http://217.69.3.53/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: payload
+      })
+      .then(response => {
+        if (response.status === 200) {
+          M.toast({ html: 'Your message has been sent !' })
+        } else {
+          M.toast({ html: 'There was an error, please try again later.' })
+        }
+      })
+      .catch(() => M.toast({ html: 'There was an error, please try again later.' }))
     }
   },
   watch: {
