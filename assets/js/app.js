@@ -56,7 +56,7 @@ let vm = new Vue({
       isEmailValid ? this.emailClass = 'valid' : this.emailClass = 'invalid'
     },
     message: function () {
-      const isMessageValid = this.isMessageValid = this.message.length > 50
+      const isMessageValid = this.isMessageValid = this.message.length > 10
       isMessageValid ? this.messageClass = 'valid' : this.messageClass = 'invalid'
     }
   }
