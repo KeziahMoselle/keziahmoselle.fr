@@ -12,453 +12,459 @@
 	<meta name="google-site-verification" content="2f8TVRTe-fLN14ktLaD_aEipVKNNvn8Qq0MgQN8JVfw" />
 	<link href="assets/icons/favicon.jpeg" rel="icon" type="image/x-icon"/>
 	<link href="assets/css/style.min.css" rel="stylesheet" type="text/css" media="screen"/>
-	<title>Keziah MOSELLE - Web Enthusiast</title>
+	<title>Keziah MOSELLE - Portfolio</title>
 </head>
 
 <body>
 
-	<header>
-		<div class="banner black">
-			<h1 class="hide-on-small-only baffle">KEZIAH MOSELLE</h1>
-		</div>
-		<img class="logo" src="assets/icons/logo.svg" alt="logo">
-		<div class="banner dark">
-			<h2 class="hide-on-small-only baffle">WEB ENTHUSIAST</h2>
-		</div>
-	</header>
+	<div id="app">
+		<header>
 
-	<main class="row">
+			<ul class="translations">
+				<a id="frenchBtn" @click="setFr" href="#lang=fr"><img src="./assets/icons/flag/fr.png" alt="Drapeau Français"></a>
+				<a id="EnglishBtn" @click="setEn" href="#lang=en"><img src="./assets/icons/flag/en.png" alt="English flag"></a>
+			</ul>
 
-		<!-- ABOUT -->
+			<div class="banner black">
+				<h1 class="hide-on-small-only baffle">KEZIAH MOSELLE</h1>
+			</div>
+			<img class="logo" src="assets/icons/logo.svg" alt="logo">
+			<div class="banner dark">
+				<h2 class="hide-on-small-only baffle">{{ $t('header.subtitle') }}</h2>
+			</div>
 
-		<div class="col s12 m10 offset-m1 l8 offset-l2">
-			<div class="col s12">
-				<div class="card">
-					<div class="block card-content text">
-						<h3>About me</h3>
-						<p>
-							I am a student of 18 years old and I study in the field of multimedia and internet in France.
-						</p>
-						<p>
-							I am passionate about the web development and web design.
-						</p>
-						<p>
-							You can see my main projects on my <a title="Open GitHub Profile" href="https://github.com/KeziahMoselle">GitHub</a>.
-						</p>
+		</header>
+	
+		<main class="row">
+	
+			<!-- ABOUT -->
+	
+			<div class="col s12 m10 offset-m1 l8 offset-l2">
+				<div class="col s12">
+					<div class="card">
+						<div class="block card-content text">
+							<h3>{{ $t('about.title') }}</h3>
+							<p>{{ $t('about.paragraph') }}</p>
+							<p>{{ $t('about.paragraph2') }}</p>
+							<p>{{ $t('about.paragraph3') }} <a href="https://github.com/KeziahMoselle">GitHub</a>.</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<!-- SKILLS -->
-
-		<div class="col s12 m10 offset-m1 l8 offset-l2">
-			<div class="col s12">
-				<div class="card">
-					<div class="block card-content text">
-						<h3>Working with</h3>
-						<div class="center row">
-							<div class="col s12 m6 l4 skills">
-								<img class="tooltipped" data-position="left" data-tooltip="HTML5" src="assets/icons/tech/html5.svg" alt="HTML">
-								<div>
-									<div class="chip">4 Years</div>
+	
+			<!-- SKILLS -->
+	
+			<div class="col s12 m10 offset-m1 l8 offset-l2">
+				<div class="col s12">
+					<div class="card">
+						<div class="block card-content text">
+							<h3>{{ $t('skills.title') }}</h3>
+							<div class="center row">
+								<div class="col s12 m6 l4 skills">
+									<img class="tooltipped" data-position="left" data-tooltip="HTML5" src="assets/icons/tech/html5.svg" alt="HTML">
+									<div>
+										<div class="chip">4 {{ $t('skills.years') }}</div>
+									</div>
 								</div>
-							</div>
-							<div class="col s12 m6 l4 skills">
-								<img class="tooltipped" data-position="left" data-tooltip="CSS3" src="assets/icons/tech/css3.svg" alt="CSS">
-								<div>
-									<div class="chip">4 Years</div>
+								<div class="col s12 m6 l4 skills">
+									<img class="tooltipped" data-position="left" data-tooltip="CSS3" src="assets/icons/tech/css3.svg" alt="CSS">
+									<div>
+										<div class="chip">4 {{ $t('skills.years') }}</div>
+									</div>
 								</div>
-							</div>
-							<div class="col s12 m6 l4 skills">
-								<img class="tooltipped" data-position="left" data-tooltip="JavaScript" src="assets/icons/tech/javascript.svg"
-									alt="JavaScript">
-								<div>
-									<div class="chip">2 Years</div>
+								<div class="col s12 m6 l4 skills">
+									<img class="tooltipped" data-position="left" data-tooltip="JavaScript" src="assets/icons/tech/javascript.svg"
+										alt="JavaScript">
+									<div>
+										<div class="chip">2 {{ $t('skills.years') }}</div>
+									</div>
 								</div>
-							</div>
-							<div class="col s12 m6 l4 skills">
-								<img class="tooltipped" data-position="left" data-tooltip="PHP" src="assets/icons/tech/php.svg" alt="PHP">
-								<div>
-									<div class="chip">2 Years</div>
+								<div class="col s12 m6 l4 skills">
+									<img class="tooltipped" data-position="left" data-tooltip="PHP" src="assets/icons/tech/php.svg" alt="PHP">
+									<div>
+										<div class="chip">2 {{ $t('skills.years') }}</div>
+									</div>
 								</div>
-							</div>
-							<div class="col s12 m6 l4 skills">
-								<img class="tooltipped" data-position="left" data-tooltip="MySQL" src="assets/icons/tech/mysql.svg" alt="MySQL">
-								<div>
-									<div class="chip">2 Years</div>
+								<div class="col s12 m6 l4 skills">
+									<img class="tooltipped" data-position="left" data-tooltip="MySQL" src="assets/icons/tech/mysql.svg" alt="MySQL">
+									<div>
+										<div class="chip">2 {{ $t('skills.years') }}</div>
+									</div>
 								</div>
-							</div>
-							<div class="col s12 m6 l4 skills">
-								<img class="tooltipped" data-position="left" data-tooltip="NodeJS" src="assets/icons/tech/nodejs.svg" alt="NodeJS">
-								<div>
-									<div class="chip">1 Year</div>
+								<div class="col s12 m6 l4 skills">
+									<img class="tooltipped" data-position="left" data-tooltip="NodeJS" src="assets/icons/tech/nodejs.svg" alt="NodeJS">
+									<div>
+										<div class="chip">1 {{ $t('skills.year') }}</div>
+									</div>
 								</div>
-							</div>
-							<div class="col s12 m6 l4 skills">
-								<img class="tooltipped" data-position="left" data-tooltip="React Native" src="assets/icons/tech/react.svg" alt="React Native">
-								<div>
-									<div class="chip">Learning...</div>
+								<div class="col s12 m6 l4 skills">
+									<img class="tooltipped" data-position="left" data-tooltip="React Native" src="assets/icons/tech/react.svg" alt="React Native">
+									<div>
+										<div class="chip">{{ $t('skills.learning') }}</div>
+									</div>
 								</div>
-							</div>
-							<div class="col s12 m6 l4 skills">
-								<img class="tooltipped" data-position="left" data-tooltip="ElectronJS" src="assets/icons/tech/electron.svg"
-									alt="Electron">
-								<div>
-									<div class="chip">Learning...</div>
+								<div class="col s12 m6 l4 skills">
+									<img class="tooltipped" data-position="left" data-tooltip="ElectronJS" src="assets/icons/tech/electron.svg"
+										alt="Electron">
+									<div>
+										<div class="chip">{{ $t('skills.learning') }}</div>
+									</div>
 								</div>
-							</div>
-							<div class="col s12 m6 l4 skills">
-								<img class="tooltipped" data-position="left" data-tooltip="VueJS" src="assets/icons/tech/vuejs.svg" alt="VueJS">
-								<div>
-									<div class="chip">Learning...</div>
+								<div class="col s12 m6 l4 skills">
+									<img class="tooltipped" data-position="left" data-tooltip="VueJS" src="assets/icons/tech/vuejs.svg" alt="VueJS">
+									<div>
+										<div class="chip">{{ $t('skills.learning') }}</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<!-- TOOLS & MISC -->
-
-		<div class="col s12 m10 offset-m1 l8 offset-l2">
-			<div class="col s12">
-				<div class="card">
-					<div class="block card-content text">
-						<h3>Tools & Miscellaneous</h3>
-						<div class="center row">
-							<div class="col s12 m6 l4 skills">
-								<img class="tooltipped" data-position="left" data-tooltip="GitHub" src="assets/icons/tools/github.svg" alt="GitHub">
-								<div>
-									<div class="chip">2 Years</div>
+	
+			<!-- TOOLS & MISC -->
+	
+			<div class="col s12 m10 offset-m1 l8 offset-l2">
+				<div class="col s12">
+					<div class="card">
+						<div class="block card-content text">
+							<h3>{{ $t('tools.title') }}</h3>
+							<div class="center row">
+								<div class="col s12 m6 l4 skills">
+									<img class="tooltipped" data-position="left" data-tooltip="GitHub" src="assets/icons/tools/github.svg" alt="GitHub">
+									<div>
+										<div class="chip">2 {{ $t('skills.years') }}</div>
+									</div>
 								</div>
-							</div>
-							<div class="col s12 m6 l4 skills">
-								<img class="tooltipped" data-position="left" data-tooltip="Git" src="assets/icons/tools/git.svg" alt="Git">
-								<div>
-									<div class="chip">2 Years</div>
+								<div class="col s12 m6 l4 skills">
+									<img class="tooltipped" data-position="left" data-tooltip="Git" src="assets/icons/tools/git.svg" alt="Git">
+									<div>
+										<div class="chip">2 {{ $t('skills.years') }}</div>
+									</div>
 								</div>
-							</div>
-							<div class="col s12 m6 l4 skills">
-								<img class="tooltipped" data-position="left" data-tooltip="VSCode" src="assets/icons/tools/vscode.svg" alt="VSCode">
-								<div>
-									<div class="chip">2 Years</div>
+								<div class="col s12 m6 l4 skills">
+									<img class="tooltipped" data-position="left" data-tooltip="VSCode" src="assets/icons/tools/vscode.svg" alt="VSCode">
+									<div>
+										<div class="chip">2 {{ $t('skills.years') }}</div>
+									</div>
 								</div>
-							</div>
-							<div class="col s12 m6 l4 skills">
-								<img class="tooltipped" data-position="left" data-tooltip="Materialize" src="assets/icons/tools/materialize.svg"
-									alt="Materialize">
-								<div>
-									<div class="chip">3 Years</div>
+								<div class="col s12 m6 l4 skills">
+									<img class="tooltipped" data-position="left" data-tooltip="Materialize" src="assets/icons/tools/materialize.svg"
+										alt="Materialize">
+									<div>
+										<div class="chip">3 {{ $t('skills.years') }}</div>
+									</div>
 								</div>
-							</div>
-							<div class="col s12 m6 l4 skills">
-								<img class="tooltipped" data-position="left" data-tooltip="Bulma" src="assets/icons/tools/bulma.svg" alt="Bulma">
-								<div>
-									<div class="chip">Learning...</div>
+								<div class="col s12 m6 l4 skills">
+									<img class="tooltipped" data-position="left" data-tooltip="Bulma" src="assets/icons/tools/bulma.svg" alt="Bulma">
+									<div>
+										<div class="chip">{{ $t('skills.learning') }}</div>
+									</div>
 								</div>
-							</div>
-							<div class="col s12 m6 l4 skills">
-								<img class="tooltipped" data-position="left" data-tooltip="Webpack" src="assets/icons/tools/webpack.svg" alt="Webpack">
-								<div>
-									<div class="chip">Learning...</div>
+								<div class="col s12 m6 l4 skills">
+									<img class="tooltipped" data-position="left" data-tooltip="Webpack" src="assets/icons/tools/webpack.svg" alt="Webpack">
+									<div>
+										<div class="chip">{{ $t('skills.learning') }}</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<!-- PROJECTS -->
-
-		<div id="projects" class="col s12 m10 offset-m1 l8 offset-l2">
-			<div class="card">
-				<div class="block card-content">
-					<h3>Professional Works</h3>
-					<a class="btn-floating btn-large waves-effect waves-light purple"><i class="material-icons">keyboard_arrow_down</i></a>
+	
+			<!-- PROJECTS -->
+	
+			<div id="projects" class="col s12 m10 offset-m1 l8 offset-l2">
+				<div class="card">
+					<div class="block card-content">
+						<h3>{{ $t('portfolio.titlePro') }}</h3>
+						<a class="btn-floating btn-large waves-effect waves-light purple"><i class="material-icons">keyboard_arrow_down</i></a>
+					</div>
+				</div>
+	
+				<div class="center row">
+	
+					<div class="col s12 m6 l4">
+						<div class="card card-project">
+							<div class="card-image">
+								<img src="./assets/icons/project/vanessamoselle.png" alt="vanessamoselle">
+								<span class="card-title">justbecause.vanessamoselle.com</span>
+								<a href="#justbecauseVanessamoselle" class="modal-trigger btn-floating halfway-fab waves-effect waves-dark white"><i
+										class="material-icons">more_vert</i></a>
+							</div>
+							<div class="project card-content">
+									<img src="assets/icons/tech/html5.svg" alt="HTML5">
+									<img src="assets/icons/tech/css3.svg" alt="CSS3">
+									<img src="assets/icons/tech/jquery.svg" alt="jQuery">
+							</div>
+						</div>
+					</div>
+	
+					<div class="col s12 m6 l4">
+						<div class="card card-project">
+							<div class="card-image">
+								<img src="./assets/icons/project/KeziahMoselle.png" alt="keziahmoselle">
+								<span class="card-title">maelysm.fr</span>
+								<a href="#maelysm" class="modal-trigger btn-floating halfway-fab waves-effect waves-dark white"><i class="material-icons">more_vert</i></a>
+							</div>
+							<div class="project card-content">
+								<img src="assets/icons/tech/nodejs.svg" alt="NodeJS">
+								<img src="assets/icons/tools/bulma.svg" alt="Bulma">
+							</div>
+						</div>
+					</div>
+	
+					<div class="col s12 m6 l4">
+						<div class="card card-project">
+							<div class="card-image">
+								<img src="./assets/icons/project/KeziahMoselle.png" alt="keziahmoselle">
+								<span class="card-title">GAS Colmar</span>
+								<a href="#GASColmar" class="modal-trigger btn-floating halfway-fab waves-effect waves-dark white"><i class="material-icons">more_vert</i></a>
+							</div>
+							<div class="project card-content">
+								<img src="assets/icons/tech/php.svg" alt="PHP">
+								<img src="assets/icons/tools/bootstrap.svg" alt="Bootstrap">
+							</div>
+						</div>
+					</div>
+	
+				</div>
+	
+				<div class="card">
+					<div class="block card-content">
+						<h3>{{ $t('portfolio.titlePerso') }}</h3>
+						<a class="btn-floating btn-large waves-effect waves-light purple"><i class="material-icons">keyboard_arrow_down</i></a>
+					</div>
+				</div>
+	
+				<div class="center row">
+	
+					<div class="col s12 m6 l4">
+						<div class="card card-project">
+							<div class="card-image">
+								<img src="./assets/icons/project/gelbooru.png" alt="gelbooru">
+								<span class="card-title">gelbooru-client</span>
+								<a href="#GelbooruClient" class="modal-trigger btn-floating halfway-fab waves-effect waves-dark white"><i
+										class="material-icons">more_vert</i></a>
+							</div>
+							<div class="project card-content">
+								<img src="assets/icons/tech/nodejs.svg" alt="NodeJS">
+								<img src="assets/icons/tech/electron.svg" alt="ElectronJS">
+								<img src="assets/icons/tools/materialize.svg" alt="MaterializeCSS">
+							</div>
+						</div>
+					</div>
+	
+					<div class="col s12 m6 l4">
+						<div class="card card-project">
+							<div class="card-image">
+								<img src="./assets/icons/project/embosseuse_braille.png" alt="embosseusebraille">
+								<span class="card-title">Embosseuse Braille</span>
+								<a href="#EmbosseuseBraille" class="modal-trigger btn-floating halfway-fab waves-effect waves-dark white"><i
+										class="material-icons">more_vert</i></a>
+							</div>
+							<div class="project card-content">
+								<img src="assets/icons/tech/nodejs.svg" alt="NodeJS">
+								<img src="assets/icons/tech/socket-io.svg" alt="Socket.io">
+								<img src="assets/icons/tech/react.svg" alt="React Native">
+							</div>
+						</div>
+					</div>
+	
+					<div class="col s12 m6 l4">
+						<div class="card card-project">
+							<div class="card-image">
+								<img src="./assets/icons/project/KeziahMoselle.png" alt="keziahmoselle">
+								<span class="card-title">Vorrk Studio</span>
+								<a href="#VorrkStudio" class="modal-trigger btn-floating halfway-fab waves-effect waves-dark white"><i class="material-icons">more_vert</i></a>
+							</div>
+							<div class="project card-content">
+								<img src="assets/icons/tech/nodejs.svg" alt="NodeJS">
+								<img src="assets/icons/tools/bulma.svg" alt="Bulma">
+							</div>
+						</div>
+					</div>
+	
 				</div>
 			</div>
-
-			<div class="center row">
-
-				<div class="col s12 m6 l4">
-					<div class="card card-project">
-						<div class="card-image">
-							<img src="./assets/icons/project/vanessamoselle.png" alt="vanessamoselle">
-							<span class="card-title">justbecause.vanessamoselle.com</span>
-							<a href="#justbecauseVanessamoselle" class="modal-trigger btn-floating halfway-fab waves-effect waves-dark white"><i
-									class="material-icons">more_vert</i></a>
+	
+			<!-- PROJECTS MODALS -->
+	
+			<div id="justbecauseVanessamoselle" class="modal bottom-sheet">
+				<div class="modal-content row">
+					<div class="modal-header col s12">
+						<h2>justbecause.vanessamoselle.com</h2>
+						<h3>Landing page for vanessamoselle's exhibition at L.A.</h3>
+						<div class="modal-links">
+							<a target="_blank" href="http://justbecause.vanessamoselle.com/" class="btn dark waves-effect waves-dark"><i class="material-icons left">open_in_new</i>Visit</a>
 						</div>
-						<div class="project card-content">
+					</div>
+					<div class="modal-container">
+						<h3>About the project</h3>
+						<div class="modal-informations">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, eius soluta libero amet tempore vitae quam quidem rem odio, molestiae quibusdam in minima dicta quod, odit asperiores velit nemo ipsam.
+							</p>
+						</div>
+					</div>
+					<div class="modal-container">
+						<h3>Technologies used</h3>
+						<div class="modal-technologies">
+							<div>
 								<img src="assets/icons/tech/html5.svg" alt="HTML5">
+								<span>HTML5</span>
+							</div>
+							<div>
 								<img src="assets/icons/tech/css3.svg" alt="CSS3">
+								<span>CSS3</span>
+							</div>
+							<div>
 								<img src="assets/icons/tech/jquery.svg" alt="jQuery">
+								<span>jQuery</span>
+							</div>
 						</div>
 					</div>
 				</div>
-
-				<div class="col s12 m6 l4">
-					<div class="card card-project">
-						<div class="card-image">
-							<img src="./assets/icons/project/KeziahMoselle.png" alt="keziahmoselle">
-							<span class="card-title">maelysm.fr</span>
-							<a href="#maelysm" class="modal-trigger btn-floating halfway-fab waves-effect waves-dark white"><i class="material-icons">more_vert</i></a>
-						</div>
-						<div class="project card-content">
-							<img src="assets/icons/tech/nodejs.svg" alt="NodeJS">
-							<img src="assets/icons/tools/bulma.svg" alt="Bulma">
-						</div>
-					</div>
-				</div>
-
-				<div class="col s12 m6 l4">
-					<div class="card card-project">
-						<div class="card-image">
-							<img src="./assets/icons/project/KeziahMoselle.png" alt="keziahmoselle">
-							<span class="card-title">GAS Colmar</span>
-							<a href="#GASColmar" class="modal-trigger btn-floating halfway-fab waves-effect waves-dark white"><i class="material-icons">more_vert</i></a>
-						</div>
-						<div class="project card-content">
-							<img src="assets/icons/tech/php.svg" alt="PHP">
-							<img src="assets/icons/tools/bootstrap.svg" alt="Bootstrap">
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="card">
-				<div class="block card-content">
-					<h3>Personal Projects</h3>
-					<a class="btn-floating btn-large waves-effect waves-light purple"><i class="material-icons">keyboard_arrow_down</i></a>
+				<div class="modal-footer">
+					<a href="#!" class="btn dark modal-close waves-effect waves-dark">Close</a>
 				</div>
 			</div>
-
-			<div class="center row">
-
-				<div class="col s12 m6 l4">
-					<div class="card card-project">
-						<div class="card-image">
-							<img src="./assets/icons/project/gelbooru.png" alt="gelbooru">
-							<span class="card-title">gelbooru-client</span>
-							<a href="#GelbooruClient" class="modal-trigger btn-floating halfway-fab waves-effect waves-dark white"><i
-									class="material-icons">more_vert</i></a>
-						</div>
-						<div class="project card-content">
-							<img src="assets/icons/tech/nodejs.svg" alt="NodeJS">
-							<img src="assets/icons/tech/electron.svg" alt="ElectronJS">
-							<img src="assets/icons/tools/materialize.svg" alt="MaterializeCSS">
-						</div>
+	
+			<div id="maelysm" class="modal bottom-sheet">
+				<div class="modal-content row">
+					<div class="col s12">
+						<h2>maelysm.fr</h2>
+						<h3></h3>
 					</div>
-				</div>
-
-				<div class="col s12 m6 l4">
-					<div class="card card-project">
-						<div class="card-image">
-							<img src="./assets/icons/project/embosseuse_braille.png" alt="embosseusebraille">
-							<span class="card-title">Embosseuse Braille</span>
-							<a href="#EmbosseuseBraille" class="modal-trigger btn-floating halfway-fab waves-effect waves-dark white"><i
-									class="material-icons">more_vert</i></a>
-						</div>
-						<div class="project card-content">
-							<img src="assets/icons/tech/nodejs.svg" alt="NodeJS">
-							<img src="assets/icons/tech/socket-io.svg" alt="Socket.io">
-							<img src="assets/icons/tech/react.svg" alt="React Native">
-						</div>
-					</div>
-				</div>
-
-				<div class="col s12 m6 l4">
-					<div class="card card-project">
-						<div class="card-image">
-							<img src="./assets/icons/project/KeziahMoselle.png" alt="keziahmoselle">
-							<span class="card-title">Vorrk Studio</span>
-							<a href="#VorrkStudio" class="modal-trigger btn-floating halfway-fab waves-effect waves-dark white"><i class="material-icons">more_vert</i></a>
-						</div>
-						<div class="project card-content">
-							<img src="assets/icons/tech/nodejs.svg" alt="NodeJS">
-							<img src="assets/icons/tools/bulma.svg" alt="Bulma">
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		<!-- PROJECTS MODALS -->
-
-		<div id="justbecauseVanessamoselle" class="modal bottom-sheet">
-			<div class="modal-content row">
-				<div class="modal-header col s12">
-					<h2>justbecause.vanessamoselle.com</h2>
-					<h3>Landing page for vanessamoselle's exhibition at L.A.</h3>
 					<div class="modal-links">
-						<a target="_blank" href="http://justbecause.vanessamoselle.com/" class="btn dark waves-effect waves-dark"><i class="material-icons left">open_in_new</i>Visit</a>
+						<a target="_blank" href="#" class="btn dark waves-effect waves-dark" disabled><i class="material-icons left">open_in_new</i>Visit</a>
 					</div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt iste minus, reiciendis numquam illum quod dicta illo at. Amet eveniet placeat dolorum consequuntur dolorem voluptatibus, nesciunt corrupti tempora esse.</p>
 				</div>
-				<div class="modal-container">
-					<h3>About the project</h3>
-					<div class="modal-informations">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, eius soluta libero amet tempore vitae quam quidem rem odio, molestiae quibusdam in minima dicta quod, odit asperiores velit nemo ipsam.
-						</p>
+				<div class="modal-footer">
+					<a href="#!" class="btn dark modal-close waves-effect waves-dark">Close</a>
+				</div>
+			</div>
+	
+			<div id="GASColmar" class="modal bottom-sheet">
+				<div class="modal-content row">
+					<div class="col s12">
+						<h2>GAS Colmar</h2>
+						<h3></h3>
 					</div>
-				</div>
-				<div class="modal-container">
-					<h3>Technologies used</h3>
-					<div class="modal-technologies">
-						<div>
-							<img src="assets/icons/tech/html5.svg" alt="HTML5">
-							<span>HTML5</span>
-						</div>
-						<div>
-							<img src="assets/icons/tech/css3.svg" alt="CSS3">
-							<span>CSS3</span>
-						</div>
-						<div>
-							<img src="assets/icons/tech/jquery.svg" alt="jQuery">
-							<span>jQuery</span>
-						</div>
+					<div class="modal-links">
+						<a target="_blank" href="http://dev.gas-colmar.fr/" class="btn dark waves-effect waves-dark"><i class="material-icons left">open_in_new</i>Visit</a>
 					</div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt iste minus, reiciendis numquam illum quod dicta illo at. Amet eveniet placeat dolorum consequuntur dolorem voluptatibus, nesciunt corrupti tempora esse.</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#!" class="btn dark modal-close waves-effect waves-dark">Close</a>
 				</div>
 			</div>
-			<div class="modal-footer">
-				<a href="#!" class="btn dark modal-close waves-effect waves-dark">Close</a>
-			</div>
-		</div>
-
-		<div id="maelysm" class="modal bottom-sheet">
-			<div class="modal-content row">
-				<div class="col s12">
-					<h2>maelysm.fr</h2>
-					<h3></h3>
+	
+			<div id="GelbooruClient" class="modal bottom-sheet">
+				<div class="modal-content row">
+					<div class="col s12">
+						<h2>Gelbooru Client</h2>
+						<h3></h3>
+					</div>
+					<div class="modal-links">
+						<a target="_blank" href="https://keziahmoselle.github.io/gelbooru-client/" class="btn dark waves-effect waves-dark"><i class="material-icons left">open_in_new</i>Visit</a>
+						<a target="_blank" href="https://github.com/KeziahMoselle/gelbooru-client" class="btn dark waves-effect waves-dark"><i class="material-icons left">code</i>Source Code</a>
+					</div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt iste minus, reiciendis numquam illum quod dicta illo at. Amet eveniet placeat dolorum consequuntur dolorem voluptatibus, nesciunt corrupti tempora esse.</p>
 				</div>
-				<div class="modal-links">
-					<a target="_blank" href="#" class="btn dark waves-effect waves-dark" disabled><i class="material-icons left">open_in_new</i>Visit</a>
+				<div class="modal-footer">
+					<a href="#!" class="btn dark modal-close waves-effect waves-dark">Close</a>
 				</div>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt iste minus, reiciendis numquam illum quod dicta illo at. Amet eveniet placeat dolorum consequuntur dolorem voluptatibus, nesciunt corrupti tempora esse.</p>
 			</div>
-			<div class="modal-footer">
-				<a href="#!" class="btn dark modal-close waves-effect waves-dark">Close</a>
-			</div>
-		</div>
-
-		<div id="GASColmar" class="modal bottom-sheet">
-			<div class="modal-content row">
-				<div class="col s12">
-					<h2>GAS Colmar</h2>
-					<h3></h3>
+	
+			<div id="EmbosseuseBraille" class="modal bottom-sheet">
+				<div class="modal-content row">
+					<div class="col s12">
+						<h2>Embosseuse Braille</h2>
+						<h3></h3>
+					</div>
+					<div class="modal-links">
+						<a target="_blank" href="https://play.google.com/store/apps/details?id=com.embosseusebraille" class="btn dark waves-effect waves-dark"><i class="material-icons left">open_in_new</i>Visit</a>
+						<a target="_blank" href="https://github.com/KeziahMoselle/braille-embosser" class="btn dark waves-effect waves-dark"><i class="material-icons left">code</i>Source Code</a>
+					</div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt iste minus, reiciendis numquam illum quod dicta illo at. Amet eveniet placeat dolorum consequuntur dolorem voluptatibus, nesciunt corrupti tempora esse.</p>
 				</div>
-				<div class="modal-links">
-					<a target="_blank" href="http://dev.gas-colmar.fr/" class="btn dark waves-effect waves-dark"><i class="material-icons left">open_in_new</i>Visit</a>
+				<div class="modal-footer">
+					<a href="#!" class="btn dark modal-close waves-effect waves-dark">Close</a>
 				</div>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt iste minus, reiciendis numquam illum quod dicta illo at. Amet eveniet placeat dolorum consequuntur dolorem voluptatibus, nesciunt corrupti tempora esse.</p>
 			</div>
-			<div class="modal-footer">
-				<a href="#!" class="btn dark modal-close waves-effect waves-dark">Close</a>
-			</div>
-		</div>
-
-		<div id="GelbooruClient" class="modal bottom-sheet">
-			<div class="modal-content row">
-				<div class="col s12">
-					<h2>Gelbooru Client</h2>
-					<h3></h3>
+	
+			<div id="VorrkStudio" class="modal bottom-sheet">
+				<div class="modal-content row">
+					<div class="col s12">
+						<h2>Vorrk Studio</h2>
+						<h3></h3>
+					</div>
+					<div class="modal-links">
+						<a target="_blank" href="https://vorrk.herokuapp.com/" class="btn dark waves-effect waves-light"><i class="material-icons left">open_in_new</i>Visit</a>
+					</div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt iste minus, reiciendis numquam illum quod dicta illo at. Amet eveniet placeat dolorum consequuntur dolorem voluptatibus, nesciunt corrupti tempora esse.</p>
 				</div>
-				<div class="modal-links">
-					<a target="_blank" href="https://keziahmoselle.github.io/gelbooru-client/" class="btn dark waves-effect waves-dark"><i class="material-icons left">open_in_new</i>Visit</a>
-					<a target="_blank" href="https://github.com/KeziahMoselle/gelbooru-client" class="btn dark waves-effect waves-dark"><i class="material-icons left">code</i>Source Code</a>
+				<div class="modal-footer">
+					<a href="#!" class="btn dark modal-close waves-effect waves-dark">Close</a>
 				</div>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt iste minus, reiciendis numquam illum quod dicta illo at. Amet eveniet placeat dolorum consequuntur dolorem voluptatibus, nesciunt corrupti tempora esse.</p>
 			</div>
-			<div class="modal-footer">
-				<a href="#!" class="btn dark modal-close waves-effect waves-dark">Close</a>
+	
+			<!-- Integrations -->
+	
+			<div class="wakatime hide">
+				<embed src="https://wakatime.com/share/@KeziahMoselle/7a5ed4e4-7dbd-4041-9b04-e3aa5f69325b.svg" />
 			</div>
-		</div>
-
-		<div id="EmbosseuseBraille" class="modal bottom-sheet">
-			<div class="modal-content row">
-				<div class="col s12">
-					<h2>Embosseuse Braille</h2>
-					<h3></h3>
-				</div>
-				<div class="modal-links">
-					<a target="_blank" href="https://play.google.com/store/apps/details?id=com.embosseusebraille" class="btn dark waves-effect waves-dark"><i class="material-icons left">open_in_new</i>Visit</a>
-					<a target="_blank" href="https://github.com/KeziahMoselle/braille-embosser" class="btn dark waves-effect waves-dark"><i class="material-icons left">code</i>Source Code</a>
-				</div>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt iste minus, reiciendis numquam illum quod dicta illo at. Amet eveniet placeat dolorum consequuntur dolorem voluptatibus, nesciunt corrupti tempora esse.</p>
-			</div>
-			<div class="modal-footer">
-				<a href="#!" class="btn dark modal-close waves-effect waves-dark">Close</a>
-			</div>
-		</div>
-
-		<div id="VorrkStudio" class="modal bottom-sheet">
-			<div class="modal-content row">
-				<div class="col s12">
-					<h2>Vorrk Studio</h2>
-					<h3></h3>
-				</div>
-				<div class="modal-links">
-					<a target="_blank" href="https://vorrk.herokuapp.com/" class="btn dark waves-effect waves-light"><i class="material-icons left">open_in_new</i>Visit</a>
-				</div>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt iste minus, reiciendis numquam illum quod dicta illo at. Amet eveniet placeat dolorum consequuntur dolorem voluptatibus, nesciunt corrupti tempora esse.</p>
-			</div>
-			<div class="modal-footer">
-				<a href="#!" class="btn dark modal-close waves-effect waves-dark">Close</a>
-			</div>
-		</div>
-
-		<!-- Integrations -->
-
-		<div class="wakatime hide">
-			<embed src="https://wakatime.com/share/@KeziahMoselle/7a5ed4e4-7dbd-4041-9b04-e3aa5f69325b.svg" />
-		</div>
-
-		<!-- Contact Form -->
-
-		<form class="col s12 m10 offset-m1 l8 offset-l2" id="contact-form">
-			<div class="card">
-				<div class="card-content block">
-					<h3>Contact Me</h3>
-					<div class="row">
-						<div class="input-field col s12 m10 offset-m1 l6 offset-l3">
-							<i class="material-icons prefix">email</i>
-							<input v-model="email" type="text" id="email" v-bind:class="emailClass">
-							<label for="email">Your email address :</label>
-							<span class="helper-text" data-error="Your email is not valid." data-success="✓"></span>
-						</div>
-						<div class="input-field col s12 m10 offset-m1 l6 offset-l3">
-							<i class="material-icons prefix">textsms</i>
-							<textarea v-model="message" class="materialize-textarea" id="content" v-bind:class="messageClass"></textarea>
-							<label for="content">Your message :</label>
-							<span class="helper-text" data-error="The message should contains at least 10 characters." data-success="✓"></span>
-						</div>
-						<div class="col s12 center">
-							<button @click.prevent="submit" class="btn dark waves-effect waves-dark" type="submit">Send</button>
+	
+			<!-- Contact Form -->
+	
+			<form class="col s12 m10 offset-m1 l8 offset-l2" id="contact-form">
+				<div class="card">
+					<div class="card-content block">
+						<h3>{{ $t('contact.title') }}</h3>
+						<div class="row">
+							<div class="input-field col s12 m10 offset-m1 l6 offset-l3">
+								<i class="material-icons prefix">email</i>
+								<input v-model="email" type="text" id="email" v-bind:class="emailClass">
+								<label for="email">{{ $t('contact.emailPlaceholder') }}</label>
+								<span class="helper-text" data-error="Your email is not valid." data-success="✓"></span>
+							</div>
+							<div class="input-field col s12 m10 offset-m1 l6 offset-l3">
+								<i class="material-icons prefix">textsms</i>
+								<textarea v-model="message" class="materialize-textarea" id="content" v-bind:class="messageClass"></textarea>
+								<label for="content">{{ $t('contact.messagePlaceholder') }}</label>
+								<span class="helper-text" data-error="The message should contains at least 10 characters." data-success="✓"></span>
+							</div>
+							<div class="col s12 center">
+								<button @click.prevent="submit" class="btn dark waves-effect waves-dark" type="submit">{{ $t('contact.send') }}</button>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</form>
-	</main>
-
-	<footer class="page-footer black">
-		<ul class="center-align">
-			<li><a href="https://github.com/KeziahMoselle"><img src="assets/icons/social/github.svg" alt="GitHub"></a></li>
-			<li><a href="https://twitter.com/KeziahMoselle"><img src="assets/icons/social/twitter.svg" alt="Twitter"></a></li>
-			<li><a href="https://www.instagram.com/keziahmoselle/"><img src="assets/icons/social/instagram.svg" alt="Instagram"></a></li>
-			<li><a href="https://medium.com/@keziahmoselle"><img src="assets/icons/social/medium.svg" alt="Medium"></a></li>
-		</ul>
-	</footer>
+			</form>
+		</main>
+	
+		<footer class="page-footer black">
+			<ul class="center-align">
+				<li><a href="https://github.com/KeziahMoselle"><img src="assets/icons/social/github.svg" alt="GitHub"></a></li>
+				<li><a href="https://twitter.com/KeziahMoselle"><img src="assets/icons/social/twitter.svg" alt="Twitter"></a></li>
+				<li><a href="https://www.instagram.com/keziahmoselle/"><img src="assets/icons/social/instagram.svg" alt="Instagram"></a></li>
+				<li><a href="https://medium.com/@keziahmoselle"><img src="assets/icons/social/medium.svg" alt="Medium"></a></li>
+			</ul>
+		</footer>
+	</div>
 
 	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/baffle.js/0.3.6/baffle.min.js"></script>
 	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.4/scrollreveal.min.js"></script>
-	<script defer src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script>
+	<script defer src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+	<script defer src="https://unpkg.com/vue-i18n@8.3.0/dist/vue-i18n.js"></script>
+	<script defer src="./assets/js/translations.js"></script>
 	<script defer src="./assets/js/app.js"></script>
+	<script defer src="./assets/js/animations.js"></script>
 </body>
 
 </html>

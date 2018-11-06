@@ -1,14 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-  M.AutoInit()
-
-  baffle('.baffle').set({ characters: '01' }).reveal(1000)
-  
-  ScrollReveal().reveal('img.tooltipped')
-  ScrollReveal().reveal('.card-project')
+const i18n = new VueI18n({
+  locale: 'fr',
+  fallbackLocale: 'fr',
+  messages
 })
 
+if (window.location.href.split('#lang=')[1]) {
+  console.log('lang present')
+  i18n.locale = window.location.href.split('#lang=')[1] || 'fr'
+}
+
+
 let vm = new Vue({
-  el: '#contact-form',
+  el: '#app',
+  i18n,
   data: {
     email: '',
     message: '',
@@ -16,6 +20,12 @@ let vm = new Vue({
     messageClass: ''
   },
   methods: {
+    setFr: function () {
+      this.$i18n.locale = 'fr'
+    },
+    setEn: function () {
+      this.$i18n.locale = 'en'
+    },
     submit: function () {
       if (this.isEmailValid && this.isMessageValid) {
         this.sendEmail()

@@ -47,6 +47,29 @@ $placeholder-text-color: #FFF;
 
 /* HEADER */
 
+    /* Translations */
+
+    .translations {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        margin: 0;
+    }
+
+    .translations img {
+        height: 30px;
+        width: auto;
+        transition: border-radius 0.3s;
+    }
+
+    .translations img:hover {
+        border-radius: 30px;
+        border: #FFF 40px solid;
+    }
+
+    /* Banner */
+
     .banner {
         width: 100%;
         box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
