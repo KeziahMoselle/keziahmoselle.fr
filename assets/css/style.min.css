@@ -6572,10 +6572,11 @@ tr {
 .translations img {
   height: 30px;
   width: auto;
-  transition: border-radius 0.4s; }
+  transition: border-radius 0.3s; }
 
 .translations img:hover {
-  border-radius: 30px; }
+  border-radius: 30px;
+  border: #FFF 40px solid; }
 
 /* Banner */
 .banner {
@@ -6615,6 +6616,16 @@ tr {
     font-size: 60px; }
   .logo {
     top: 325px; } }
+
+/* Arrow down */
+button.btn-floating.white {
+  position: relative;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+button.white i {
+  color: black !important; }
 
 /* MAIN */
 /* ABOUT ME */

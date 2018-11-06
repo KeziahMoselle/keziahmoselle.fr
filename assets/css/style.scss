@@ -125,6 +125,19 @@ $placeholder-text-color: #FFF;
         }
     }
 
+    /* Arrow down */
+    
+    button.btn-floating.white {
+        position: relative;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    button.white i {
+        color: black !important;
+    }
+
 /* MAIN */
 
     /* ABOUT ME */
