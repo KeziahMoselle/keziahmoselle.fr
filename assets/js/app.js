@@ -30,11 +30,14 @@ let vm = new Vue({
       if (this.isEmailValid && this.isMessageValid) {
         this.sendEmail()
       } else if (!this.isEmailValid && this.isMessageValid) {
-        M.toast({ html: 'Your email is invalid.' })
+        console.log(messages.fr.contact.errorEmail)
+        M.toast({ html: messages.fr.contact.errorEmail })
       } else if (!this.isMessageValid && this.isEmailValid) {
-        M.toast({ html: 'You must type a message.' })
+        console.log(messages.fr.contact.errorMessage)
+        M.toast({ html: messages.fr.contact.errorMessage })
       } else {
-        M.toast({ html: 'Please fill the two fields.' })
+        console.log(messages.fr.contact.error)
+        M.toast({ html: messages.fr.contact.error })
       }
     },
     sendEmail: function () {
@@ -51,12 +54,12 @@ let vm = new Vue({
       })
       .then(response => {
         if (response.status === 200) {
-          M.toast({ html: 'Your message has been sent !' })
+          M.toast({ html: messages.fr.contact.sent })
         } else {
-          M.toast({ html: 'There was an error, please try again later.' })
+          M.toast({ html: messages.fr.contact.serverError })
         }
       })
-      .catch(() => M.toast({ html: 'There was an error, please try again later.' }))
+      .catch(() => M.toast({ html: messages.fr.contact.serverError }))
     }
   },
   watch: {

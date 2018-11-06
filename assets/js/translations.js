@@ -26,7 +26,12 @@ const messages = {
       title: 'Contact me',
       emailPlaceholder: 'Your email address :',
       messagePlaceholder: 'Your message :',
-      send: 'Send'
+      send: 'Send',
+      errorEmail: 'Your email is invalid.',
+      errorMessage: 'You must type a message.',
+      error: 'Please fill the two fields.',
+      sent: 'Your message has been sent !',
+      serverError: 'There was an error, please try again later.'
     }
   },
   fr: {
@@ -56,7 +61,12 @@ const messages = {
       title: 'Me contacter',
       emailPlaceholder: 'Votre addresse email :',
       messagePlaceholder: 'Votre message :',
-      send: 'Envoyer'
+      send: 'Envoyer',
+      errorEmail: 'Votre addresse email est invalide.',
+      errorMessage: 'Vous devez entrer un message.',
+      error: 'S\'il vous plaît, remplissez les deux champs.',
+      sent: 'Votre message a été envoyé !',
+      serverError: 'Il y a eu une erreur. Veuillez réessayez plus tard'
     }
   }
 }
