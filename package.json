@@ -14,6 +14,6 @@
   },
   "scripts": {
     "build": "node-sass ./assets/css/style.scss ./assets/css/style.min.css --output-style compressed",
-    "dev": "node-sass ./assets/css/style.scss ./assets/css/style.min.css --watch"
+    "dev": "yarn build --watch"
   }
 }
