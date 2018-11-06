@@ -6575,8 +6575,7 @@ tr {
   transition: border-radius 0.3s; }
 
 .translations img:hover {
-  border-radius: 30px;
-  border: #FFF 40px solid; }
+  border-radius: 10px; }
 
 /* Banner */
 .banner {
