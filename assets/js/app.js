@@ -24,6 +24,10 @@ let vm = new Vue({
     setEn: function () {
       this.$i18n.locale = 'en'
     },
+    scrollToContent: function (event) {
+      const elementToScrollTo = event.target
+      elementToScrollTo.scrollIntoView()
+    },
     submit: function () {
       if (this.isEmailValid && this.isMessageValid) {
         this.sendEmail()
