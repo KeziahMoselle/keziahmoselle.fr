@@ -20,9 +20,11 @@ let vm = new Vue({
   methods: {
     setFr: function () {
       this.$i18n.locale = 'fr'
+      window.location.reload()
     },
     setEn: function () {
       this.$i18n.locale = 'en'
+      window.location.reload()
     },
     scrollToContent: function (event) {
       const elementToScrollTo = event.target
