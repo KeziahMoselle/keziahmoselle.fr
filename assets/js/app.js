@@ -5,10 +5,8 @@ const i18n = new VueI18n({
 })
 
 if (window.location.href.split('#lang=')[1]) {
-  console.log('lang present')
   i18n.locale = window.location.href.split('#lang=')[1] || 'fr'
 }
-
 
 let vm = new Vue({
   el: '#app',
@@ -37,7 +35,7 @@ let vm = new Vue({
         M.toast({ html: messages.fr.contact.errorMessage })
       } else {
         console.log(messages.fr.contact.error)
-        M.toast({ html: messages.fr.contact.error })
+        M.toast({ html: messages[i18n.locale].contact.error })
       }
     },
     sendEmail: function () {
@@ -54,12 +52,12 @@ let vm = new Vue({
       })
       .then(response => {
         if (response.status === 200) {
-          M.toast({ html: messages.fr.contact.sent })
+          M.toast({ html: messages[i18n.locale].contact.sent })
         } else {
-          M.toast({ html: messages.fr.contact.serverError })
+          M.toast({ html: messages[i18n.locale].contact.serverError })
         }
       })
-      .catch(() => M.toast({ html: messages.fr.contact.serverError }))
+      .catch(() => M.toast({ html: messages[i18n.locale].contact.serverError }))
     }
   },
   watch: {
