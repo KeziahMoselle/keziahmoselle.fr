@@ -27,7 +27,7 @@ let vm = new Vue({
       window.location.reload()
     },
     scrollToContent: function (event) {
-      const elementToScrollTo = event.target
+      const elementToScrollTo = document.querySelector('main')
       elementToScrollTo.scrollIntoView()
     },
     submit: function () {
