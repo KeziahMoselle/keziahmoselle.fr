@@ -11,8 +11,8 @@ const messages = {
     },
     skills: {
       title: 'Working with',
-      years: 'Years',
-      year: 'Year',
+      years: 'years',
+      year: 'year',
       learning: 'Learning...'
     },
     tools: {
@@ -46,8 +46,8 @@ const messages = {
     },
     skills: {
       title: 'Mes compétences',
-      years: 'Années',
-      year: 'Année',
+      years: 'ans',
+      year: 'an',
       learning: 'Apprentissage...'
     },
     tools: {
