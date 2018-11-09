@@ -422,3 +422,8 @@ body::-webkit-scrollbar-thumb {background-color: $primary-color;}
 
 ::-moz-selection {background: $primary-color;}
 ::selection {background: $primary-color;}
+
+/* SCROLL */
+html {
+    scroll-behavior: smooth;
+}
