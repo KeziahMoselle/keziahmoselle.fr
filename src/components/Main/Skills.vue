@@ -24,8 +24,13 @@
 </template>
 
 <script>
+import Skill from './components/Skill'
+
 export default {
-  name: 'SKills'
+  name: 'Skills',
+  components: {
+    Skill
+  }
 }
 </script>
 

@@ -28,22 +28,26 @@
 <script>
 export default {
   name: 'Contact-form',
-  data: {
-    email: '',
-    message: '',
-    emailClass: '',
-    messageClass: ''
+  data() {
+    return {
+      email: '',
+      message: '',
+      emailClass: '',
+      messageClass: ''
+    }
   },
   methods: {
     submit: function () {
+      const messages = this.$i18n.messages
+      const locale = this.$i18n.locale
       if (this.isEmailValid && this.isMessageValid) {
         this.sendEmail()
       } else if (!this.isEmailValid && this.isMessageValid) {
-        M.toast({ html: messages.fr.contact.errorEmail })
+        M.toast({ html: messages[locale].contact.errorEmail })
       } else if (!this.isMessageValid && this.isEmailValid) {
-        M.toast({ html: messages.fr.contact.errorMessage })
+        M.toast({ html: messages[locale].contact.errorMessage })
       } else {
-        M.toast({ html: messages[i18n.locale].contact.error })
+        M.toast({ html: messages[locale].contact.error })
       }
     },
     sendEmail: function () {

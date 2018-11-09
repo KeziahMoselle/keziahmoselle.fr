@@ -7,7 +7,7 @@
 
     <!-- SKILLS -->
 
-    <SKills></SKills>
+    <Skills></Skills>
 
     <!-- TOOLS & MISC -->
 

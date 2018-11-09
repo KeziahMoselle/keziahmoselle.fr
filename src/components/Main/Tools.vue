@@ -5,13 +5,13 @@
         <div class="block card-content text">
           <h3>{{ $t('tools.title') }}</h3>
           <div class="center row">
-            <Tool lang="GitHub" :years="2"></Tool>
-            <Tool lang="Git" :years="2"></Tool>
-            <Tool lang="VSCode" :years="2"></Tool>
+            <Skill lang="GitHub" :years="2"></Skill>
+            <Skill lang="Git" :years="2"></Skill>
+            <Skill lang="VSCode" :years="2"></Skill>
 
-            <Tool lang="Materialize" :years="3"></Tool>
-            <Tool lang="Bulma" :years="0"></Tool>
-            <Tool lang="Webpack" :years="0"></Tool>
+            <Skill lang="Materialize" :years="3"></Skill>
+            <Skill lang="Bulma" :years="0"></Skill>
+            <Skill lang="Webpack" :years="0"></Skill>
           </div>
         </div>
       </div>
@@ -20,8 +20,13 @@
 </template>
 
 <script>
+import Skill from './components/Skill'
+
 export default {
-  name: 'Tools'
+  name: 'Tools',
+  components: {
+    Skill
+  }
 }
 </script>
 
