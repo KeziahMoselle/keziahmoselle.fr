@@ -8,9 +8,9 @@
             class="material-icons">more_vert</i></a>
       </div>
       <div class="project card-content">
-          <span v-for="tech in technologies" :key="tech.id">
-            <img :src="tech" alt="tech">
-          </span>
+        <span v-for="(tech, key) in technologies">
+          <img :src="tech" alt="tech">
+        </span>
       </div>
     </div>
   </div>
@@ -27,7 +27,7 @@ export default {
   computed: {
     technologies: function () {
       let technologies = []
-      for (i in this.tech) {
+      for (let i in this.tech) {
         const parsedLink = this.filter(this.tech[i])
         technologies.push(`./assets/icons/tech/${parsedLink}.svg`)
       }

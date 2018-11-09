@@ -9,6 +9,8 @@
 
     <div class="center row">
 
+      <!-- PRO -->
+
       <Project title="justbecause.vanessamoselle.fr" :tech="['HTML5', 'CSS3', 'jQuery']" modal-id="#justbecauseVanessamoselle"></Project>
       <Project title="maelysm.fr" :tech="['NodeJS', 'Bulma']" modal-id="#maelysm"></Project>
       <Project title="GAS Colmar" :tech="['PHP', 'Bootstrap']" modal-id="#GASColmar"></Project>
@@ -23,6 +25,8 @@
     </div>
 
     <div class="center row">
+
+      <!-- PERSO -->
 
       <Project title="Gelbooru Client" :tech="['NodeJS', 'Electron', 'Materialize']" modal-id="#GelbooruClient"></Project>
       <Project title="Embosseuse Braille" :tech="['NodeJS', 'Socket.io', 'React Native']" modal-id="#EmbosseuseBraille"></Project>
