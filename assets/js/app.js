@@ -8,7 +8,7 @@ if (window.location.href.split('#lang=')[1]) {
   i18n.locale = window.location.href.split('#lang=')[1] || 'fr'
 }
 
-Vue.component('Skill', {
+const Skill = {
   template: `
     <div class="col s12 m6 l4 skills">
       <img class="tooltipped" data-position="left" :data-tooltip="lang" :src="link" :alt="lang">
@@ -36,9 +36,9 @@ Vue.component('Skill', {
       }
     }
   }
-})
+}
 
-Vue.component('Tool', {
+const Tool = {
   template: `
     <div class="col s12 m6 l4 skills">
       <img class="tooltipped" data-position="left" :data-tooltip="lang" :src="link" :alt="lang">
@@ -66,9 +66,9 @@ Vue.component('Tool', {
       }
     }
   }
-})
+}
 
-Vue.component('Project', {
+const Project =  {
   template: `
     <div class="col s12 m6 l4">
       <div class="card card-project">
@@ -109,11 +109,16 @@ Vue.component('Project', {
       return string.toLowerCase().replace(' ', '').replace('.', '').replace('.fr', '')
     }
   }
-})
+}
 
 let vm = new Vue({
   el: '#app',
   i18n,
+  components: {
+    Skill,
+    Tool,
+    Project
+  },
   data: {
     email: '',
     message: '',
@@ -129,7 +134,7 @@ let vm = new Vue({
       this.$i18n.locale = 'en'
       window.location.reload()
     },
-    scrollToContent: function (event) {
+    scrollToContent: function () {
       const elementToScrollTo = document.querySelector('main')
       elementToScrollTo.scrollIntoView()
     },
