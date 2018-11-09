@@ -11,6 +11,10 @@ const i18n = new VueI18n({
   messages
 })
 
+if (window.location.href.split('#lang=')[1]) {
+  i18n.locale = window.location.href.split('#lang=')[1] || 'fr'
+}
+
 Vue.config.productionTip = true
 
 

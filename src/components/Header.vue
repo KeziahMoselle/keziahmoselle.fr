@@ -1,8 +1,8 @@
 <template>
   <header>
     <div class="translations">
-			<a id="frenchBtn" @click="setFr" href="#lang=fr"><img src="" alt="Drapeau Français"></a>
-			<a id="EnglishBtn" @click="setEn" href="#lang=en"><img src="" alt="English flag"></a>
+			<a id="frenchBtn" @click="setFr" href="#lang=fr"><img src="assets/icons/flag/fr.png" alt="Drapeau Français"></a>
+			<a id="EnglishBtn" @click="setEn" href="#lang=en"><img src="assets/icons/flag/en.png" alt="English flag"></a>
 		</div>
 		<div class="banner black">
 			<h1 class="hide-on-small-only baffle">KEZIAH MOSELLE</h1>
@@ -19,16 +19,27 @@
 export default {
   name: 'Header',
   methods: {
-    setFr: function () {
+    setFr () {
       this.$i18n.locale = 'fr'
+      window.location.reload()
     },
-    setEn: function () {
+    setEn () {
       this.$i18n.locale = 'en'
+      window.location.reload()
+    },
+    scrollToContent () {
+      const elementToScrollTo = document.querySelector('main')
+      elementToScrollTo.scrollIntoView()
     }
   }
 }
 </script>
 
 <style scoped>
+
+  .translations {
+    top: 10px;
+    left: 10px;
+  }
 
 </style>
