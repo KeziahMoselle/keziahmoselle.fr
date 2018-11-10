@@ -38,16 +38,14 @@ export default {
   },
   methods: {
     submit: function () {
-      const messages = this.$i18n.messages
-      const locale = this.$i18n.locale
       if (this.isEmailValid && this.isMessageValid) {
         this.sendEmail()
       } else if (!this.isEmailValid && this.isMessageValid) {
-        M.toast({ html: messages[locale].contact.errorEmail })
+        M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.errorEmail })
       } else if (!this.isMessageValid && this.isEmailValid) {
-        M.toast({ html: messages[locale].contact.errorMessage })
+        M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.errorMessage })
       } else {
-        M.toast({ html: messages[locale].contact.error })
+        M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.error })
       }
     },
     sendEmail: function () {
@@ -64,12 +62,12 @@ export default {
       })
       .then(response => {
         if (response.status === 200) {
-          M.toast({ html: messages[i18n.locale].contact.sent })
+          M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.sent })
         } else {
-          M.toast({ html: messages[i18n.locale].contact.serverError })
+          M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.serverError })
         }
       })
-      .catch(() => M.toast({ html: messages[i18n.locale].contact.serverError }))
+      .catch(() => M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.serverError }))
     }
   },
   watch: {
