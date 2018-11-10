@@ -447,6 +447,12 @@ export default {
 
   body::-webkit-scrollbar {background-color: $primary-color-dark; width: 0.5em;}
   body::-webkit-scrollbar-thumb {background-color: $primary-color;}
+  
+  /* SCROLL */
+
+  html {
+    scroll-behavior: smooth;
+  }
 
   /* SELECTION */
 

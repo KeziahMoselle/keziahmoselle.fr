@@ -3,7 +3,7 @@
     <div class="card">
       <div class="block card-content">
         <h3>{{ $t('portfolio.titlePro') }}</h3>
-        <a class="btn-floating btn-large waves-effect waves-light purple"><i class="material-icons">keyboard_arrow_down</i></a>
+        <a class="btn-floating btn-large waves-effect waves-dark white"><i class="material-icons">keyboard_arrow_down</i></a>
       </div>
     </div>
 
@@ -20,7 +20,7 @@
     <div class="card">
       <div class="block card-content">
         <h3>{{ $t('portfolio.titlePerso') }}</h3>
-        <a class="btn-floating btn-large waves-effect waves-light purple"><i class="material-icons">keyboard_arrow_down</i></a>
+        <a class="btn-floating btn-large waves-effect waves-dark white"><i class="material-icons">keyboard_arrow_down</i></a>
       </div>
     </div>
 
