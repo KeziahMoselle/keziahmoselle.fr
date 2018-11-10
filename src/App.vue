@@ -77,26 +77,6 @@ export default {
 
   /* HEADER */
 
-      /* Translations */
-
-      .translations {
-          position: fixed;
-          right: 0;
-          top: 0;
-          z-index: 2;
-          margin: 0;
-      }
-
-      .translations img {
-          height: 30px;
-          width: auto;
-          transition: border-radius 0.3s;
-      }
-
-      .translations img:hover {
-          border-radius: 10px;
-      }
-
       /* Banner */
 
       .banner {

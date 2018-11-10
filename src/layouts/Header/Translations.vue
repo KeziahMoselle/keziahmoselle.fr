@@ -1,0 +1,42 @@
+<template>
+  <div class="translations">
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown-translations'>{{ $t('header.language') }}</a>
+    <ul id='dropdown-translations' class='dropdown-content'>
+      <li><a @click="setFr" href="#lang=fr">Français</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li><a @click="setEn" href="#lang=en">English</a></li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Translations',
+  mounted () {
+    const dropdownEl = document.querySelector('.dropdown-trigger')
+    const instance = M.Dropdown.init(dropdownEl)
+  },
+  methods: {
+    setFr () {
+      this.$i18n.locale = 'fr'
+      document.querySelector('h2').innerText = 'DÉVELOPPEUR WEB'
+    },
+    setEn () {
+      this.$i18n.locale = 'en'
+      document.querySelector('h2').innerText = 'WEB ENTHUSIAST'
+    }
+  }
+}
+</script>
+
+<style>
+
+  .translations {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    margin: 0;
+  }
+
+</style>

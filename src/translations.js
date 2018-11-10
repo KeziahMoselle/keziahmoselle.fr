@@ -1,7 +1,8 @@
 export default {
   en: {
     header: {
-      subtitle: 'WEB ENTHUSIAST'
+      subtitle: 'WEB ENTHUSIAST',
+      language: 'EN'
     },
     about: {
       title: 'About me',
@@ -36,7 +37,8 @@ export default {
   },
   fr: {
     header: {
-      subtitle: 'DÉVELOPPEUR WEB'
+      subtitle: 'DÉVELOPPEUR WEB',
+      language: 'FR'
     },
     about: {
       title: 'À propos de moi',
