@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Header from './components/Header'
-import Main from './components/Main'
-import Footer from './components/Footer'
+import Header from './layouts/Header'
+import Main from './layouts/Main'
+import Footer from './layouts/Footer'
 
 export default {
   name: 'App',

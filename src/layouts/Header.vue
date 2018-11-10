@@ -16,16 +16,23 @@
 </template>
 
 <script>
+import baffle from 'baffle'
+
 export default {
   name: 'Header',
+  mounted () {
+    baffle('.baffle', {
+      characters: '01'
+    }).reveal(1000)
+  },
   methods: {
     setFr () {
       this.$i18n.locale = 'fr'
-      window.location.reload()
+      document.querySelector('h2').innerText = 'DÉVELOPPEUR WEB'
     },
     setEn () {
       this.$i18n.locale = 'en'
-      window.location.reload()
+      document.querySelector('h2').innerText = 'WEB ENTHUSIAST'
     },
     scrollToContent () {
       const elementToScrollTo = document.querySelector('main')
