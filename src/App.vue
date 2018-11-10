@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import Materialize from 'materialize-css'
+
 import Header from './layouts/Header'
 import Main from './layouts/Main'
 import Footer from './layouts/Footer'
@@ -17,6 +19,9 @@ export default {
     Header,
     Main,
     Footer
+  },
+  mounted () {
+    Materialize.AutoInit()
   }
 }
 </script>
