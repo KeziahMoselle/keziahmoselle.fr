@@ -13,8 +13,8 @@
             <Skill lang="MySQL" :years="2"></Skill>
             <Skill lang="NodeJS" :years="1"></Skill>
 
-            <Skill lang="React Native" :years="0"></Skill>
-            <Skill lang="Electron" :years="0"></Skill>
+            <Skill lang="React Native" :years="1"></Skill>
+            <Skill lang="Electron" :years="1"></Skill>
             <Skill lang="VueJS" :years="0"></Skill>
           </div>
         </div>
