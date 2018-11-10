@@ -2,8 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://keziahmoselle.fr/</loc>
-        <lastmod>2018-11-10</lastmod>
-        <changefreq>3</changefreq>
-        <priority>0.5</priority>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://keziahmoselle.fr/</loc>
+        <priority>1</priority>
     </url>
 </urlset>
