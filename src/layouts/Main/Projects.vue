@@ -1,5 +1,8 @@
 <template>
   <div id="projects" class="col s12 m10 offset-m1 l8 offset-l2">
+
+    <Tags></Tags>
+
     <div class="card">
       <div class="block card-content">
         <h3>{{ $t('portfolio.titlePro') }}</h3>
@@ -38,11 +41,13 @@
 
 <script>
 import Project from './components/Project'
+import Tags from './components/Tags'
 
 export default {
   name: 'Projects',
   components: {
-    Project
+    Project,
+    Tags
   }
 }
 </script>
