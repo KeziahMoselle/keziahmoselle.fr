@@ -39,4 +39,9 @@ export default {
     margin: 0;
   }
 
+  .dropdown-content li > a,
+  .dropdown-content li > span {
+    user-select: none;
+}
+
 </style>

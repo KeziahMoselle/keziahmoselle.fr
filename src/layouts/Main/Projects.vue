@@ -1,36 +1,27 @@
 <template>
   <div id="projects" class="col s12 m10 offset-m1 l8 offset-l2">
-    <div class="card">
-      <div class="block card-content">
-        <h3>{{ $t('portfolio.titlePro') }}</h3>
-        <a class="btn-floating btn-large waves-effect waves-dark white"><i class="material-icons">keyboard_arrow_down</i></a>
-      </div>
-    </div>
+
+    <Tags @sort="sort"></Tags>
 
     <div class="center row">
 
-      <!-- PRO -->
+      <Project
+        v-if="!isSorted"
+        v-for="project in Projects"
+        :key="project.id"
+        :title="project.title"
+        :tech="project.tech"
+        :modal-id="project.modalId">
+      </Project>
 
-      <Project title="justbecause.vanessamoselle.fr" :tech="['HTML5', 'CSS3', 'jQuery']" modal-id="#justbecauseVanessamoselle"></Project>
-      <Project title="maelysm.fr" :tech="['NodeJS', 'Bulma']" modal-id="#maelysm"></Project>
-      <Project title="GAS Colmar" :tech="['PHP', 'Bootstrap']" modal-id="#GASColmar"></Project>
-
-    </div>
-
-    <div class="card">
-      <div class="block card-content">
-        <h3>{{ $t('portfolio.titlePerso') }}</h3>
-        <a class="btn-floating btn-large waves-effect waves-dark white"><i class="material-icons">keyboard_arrow_down</i></a>
-      </div>
-    </div>
-
-    <div class="center row">
-
-      <!-- PERSO -->
-
-      <Project title="Gelbooru Client" :tech="['NodeJS', 'Electron', 'Materialize']" modal-id="#GelbooruClient"></Project>
-      <Project title="Embosseuse Braille" :tech="['NodeJS', 'Socket.io', 'React Native']" modal-id="#EmbosseuseBraille"></Project>
-      <Project title="Vorrk Studio" :tech="['NodeJS', 'Bulma']" modal-id="#VorrkStudio"></Project>
+      <Project
+        v-if="isSorted"
+        v-for="sorted in sortedProjects"
+        :key="sorted.id"
+        :title="sorted.title"
+        :tech="sorted.tech"
+        :modal-id="sorted.modalId">
+      </Project>
 
     </div>
   </div>
@@ -38,11 +29,50 @@
 
 <script>
 import Project from './components/Project'
+import Tags from './components/Tags'
+
+import Projects from './Projects.js'
 
 export default {
   name: 'Projects',
   components: {
-    Project
+    Project,
+    Tags
+  },
+  data () {
+    return {
+      Projects,
+      sortedProjects: []
+    }
+  },
+  computed: {
+    isSorted () {
+      return this.sortedProjects.length > 0 ? true : false
+    }
+  },
+  methods: {
+    sort (tags) {
+      this.sortedProjects = []
+      this.Projects.forEach(project => {
+        tags.forEach(tag => {
+          if (project.tech.includes(tag)) {
+            let isDuplicata
+            this.sortedProjects.forEach(sortedProject => {
+              if (sortedProject.title == project.title) {
+                console.log(true)
+                isDuplicata = true
+              } else {
+                console.log(false)
+                isDuplicata = false
+              }
+            });
+            if (!isDuplicata) {
+              this.sortedProjects.push(project)
+            }
+          }
+        })
+      });
+    }
   }
 }
 </script>

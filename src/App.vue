@@ -75,6 +75,10 @@ export default {
           border-bottom: 0;
       }
 
+      img, label, i.material-icons.prefix {
+          user-select: none;
+      }
+
   /* HEADER */
 
       /* Banner */
@@ -181,11 +185,6 @@ export default {
           .skills img {
               height: 64px;
           }
-      }
-
-      .chip {
-          font-size: 18px;
-          padding: 0 16px;
       }
 
       /* BUTTONS */
@@ -385,6 +384,10 @@ export default {
 
   .modal-links {
       margin-bottom: 24px;
+  }
+
+  .modal-links a {
+      margin: 0 0.75rem;
   }
 
   /* FORM */
