@@ -31,7 +31,7 @@
 import Project from './components/Project'
 import Tags from './components/Tags'
 
-import Projects from './Projects.js'
+import Projects from './listProjects.js'
 
 export default {
   name: 'Projects',
