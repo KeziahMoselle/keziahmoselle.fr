@@ -14,15 +14,17 @@
         </Project>
       </div>
 
-      <div v-if="isSorted">
-        <Project
-          v-for="sorted in sortedProjects"
-          :key="sorted.id"
-          :title="sorted.title"
-          :tech="sorted.tech"
-          :modal-id="sorted.modalId">
-        </Project>
-      </div>
+      <transition name="fade" mode="out-in">
+        <div v-if="isSorted">
+          <Project
+            v-for="sorted in sortedProjects"
+            :key="sorted.id"
+            :title="sorted.title"
+            :tech="sorted.tech"
+            :modal-id="sorted.modalId">
+          </Project>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -71,6 +73,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
 
 </style>

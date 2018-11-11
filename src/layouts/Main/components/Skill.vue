@@ -33,6 +33,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+  .chip {
+    font-size: 18px;
+    padding: 0 16px;
+  }
 
 </style>

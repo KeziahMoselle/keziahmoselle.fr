@@ -34,7 +34,7 @@ export default {
 <style scoped>
 
   .chip {
-    font-size: 16px;
+    font-size: 18px;
     padding: 0 16px;
     user-select: none;
     cursor: pointer;
