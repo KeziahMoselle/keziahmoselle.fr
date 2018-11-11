@@ -4,25 +4,25 @@
     <Tags @sort="sort"></Tags>
 
     <div class="center row">
+      <div v-if="!isSorted">
+        <Project
+          v-for="project in Projects"
+          :key="project.id"
+          :title="project.title"
+          :tech="project.tech"
+          :modal-id="project.modalId">
+        </Project>
+      </div>
 
-      <Project
-        v-if="!isSorted"
-        v-for="project in Projects"
-        :key="project.id"
-        :title="project.title"
-        :tech="project.tech"
-        :modal-id="project.modalId">
-      </Project>
-
-      <Project
-        v-if="isSorted"
-        v-for="sorted in sortedProjects"
-        :key="sorted.id"
-        :title="sorted.title"
-        :tech="sorted.tech"
-        :modal-id="sorted.modalId">
-      </Project>
-
+      <div v-if="isSorted">
+        <Project
+          v-for="sorted in sortedProjects"
+          :key="sorted.id"
+          :title="sorted.title"
+          :tech="sorted.tech"
+          :modal-id="sorted.modalId">
+        </Project>
+      </div>
     </div>
   </div>
 </template>
@@ -58,20 +58,14 @@ export default {
           if (project.tech.includes(tag)) {
             let isDuplicata
             this.sortedProjects.forEach(sortedProject => {
-              if (sortedProject.title == project.title) {
-                console.log(true)
-                isDuplicata = true
-              } else {
-                console.log(false)
-                isDuplicata = false
-              }
+              sortedProject.title === project.title ? isDuplicata = true : isDuplicata = false
             });
             if (!isDuplicata) {
               this.sortedProjects.push(project)
             }
           }
         })
-      });
+      })
     }
   }
 }
