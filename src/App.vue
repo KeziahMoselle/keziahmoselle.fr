@@ -183,11 +183,6 @@ export default {
           }
       }
 
-      .chip {
-          font-size: 18px;
-          padding: 0 16px;
-      }
-
       /* BUTTONS */
 
       .btn.dark:hover {
@@ -385,6 +380,10 @@ export default {
 
   .modal-links {
       margin-bottom: 24px;
+  }
+
+  .modal-links a {
+      margin: 0 0.75rem;
   }
 
   /* FORM */

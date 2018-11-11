@@ -8,7 +8,7 @@
             class="material-icons">more_vert</i></a>
       </div>
       <div class="project card-content">
-        <span v-for="(tech, key) in technologies">
+        <span v-for="tech in technologies" :key="tech">
           <img :src="tech" alt="tech">
         </span>
       </div>
