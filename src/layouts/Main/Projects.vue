@@ -6,11 +6,21 @@
     <div class="center row">
 
       <Project
+        v-if="!isSorted"
         v-for="project in Projects"
         :key="project.id"
         :title="project.title"
         :tech="project.tech"
         :modal-id="project.modalId">
+      </Project>
+
+      <Project
+        v-if="isSorted"
+        v-for="sorted in sortedProjects"
+        :key="sorted.id"
+        :title="sorted.title"
+        :tech="sorted.tech"
+        :modal-id="sorted.modalId">
       </Project>
 
     </div>
@@ -35,12 +45,32 @@ export default {
       sortedProjects: []
     }
   },
+  computed: {
+    isSorted () {
+      return this.sortedProjects.length > 0 ? true : false
+    }
+  },
   methods: {
     sort (tags) {
       this.sortedProjects = []
-      Projects.forEach(project => {
-        // Compare Projects to tags
-        // If Projects.tech [] have 1 similar key to tags [] -> Add it to sortedProjects
+      this.Projects.forEach(project => {
+        tags.forEach(tag => {
+          if (project.tech.includes(tag)) {
+            let isDuplicata
+            this.sortedProjects.forEach(sortedProject => {
+              if (sortedProject.title == project.title) {
+                console.log(true)
+                isDuplicata = true
+              } else {
+                console.log(false)
+                isDuplicata = false
+              }
+            });
+            if (!isDuplicata) {
+              this.sortedProjects.push(project)
+            }
+          }
+        })
       });
     }
   }
