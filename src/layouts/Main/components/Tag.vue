@@ -1,7 +1,7 @@
 <template>
   <div @click="chipClicked" class="chip" :class="{ active: isActive }">
     <img :src="link" alt="aze">{{ lang }}
-    <i v-if="isActive" class="close material-icons">close</i>
+    <i v-if="isActive" class="material-icons">close</i>
   </div>
 </template>
 
@@ -42,6 +42,14 @@ export default {
   .chip > img {
     padding: 5px;
     border-radius: 0;
+  }
+
+  .chip i.material-icons {
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    line-height: 32px;
+    padding-left: 8px;
   }
 
   .active {
