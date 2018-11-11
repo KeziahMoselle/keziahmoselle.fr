@@ -20,8 +20,8 @@ export default {
       title: 'Tools, Frameworks and Miscellaneous'
     },
     portfolio: {
-      titlePro: 'Professional Works',
-      titlePerso: 'Personal Projects'
+      title: 'My Projects',
+      found: 'projects found.'
     },
     contact: {
       title: 'Contact me',
@@ -56,8 +56,8 @@ export default {
       title: 'Outils, Frameworks et divers'
     },
     portfolio: {
-      titlePro: 'Projets Professionnels',
-      titlePerso: 'Projets Personnels'
+      title: 'Mes Projets',
+      found: 'projets correspondant.'
     },
     contact: {
       title: 'Me contacter',

@@ -1,30 +1,39 @@
 <template>
   <div id="projects" class="col s12 m10 offset-m1 l8 offset-l2">
+    <div class="card">
+      <div class="card-content">
 
-    <Tags @sort="sort"></Tags>
+        <h3>{{ $t('portfolio.title') }}</h3>
 
-    <div class="center row">
-      <div v-if="!isSorted">
-        <Project
-          v-for="project in Projects"
-          :key="project.id"
-          :title="project.title"
-          :tech="project.tech"
-          :modal-id="project.modalId">
-        </Project>
-      </div>
+        <Tags @sort="sort"></Tags>
 
-      <transition name="fade" mode="out-in">
-        <div v-if="isSorted">
-          <Project
-            v-for="sorted in sortedProjects"
-            :key="sorted.id"
-            :title="sorted.title"
-            :tech="sorted.tech"
-            :modal-id="sorted.modalId">
-          </Project>
+        <h4 v-if="isSorted">{{ sortedProjects.length }} {{ $t('portfolio.found') }}</h4>
+
+        <div class="center row">
+          <div v-if="!isSorted">
+            <Project
+              v-for="project in Projects"
+              :key="project.id"
+              :title="project.title"
+              :tech="project.tech"
+              :modal-id="project.modalId">
+            </Project>
+          </div>
+
+          <transition name="fade" mode="out-in">
+            <div v-if="isSorted">
+              <Project
+                v-for="sorted in sortedProjects"
+                :key="sorted.id"
+                :title="sorted.title"
+                :tech="sorted.tech"
+                :modal-id="sorted.modalId">
+              </Project>
+            </div>
+          </transition>
         </div>
-      </transition>
+
+      </div>
     </div>
   </div>
 </template>
@@ -80,6 +89,10 @@ export default {
   }
   .fade-enter, .fade-leave-to {
     opacity: 0;
+  }
+
+  h4 {
+    text-align: center;
   }
 
 </style>

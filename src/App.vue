@@ -67,6 +67,10 @@ export default {
           font-weight: 300;
       }
 
+      h3 {
+          font-size: 2rem;
+      }
+
       main {
           margin: 40px 0 0 0;
       }
@@ -259,10 +263,6 @@ export default {
 
       #projects .card .card-title {
           font-size: 2rem;
-      }
-      
-      #projects .card .card-content h3 {
-          margin-bottom: 14px;
       }
 
       #projects .card .card-content:not(.project) {

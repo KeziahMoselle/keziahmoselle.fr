@@ -4,13 +4,13 @@
       <div class="card-content block">
         <h3>{{ $t('contact.title') }}</h3>
         <div class="row">
-          <div class="input-field col s12 m10 offset-m1 l6 offset-l3">
+          <div class="input-field col s12 m10 offset-m1 l8 offset-l2">
             <i class="material-icons prefix">email</i>
             <input v-model="email" type="text" id="email" v-bind:class="emailClass">
             <label for="email">{{ $t('contact.emailPlaceholder') }}</label>
             <span class="helper-text" data-error="Your email is not valid." data-success="✓"></span>
           </div>
-          <div class="input-field col s12 m10 offset-m1 l6 offset-l3">
+          <div class="input-field col s12 m10 offset-m1 l8 offset-l2">
             <i class="material-icons prefix">textsms</i>
             <textarea v-model="message" class="materialize-textarea" id="content" v-bind:class="messageClass"></textarea>
             <label for="content">{{ $t('contact.messagePlaceholder') }}</label>
