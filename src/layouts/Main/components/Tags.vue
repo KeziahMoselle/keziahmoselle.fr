@@ -33,12 +33,26 @@ export default {
         'Bulma',
         'Bootstrap',
         'Materialize'
-      ]
+      ],
+      activeTechnologies: []
     }
   },
   methods: {
     chipClicked (technology, isActive) {
-      console.log(technology + ' is ' + isActive)
+      if (isActive) {
+        this.activeTechnologies.push(technology)
+      } else {
+        const index = this.activeTechnologies.indexOf(technology)
+        if (index !== -1) {
+          this.activeTechnologies.splice(index, 1)
+        }
+      }
+      console.log(this.activeTechnologies)
+    }
+  },
+  watch: {
+    activeTechnologies () {
+      
     }
   }
 }
