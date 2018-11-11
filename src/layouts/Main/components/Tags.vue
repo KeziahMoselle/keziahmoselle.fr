@@ -47,12 +47,11 @@ export default {
           this.activeTechnologies.splice(index, 1)
         }
       }
-      console.log(this.activeTechnologies)
     }
   },
   watch: {
     activeTechnologies () {
-      
+      this.$emit('sort', this.activeTechnologies)
     }
   }
 }

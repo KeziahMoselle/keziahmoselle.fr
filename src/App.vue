@@ -75,6 +75,10 @@ export default {
           border-bottom: 0;
       }
 
+      img, label, i.material-icons.prefix {
+          user-select: none;
+      }
+
   /* HEADER */
 
       /* Banner */

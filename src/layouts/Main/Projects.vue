@@ -1,39 +1,17 @@
 <template>
   <div id="projects" class="col s12 m10 offset-m1 l8 offset-l2">
 
-    <Tags></Tags>
-
-    <div class="card">
-      <div class="block card-content">
-        <h3>{{ $t('portfolio.titlePro') }}</h3>
-        <a class="btn-floating btn-large waves-effect waves-dark white"><i class="material-icons">keyboard_arrow_down</i></a>
-      </div>
-    </div>
+    <Tags @sort="sort"></Tags>
 
     <div class="center row">
 
-      <!-- PRO -->
-
-      <Project title="justbecause.vanessamoselle.fr" :tech="['HTML5', 'CSS3', 'jQuery']" modal-id="#justbecauseVanessamoselle"></Project>
-      <Project title="maelysm.fr" :tech="['NodeJS', 'Bulma']" modal-id="#maelysm"></Project>
-      <Project title="GAS Colmar" :tech="['PHP', 'Bootstrap']" modal-id="#GASColmar"></Project>
-
-    </div>
-
-    <div class="card">
-      <div class="block card-content">
-        <h3>{{ $t('portfolio.titlePerso') }}</h3>
-        <a class="btn-floating btn-large waves-effect waves-dark white"><i class="material-icons">keyboard_arrow_down</i></a>
-      </div>
-    </div>
-
-    <div class="center row">
-
-      <!-- PERSO -->
-
-      <Project title="Gelbooru Client" :tech="['NodeJS', 'Electron', 'Materialize']" modal-id="#GelbooruClient"></Project>
-      <Project title="Embosseuse Braille" :tech="['NodeJS', 'Socket.io', 'React Native']" modal-id="#EmbosseuseBraille"></Project>
-      <Project title="Vorrk Studio" :tech="['NodeJS', 'Bulma']" modal-id="#VorrkStudio"></Project>
+      <Project
+        v-for="project in Projects"
+        :key="project.id"
+        :title="project.title"
+        :tech="project.tech"
+        :modal-id="project.modalId">
+      </Project>
 
     </div>
   </div>
@@ -43,11 +21,28 @@
 import Project from './components/Project'
 import Tags from './components/Tags'
 
+import Projects from './Projects.js'
+
 export default {
   name: 'Projects',
   components: {
     Project,
     Tags
+  },
+  data () {
+    return {
+      Projects,
+      sortedProjects: []
+    }
+  },
+  methods: {
+    sort (tags) {
+      this.sortedProjects = []
+      Projects.forEach(project => {
+        // Compare Projects to tags
+        // If Projects.tech [] have 1 similar key to tags [] -> Add it to sortedProjects
+      });
+    }
   }
 }
 </script>
