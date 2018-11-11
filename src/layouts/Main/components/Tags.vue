@@ -27,7 +27,7 @@ export default {
         'PHP',
         'MySQL',
         'NodeJS',
-        'React',
+        'React Native',
         'Electron',
         'VueJS',
         'Bulma',

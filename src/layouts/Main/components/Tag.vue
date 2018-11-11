@@ -1,5 +1,8 @@
 <template>
-  <div @click="chipClicked" class="chip" :class="{ active: isActive }">{{ lang }}</div>
+  <div @click="chipClicked" class="chip" :class="{ active: isActive }">
+    <img :src="link" alt="aze">{{ lang }}
+    <i v-if="isActive" class="close material-icons">close</i>
+  </div>
 </template>
 
 <script>
@@ -13,9 +16,15 @@ export default {
       isActive: false
     }
   },
+  computed: {
+    link () {
+      const parsedLink = this.lang.toLowerCase().replace(' ', '')
+      return `./assets/icons/tech/${parsedLink}.svg`
+    },
+  },
   methods: {
     chipClicked () {
-      this.isActive === true ? this.isActive = false : this.isActive = true
+      this.isActive = !this.isActive
       this.$emit('chipClicked', this.lang, this.isActive)
     }
   }
@@ -30,9 +39,9 @@ export default {
     transition: background-color, color 0.4s;
   }
 
-  .chip:hover {
-    background-color: #ED145B;
-    color: white;
+  .chip > img {
+    padding: 5px;
+    border-radius: 0;
   }
 
   .active {
