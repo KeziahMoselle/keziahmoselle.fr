@@ -17,7 +17,6 @@ if (window.location.href.split('#lang=')[1]) {
 
 Vue.config.productionTip = true
 
-
 new Vue({
   i18n,
   render: h => h(App)

@@ -49,8 +49,17 @@ export default {
 <style scoped>
 
   .chip {
+    margin-top: 10px;
     font-size: 18px;
     padding: 0 16px;
+  }
+
+  img {
+    transition: transform 0.3s;
+  }
+
+  img:hover {
+    transform: scale(1.2);
   }
 
 </style>

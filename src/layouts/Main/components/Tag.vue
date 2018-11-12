@@ -54,9 +54,14 @@ export default {
     padding-left: 8px;
   }
 
+  .chip:hover {
+    background-color: white;
+    color: black;
+  }
+
   .active {
-    background-color: #ED145B;
-    color: white;
+    background-color: #ED145B !important;
+    color: white !important;
   }
 
 </style>
