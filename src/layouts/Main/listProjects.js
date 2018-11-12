@@ -28,5 +28,9 @@ export default [
     title: 'Vorrk Studio',
     tech: ['NodeJS', 'Bulma'],
     modalId: '#VorrkStudio'
+  },
+  {
+    title: 'keziahmoselle.fr',
+    tech: ['VueJS', 'Materialize']
   }
 ]

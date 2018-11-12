@@ -4,7 +4,7 @@
       <div class="card-image">
         <img :src="backgroundImg" :alt="title">
         <span class="card-title">{{ title }}</span>
-        <a :href="modalId" class="modal-trigger btn-floating halfway-fab waves-effect waves-dark white"><i
+        <a v-if="modalId" :href="modalId" class="modal-trigger btn-floating halfway-fab waves-effect waves-dark white"><i
             class="material-icons">more_vert</i></a>
       </div>
       <div class="project card-content">
@@ -20,9 +20,15 @@
 export default {
   name: 'Project',
   props: {
-    title: String,
-    modalId: String,
-    tech: Array
+    title: {
+      type: String,
+      required: true
+    },
+    tech: {
+      type: Array,
+      required: true
+    },
+    modalId: String
   },
   computed: {
     technologies: function () {
