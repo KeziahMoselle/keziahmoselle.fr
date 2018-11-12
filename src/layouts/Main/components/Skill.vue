@@ -1,5 +1,5 @@
 <template>
-  <div class="col s12 m6 l4 skills">
+  <div class="col s6 l4 skills">
     <img class="tooltipped" data-position="left" :data-tooltip="lang" :src="link" :alt="lang">
     <div>
       <div class="chip">{{ experience }}</div>

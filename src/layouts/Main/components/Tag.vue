@@ -38,7 +38,7 @@ export default {
     padding: 0 16px;
     user-select: none;
     cursor: pointer;
-    transition: background-color, color 0.4s;
+    transition: background-color 0.4s, color 0.4s;
   }
 
   .chip > img {
