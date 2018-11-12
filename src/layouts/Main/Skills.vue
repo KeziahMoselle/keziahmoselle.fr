@@ -5,17 +5,17 @@
         <div class="block card-content text">
           <h3>{{ $t('skills.title') }}</h3>
           <div class="center row">
-            <Skill lang="HTML5" :years="4"></Skill>
-            <Skill lang="CSS3" :years="4"></Skill>
-            <Skill lang="JavaScript" :years="2"></Skill>
+            <Skill lang="HTML5" years="2014"></Skill>
+            <Skill lang="CSS3" years="2014"></Skill>
+            <Skill lang="JavaScript" years="2016"></Skill>
 
-            <Skill lang="PHP" :years="2"></Skill>
-            <Skill lang="MySQL" :years="2"></Skill>
-            <Skill lang="NodeJS" :years="1"></Skill>
+            <Skill lang="PHP" years="2016"></Skill>
+            <Skill lang="MySQL" years="2016"></Skill>
+            <Skill lang="NodeJS" years="2017"></Skill>
 
-            <Skill lang="React Native" :years="1"></Skill>
-            <Skill lang="Electron" :years="1"></Skill>
-            <Skill lang="VueJS" :years="0"></Skill>
+            <Skill lang="React Native" years="2017"></Skill>
+            <Skill lang="Electron" years="2017"></Skill>
+            <Skill lang="VueJS" years="2018"></Skill>
           </div>
         </div>
       </div>

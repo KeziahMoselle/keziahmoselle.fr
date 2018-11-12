@@ -10,9 +10,20 @@
 <script>
 export default {
   name: 'Skill',
+  data () {
+    return {
+      actualYear: new Date().getFullYear()
+    }
+  },
   props: {
-    lang: String,
-    years: Number
+    lang: {
+      type: String,
+      require: true
+    },
+    years: {
+      type: String,
+      required: true
+    }
   },
   computed: {
     link: function () {
@@ -20,11 +31,13 @@ export default {
       return `./assets/icons/tech/${parsedLink}.svg`
     },
     experience: function () {
-      if (this.years > 0) {
-        if (this.years === 1) {
-          return `${this.years} ${this.$parent.$t('skills.year')}`
+      const startDate = new Date(this.years).getFullYear()
+      const years = this.actualYear - startDate
+      if (years > 0) {
+        if (years === 1) {
+          return `${years} ${this.$parent.$t('skills.year')}`
         }
-        return `${this.years} ${this.$parent.$t('skills.years')}`
+        return `${years} ${this.$parent.$t('skills.years')}`
       } else {
         return this.$parent.$t('skills.learning')
       }

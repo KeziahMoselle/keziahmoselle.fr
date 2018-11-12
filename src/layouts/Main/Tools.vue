@@ -5,13 +5,13 @@
         <div class="block card-content text">
           <h3>{{ $t('tools.title') }}</h3>
           <div class="center row">
-            <Skill lang="GitHub" :years="2"></Skill>
-            <Skill lang="Git" :years="2"></Skill>
-            <Skill lang="VSCode" :years="2"></Skill>
+            <Skill lang="GitHub" years="2016"></Skill>
+            <Skill lang="Git" years="2016"></Skill>
+            <Skill lang="VSCode" years="2016"></Skill>
 
-            <Skill lang="Materialize" :years="3"></Skill>
-            <Skill lang="Bulma" :years="0"></Skill>
-            <Skill lang="Webpack" :years="0"></Skill>
+            <Skill lang="Materialize" years="2015"></Skill>
+            <Skill lang="Bulma" years="2018"></Skill>
+            <Skill lang="Webpack" years="2018"></Skill>
           </div>
         </div>
       </div>
