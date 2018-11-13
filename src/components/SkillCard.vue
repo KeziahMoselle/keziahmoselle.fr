@@ -8,8 +8,10 @@
 </template>
 
 <script>
+import filter from '@/utils/filter'
+
 export default {
-  name: 'Skill',
+  name: 'SkillCard',
   data () {
     return {
       actualYear: new Date().getFullYear()
@@ -27,7 +29,7 @@ export default {
   },
   computed: {
     link: function () {
-      const parsedLink = this.lang.toLowerCase().replace(' ', '')
+      const parsedLink = filter(this.lang)
       return `./assets/icons/tech/${parsedLink}.svg`
     },
     experience: function () {

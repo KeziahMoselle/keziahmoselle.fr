@@ -17,8 +17,10 @@
 </template>
 
 <script>
+import filter from '@/utils/filter'
+
 export default {
-  name: 'Project',
+  name: 'ProjectCard',
   props: {
     title: {
       type: String,
@@ -34,19 +36,14 @@ export default {
     technologies: function () {
       let technologies = []
       for (let i in this.tech) {
-        const parsedLink = this.filter(this.tech[i])
+        const parsedLink = filter(this.tech[i])
         technologies.push(`./assets/icons/tech/${parsedLink}.svg`)
       }
       return technologies
     },
     backgroundImg: function () {
-      const parsedTitle = this.filter(this.title)
+      const parsedTitle = filter(this.title)
       return `./assets/icons/project/${parsedTitle}.png`
-    }
-  },
-  methods: {
-    filter: function (string) {
-      return string.toLowerCase().replace(' ', '').replace('.', '').replace('.fr', '')
     }
   }
 }

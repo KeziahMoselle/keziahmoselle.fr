@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'Translations',
+  name: 'TranslationButton',
   mounted () {
     const dropdownEl = document.querySelector('.dropdown-trigger')
     const instance = M.Dropdown.init(dropdownEl)

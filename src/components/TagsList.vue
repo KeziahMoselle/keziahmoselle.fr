@@ -1,21 +1,21 @@
 <template>
   <div class="container-tags">
-    <Tag
+    <TagsListChip
       v-for="technology in technologies"
       :key="technology.id"
       :lang="technology"
       v-on:chipClicked="chipClicked">
-    </Tag>
+    </TagsListChip>
   </div>
 </template>
 
 <script>
-import Tag from './Tag'
+import TagsListChip from './TagsListChip'
 
 export default {
-  name: 'Tags',
+  name: 'TagsList',
   components: {
-    Tag
+    TagsListChip
   },
   data () {
     return {

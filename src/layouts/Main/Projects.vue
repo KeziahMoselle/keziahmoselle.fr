@@ -5,30 +5,30 @@
 
         <h3>{{ $t('portfolio.title') }}</h3>
 
-        <Tags @sort="sort"></Tags>
+        <TagsList @sort="sort"></TagsList>
 
         <h4 v-if="isSorted">{{ sortedProjects.length }} {{ $t('portfolio.found') }}</h4>
 
         <div class="center row">
           <div v-if="!isSorted">
-            <Project
+            <Project-card
               v-for="project in Projects"
               :key="project.id"
               :title="project.title"
               :tech="project.tech"
               :modal-id="project.modalId">
-            </Project>
+            </Project-card>
           </div>
 
           <transition name="fade" mode="out-in">
             <div v-if="isSorted">
-              <Project
+              <Project-card
                 v-for="sorted in sortedProjects"
                 :key="sorted.id"
                 :title="sorted.title"
                 :tech="sorted.tech"
                 :modal-id="sorted.modalId">
-              </Project>
+              </Project-card>
             </div>
           </transition>
         </div>
@@ -39,16 +39,16 @@
 </template>
 
 <script>
-import Project from './components/Project'
-import Tags from './components/Tags'
+import ProjectCard from '@/components/ProjectCard'
+import TagsList from '@/components/TagsList'
 
-import Projects from './listProjects.js'
+import Projects from '@/myProjects.js'
 
 export default {
   name: 'Projects',
   components: {
-    Project,
-    Tags
+    ProjectCard,
+    TagsList
   },
   data () {
     return {
