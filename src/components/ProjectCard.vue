@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import filter from '@/utils/filter'
+import filter from '@/mixins/filter'
 
 export default {
   name: 'ProjectCard',
@@ -32,17 +32,20 @@ export default {
     },
     modalId: String
   },
+  methods: {
+    filter
+  },
   computed: {
     technologies: function () {
       let technologies = []
       for (let i in this.tech) {
-        const parsedLink = filter(this.tech[i])
+        const parsedLink = this.filter(this.tech[i])
         technologies.push(`./assets/icons/tech/${parsedLink}.svg`)
       }
       return technologies
     },
     backgroundImg: function () {
-      const parsedTitle = filter(this.title)
+      const parsedTitle = this.filter(this.title)
       return `./assets/icons/project/${parsedTitle}.png`
     }
   }

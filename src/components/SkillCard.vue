@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import filter from '@/utils/filter'
+import filter from '@/mixins/filter'
 
 export default {
   name: 'SkillCard',
@@ -27,9 +27,12 @@ export default {
       required: true
     }
   },
+  methods: {
+    filter
+  },
   computed: {
     link: function () {
-      const parsedLink = filter(this.lang)
+      const parsedLink = this.filter(this.lang)
       return `./assets/icons/tech/${parsedLink}.svg`
     },
     experience: function () {
