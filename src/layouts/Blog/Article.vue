@@ -72,7 +72,7 @@ export default {
   .scale-transition {
     position: absolute;
     right: -28px;
-    top: 35px;
+    top: 18px;
   }
 
 </style>
