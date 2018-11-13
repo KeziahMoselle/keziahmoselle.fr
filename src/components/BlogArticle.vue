@@ -1,15 +1,28 @@
 <template>
   <article class="card">
-    <div class="card-content">
+    <div @mouseover="toggleBtn" @mouseout="toggleBtn" class="card-content">
       <h4>Title</h4>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+      <a :class="[ displayBtn ? 'scale-in' : 'scale-out' ]" class="btn-floating btn-large scale-transition">
+        <i class="material-icons">keyboard_arrow_right</i>
+      </a>
     </div>
   </article>
 </template>
 
 <script>
 export default {
-  name: 'BlogArticle'
+  name: 'BlogArticle',
+  data () {
+    return {
+      displayBtn: false
+    }
+  },
+  methods: {
+    toggleBtn () {
+      this.displayBtn = !this.displayBtn
+    }
+  }
 }
 </script>
 
@@ -18,10 +31,11 @@ export default {
   article {
     cursor: pointer;
     border-radius: 6px;
+    transition: background-color 0.4s;
   }
 
-  article:hover {
-    border: 1px solid white;
+  article:hover .card {
+    background-color: white !important;
   }
 
   div.card-content {
@@ -41,6 +55,12 @@ export default {
     padding: 10px 20px 0 20px;
     font-size: 18px;
     overflow: hidden;
+  }
+
+  .scale-transition {
+    position: absolute;
+    right: -28px;
+    top: 35px;
   }
 
 </style>
