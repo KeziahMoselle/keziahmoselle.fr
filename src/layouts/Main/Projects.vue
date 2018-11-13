@@ -12,7 +12,7 @@
         <div class="center row">
           <div v-if="!isSorted">
             <Project-card
-              v-for="project in Projects"
+              v-for="project in myProjects"
               :key="project.id"
               :title="project.title"
               :tech="project.tech"
@@ -42,7 +42,7 @@
 import ProjectCard from '@/components/ProjectCard'
 import TagsList from '@/components/TagsList'
 
-import Projects from '@/myProjects.js'
+import myProjects from '@/myProjects.js'
 
 export default {
   name: 'Projects',
@@ -52,7 +52,7 @@ export default {
   },
   data () {
     return {
-      Projects,
+      myProjects,
       sortedProjects: []
     }
   },
@@ -64,7 +64,7 @@ export default {
   methods: {
     sort (tags) {
       this.sortedProjects = []
-      this.Projects.forEach(project => {
+      this.myProjects.forEach(project => {
         tags.forEach(tag => {
           if (project.tech.includes(tag)) {
             let isDuplicata
