@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>You're reading article n°{{ $route.params.id }}</h1>
+    <h1>You're reading article n°{{ id }}</h1>
     <button @click="goBack" class="btn">Go Back</button>
   </div>
 </template>
@@ -8,9 +8,15 @@
 <script>
 export default {
   name: 'BlogArticleRead',
+  props: {
+    id: {
+      type: Number,
+      required: true
+    }
+  },
   methods: {
     goBack () {
-      this.$router.go(-1)
+      this.$router.push('/blog')
     }
   }
 }

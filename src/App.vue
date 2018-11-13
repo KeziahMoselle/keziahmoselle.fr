@@ -3,6 +3,7 @@
     <Header></Header>
     <transition name="fade" mode="out-in">
         <router-view></router-view>
+        <router-view name="article"></router-view>
     </transition>
     <Footer></Footer>
   </div>

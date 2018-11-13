@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="'/blog/'+id">
+  <router-link :to="{ name: 'readArticle', params: { id: id } }">
     <article class="card">
       <div @mouseover="toggleBtn" @mouseout="toggleBtn" class="card-content">
         <h4>Title {{ id }}</h4>
@@ -47,11 +47,14 @@ export default {
   }
 
   div.card-content {
-    padding-top: 25px;
+    padding-top: 30px;
     padding-bottom: 25px;
   }
 
   h4 {
+    position: absolute;
+    top: -10px;
+    left: -10px;
     font-size: 1.7rem;
     color: black;
     display: inline-block;
