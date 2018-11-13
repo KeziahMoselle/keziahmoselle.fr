@@ -32,7 +32,7 @@ export default {
 <style>
 
   .translations {
-    position: fixed;
+    position: absolute;
     top: 10px;
     left: 10px;
     z-index: 2;

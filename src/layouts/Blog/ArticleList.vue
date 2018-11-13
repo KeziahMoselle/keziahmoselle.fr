@@ -1,5 +1,5 @@
 <template>
-  <main class="row">
+  <div class="row">
     <div class="col s12 m10 offset-m1 l8 offset-l2">
 
       <div class="card-panel col s12 m10 offset-m1 l8 offset-l2">
@@ -14,7 +14,7 @@
       </Article>
 
     </div>
-  </main>
+  </div>
 </template>
 
 <script>

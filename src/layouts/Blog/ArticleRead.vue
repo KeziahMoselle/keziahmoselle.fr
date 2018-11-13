@@ -1,5 +1,5 @@
 <template>
-  <main class="row">
+  <div class="row">
 
     <div class="card-panel col s12 m10 offset-m1 l6 offset-l3">
       <router-link to="/blog" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">keyboard_arrow_left</i></router-link>
@@ -20,7 +20,7 @@
       </div>
     </div>
 
-  </main>
+  </div>
 </template>
 
 <script>
