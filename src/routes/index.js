@@ -1,6 +1,8 @@
+import VueRouter from 'vue-router'
+
 import Main from '@/layouts/Main'
 import Blog from '@/layouts/Blog'
-import VueRouter from 'vue-router';
+import BlogArticleRead from '@/components/BlogArticleRead'
 
 const routes = [
   {
@@ -9,7 +11,13 @@ const routes = [
   },
   {
     path: '/blog',
-    component: Blog
+    component: Blog,
+    children: [
+      {
+        path: ':id',
+        component: BlogArticleRead
+      }
+    ]
   }
 ]
 

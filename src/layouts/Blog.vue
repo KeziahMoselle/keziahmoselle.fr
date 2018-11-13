@@ -11,8 +11,11 @@
 
       <blog-article class="col s12"
         v-for="i in 5"
-        :key="i">
+        :key="i"
+        :id="i">
       </blog-article>
+
+      <router-view></router-view>
 
     </div>
 

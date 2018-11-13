@@ -1,13 +1,15 @@
 <template>
-  <article class="card">
-    <div @mouseover="toggleBtn" @mouseout="toggleBtn" class="card-content">
-      <h4>Title</h4>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
-      <a :class="[ displayBtn ? 'scale-in' : 'scale-out' ]" class="btn-floating btn-large scale-transition">
-        <i class="material-icons">keyboard_arrow_right</i>
-      </a>
-    </div>
-  </article>
+  <router-link :to="'/blog/'+id">
+    <article class="card">
+      <div @mouseover="toggleBtn" @mouseout="toggleBtn" class="card-content">
+        <h4>Title {{ id }}</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+        <a :class="[ displayBtn ? 'scale-in' : 'scale-out' ]" class="btn-floating btn-large scale-transition">
+          <i class="material-icons">keyboard_arrow_right</i>
+        </a>
+      </div>
+    </article>
+  </router-link>
 </template>
 
 <script>
@@ -16,6 +18,12 @@ export default {
   data () {
     return {
       displayBtn: false
+    }
+  },
+  props: {
+    id: {
+      type: Number,
+      required: true
     }
   },
   methods: {
@@ -55,6 +63,7 @@ export default {
     padding: 10px 20px 0 20px;
     font-size: 18px;
     overflow: hidden;
+    color: white;
   }
 
   .scale-transition {
