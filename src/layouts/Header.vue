@@ -1,6 +1,6 @@
 <template>
   <header>
-    <Translations></Translations>
+    <Translation-button></Translation-button>
 		<div class="banner black">
 			<h1 class="hide-on-small-only baffle">KEZIAH MOSELLE</h1>
 		</div>
@@ -13,13 +13,13 @@
 </template>
 
 <script>
-import Translations from './Header/Translations'
+import TranslationButton from '@/components/TranslationButton'
 import baffle from 'baffle'
 
 export default {
   name: 'Header',
   components: {
-    Translations
+    TranslationButton
   },
   mounted () {
     baffle('.baffle', {

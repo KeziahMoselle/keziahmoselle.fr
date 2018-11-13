@@ -8,8 +8,10 @@
 </template>
 
 <script>
+import filter from '@/mixins/filter'
+
 export default {
-  name: 'Skill',
+  name: 'SkillCard',
   data () {
     return {
       actualYear: new Date().getFullYear()
@@ -25,9 +27,12 @@ export default {
       required: true
     }
   },
+  methods: {
+    filter
+  },
   computed: {
     link: function () {
-      const parsedLink = this.lang.toLowerCase().replace(' ', '')
+      const parsedLink = this.filter(this.lang)
       return `./assets/icons/tech/${parsedLink}.svg`
     },
     experience: function () {

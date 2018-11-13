@@ -5,17 +5,17 @@
         <div class="block card-content text">
           <h3>{{ $t('skills.title') }}</h3>
           <div class="center row">
-            <Skill lang="HTML5" years="2014"></Skill>
-            <Skill lang="CSS3" years="2014"></Skill>
-            <Skill lang="JavaScript" years="2016"></Skill>
+            <Skill-card lang="HTML5" years="2014"></Skill-card>
+            <Skill-card lang="CSS3" years="2014"></Skill-card>
+            <Skill-card lang="JavaScript" years="2016"></Skill-card>
 
-            <Skill lang="PHP" years="2016"></Skill>
-            <Skill lang="MySQL" years="2016"></Skill>
-            <Skill lang="NodeJS" years="2017"></Skill>
+            <Skill-card lang="PHP" years="2016"></Skill-card>
+            <Skill-card lang="MySQL" years="2016"></Skill-card>
+            <Skill-card lang="NodeJS" years="2017"></Skill-card>
 
-            <Skill lang="React Native" years="2017"></Skill>
-            <Skill lang="Electron" years="2017"></Skill>
-            <Skill lang="VueJS" years="2018"></Skill>
+            <Skill-card lang="React Native" years="2017"></Skill-card>
+            <Skill-card lang="Electron" years="2017"></Skill-card>
+            <Skill-card lang="VueJS" years="2018"></Skill-card>
           </div>
         </div>
       </div>
@@ -24,12 +24,12 @@
 </template>
 
 <script>
-import Skill from './components/Skill'
+import SkillCard from '@/components/SkillCard'
 
 export default {
   name: 'Skills',
   components: {
-    Skill
+    SkillCard
   }
 }
 </script>

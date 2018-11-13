@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'Translations',
+  name: 'TranslationButton',
   mounted () {
     const dropdownEl = document.querySelector('.dropdown-trigger')
     const instance = M.Dropdown.init(dropdownEl)
@@ -19,11 +19,11 @@ export default {
   methods: {
     setFr () {
       this.$i18n.locale = 'fr'
-      document.querySelector('h2').innerText = 'DÉVELOPPEUR WEB'
+      document.querySelector('h2').innerText = this.$i18n.messages.fr.header.subtitle
     },
     setEn () {
       this.$i18n.locale = 'en'
-      document.querySelector('h2').innerText = 'WEB ENTHUSIAST'
+      document.querySelector('h2').innerText = this.$i18n.messages.en.header.subtitle
     }
   }
 }

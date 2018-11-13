@@ -17,8 +17,10 @@
 </template>
 
 <script>
+import filter from '@/mixins/filter'
+
 export default {
-  name: 'Project',
+  name: 'ProjectCard',
   props: {
     title: {
       type: String,
@@ -29,6 +31,9 @@ export default {
       required: true
     },
     modalId: String
+  },
+  methods: {
+    filter
   },
   computed: {
     technologies: function () {
@@ -42,11 +47,6 @@ export default {
     backgroundImg: function () {
       const parsedTitle = this.filter(this.title)
       return `./assets/icons/project/${parsedTitle}.png`
-    }
-  },
-  methods: {
-    filter: function (string) {
-      return string.toLowerCase().replace(' ', '').replace('.', '').replace('.fr', '')
     }
   }
 }

@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'Tag',
+  name: 'TagsListChip',
   props: {
     lang: String
   },
