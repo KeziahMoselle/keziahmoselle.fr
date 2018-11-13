@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import TagsListChip from './TagsListChip'
+import TagsListChip from '@/components/TagsListChip'
 
 export default {
   name: 'TagsList',

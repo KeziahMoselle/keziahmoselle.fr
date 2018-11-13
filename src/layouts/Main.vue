@@ -148,11 +148,11 @@
 </template>
 
 <script>
-import About from './Main/About'
-import Skills from './Main/Skills'
-import Tools from './Main/Tools'
-import Projects from './Main/Projects'
-import ContactForm from './Main/ContactForm'
+import About from '@/layouts/Main/About'
+import Skills from '@/layouts/Main/Skills'
+import Tools from '@/layouts/Main/Tools'
+import Projects from '@/layouts/Main/Projects'
+import ContactForm from '@/layouts/Main/ContactForm'
 
 export default {
   name: 'Main',
