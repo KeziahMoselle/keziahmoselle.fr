@@ -8,6 +8,9 @@
           <div class="indeterminate"></div>
         </div>
         <p v-if="article">{{ article.body }}</p>
+        <div class="center">
+          <router-link to="/blog" class="btn white black-text waves-effect waves-light"><i class="left material-icons">keyboard_arrow_left</i>Go back</router-link>
+        </div>
       </div>
     </div>
 
@@ -97,6 +100,7 @@ export default {
 
   div.card-content p {
     font-size: 1.5rem;
+    margin-bottom: 20px;
   }
 
   .progress {
