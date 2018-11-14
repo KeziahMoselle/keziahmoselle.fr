@@ -9,14 +9,14 @@
         </div>
         <p v-if="article">{{ article.body }}</p>
         <div class="center">
-          <router-link to="/blog" class="btn white black-text waves-effect waves-light"><i class="left material-icons">keyboard_arrow_left</i>Go back</router-link>
+          <router-link to="/blog" class="btn white black-text waves-effect waves-light"><i class="left material-icons">keyboard_arrow_left</i>{{ $t('blog.back') }}</router-link>
         </div>
       </div>
     </div>
 
     <div v-if="error" class="col s12 m10 offset-m1 l6 offset-l3 card-panel white black-text center">
-      <h4>Article not found.</h4>
-      <router-link to="/blog" class="btn black waves-effect waves-light"><i class="left material-icons">keyboard_arrow_left</i>Go back</router-link>
+      <h4>{{ $t('blog.notFound') }}</h4>
+      <router-link to="/blog" class="btn black waves-effect waves-light"><i class="left material-icons">keyboard_arrow_left</i>{{ $t('blog.back') }}</router-link>
     </div>
 
   </div>
