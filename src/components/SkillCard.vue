@@ -22,7 +22,7 @@ export default {
       type: String,
       require: true
     },
-    years: {
+    year: {
       type: String,
       required: true
     }
@@ -36,7 +36,7 @@ export default {
       return `./assets/icons/tech/${parsedLink}.svg`
     },
     experience: function () {
-      const startDate = new Date(this.years).getFullYear()
+      const startDate = new Date(this.year).getFullYear()
       const years = this.actualYear - startDate
       if (years > 0) {
         if (years === 1) {
