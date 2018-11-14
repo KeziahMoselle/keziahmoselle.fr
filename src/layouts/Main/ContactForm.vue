@@ -5,14 +5,14 @@
         <h3>{{ $t('contact.title') }}</h3>
         <div class="row">
           <div class="input-field col s12 m10 offset-m1 l8 offset-l2">
-            <i class="material-icons prefix">email</i>
-            <input v-model="email" type="text" id="email" v-bind:class="emailClass">
+            <i :class="emailClass" class="material-icons prefix">email</i>
+            <input v-model="email" type="text" id="email" :class="emailClass">
             <label for="email">{{ $t('contact.emailPlaceholder') }}</label>
             <span class="helper-text" data-error="Your email is not valid." data-success="✓"></span>
           </div>
           <div class="input-field col s12 m10 offset-m1 l8 offset-l2">
-            <i class="material-icons prefix">textsms</i>
-            <textarea v-model="message" class="materialize-textarea" id="content" v-bind:class="messageClass"></textarea>
+            <i :class="messageClass" class="material-icons prefix">textsms</i>
+            <textarea v-model="message" class="materialize-textarea" id="content" :class="messageClass"></textarea>
             <label for="content">{{ $t('contact.messagePlaceholder') }}</label>
             <span class="helper-text" data-error="The message should contains at least 10 characters." data-success="✓"></span>
           </div>
@@ -84,6 +84,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+  .prefix.valid {
+    color: #4CAF50 !important;
+  }
+
+  .prefix.invalid {
+    color: #F44336 !important;
+  }
 
 </style>
