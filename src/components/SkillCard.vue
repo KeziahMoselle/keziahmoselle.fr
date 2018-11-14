@@ -1,6 +1,9 @@
 <template>
   <div class="col s6 l4 skills">
-    <img class="tooltipped" data-position="left" :data-tooltip="lang" :src="link" :alt="lang">
+    <div class="skill-container">
+      <h5>{{ lang }}</h5>
+      <img :src="link" :alt="lang">
+    </div>
     <div>
       <div class="chip">{{ experience }}</div>
     </div>
@@ -53,10 +56,9 @@ export default {
 
 <style scoped>
 
-  .chip {
-    margin-top: 10px;
-    font-size: 18px;
-    padding: 0 16px;
+  h5 {
+    letter-spacing: 2px;
+    font-weight: bold;
   }
 
   img {
@@ -65,6 +67,12 @@ export default {
 
   img:hover {
     transform: scale(1.2);
+  }
+
+  .chip {
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 0 16px;
   }
 
 </style>
