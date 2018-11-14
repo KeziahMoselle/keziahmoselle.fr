@@ -5,7 +5,7 @@
 		<div class="banner black">
 			<h1 class="hide-on-small-only baffle">KEZIAH MOSELLE</h1>
 		</div>
-		<img class="logo" src="assets/icons/logo.svg" alt="logo">
+		<img class="logo" src="@/assets/icons/logo.svg" alt="logo">
 		<div class="banner dark">
 			<h2 class="hide-on-small-only baffle">{{ $t('header.subtitle') }}</h2>
 		</div>

@@ -37,7 +37,6 @@ body {
 }
 
 main {
-  flex: 1 0 auto;
   margin: 40px 0 0 0;
 }
 
@@ -323,41 +322,12 @@ p>a:hover {
   font-size: 1.2rem;
 }
 
-.modal-header {
-  margin-bottom: 40px;
-  border-bottom: 1px solid black;
-}
-
 .modal-container h3 {
   display: inline;
   padding: 8px;
   color: white;
   background-color: $primary-color-dark;
   border-radius: 3px;
-}
-
-.modal-technologies {
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.modal-technologies div {
-  display: inline-flex;
-  line-height: 56px;
-}
-
-.modal-technologies div>span {
-  margin-left: 10px;
-}
-
-.modal-technologies img {
-  height: 56px;
-  width: auto;
-}
-
-.modal-technologies span {
-  line-height: 56px;
 }
 
 .modal-links {
