@@ -7,8 +7,8 @@
         <h3>Blog</h3>
       </div>
 
-      <Article class="col s12 m10 offset-m1 l8 offset-l2"
-        v-for="i in 2"
+      <Article class="col s12 m10 offset-m1"
+        v-for="i in 5"
         :key="i"
         :id="i">
       </Article>
@@ -29,10 +29,6 @@ export default {
 </script>
 
 <style scoped>
-
-  main {
-    flex: 1 0 auto;
-  }
 
   div.card-panel {
     position: relative;

@@ -2,8 +2,8 @@
   <router-link :to="{ name: 'readArticle', params: { id: id } }">
     <article class="card">
       <div @mouseover="toggleBtn" @mouseout="toggleBtn" class="card-content">
-        <h4>Title {{ id }}</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+        <h4>Article n°{{ id }}</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eius accusamus deserunt dolorem, at totam sint quasi rerum eveniet iure culpa ullam est aspernatur neque eos, qui nostrum quam magnam!</p>
         <a :class="[ displayBtn ? 'scale-in' : 'scale-out' ]" class="btn-floating btn-large scale-transition">
           <i class="material-icons">keyboard_arrow_right</i>
         </a>
@@ -63,6 +63,8 @@ export default {
   }
 
   p {
+    max-height: 64px;
+    text-overflow: ellipsis;
     padding: 10px 20px 0 20px;
     font-size: 18px;
     overflow: hidden;

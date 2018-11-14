@@ -8,15 +8,10 @@
     
     <div class="card col s12 m10 offset-m1 l8 offset-l2">
       <div class="card-content">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quisquam, aut, modi officia consequatur nulla rem perferendis minima nam explicabo itaque incidunt. Tempora mollitia fugit dolorem optio, dignissimos vitae expedita.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus eveniet porro accusantium illum sed doloribus recusandae repellendus nisi maiores quos asperiores, deleniti vel, molestias, nulla distinctio iste minima? Ex?
-        </p>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit inventore maxime nemo perspiciatis blanditiis hic, sed maiores officia tempora numquam. Vero corporis, magnam earum laudantium maxime distinctio fugiat nesciunt nisi?
-        </p>
+        <h4>Subtitle</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum corporis sit quaerat voluptatum, id, autem porro ratione doloribus quia eum error architecto culpa repellendus, cum aut laudantium quo ea voluptas.</p>
+        <h4>Subtitle</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque hic, sequi aliquam aperiam provident libero perspiciatis labore alias nihil vitae veniam incidunt nostrum, ipsa dolor maiores odio odit aspernatur eius? Lorem ipsum dolor sit amet consectetur adipisicing elit. At facere in consequuntur tempora, autem, temporibus hic perferendis deserunt quam eaque libero similique exercitationem, ipsum illo vel quaerat id molestias nam.</p>
       </div>
     </div>
 
@@ -30,11 +25,6 @@ export default {
     id: {
       type: Number,
       required: true
-    }
-  },
-  methods: {
-    goBack () {
-      this.$router.push('/blog')
     }
   }
 }
@@ -58,6 +48,15 @@ export default {
     position: absolute;
     top: 31.5px;
     left: -28px;
+  }
+
+  div.card-content {
+    padding: 40px;
+  }
+
+  div.card-content h4 {
+    margin: 10px 0 20px 0;
+    text-decoration: underline;
   }
 
   div.card-content p {
