@@ -1,15 +1,19 @@
 <template>
   <div class="row">
 
-    <div class="card-panel col s12 m10 offset-m1 l6 offset-l3">
-      <router-link to="/blog" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">keyboard_arrow_left</i></router-link>
-      <h3 v-if="this.article">{{ this.article.title }}</h3>
-    </div>
-    
-    <div v-cloak class="card col s12 m10 offset-m1 l8 offset-l2">
+    <div v-if="!error" class="card col s12 m10 offset-m1 l8 offset-l2">
+      <h3 v-if="article">{{ article.title }}</h3>
       <div class="card-content">
-        <p v-if="this.article">{{ this.article.body }}</p>
+        <div v-if="loading" class="progress">
+          <div class="indeterminate"></div>
+        </div>
+        <p v-if="article">{{ article.body }}</p>
       </div>
+    </div>
+
+    <div v-if="error" class="col s12 m10 offset-m1 l6 offset-l3 card-panel white black-text center">
+      <h4>Article not found.</h4>
+      <router-link to="/blog" class="btn black waves-effect waves-light"><i class="left material-icons">keyboard_arrow_left</i>Go back</router-link>
     </div>
 
   </div>
@@ -26,7 +30,9 @@ export default {
   },
   data () {
     return {
-      article: null
+      loading: true,
+      article: null,
+      error: null
     }
   },
   created () {
@@ -35,8 +41,17 @@ export default {
   methods: {
     fetchArticle (id) {
       fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-      .then(response => response.json())
-      .then(json => this.article = json)
+      .then(response => {
+        if (response.ok) {
+          return response.json()
+        } else {
+          this.error = true
+        }
+      })
+      .then(json => {
+        this.loading = false
+        this.article = json
+      })
     }
   }
 }
@@ -44,10 +59,21 @@ export default {
 
 <style scoped>
 
+  h3 {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 2rem;
+    color: black;
+    display: inline-block;
+    background-color: white;
+    padding: 5px;
+  }
+
   div.card-panel {  
     position: relative;
     background-color: #1F1D20;
-    padding: 40px;
+    padding: 35px;
     margin-bottom: 50px;
   }
 
@@ -56,14 +82,12 @@ export default {
     text-align: center;
   }
 
-  div.card-panel .btn-floating {
-    position: absolute;
-    top: 31.5px;
-    left: -28px;
+  div.card-panel h4 {
+    margin-bottom: 10px;
   }
 
   div.card-content {
-    padding: 40px;
+    padding: 80px 20px 30px 20px;
   }
 
   div.card-content h4 {
@@ -73,6 +97,14 @@ export default {
 
   div.card-content p {
     font-size: 1.5rem;
+  }
+
+  .progress {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .progress .indeterminate {
+    background-color: white;
   }
 
 </style>
