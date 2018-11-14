@@ -19,6 +19,16 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+  .card-content p {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 0;
+    left: 386px;
+  }
 
 </style>

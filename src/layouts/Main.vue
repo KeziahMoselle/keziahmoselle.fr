@@ -21,38 +21,14 @@
 
     <div id="justbecauseVanessamoselle" class="modal bottom-sheet">
       <div class="modal-content row">
-        <div class="modal-header col s12">
+        <div class="col s12">
           <h2>justbecause.vanessamoselle.com</h2>
           <h3>Landing page for vanessamoselle's exhibition at L.A.</h3>
-          <div class="modal-links">
-            <a target="_blank" href="http://justbecause.vanessamoselle.com/" class="btn dark waves-effect waves-dark"><i class="material-icons left">open_in_new</i>Visit</a>
-          </div>
         </div>
-        <div class="modal-container">
-          <h3>About the project</h3>
-          <div class="modal-informations">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, eius soluta libero amet tempore vitae quam quidem rem odio, molestiae quibusdam in minima dicta quod, odit asperiores velit nemo ipsam.
-            </p>
-          </div>
+        <div class="modal-links">
+          <a target="_blank" href="http://justbecause.vanessamoselle.com/" class="btn dark waves-effect waves-dark"><i class="material-icons left">open_in_new</i>Visit</a>
         </div>
-        <div class="modal-container">
-          <h3>Technologies used</h3>
-          <div class="modal-technologies">
-            <div>
-              <img src="assets/icons/tech/html5.svg" alt="HTML5">
-              <span>HTML5</span>
-            </div>
-            <div>
-              <img src="assets/icons/tech/css3.svg" alt="CSS3">
-              <span>CSS3</span>
-            </div>
-            <div>
-              <img src="assets/icons/tech/jquery.svg" alt="jQuery">
-              <span>jQuery</span>
-            </div>
-          </div>
-        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur minima asperiores aliquam modi commodi aut eaque numquam alias aspernatur aliquid ducimus odio sit pariatur sint inventore, quidem doloribus consequuntur non?</p>
       </div>
       <div class="modal-footer">
         <a href="#!" class="btn dark modal-close waves-effect waves-dark">Close</a>
