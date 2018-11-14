@@ -32,5 +32,9 @@ export default {
     error: 'Please fill the two fields.',
     sent: 'Your message has been sent !',
     serverError: 'There was an error, please try again later.'
+  },
+  blog: {
+    back: 'Go Back',
+    notFound: 'Article not found.'
   }
 }

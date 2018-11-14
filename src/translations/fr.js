@@ -32,5 +32,9 @@ export default {
     error: 'S\'il vous plaît, remplissez les deux champs.',
     sent: 'Votre message a été envoyé !',
     serverError: 'Il y a eu une erreur. Veuillez réessayez plus tard'
+  },
+  blog: {
+    back: 'Retour',
+    notFound: 'Aucun article correspondant.'
   }
 }
