@@ -8,13 +8,13 @@
             <i :class="emailClass" class="material-icons prefix">email</i>
             <input v-model="email" type="text" id="email" :class="emailClass">
             <label for="email">{{ $t('contact.emailPlaceholder') }}</label>
-            <span class="helper-text" data-error="Your email is not valid." data-success="✓"></span>
+            <span class="helper-text" :data-error="this.$i18n.messages[this.$i18n.locale].contact.dataErrorEmail" data-success="✓"></span>
           </div>
           <div class="input-field col s12 m10 offset-m1 l8 offset-l2">
             <i :class="messageClass" class="material-icons prefix">textsms</i>
             <textarea v-model="message" class="materialize-textarea" id="content" :class="messageClass"></textarea>
             <label for="content">{{ $t('contact.messagePlaceholder') }}</label>
-            <span class="helper-text" data-error="The message should contains at least 10 characters." data-success="✓"></span>
+            <span class="helper-text" :data-error="this.$i18n.messages[this.$i18n.locale].contact.dataErrorMessage" data-success="✓"></span>
           </div>
           <div class="col s12 center">
             <button @click.prevent="submit" class="btn dark waves-effect waves-dark" type="submit">{{ $t('contact.send') }}</button>

@@ -27,6 +27,8 @@ export default {
     emailPlaceholder: 'Votre addresse email :',
     messagePlaceholder: 'Votre message :',
     send: 'Envoyer',
+    dataErrorEmail: 'Adresse email invalide.',
+    dataErrorMessage: 'Votre message doit être supérieur à 10 caractères.',
     errorEmail: 'Votre addresse email est invalide.',
     errorMessage: 'Vous devez entrer un message.',
     error: 'S\'il vous plaît, remplissez les deux champs.',

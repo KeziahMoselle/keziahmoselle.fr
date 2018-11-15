@@ -27,6 +27,8 @@ export default {
     emailPlaceholder: 'Your email address :',
     messagePlaceholder: 'Your message :',
     send: 'Send',
+    dataErrorEmail: 'Your email is not valid.',
+    dataErrorMessage: 'The message should contains at least 10 characters.',
     errorEmail: 'Your email is invalid.',
     errorMessage: 'You must type a message.',
     error: 'Please fill the two fields.',
