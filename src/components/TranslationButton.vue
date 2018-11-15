@@ -13,8 +13,7 @@
 export default {
   name: 'TranslationButton',
   mounted () {
-    const dropdownEl = document.querySelector('.dropdown-trigger')
-    const instance = M.Dropdown.init(dropdownEl)
+    window.M.Dropdown.init(document.querySelector('.dropdown-trigger'))
   },
   methods: {
     setFr () {

@@ -41,11 +41,11 @@ export default {
       if (this.isEmailValid && this.isMessageValid) {
         this.sendEmail()
       } else if (!this.isEmailValid && this.isMessageValid) {
-        M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.errorEmail })
+        window.M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.errorEmail })
       } else if (!this.isMessageValid && this.isEmailValid) {
-        M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.errorMessage })
+        window.M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.errorMessage })
       } else {
-        M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.error })
+        window.M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.error })
       }
     },
     sendEmail () {
@@ -62,12 +62,12 @@ export default {
       })
       .then(response => {
         if (response.status === 200) {
-          M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.sent })
+          window.M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.sent })
         } else {
-          M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.serverError })
+          window.M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.serverError })
         }
       })
-      .catch(() => M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.serverError }))
+      .catch(() => window.M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.serverError }))
     }
   },
   watch: {

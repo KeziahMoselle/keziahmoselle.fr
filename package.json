@@ -34,7 +34,9 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-useless-escape": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }

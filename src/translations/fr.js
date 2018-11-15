@@ -16,7 +16,7 @@ export default {
     learning: 'Apprentissage'
   },
   tools: {
-    title: 'Outils, Frameworks et divers'
+    title: 'Outils et Frameworks'
   },
   portfolio: {
     title: 'Mes Projets',
