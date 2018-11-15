@@ -13,7 +13,7 @@ export default {
     title: 'Mes compétences',
     years: 'ans',
     year: 'an',
-    learning: '...'
+    learning: 'Apprentissage'
   },
   tools: {
     title: 'Outils, Frameworks et divers'

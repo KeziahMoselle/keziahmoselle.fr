@@ -47,7 +47,11 @@ export default {
         }
         return `${years} ${this.$parent.$t('skills.years')}`
       } else {
-        return this.$parent.$t('skills.learning')
+        const mq = window.matchMedia('(max-width: 600px)').matches
+        if (mq) {
+          return '...'
+        }
+        return `${this.$parent.$t('skills.learning')}...`
       }
     }
   }
