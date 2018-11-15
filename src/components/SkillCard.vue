@@ -34,11 +34,11 @@ export default {
     filter
   },
   computed: {
-    link () {
+    link: function () {
       const parsedLink = this.filter(this.lang)
       return `./assets/icons/tech/${parsedLink}.svg`
     },
-    experience () {
+    experience: function () {
       const startDate = new Date(this.year).getFullYear()
       const years = this.actualYear - startDate
       if (years > 0) {
@@ -47,10 +47,6 @@ export default {
         }
         return `${years} ${this.$parent.$t('skills.years')}`
       } else {
-        const mq = window.matchMedia('(max-width: 600px)').matches
-        if (mq) {
-          return '...'
-        }
         return `${this.$parent.$t('skills.learning')}...`
       }
     }
@@ -77,7 +73,7 @@ export default {
   }
 
   img {
-    transition: transform 0.3s;
+    transition: transform 0.3s, filter 0.3s;
     filter: brightness(70%);
   }
 

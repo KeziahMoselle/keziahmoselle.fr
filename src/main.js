@@ -20,7 +20,19 @@ if (window.location.href.split('#lang=')[1]) {
   i18n.locale = window.location.href.split('#lang=')[1] || 'fr'
 }
 
+
 Vue.config.productionTip = true
+
+Vue.directive('scroll', {
+  inserted (el, binding) {
+    let f = function (event) {
+      if (binding.value(event, el)) {
+        window.removeEventListener('scroll', f)
+      }
+    }
+    window.addEventListener('scroll', f)
+  }
+})
 
 new Vue({
   i18n,
