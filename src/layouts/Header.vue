@@ -1,7 +1,7 @@
 <template>
   <header v-scroll="onScroll">
-    <div id="navbar-container">
-      <nav>
+    <transition name="slide">
+      <nav v-if="showNavbar">
         <div class="nav-wrapper">
           <a href="#" class="brand-logo">Logo</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -10,7 +10,7 @@
           </ul>
         </div>
       </nav>
-    </div>
+    </transition>
 		<div id="header-container">
       <div class="banner black">
         <h1 v-if="!showNavbar" class="hide-on-small-only baffle">KEZIAH MOSELLE</h1>
@@ -51,25 +51,8 @@ export default {
     },
     onScroll (event, el) {
       if (window.scrollY > 400 && !this.showNavbar) {
-        console.log('triggered')
-        this.slideUp()
+        this.showNavbar = true
       }
-    },
-    slideUp () {
-      this.showNavbar = true
-      document.querySelector('nav').style.display = 'block'
-      setTimeout(() => {
-        document.querySelector('nav').style.opacity = '1'
-        document.querySelector('nav').style.height = '64px'
-      }, 100);
-    },
-    slideDown () {
-      this.showNavbar = false
-      document.querySelector('nav').style.height = '0'
-      document.querySelector('nav').style.opacity = '0'
-      setTimeout(() => {
-        document.querySelector('nav').style.position = 'unset'
-      }, 100);
     }
   }
 }
@@ -80,10 +63,25 @@ export default {
   nav {
     position: fixed;
     z-index: 3;
-    height: 0;
-    display: none;
-    opacity: 0;
     transition: opacity 0.4s, height 0.4s;
+  }
+
+  .slide-enter-active {
+    animation: slide 0.4s;
+  }
+
+  .slide-leave-active {
+    animation: slide 0.4s;
+  }
+
+  @keyframes slide {
+    0% {
+      height: 0;
+    }
+
+    100% {
+      height: 64px;
+    }
   }
 
 </style>
