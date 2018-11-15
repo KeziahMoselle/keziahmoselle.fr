@@ -61,7 +61,6 @@ export default {
   }
 
   h5 {
-    z-index: 1;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -74,7 +73,6 @@ export default {
   }
 
   img {
-    z-index: 2;
     transition: transform 0.3s;
   }
 
@@ -83,6 +81,7 @@ export default {
   }
 
   img:hover + h5 {
+    z-index: -1;
     opacity: 0;
   }
 
