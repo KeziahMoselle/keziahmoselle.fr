@@ -1,6 +1,16 @@
 <p align="center"><img src="https://i.imgur.com/QKQrHJi.png" height="64" alt="KeziahMoselle Logo"></p>
 <h3 align="center">keziahmoselle.fr</h3>
 
+## In development...
+
+### Objectives
+
+- [x] Migrate to VueJS
+- [ ] Add Blog
+- [ ] Add Curriculum
+- [ ] Complete list of projects
+- [ ] Add case study
+
 ## Project setup
 ```
 yarn install
