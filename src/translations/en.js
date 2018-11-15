@@ -13,7 +13,7 @@ export default {
     title: 'Working with',
     years: 'years',
     year: 'year',
-    learning: 'Learning...'
+    learning: '...'
   },
   tools: {
     title: 'Tools, Frameworks and Miscellaneous'
