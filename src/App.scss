@@ -149,19 +149,17 @@ p>a:hover {
   margin-bottom: 10px;
 }
 
-.skills img {
-  width: auto;
-}
-
 @media only screen and (min-width: 451px) {
   .skills img {
     height: 100px;
+    width: 100px;
   }
 }
 
 @media only screen and (max-width: 450px) {
   .skills img {
     height: 64px;
+    width: 64px;
   }
 }
 
