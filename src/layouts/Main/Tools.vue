@@ -12,6 +12,7 @@
             <Skill-card lang="Materialize" year="2015"></Skill-card>
             <Skill-card lang="Bulma" year="2018"></Skill-card>
             <Skill-card lang="Webpack" year="2018"></Skill-card>
+            <Skill-card lang="Sass" year="2018"></Skill-card>
           </div>
         </div>
       </div>

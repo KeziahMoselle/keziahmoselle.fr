@@ -31,6 +31,6 @@ export default [
   },
   {
     title: 'keziahmoselle.fr',
-    tech: ['VueJS', 'Materialize']
+    tech: ['VueJS', 'Materialize', 'Sass']
   }
 ]

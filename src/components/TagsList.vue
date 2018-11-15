@@ -32,7 +32,8 @@ export default {
         'VueJS',
         'Bulma',
         'Bootstrap',
-        'Materialize'
+        'Materialize',
+        'Sass'
       ],
       activeTechnologies: []
     }
