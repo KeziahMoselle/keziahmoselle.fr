@@ -74,10 +74,12 @@ export default {
 
   img {
     transition: transform 0.3s;
+    filter: brightness(70%);
   }
 
   img:hover {
     transform: scale(1.2);
+    filter: brightness(100%);
   }
 
   img:hover + h5 {
