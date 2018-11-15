@@ -21,7 +21,7 @@ export default [
   },
   {
     title: 'Embosseuse Braille',
-    tech: ['NodeJS', 'Socket.io', 'React Native'],
+    tech: ['NodeJS', 'Websocket', 'React Native'],
     modalId: '#EmbosseuseBraille'
   },
   {

@@ -11,6 +11,7 @@
 
 <script>
 import TagsListChip from '@/components/TagsListChip'
+import technologies from '@/technologies'
 
 export default {
   name: 'TagsList',
@@ -19,22 +20,7 @@ export default {
   },
   data () {
     return {
-      technologies: [
-        'HTML5',
-        'CSS3',
-        'JavaScript',
-        'jQuery',
-        'PHP',
-        'MySQL',
-        'NodeJS',
-        'React Native',
-        'Electron',
-        'VueJS',
-        'Bulma',
-        'Bootstrap',
-        'Materialize',
-        'Sass'
-      ],
+      technologies,
       activeTechnologies: []
     }
   },
