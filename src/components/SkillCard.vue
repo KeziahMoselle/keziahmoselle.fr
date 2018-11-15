@@ -66,7 +66,7 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     font-weight: bold;
     text-shadow: 2px 2px 4px black;
     opacity: 1;
@@ -84,6 +84,24 @@ export default {
 
   img:hover + h5 {
     opacity: 0;
+  }
+
+  .skills {
+    margin-bottom: 10px;
+  }
+
+  @media only screen and (min-width: 451px) {
+    .skills img {
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    .skills img {
+      height: 64px;
+      width: 64px;
+    }
   }
 
   .chip {

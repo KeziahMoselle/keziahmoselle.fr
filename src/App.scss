@@ -143,26 +143,6 @@ p>a:hover {
   color: #b2b2b2;
 }
 
-/* SKILLS */
-
-.skills {
-  margin-bottom: 10px;
-}
-
-@media only screen and (min-width: 451px) {
-  .skills img {
-    height: 100px;
-    width: 100px;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .skills img {
-    height: 64px;
-    width: 64px;
-  }
-}
-
 /* BUTTONS */
 
 .btn.dark:hover {
