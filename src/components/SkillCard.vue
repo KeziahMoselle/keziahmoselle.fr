@@ -34,11 +34,11 @@ export default {
     filter
   },
   computed: {
-    link: function () {
+    link () {
       const parsedLink = this.filter(this.lang)
       return `./assets/icons/tech/${parsedLink}.svg`
     },
-    experience: function () {
+    experience () {
       const startDate = new Date(this.year).getFullYear()
       const years = this.actualYear - startDate
       if (years > 0) {

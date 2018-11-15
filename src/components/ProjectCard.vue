@@ -36,7 +36,7 @@ export default {
     filter
   },
   computed: {
-    technologies: function () {
+    technologies () {
       let technologies = []
       for (let i in this.tech) {
         const parsedLink = this.filter(this.tech[i])
@@ -44,7 +44,7 @@ export default {
       }
       return technologies
     },
-    backgroundImg: function () {
+    backgroundImg () {
       const parsedTitle = this.filter(this.title)
       return `./assets/icons/project/${parsedTitle}.png`
     }

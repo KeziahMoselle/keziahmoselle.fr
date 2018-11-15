@@ -37,7 +37,7 @@ export default {
     }
   },
   methods: {
-    submit: function () {
+    submit () {
       if (this.isEmailValid && this.isMessageValid) {
         this.sendEmail()
       } else if (!this.isEmailValid && this.isMessageValid) {
@@ -48,7 +48,7 @@ export default {
         M.toast({ html: this.$i18n.messages[this.$i18n.locale].contact.error })
       }
     },
-    sendEmail: function () {
+    sendEmail () {
       const payload = JSON.stringify({
         email: this.email,
         message: this.message
