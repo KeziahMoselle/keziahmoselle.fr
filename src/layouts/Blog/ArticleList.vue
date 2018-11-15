@@ -2,9 +2,9 @@
   <div class="row">
     <div class="col s12 m10 offset-m1 l8 offset-l2">
 
-      <div class="card-panel col s12 m10 offset-m1 l8 offset-l2">
-        <router-link to="/" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">home</i></router-link>
+      <div class="blog-panel card-panel col s12 m10 offset-m1 l8 offset-l2">
         <h3>Blog</h3>
+        <router-link to="/" class="btn white black-text waves-effect waves-light"><i class="left material-icons">keyboard_arrow_left</i>Back Home</router-link>
       </div>
 
       <Article class="col s12 m10 offset-m1"
@@ -30,6 +30,11 @@ export default {
 
 <style scoped>
 
+  .blog-panel {
+    display: flex;
+    justify-content: space-between;
+  }
+
   div.card-panel {
     position: relative;
     background-color: #1F1D20;
@@ -40,12 +45,6 @@ export default {
   div.card-panel h3 {
     font-size: 36px;
     text-align: center;
-  }
-
-  div.card-panel .btn-floating {
-    position: absolute;
-    top: 31.5px;
-    left: -28px;
   }
 
 </style>

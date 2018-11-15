@@ -63,9 +63,6 @@ export default {
 <style scoped>
 
   h3 {
-    position: absolute;
-    top: -10px;
-    left: -10px;
     font-size: 2rem;
     color: black;
     display: inline-block;
@@ -90,7 +87,7 @@ export default {
   }
 
   div.card-content {
-    padding: 80px 20px 30px 20px;
+    padding: 20px;
   }
 
   div.card-content h4 {
