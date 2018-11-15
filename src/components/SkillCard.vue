@@ -1,8 +1,8 @@
 <template>
   <div class="col s6 l4 skills">
     <div class="skill-container">
-      <h5>{{ lang }}</h5>
       <img :src="link" :alt="lang">
+      <h5>{{ lang }}</h5>
     </div>
     <div>
       <div class="chip">{{ experience }}</div>
@@ -56,17 +56,34 @@ export default {
 
 <style scoped>
 
+  .skill-container {
+    position: relative;
+  }
+
   h5 {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     letter-spacing: 2px;
     font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+    opacity: 1;
+    transition: opacity 0.2s;
   }
 
   img {
+    z-index: 2;
     transition: transform 0.3s;
   }
 
   img:hover {
     transform: scale(1.2);
+  }
+
+  img:hover + h5 {
+    opacity: 0;
   }
 
   .chip {
