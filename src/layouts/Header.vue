@@ -26,7 +26,9 @@
       <div class="banner black" :style="{ height: headerHeight }">
         <h1 class="hide-on-small-only baffle" :class="{ fadeOut: showNavbar }">KEZIAH MOSELLE</h1>
       </div>
-      <img class="logo" src="@/assets/icons/logo.svg" alt="KeziahMoselle logo">
+      <svg :class="{ zoom: zoom }" class="logo" xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="128" height="128">
+        <defs><clipPath id="a"><path d="M0 0h128v128H0z"/></clipPath></defs><g clip-path="url(#a)" fill="#FFF"><path d="M0 0v90.5h128V0L64.25 59.997 0 0zM0 106.25h128V128H0z"/></g>
+      </svg>
       <div class="banner dark" :style="{ height: headerHeight }">
         <h2 class="hide-on-small-only baffle" :class="{ fadeOut: showNavbar }">{{ $t('header.subtitle') }}</h2>
       </div>
@@ -51,6 +53,7 @@ export default {
     return {
       showNavbar: false,
       headerHeight: '400px',
+      zoom: false,
       links: [
         {
           to: '/',
@@ -82,13 +85,16 @@ export default {
           this.showNavbar = true
         }
       } else {
-        console.log(window.scrollY)
-        if (window.scrollY < 300) {
+        if (window.scrollY < 200) {
           this.showNavbar = false
           this.headerHeight = '400px'
+          this.zoom = false
         }
-        if (window.scrollY >= 400) {
+        if (window.scrollY >= 200) {
           this.headerHeight = '32px'
+        }
+        if (window.scrollY >= 370) {
+          this.zoom = true
         }
       }
     }
@@ -98,12 +104,20 @@ export default {
 
 <style scoped>
 
-  h1, h2, img, button {
+  .banner {
+    transition: height 0.4s;
+  }
+
+  h1, h2, button {
     transition: opacity 0.3s;
   }
 
-  .banner {
-    transition: height 0.4s;
+  svg {
+    transition: transform 0.4s;
+  }
+
+  svg.zoom g {
+    fill: #000;
   }
 
   #header-container {
@@ -150,6 +164,11 @@ export default {
 
   .slide-leave-active {
     animation: slideUp  0.4s;
+  }
+
+  .zoom {
+    fill: #222023 !important;
+    transform: scale(100);
   }
 
   @keyframes slideDown {
