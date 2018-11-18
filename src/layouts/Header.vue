@@ -6,6 +6,7 @@
         <div class="nav-wrapper">
           <a href="#mobile-nav" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <translation-button class="hide-on-med-and-down"></translation-button>
+          <a v-if="translateLogo" href="#" class="brand-logo center"><img src="@/assets/logo-black.svg" alt="KeziahMoselle logo"></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li v-for="link in links" :key="link.name">
               <router-link :to="link.to" class="btn black white-text waves-effect">{{ link.name }}</router-link>
@@ -26,9 +27,7 @@
       <div class="banner black" :style="{ height: headerHeight }">
         <h1 class="hide-on-small-only baffle" :class="{ fadeOut: showNavbar }">KEZIAH MOSELLE</h1>
       </div>
-      <svg :class="{ zoom: zoom }" class="logo" xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="128" height="128">
-        <defs><clipPath id="a"><path d="M0 0h128v128H0z"/></clipPath></defs><g clip-path="url(#a)" fill="#FFF"><path d="M0 0v90.5h128V0L64.25 59.997 0 0zM0 106.25h128V128H0z"/></g>
-      </svg>
+      <img src="@/assets/logo.svg" alt="KeziahMoselle logo" class="logo" :class="{ translateLogo: translateLogo }">
       <div class="banner dark" :style="{ height: headerHeight }">
         <h2 class="hide-on-small-only baffle" :class="{ fadeOut: showNavbar }">{{ $t('header.subtitle') }}</h2>
       </div>
@@ -53,7 +52,7 @@ export default {
     return {
       showNavbar: false,
       headerHeight: '400px',
-      zoom: false,
+      translateLogo: false,
       links: [
         {
           to: '/',
@@ -88,13 +87,13 @@ export default {
         if (window.scrollY < 200) {
           this.showNavbar = false
           this.headerHeight = '400px'
-          this.zoom = false
+          this.translateLogo = false
         }
         if (window.scrollY >= 200) {
           this.headerHeight = '32px'
         }
-        if (window.scrollY >= 370) {
-          this.zoom = true
+        if (window.scrollY >= 380) {
+          this.translateLogo = true
         }
       }
     }
@@ -112,12 +111,8 @@ export default {
     transition: opacity 0.3s;
   }
 
-  svg {
-    transition: transform 0.4s;
-  }
-
-  svg.zoom g {
-    fill: #000;
+  img {
+    transition: top 0.4s, height 0.4s;
   }
 
   #header-container {
@@ -145,6 +140,11 @@ export default {
     margin: 0 20px 0 20px;
   }
 
+  .brand-logo img {
+    height: 40px;
+    width: 40px;
+  }
+
   .btn {
     margin: 0 10px 0 10px;
   }
@@ -166,9 +166,8 @@ export default {
     animation: slideUp  0.4s;
   }
 
-  .zoom {
-    fill: #222023 !important;
-    transform: scale(100);
+  .translateLogo {
+    top: -128px;
   }
 
   @keyframes slideDown {
