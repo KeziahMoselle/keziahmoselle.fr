@@ -1,5 +1,6 @@
 <template>
   <header v-scroll="onScroll">
+
     <transition name="slide">
       <nav v-if="showNavbar">
         <div class="nav-wrapper">
@@ -22,15 +23,16 @@
     </ul>
 
 		<div id="header-container">
-      <div class="banner black">
-        <h1 class="hide-on-small-only baffle">KEZIAH MOSELLE</h1>
+      <div class="banner black" :style="{ height: headerHeight }">
+        <h1 class="hide-on-small-only baffle" :class="{ fadeOut: showNavbar }">KEZIAH MOSELLE</h1>
       </div>
       <img class="logo" src="@/assets/icons/logo.svg" alt="KeziahMoselle logo">
-      <div class="banner dark">
-        <h2 class="hide-on-small-only baffle">{{ $t('header.subtitle') }}</h2>
+      <div class="banner dark" :style="{ height: headerHeight }">
+        <h2 class="hide-on-small-only baffle" :class="{ fadeOut: showNavbar }">{{ $t('header.subtitle') }}</h2>
       </div>
+      <button @click="scrollToContent" class="btn-floating white pulse" :class="{ fadeOut: showNavbar }"><i class="material-icons">keyboard_arrow_down</i></button>
     </div>
-		<button @click="scrollToContent" class="btn-floating white pulse"><i class="material-icons">keyboard_arrow_down</i></button>
+
   </header>
 </template>
 
@@ -48,6 +50,7 @@ export default {
   data () {
     return {
       showNavbar: false,
+      headerHeight: '400px',
       links: [
         {
           to: '/',
@@ -75,12 +78,17 @@ export default {
     },
     onScroll () {
       if (!this.showNavbar) {
-        if (window.scrollY > 800) {
+        if (window.scrollY >= 300) {
           this.showNavbar = true
         }
       } else {
-        if (window.scrollY < 800) {
+        console.log(window.scrollY)
+        if (window.scrollY < 300) {
           this.showNavbar = false
+          this.headerHeight = '400px'
+        }
+        if (window.scrollY >= 400) {
+          this.headerHeight = '32px'
         }
       }
     }
@@ -89,6 +97,20 @@ export default {
 </script>
 
 <style scoped>
+
+  h1, h2, img, button {
+    transition: opacity 0.3s;
+  }
+
+  .banner {
+    transition: height 0.4s;
+  }
+
+  #header-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
 
   nav {
     position: fixed;
@@ -116,6 +138,10 @@ export default {
   .btn:hover {
     background-color: white !important;
     color: black !important;
+  }
+
+  .fadeOut {
+    opacity: 0;
   }
 
   .slide-enter-active {
