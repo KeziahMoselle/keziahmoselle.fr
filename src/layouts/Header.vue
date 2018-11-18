@@ -21,7 +21,7 @@
       <translation-button></translation-button>
     </ul>
 
-		<div v-scroll="animateHeader" id="header-container">
+		<div id="header-container">
       <div class="banner black">
         <h1 class="hide-on-small-only baffle">KEZIAH MOSELLE</h1>
       </div>
@@ -83,13 +83,6 @@ export default {
           this.showNavbar = false
         }
       }
-    },
-    animateHeader () {
-      const firstBanner = document.querySelector('.banner.black')
-      const secondBanner = document.querySelector('.banner.dark')
-      const height = secondBanner.clientHeight
-      const newHeight = height - (window.scrollY / 8)
-      secondBanner.style.height = `${newHeight}px`
     }
   }
 }
