@@ -13,11 +13,11 @@
     </transition>
 		<div id="header-container">
       <div class="banner black">
-        <h1 v-if="!showNavbar" class="hide-on-small-only baffle">KEZIAH MOSELLE</h1>
+        <h1 class="hide-on-small-only baffle">KEZIAH MOSELLE</h1>
       </div>
       <img class="logo" src="@/assets/icons/logo.svg" alt="logo">
       <div class="banner dark">
-        <h2 v-if="!showNavbar" class="hide-on-small-only baffle">{{ $t('header.subtitle') }}</h2>
+        <h2 class="hide-on-small-only baffle">{{ $t('header.subtitle') }}</h2>
       </div>
     </div>
 		<button @click="scrollToContent" class="btn-floating white pulse"><i class="material-icons">keyboard_arrow_down</i></button>
@@ -49,9 +49,16 @@ export default {
     scrollToContent () {
       document.querySelector('main').scrollIntoView()
     },
-    onScroll (event, el) {
-      if (window.scrollY > 400 && !this.showNavbar) {
-        this.showNavbar = true
+    onScroll () {
+      console.log(window.scrollY)
+      if (!this.showNavbar) {
+        if (window.scrollY > 800) {
+          this.showNavbar = true
+        }
+      } else {
+        if (window.scrollY < 800) {
+          this.showNavbar = false
+        }
       }
     }
   }
@@ -67,20 +74,30 @@ export default {
   }
 
   .slide-enter-active {
-    animation: slide 0.4s;
+    animation: slideDown 0.4s;
   }
 
   .slide-leave-active {
-    animation: slide 0.4s;
+    animation: slideUp  0.4s;
   }
 
-  @keyframes slide {
+  @keyframes slideDown {
     0% {
       height: 0;
     }
 
     100% {
       height: 64px;
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      height: 64px;
+    }
+
+    100% {
+      height: 0;
     }
   }
 
