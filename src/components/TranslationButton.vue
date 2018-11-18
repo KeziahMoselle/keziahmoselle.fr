@@ -1,12 +1,12 @@
 <template>
-  <div class="translations">
+  <li>
     <a class='dropdown-trigger btn' href='#' data-target='dropdown-translations'>{{ $t('header.language') }}</a>
     <ul id='dropdown-translations' class='dropdown-content'>
       <li><a @click="setFr" href="#lang=fr">Français</a></li>
       <li class="divider" tabindex="-1"></li>
       <li><a @click="setEn" href="#lang=en">English</a></li>
     </ul>
-  </div>
+  </li>
 </template>
 
 <script>
@@ -31,11 +31,7 @@ export default {
 <style>
 
   .translations {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 2;
-    margin: 0;
+    display: inline-block;
   }
 
   .dropdown-content li > a,

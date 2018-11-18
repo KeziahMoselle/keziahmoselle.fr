@@ -3,19 +3,29 @@
     <transition name="slide">
       <nav v-if="showNavbar">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Logo</a>
+          <a href="#mobile-nav" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <translation-button class="hide-on-med-and-down"></translation-button>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><router-link to="/" class="btn white black-text waves-effect">Home</router-link></li>
-            <li><router-link to="/blog" class="btn white black-text waves-effect">Blog</router-link></li>
+            <li v-for="link in links" :key="link.name">
+              <router-link :to="link.to" class="btn black white-text waves-effect">{{ link.name }}</router-link>
+            </li>
           </ul>
         </div>
       </nav>
     </transition>
+
+    <ul class="sidenav" id="mobile-nav">
+      <li v-for="link in links" :key="link.name">
+        <router-link :to="link.to" class="btn black white-text waves-effect">{{ link.name }}</router-link>
+      </li>
+      <translation-button></translation-button>
+    </ul>
+
 		<div id="header-container">
       <div class="banner black">
         <h1 class="hide-on-small-only baffle">KEZIAH MOSELLE</h1>
       </div>
-      <img class="logo" src="@/assets/icons/logo.svg" alt="logo">
+      <img class="logo" src="@/assets/icons/logo.svg" alt="KeziahMoselle logo">
       <div class="banner dark">
         <h2 class="hide-on-small-only baffle">{{ $t('header.subtitle') }}</h2>
       </div>
@@ -37,7 +47,17 @@ export default {
   },
   data () {
     return {
-      showNavbar: false
+      showNavbar: false,
+      links: [
+        {
+          to: '/',
+          name: 'Home'
+        },
+        {
+          to: '/blog',
+          name: 'Blog'
+        }
+      ]
     }
   },
   mounted () {
@@ -49,8 +69,11 @@ export default {
     scrollToContent () {
       document.querySelector('main').scrollIntoView()
     },
+    closeSidenav () {
+      console.log(this.sidenavInstance)
+      this.sidenavInstance.close()
+    },
     onScroll () {
-      console.log(window.scrollY)
       if (!this.showNavbar) {
         if (window.scrollY > 800) {
           this.showNavbar = true
@@ -70,7 +93,29 @@ export default {
   nav {
     position: fixed;
     z-index: 3;
+    background-color: white;
     transition: opacity 0.4s, height 0.4s;
+  }
+
+  nav a {
+    color: black;
+  }
+
+  nav li {
+    display: inline-block;
+  }
+
+  .nav-wrapper {
+    margin: 0 20px 0 20px;
+  }
+
+  .btn {
+    margin: 0 10px 0 10px;
+  }
+
+  .btn:hover {
+    background-color: white !important;
+    color: black !important;
   }
 
   .slide-enter-active {
@@ -83,20 +128,24 @@ export default {
 
   @keyframes slideDown {
     0% {
+      opacity: 0;
       height: 0;
     }
 
     100% {
+      opacity: 1;
       height: 64px;
     }
   }
 
   @keyframes slideUp {
     0% {
+      opacity: 1;
       height: 64px;
     }
 
     100% {
+      opacity: 0;
       height: 0;
     }
   }
