@@ -118,7 +118,7 @@ export default {
 
   #header-container {
     position: fixed;
-    height: 100%;
+    height: 10%;
     width: 100%;
   }
 
