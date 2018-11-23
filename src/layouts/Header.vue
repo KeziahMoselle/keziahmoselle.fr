@@ -17,7 +17,7 @@
     </transition>
 
     <ul class="sidenav" id="mobile-nav">
-      <li v-for="link in links" :key="link.name">
+      <li v-for="link in links" :key="link.name" @click="closeSidenav">
         <router-link :to="link.to" class="btn black white-text waves-effect">{{ link.name }}</router-link>
       </li>
       <translation-button></translation-button>
@@ -75,8 +75,9 @@ export default {
       document.querySelector('main').scrollIntoView()
     },
     closeSidenav () {
-      console.log(this.sidenavInstance)
-      this.sidenavInstance.close()
+      const sidenavElement = document.querySelector('.sidenav')
+      const instance = new window.M.Sidenav(sidenavElement)
+      instance.close()
     },
     onScroll () {
       if (!this.showNavbar) {
