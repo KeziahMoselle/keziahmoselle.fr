@@ -5,7 +5,7 @@
       <nav v-if="showNavbar">
         <div class="nav-wrapper">
           <a href="#mobile-nav" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <translation-button class="hide-on-med-and-down"></translation-button>
+          <translation-button class="right"></translation-button>
           <a v-if="translateLogo" href="#" class="brand-logo center"><img src="@/assets/logo-black.svg" alt="KeziahMoselle logo"></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li v-for="link in links" :key="link.name">
@@ -142,6 +142,7 @@ export default {
   }
 
   .brand-logo img {
+    margin-top: 10px;
     height: 40px;
     width: 40px;
   }
