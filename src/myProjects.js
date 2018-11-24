@@ -2,7 +2,8 @@ export default [
   {
     title: 'justbecause.vanessamoselle.fr',
     tech: ['HTML5', 'CSS3', 'jQuery'],
-    modalId: '#justbecauseVanessamoselle'
+    modalId: '#justbecauseVanessamoselle',
+    url: 'http://justbecause.vanessamoselle.com/'
   },
   {
     title: 'maelysm.fr',
@@ -17,12 +18,14 @@ export default [
   {
     title: 'Gelbooru Client',
     tech: ['NodeJS', 'Electron', 'Materialize'],
-    modalId: '#GelbooruClient'
+    modalId: '#GelbooruClient',
+    repository: 'https://github.com/KeziahMoselle/gelbooru-client'
   },
   {
     title: 'Embosseuse Braille',
     tech: ['NodeJS', 'Websocket', 'React Native'],
-    modalId: '#EmbosseuseBraille'
+    modalId: '#EmbosseuseBraille',
+    repository: 'https://github.com/KeziahMoselle/braille-embosser'
   },
   {
     title: 'Vorrk Studio',
@@ -31,6 +34,8 @@ export default [
   },
   {
     title: 'keziahmoselle.fr',
-    tech: ['VueJS', 'Materialize', 'Sass']
+    tech: ['VueJS', 'Materialize', 'Sass'],
+    url: 'https://keziahmoselle.fr/',
+    repository: 'https://github.com/KeziahMoselle/keziahmoselle.fr'
   }
 ]
