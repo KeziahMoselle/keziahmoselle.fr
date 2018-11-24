@@ -7,7 +7,7 @@
           <a href="#mobile-nav" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <translation-button class="right"></translation-button>
           <a v-if="translateLogo" href="#" class="brand-logo center"><img src="@/assets/logo-black.svg" alt="KeziahMoselle logo"></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li v-for="link in links" :key="link.name">
               <router-link :to="link.to" class="btn black white-text waves-effect">{{ link.name }}</router-link>
             </li>
@@ -24,6 +24,16 @@
     </ul>
 
 		<div id="header-container">
+      <nav class="transparent z-depth-0">
+        <ul class="left">
+          <li v-for="link in links" :key="link.name">
+            <router-link :to="link.to" class="btn black white-text waves-effect">{{ link.name }}</router-link>
+          </li>
+        </ul>
+        <ul class="right">
+          <translation-button></translation-button>
+        </ul>
+      </nav>
       <div class="banner black" :style="{ height: headerHeight }">
         <h1 class="hide-on-small-only baffle" :class="{ fadeOut: showNavbar }">KEZIAH MOSELLE</h1>
       </div>
