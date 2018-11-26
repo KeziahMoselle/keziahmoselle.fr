@@ -1,12 +1,9 @@
 <template>
   <router-link :to="{ name: 'readArticle', params: { id: id } }">
-    <article class="card">
-      <div @mouseover="toggleBtn" @mouseout="toggleBtn" class="card-content">
+    <article :class="[ focus ? 'hover' : '' ]" class="card">
+      <div @mouseover="toggleFocus" @mouseout="toggleFocus" class="card-content">
         <h4>Article n°{{ id }}</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eius accusamus deserunt dolorem, at totam sint quasi rerum eveniet iure culpa ullam est aspernatur neque eos, qui nostrum quam magnam!</p>
-        <a :class="[ displayBtn ? 'scale-in' : 'scale-out' ]" class="btn-floating btn-large scale-transition">
-          <i class="material-icons">keyboard_arrow_right</i>
-        </a>
       </div>
     </article>
   </router-link>
@@ -17,7 +14,7 @@ export default {
   name: 'BlogArticle',
   data () {
     return {
-      displayBtn: false
+      focus: false
     }
   },
   props: {
@@ -27,8 +24,9 @@ export default {
     }
   },
   methods: {
-    toggleBtn () {
       this.displayBtn = !this.displayBtn
+    toggleFocus () {
+      this.focus = !this.focus
     }
   }
 }
@@ -39,11 +37,7 @@ export default {
   article {
     cursor: pointer;
     border-radius: 6px;
-    transition: background-color 0.4s;
-  }
-
-  article:hover .card {
-    background-color: white !important;
+    transition: box-shadow 0.1s;
   }
 
   div.card-content {
@@ -71,10 +65,8 @@ export default {
     color: white;
   }
 
-  .scale-transition {
-    position: absolute;
-    right: -28px;
-    top: 18px;
+  .hover {
+    box-shadow: 2px 2px 4px white;
   }
 
 </style>
