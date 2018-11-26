@@ -24,7 +24,6 @@ export default {
     }
   },
   methods: {
-      this.displayBtn = !this.displayBtn
     toggleFocus () {
       this.focus = !this.focus
     }
