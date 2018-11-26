@@ -115,7 +115,35 @@ export default {
 <style scoped>
 
   .banner {
+    height: 400px;
+    width: 100%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
     transition: height 0.4s;
+  }
+
+  .banner > h1, .banner > h2 {
+    position: relative;
+    top: 50%;
+    line-height: 400px;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+  .banner > h1 {
+    font-size: 60px;
+  }
+
+  .banner > h2 {
+    font-weight: 100;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 128px;
+    width: 128px;
+    top: 325px;
   }
 
   h1, h2, button {
