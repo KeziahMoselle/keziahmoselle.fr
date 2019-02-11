@@ -13,10 +13,10 @@
             <Skill-card lang="MySQL" year="2016"></Skill-card>
             <Skill-card lang="NodeJS" year="2017"></Skill-card>
 
+            <Skill-card lang="ReactJS" year="2018"></Skill-card>
             <Skill-card lang="React Native" year="2017"></Skill-card>
-            <Skill-card lang="Electron" year="2017"></Skill-card>
             <Skill-card lang="VueJS" year="2018"></Skill-card>
-            <Skill-card lang="AdonisJS" year="2018"></Skill-card>
+            <Skill-card lang="Electron" year="2017"></Skill-card>
           </div>
         </div>
       </div>
