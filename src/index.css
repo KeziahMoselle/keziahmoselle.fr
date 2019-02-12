@@ -1,4 +1,13 @@
 @font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Playfair Display Black'), local('PlayfairDisplay-Black'),
+       url('./assets/fonts/playfair-display.woff2') format('woff2'),
+       url('./assets/fonts/playfair-display.woff') format('woff');
+}
+
+@font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
@@ -28,6 +37,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   font-size: 16px;
+}
+
+main {
+  margin-top: 120px;
 }
 
 code {

@@ -4,7 +4,7 @@ import './index.css'
 class Skills extends Component {
   render() {
     return (
-      <div className="container skills">
+      <div className="container">
         <h3>Compétences</h3>
         
         <div className="skills-container">
