@@ -67,17 +67,29 @@ a {
  */
 
 button {
-  cursor: pointer;
-  outline: none;
-  border: none;
-  box-shadow: none;
-  padding: 0px;
   margin: 0px;
+  padding: 16px 32px;
   font-family: inherit;
   font-size: 14px;
   background-color: black;
   color: white;
-  padding: 16px 32px;
   font-weight: 700;
   cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button.rounded {
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: rgb(47, 47, 47);
+}
+
+button:focus {
+  background-color: #eeeeee;
+  color: black;
 }
