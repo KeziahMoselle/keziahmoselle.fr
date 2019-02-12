@@ -29,3 +29,7 @@ header {
 .header-menu li {
   font-size: 24px;
 }
+
+.header-menu li img {
+  height: 32px;
+}

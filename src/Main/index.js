@@ -9,7 +9,7 @@ class Main extends Component {
           <h1>Keziah <br/> Moselle</h1>
           <h2>Front-end developer.</h2>
           <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+            Autodidacte de 18 ans, je suis passioné par le développement web et l'UI/UX depuis 2014.
           </p>
           <button>Get in touch</button>
         </div>

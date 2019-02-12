@@ -32,16 +32,17 @@ main {
 
 .hero h1 {
   font-family: 'Playfair Display';
-  line-height: 64px;
-  font-size: 64px;
+  line-height: 76px;
+  font-size: 76px;
   margin-bottom: 20px;
 }
 
 .hero h2 {
-  font-size: 24px;
+  font-size: 32px;
 }
 
 .hero p {
+  font-size: 18px;
   margin-top: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
