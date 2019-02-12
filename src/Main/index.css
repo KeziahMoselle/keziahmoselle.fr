@@ -1,48 +1,12 @@
-/* playfair-display-900 - latin */
 @font-face {
   font-family: 'Playfair Display';
   font-style: normal;
   font-weight: 900;
   src: local('Playfair Display Black'), local('PlayfairDisplay-Black'),
-       url('./playfair-display-v13-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./playfair-display-v13-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('./playfair-display.woff2') format('woff2'),
+       url('./playfair-display.woff') format('woff');
 }
 
 main {
   margin-top: 120px;
-}
-
-
-/* DESKTOP */
-@media only screen and (min-width: 1200px) {
-  .hero {
-    width: 1200px;
-    margin: 0 auto;
-  }
-}
-
-
-/* MOBILE */
-@media only screen and (max-width: 1200px) {
-  .hero {
-    width: auto;
-    padding: 0 32px;
-  }
-}
-
-.hero h1 {
-  font-family: 'Playfair Display';
-  line-height: 76px;
-  font-size: 76px;
-  margin-bottom: 20px;
-}
-
-.hero h2 {
-  font-size: 32px;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-top: 16px;
-  margin-bottom: 32px;
 }

@@ -1,0 +1,33 @@
+/* DESKTOP */
+@media only screen and (min-width: 1200px) {
+  .hero {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+
+/* MOBILE */
+@media only screen and (max-width: 1200px) {
+  .hero {
+    width: auto;
+    padding: 0 32px;
+  }
+}
+
+.hero h1 {
+  font-family: 'Playfair Display';
+  line-height: 76px;
+  font-size: 76px;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 32px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
