@@ -7,6 +7,13 @@ header {
   align-items: center;
 }
 
+@media only screen and (min-width: 1600px) {
+  header {
+    width: 1400px;
+    margin: 0 auto;
+  }
+}
+
 .header-logo {
   height: 32px;
   width: 32px;

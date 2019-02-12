@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'),
+       url('./assets/fonts/lato-v14-latin-700.woff2') format('woff2'),
+       url('./assets/fonts/lato-v14-latin-700.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'),
+       url('./assets/fonts/lato-v14-latin-regular.woff2') format('woff2'),
+       url('./assets/fonts/lato-v14-latin-regular.woff') format('woff');
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,13 +23,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 code {
@@ -22,11 +38,11 @@ code {
 
 /**
  *
- * FONTS
+ * TYPOGRAPHY
  *
  */
 
-@font-face {
-  font-family: 'Playfair Display';
-  src: url('./assets/fonts/PlayfairDisplay-Black.ttf') format('ttf');
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
 }
