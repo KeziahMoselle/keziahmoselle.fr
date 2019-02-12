@@ -1,0 +1,21 @@
+footer {
+  background-color: black;
+  color: white;
+  padding: 32px;
+}
+
+.footer-container {
+  margin: 32px 0 32px 32px;
+  display: flex;
+}
+
+.footer-container h4 {
+  width: 100px;
+  margin-right: 32px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer-container {
+    margin: 32px 0;
+  }
+}
