@@ -23,7 +23,7 @@
     position: absolute;
     left: -60px;
     top: 0;
-    height: 454px;
+    height: 100%;
     width: 4px;
     background-color: #eee;
     overflow: hidden;
@@ -44,7 +44,7 @@
       transform: translateY(-32px);
     }
     to  {
-      transform: translateY(456px);
+      transform: translateY(330px);
     }
   }
 }
