@@ -102,6 +102,19 @@ h3 {
   font-size: 24px;
 }
 
+.first-title {
+  position: relative;
+}
+
+.first-title::before {
+  position: absolute;
+  top: -4px;
+  left: -60px;
+  content: '';
+  width: 100%;
+  border-top: 4px solid black;
+}
+
 h4 {
   font-size: 18px;
 }
