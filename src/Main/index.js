@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Hero from './Hero'
 import Skills from './Skills'
 import Experience from './Experience'
+import Formations from './Formations'
 
 class Main extends Component {
   render() {
@@ -10,6 +11,7 @@ class Main extends Component {
         <Hero />
         <Skills />
         <Experience />
+        <Formations />
       </main>
     )
   }
