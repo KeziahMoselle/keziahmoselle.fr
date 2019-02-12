@@ -38,6 +38,31 @@ code {
 
 /**
  *
+ * CONTAINER
+ *
+ */
+
+/* DESKTOP */
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    margin: 120px auto;
+  }
+}
+
+
+/* MOBILE */
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: auto;
+    padding: 0 32px;
+    margin: 64px 0;
+  }
+}
+
+
+/**
+ *
  * TYPOGRAPHY
  *
  */
@@ -45,6 +70,27 @@ code {
 h1, h2, h3, h4, h5, h6, p, ul {
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  font-family: 'Playfair Display';
+  line-height: 76px;
+  font-size: 76px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  display: inline-block;
+  border-top: 4px solid black;
+  padding-top: 6px;
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
 }
 
 
@@ -92,4 +138,14 @@ button:hover {
 button:focus {
   background-color: #eeeeee;
   color: black;
+}
+
+
+/* LIST */
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline-block;
 }

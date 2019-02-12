@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Hero from './Hero'
+import Skills from './Skills'
 import './index.css'
 
 class Main extends Component {
@@ -7,6 +8,7 @@ class Main extends Component {
     return (
       <main>
         <Hero />
+        <Skills />
       </main>
     )
   }

@@ -14,43 +14,7 @@ header {
   }
 }
 
-.bar {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 4px;
-  background-color: #eee;
-  overflow: hidden;
-}
-
-.bar::before {
-  content: '';
-  position: absolute;
-  height: 64px;
-  width: 4px;
-  background-color: black;
-  top: 0;
-  animation: translationY ease 4s infinite;
-}
-
-@keyframes translationY {
-  from {
-    transform: translateY(-32px);
-  }
-  to  {
-    transform: translateY(100vh);
-  }
-}
-
 header img {
   height: 32px;
   width: 32px;
-}
-
-.header-menu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: inline-block;
 }

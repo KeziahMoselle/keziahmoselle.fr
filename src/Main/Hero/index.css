@@ -1,33 +1,50 @@
-/* DESKTOP */
-@media only screen and (min-width: 1200px) {
-  .hero {
-    width: 1200px;
-    margin: 0 auto;
-  }
-}
-
-
-/* MOBILE */
-@media only screen and (max-width: 1200px) {
-  .hero {
-    width: auto;
-    padding: 0 32px;
-  }
+.hero {
+  position: relative;
 }
 
 .hero h1 {
-  font-family: 'Playfair Display';
-  line-height: 76px;
-  font-size: 76px;
   margin-bottom: 20px;
-}
-
-.hero h2 {
-  font-size: 32px;
 }
 
 .hero p {
   font-size: 18px;
   margin-top: 16px;
   margin-bottom: 32px;
+}
+
+/**
+ *
+ * Bar scroller
+ *
+ */
+
+@media only screen and (min-width: 1400px) {
+  .bar {
+    position: absolute;
+    left: -60px;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #eee;
+    overflow: hidden;
+  }
+
+  .bar::before {
+    content: '';
+    position: absolute;
+    height: 64px;
+    width: 4px;
+    background-color: black;
+    top: 0;
+    animation: translationY ease 2.5s infinite;
+  }
+  
+  @keyframes translationY {
+    from {
+      transform: translateY(-32px);
+    }
+    to  {
+      transform: translateY(330px);
+    }
+  }
 }

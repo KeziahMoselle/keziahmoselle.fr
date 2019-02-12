@@ -4,7 +4,8 @@ import './index.css'
 class Hero extends Component {
   render() {
     return (
-      <div className="hero">
+      <div className="container hero">
+        <div className="bar"></div>
         <h1>Keziah <br/> Moselle</h1>
         <h2>Front-end developer.</h2>
         <p>
