@@ -6,7 +6,10 @@ import './index.css'
 function Header () {
   return (
     <header>
-      <img src={logo} className="header-logo" alt="Keziah logo" />
+      <a href="https://keziahmoselle.fr/">
+        <img src={logo} className="header-logo" alt="Keziah logo" />
+        <p>Website under construction...</p>
+      </a>
       
       <ul className="header-menu">
         <li>
