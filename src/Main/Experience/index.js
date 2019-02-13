@@ -3,7 +3,7 @@ import './index.css'
 
 function Experience () {
   return (
-    <div className="container experience">
+    <div className="container medium experience">
       <h3>Expérience</h3>
 
       <div className="block">
@@ -22,6 +22,8 @@ function Experience () {
           <li>Réalisation de 2 template emails (MJML)</li>
         </ul>
       </div>
+
+      <div className="circle"></div>
     </div>
   )
 }

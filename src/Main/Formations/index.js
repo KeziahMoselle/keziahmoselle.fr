@@ -3,7 +3,7 @@ import './index.css'
 
 function Formations () {
   return (
-    <div className="container formations">
+    <div className="container medium formations">
       <h3>Formations</h3>
 
       <div className="block">
@@ -12,7 +12,7 @@ function Formations () {
       </div>
 
       <div className="block">
-        <h4>Lycée Blaise Pascal</h4>
+        <h4>Lycée Blaise Pascal STI2D</h4>
         <h5>2016-2018</h5>
       </div>
     </div>

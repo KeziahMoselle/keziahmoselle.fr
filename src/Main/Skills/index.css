@@ -4,11 +4,23 @@
 
 .skills .block .center {
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .skills h4 {
   width: 100px;
   margin-right: 32px;
+}
+
+@media only screen and (max-width: 700px) {
+  .skills .block {
+    justify-content: center;
+  }
+
+  .skills h4 {
+    width: auto;
+    margin-right: 0;
+  }
 }
 
 /* SKILL IMAGE */
@@ -18,6 +30,12 @@
   flex-direction: column;
   align-items: center;
   margin: 0 24px;
+}
+
+@media only screen and (max-width: 700px) {
+  .skill {
+    margin-bottom: 24px;
+  }
 }
 
 .skill img {

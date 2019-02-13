@@ -2,6 +2,8 @@ footer {
   background-color: black;
   color: white;
   padding: 32px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 footer h4 {
