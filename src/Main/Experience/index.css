@@ -13,3 +13,7 @@
   left: -400px;
   background-color: black;
 }
+
+.experience ol li {
+  margin-bottom: 8px;
+}

@@ -1,5 +1,6 @@
 .skills .block {
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .skills .block .center {
@@ -9,7 +10,7 @@
 
 .skills h4 {
   text-align: center;
-  width: 120px;
+  width: 160px;
   padding: 6px;
   margin-right: 32px;
   background-color: black;

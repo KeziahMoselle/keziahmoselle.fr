@@ -27,7 +27,7 @@ function Projects () {
           title="Gelbooru Client"
           subtitle="A material client to explore an image board."
           type="UI/UX, Frontend, API"
-          date="2019"
+          date="2017-2018"
           url="#"
         />
       </div>
@@ -46,7 +46,7 @@ function Project ({ title, subtitle, type, date, url }) {
           <h4 className="grey">{ subtitle }</h4>
           <h5>{ type } <span className="separator">⚬</span> { date }</h5>
         </div>
-        <a href={url}>View more</a>
+        <a href={url}>Read more</a>
       </div>
       <img src={`./assets/thumbnails/${img}.jpg`} alt={`${title} thumbnail`} />
     </div>

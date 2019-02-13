@@ -8,19 +8,19 @@ function Experience () {
 
       <div className="block">
         <h4>Groupement d'Action Sociale de Colmar</h4>
-        <ul>
+        <ol>
           <li>Refonte du site Joomla vers PHP 7 (migrations base de données)</li>
           <li>Réalisation d'un back-office, gestion d'articles, d'utilisateurs..</li>
           <li>Espace membre, visualisation d'articles...</li>
-        </ul>
+        </ol>
       </div>
 
       <div className="block">
         <h4>vanessamoselle photographie</h4>
-        <ul>
-          <li>Réalisation d'une landing page pour une exposition à Los Angeles (HTML/CSS/jQuery/Google Maps)</li>
+        <ol>
+          <li>Réalisation d'une landing page pour une exposition à Los Angeles</li>
           <li>Réalisation de 2 template emails (MJML)</li>
-        </ul>
+        </ol>
       </div>
 
       <div className="circle"></div>
