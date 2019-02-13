@@ -16,6 +16,15 @@
 @font-face {
   font-family: 'Lato';
   font-style: normal;
+  font-weight: 900;
+  src: local('Lato Black'), local('Lato-Black'),
+       url('./assets/fonts/lato-v14-latin-900.woff2') format('woff2'),
+       url('./assets/fonts/lato-v14-latin-900.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
   font-weight: 700;
   src: local('Lato Bold'), local('Lato-Bold'),
        url('./assets/fonts/lato-v14-latin-700.woff2') format('woff2'),
@@ -88,6 +97,11 @@ code {
   }
 }
 
+.container > h3 {
+  border-top: 4px solid black;
+  padding-top: 6px;
+}
+
 
 
 /**
@@ -99,6 +113,10 @@ code {
 .block {
   margin: 32px 0 32px 32px;
   display: flex;
+}
+
+.block:first-of-type {
+  margin-top: 56px;
 }
 
 .block h4 {
@@ -145,8 +163,6 @@ h2 {
 
 h3 {
   display: inline-block;
-  border-top: 4px solid black;
-  padding-top: 6px;
   font-size: 24px;
 }
 
@@ -155,9 +171,16 @@ h4 {
 }
 
 h5 {
-  color: rgb(46, 46, 46);
+  color: rgba(29, 29, 29, 0.5);
 }
 
+.grey {
+  color: rgba(29, 29, 29, 0.5);
+}
+
+.separator {
+  margin: 0 8px;
+}
 
 /**
  *
@@ -222,9 +245,18 @@ ul {
  *
  */
 
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .center {
   display: flex;
   justify-content: center;
+}
+
+.valign {
+  align-items: center;
 }
 
 /* CIRCLE */
