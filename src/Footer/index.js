@@ -7,7 +7,7 @@ function Footer () {
       <div className="container">
         <h2>Contact</h2>
         
-        <div className="footer-container">
+        <div className="block">
           <h4>Details</h4>
           <ul>
             <li>Strasbourg, Alsace, France</li>

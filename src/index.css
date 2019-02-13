@@ -92,6 +92,10 @@ code {
   display: flex;
 }
 
+.block h4 {
+  margin-bottom: 16px;
+}
+
 
 /* MOBILE */
 @media only screen and (max-width: 1200px) {
