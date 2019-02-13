@@ -205,3 +205,15 @@ ul {
   list-style: none;
   display: inline-block;
 }
+
+
+/**
+ *
+ * UTILITIES
+ *
+ */
+
+.center {
+  display: flex;
+  justify-content: center;
+}

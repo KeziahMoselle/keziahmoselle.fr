@@ -1,4 +1,30 @@
+.skills .block {
+  align-items: center;
+}
+
+.skills .block .center {
+  width: 100%;
+}
+
 .skills h4 {
   width: 100px;
   margin-right: 32px;
+}
+
+/* SKILL IMAGE */
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 24px;
+}
+
+.skill img {
+  height: 90px;
+  width: 90px;
+}
+
+.skill span {
+  font-weight: 700;
 }

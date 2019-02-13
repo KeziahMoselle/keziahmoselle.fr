@@ -9,35 +9,50 @@ class Skills extends Component {
         
         <div className="block">
           <h4>Front-end</h4>
-          <ul>
-            <li>JavaScript</li>
-            <li>Vue.js</li>
-            <li>React.js</li>
-            <li>React Native</li>
-            <li>Electron.js</li>
-          </ul>
+
+          <div className="center">
+            <Skill name="JavaScript" />
+            <Skill name="Vue.js" />
+            <Skill name="React.js" />
+            <Skill name="React Native" />
+            <Skill name="Electron.js" />
+          </div>
         </div>
 
         <div className="block">
           <h4>Back-end</h4>
-          <ul>
-            <li>Node.js</li>
-            <li>PHP</li>
-            <li>MySQL</li>
-          </ul>
+
+          <div className="center">
+            <Skill name="Node.js" />
+            <Skill name="PHP" />
+            <Skill name="MySQL" />
+          </div>
         </div>
 
         <div className="block">
           <h4>Tooling</h4>
-          <ul>
-            <li>Git / GitHub</li>
-            <li>SASS</li>
-            <li>Webpack</li>
-          </ul>
+
+          <div className="center">
+            <Skill name="Git" />
+            <Skill name="GitHub" />
+            <Skill name="SASS" />
+            <Skill name="Webpack" />
+          </div>
         </div>
       </div>
     )
   }
+}
+
+function Skill ({ name }) {
+  const img = name.toLowerCase().replace(' ', '').replace('.', '')
+
+  return (
+    <div className="skill">
+      <img src={`./logos/${img}.svg`} alt={`${name} logo`}></img>
+      <span>{name}</span>
+    </div>
+  )
 }
 
 export default Skills
