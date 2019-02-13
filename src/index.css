@@ -91,10 +91,6 @@ code {
     padding: 0 32px;
     margin: 64px 0;
   }
-
-  .container.medium {
-    width: auto;
-  }
 }
 
 .container > h3 {
