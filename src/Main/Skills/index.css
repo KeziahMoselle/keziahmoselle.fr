@@ -11,7 +11,7 @@
 .skills h4 {
   text-align: center;
   width: 160px;
-  padding: 6px;
+  padding: 6px 12px;
   margin-right: 32px;
   background-color: black;
   color: white;
@@ -26,6 +26,7 @@
   .skills h4 {
     width: auto;
     margin-right: 0;
+    margin-bottom: 32px;
   }
 }
 

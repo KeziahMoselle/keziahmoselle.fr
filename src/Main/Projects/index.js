@@ -40,7 +40,7 @@ function Project ({ title, subtitle, type, date, url }) {
 
   return (
     <div className="project">
-      <div className="space-between valign">
+      <div className="project-header">
         <div>
           <h3>{ title }</h3>
           <h4 className="grey">{ subtitle }</h4>

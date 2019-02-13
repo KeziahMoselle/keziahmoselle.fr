@@ -98,6 +98,12 @@ code {
   padding-top: 6px;
 }
 
+@media only screen and (max-width: 600px) {
+  .container > h3 {
+    display: block;
+  }
+}
+
 
 
 /**

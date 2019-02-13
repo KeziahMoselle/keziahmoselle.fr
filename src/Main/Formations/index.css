@@ -1,5 +1,3 @@
-.formations h4 {
-  max-width: 200px;
-  min-width: 200px;
-  margin-right: 32px;
+.formations .block {
+  flex-direction: column;
 }
