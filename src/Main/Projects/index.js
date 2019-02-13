@@ -10,7 +10,7 @@ function Projects () {
         <Project
           title="Pomodoro"
           subtitle="A simple yet featureful pomodoro in the tray/menubar"
-          type="UI/UX, Front-end development"
+          type="UI/UX, Frontend"
           date="2019"
           url="#"
         />
