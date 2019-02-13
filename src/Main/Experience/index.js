@@ -4,10 +4,10 @@ import './index.css'
 class Experience extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container experience">
         <h3>Expérience</h3>
 
-        <div className="experience-container">
+        <div className="block">
           <h4>Groupement d'Action Sociale de Colmar</h4>
           <ul>
             <li>Refonte du site Joomla vers PHP 7 (migrations base de données)</li>
@@ -16,7 +16,7 @@ class Experience extends Component {
           </ul>
         </div>
 
-        <div className="experience-container">
+        <div className="block">
           <h4>vanessamoselle photographie</h4>
           <ul>
             <li>Réalisation d'une landing page pour une exposition à Los Angeles (HTML/CSS/jQuery/Google Maps)</li>

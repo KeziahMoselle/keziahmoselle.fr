@@ -4,10 +4,10 @@ import './index.css'
 class Skills extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container skills">
         <h3>Compétences</h3>
         
-        <div className="skills-container">
+        <div className="block">
           <h4>Front-end</h4>
           <ul>
             <li>JavaScript</li>
@@ -18,7 +18,7 @@ class Skills extends Component {
           </ul>
         </div>
 
-        <div className="skills-container">
+        <div className="block">
           <h4>Back-end</h4>
           <ul>
             <li>Node.js</li>
@@ -27,7 +27,7 @@ class Skills extends Component {
           </ul>
         </div>
 
-        <div className="skills-container">
+        <div className="block">
           <h4>Tooling</h4>
           <ul>
             <li>Git / GitHub</li>

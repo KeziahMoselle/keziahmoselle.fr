@@ -1,15 +1,5 @@
-.experience-container {
-  margin: 32px 0 32px 32px;
-  display: flex;
-}
-
-.experience-container h4 {
-  width: 200px;
+.formations h4 {
+  max-width: 200px;
+  min-width: 200px;
   margin-right: 32px;
-}
-
-@media only screen and (max-width: 1200px) {
-  .experience-container {
-    margin: 32px 0;
-  }
 }

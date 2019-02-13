@@ -33,6 +33,7 @@
 
 * {
   box-sizing: border-box;
+  word-wrap: break-word;
 }
 
 body {
@@ -76,6 +77,27 @@ code {
     width: auto;
     padding: 0 32px;
     margin: 64px 0;
+  }
+}
+
+
+/**
+ *
+ * BLOCKS
+ *
+ */
+
+.block {
+  margin: 32px 0 32px 32px;
+  display: flex;
+}
+
+
+/* MOBILE */
+@media only screen and (max-width: 1200px) {
+  .block {
+    margin: 32px 0;
+    flex-wrap: wrap;
   }
 }
 
