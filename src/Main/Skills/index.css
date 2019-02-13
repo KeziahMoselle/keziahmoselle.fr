@@ -1,0 +1,53 @@
+.skills .block {
+  align-items: center;
+}
+
+.skills .block .center {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.skills h4 {
+  text-align: center;
+  width: 120px;
+  padding: 6px;
+  margin-right: 32px;
+  background-color: black;
+  color: white;
+  border-radius: 16px;
+}
+
+@media only screen and (max-width: 700px) {
+  .skills .block {
+    justify-content: center;
+  }
+
+  .skills h4 {
+    width: auto;
+    margin-right: 0;
+  }
+}
+
+/* SKILL IMAGE */
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 24px;
+}
+
+@media only screen and (max-width: 700px) {
+  .skill {
+    margin-bottom: 24px;
+  }
+}
+
+.skill img {
+  height: 90px;
+  width: 90px;
+}
+
+.skill span {
+  font-weight: 700;
+}
