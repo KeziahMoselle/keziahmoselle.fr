@@ -119,6 +119,13 @@ h1 {
   font-size: 76px;
 }
 
+/* MOBILE */
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 64px;
+  }
+}
+
 h2 {
   font-size: 32px;
 }
