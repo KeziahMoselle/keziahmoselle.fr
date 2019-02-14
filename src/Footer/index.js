@@ -11,12 +11,17 @@ function Footer () {
   async function send (event) {
     event.preventDefault()
 
+    const { email, message } = data
     const url = `${window.location.href}.netlify/functions/contact`
-    console.log(url)
-    const response = await ky.post(url, {
-      data.email,
-      data.message
+    const response = await fetch(url, {
+      method: 'POST',
+      body: JSON.stringify({
+        email,
+        message
+      })
     })
+    console.log(email, message)
+    console.log(url)
     console.log(response)
   }
 
