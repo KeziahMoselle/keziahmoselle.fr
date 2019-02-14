@@ -72,6 +72,7 @@
   font-weight: 700;
   position: relative;
 }
+
 .project a::before {
   transition: all 0.4s;
   content: '';
@@ -82,11 +83,13 @@
   top: 0;
   left: 0;
 }
+
 .project a::before {
   border-radius: 50px;
   width: 25%;
   background: #d23669;
 }
+
 .project a:hover::before {
   background: #d23669;
   width: 100%;

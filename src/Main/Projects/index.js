@@ -12,7 +12,7 @@ function Projects () {
           subtitle="A simple yet featureful pomodoro in the tray/menubar"
           type="UI/UX, Frontend"
           date="2019"
-          url="#"
+          url="/"
         />
 
         <Project
@@ -20,7 +20,7 @@ function Projects () {
           subtitle="View / Sort / Export your Starred repositories."
           type="UI/UX, Frontend, GitHub API"
           date="2018"
-          url="#"
+          url="/"
         />
 
         <Project
@@ -28,7 +28,7 @@ function Projects () {
           subtitle="A material client to explore an image board."
           type="UI/UX, Frontend, API"
           date="2017-2018"
-          url="#"
+          url="/"
         />
       </div>
     </div>

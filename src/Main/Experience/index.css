@@ -13,6 +13,16 @@
   background-color: black;
 }
 
+.experience ol {
+  margin: 0;
+}
+
 .experience ol li {
   margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 960px) {
+  .experience ol {
+    margin-top: 26px;
+  }
 }
