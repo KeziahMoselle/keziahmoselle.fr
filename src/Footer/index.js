@@ -8,8 +8,15 @@ function Footer () {
     message: ''
   })
 
-  async function send () {
-    const response = await ky.post('/.netlify/functions/contact')
+  async function send (event) {
+    event.preventDefault()
+
+    const url = `${window.location.href}.netlify/functions/contact`
+    console.log(url)
+    const response = await ky.post(url, {
+      data.email,
+      data.message
+    })
     console.log(response)
   }
 
