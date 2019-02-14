@@ -185,6 +185,10 @@ h5 {
   margin: 0 8px;
 }
 
+.separator::before {
+  content: '/'
+}
+
 /**
  *
  * LINKS
