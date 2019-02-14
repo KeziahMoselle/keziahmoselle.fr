@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './index.css'
-import ky from 'ky'
 
 function Footer () {
   const [data, setData] = useState({
@@ -28,20 +27,26 @@ function Footer () {
   return (
     <footer>
       <div className="container">
-        <h2>Contact</h2>
+        
         <form>
+          <h2>Contact</h2>
 
           <input
             id="email"
             type="text"
             value={data.email}
-            onInput={(event) => setData({ email: event.target.value })}
+            onChange={(event) => setData({ email: event.target.value })}
+            placeholder="Email"
           />
 
           <textarea
             id="message"
-            onInput={(event) => setData({ message: event.target.value })}
-          >{ data.message }</textarea>
+            value={data.message}
+            onChange={(event) => setData({ message: event.target.value })}
+            placeholder="Message"
+            spellCheck
+            rows="6"
+          ></textarea>
 
           <button onClick={send}>Submit</button>
         </form>
