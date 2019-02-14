@@ -9,8 +9,8 @@ function Main () {
   return (
     <main>
       <Hero />
-      <Skills />
       <Projects />
+      <Skills />
       <Experience />
       <Formations />
     </main>

@@ -8,8 +8,9 @@ function Header () {
     <header>
       <a href="https://keziahmoselle.fr/">
         <img src={logo} className="header-logo" alt="Keziah logo" />
-        <p>Website under construction...</p>
       </a>
+
+      <p style={{ color: '#d23669' }}>Website under construction...</p>
       
       <ul className="header-menu">
         <li>
