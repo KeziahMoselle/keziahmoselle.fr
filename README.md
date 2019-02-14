@@ -16,22 +16,22 @@
 
 - **v2** (2019) [preview](https://keziahmoselle.fr/)
 <p align="center">
-  <img width="400" src="./.github/v2.png" alt="preview">
+  <img width="100%" src="./.github/v2.png" alt="preview">
 </p>
 
 - v1 (2018) [preview](https://5c61cc3acb9cd0000840a695--keziahmoselle.netlify.com/)
 <p align="center">
-  <img width="400" src="./.github/v1.png" alt="preview">
+  <img width="100%" src="./.github/v1.png" alt="preview">
 </p>
 - beta (2017)
 <p align="center">
-  <img width="400" src="./.github/beta.png" alt="preview">
+  <img width="100%" src="./.github/beta.png" alt="preview">
 </p>
 - alpha 2 (2016-2017)
 <p align="center">
-  <img width="400" src="./.github/alpha-2.png" alt="preview">
+  <img width="100%" src="./.github/alpha-2.png" alt="preview">
 </p>
 - alpha (2015-2016)
 <p align="center">
-  <img width="400" src="./.github/alpha.png" alt="preview">
+  <img width="100%" src="./.github/alpha.png" alt="preview">
 </p>
