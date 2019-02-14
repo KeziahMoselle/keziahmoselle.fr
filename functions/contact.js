@@ -1,9 +1,14 @@
+import querystring from 'querystring'
+
 exports.handler = async (event, context) => {
-  const email = event.queryStringParameters.email
-  const message = event.queryStringParameters.message
+  if (event.httpMethod !== "POST") {
+    return { statusCode: 405, body: "Method Not Allowed" }
+  }
+
+  const { email, message } = querystring.parse(event.body)
 
   return {
     statusCode: 200,
-    body: `Received: ${email} and '${message}'`
+    body: `Received message from '${email}': ${message}`
   }
-};
+}
