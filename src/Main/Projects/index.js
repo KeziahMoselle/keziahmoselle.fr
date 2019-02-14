@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, Fragment } from 'react'
 import './index.css'
 import ky from 'ky'
 
@@ -14,6 +14,7 @@ function Projects () {
           type="UI/UX, Frontend"
           date="2019"
           github="KeziahMoselle/pomodoro"
+          stack={['reactjs', 'electronjs']}
         />
 
         <Project
@@ -22,6 +23,7 @@ function Projects () {
           type="UI/UX, Frontend, GitHub API"
           date="2018"
           github="KeziahMoselle/export-github-stars"
+          stack={['vuejs']}
         />
 
         <Project
@@ -30,13 +32,14 @@ function Projects () {
           type="UI/UX, Frontend, API"
           date="2017-2018"
           github="KeziahMoselle/gelbooru-client"
+          stack={['javascript', 'electronjs']}
         />
       </div>
     </div>
   )
 }
 
-function Project ({ title, subtitle, type, date, github }) {
+function Project ({ title, subtitle, type, date, github, stack }) {
   const [stars, setStars] = useState(null)
   /* Get the file name in /assets/thumbnails */
   const img = title.toLowerCase().replace(/\s/g, '_')
@@ -49,6 +52,12 @@ function Project ({ title, subtitle, type, date, github }) {
     })()
   }
 
+  /* Tech stack */
+  const techStack = stack.map(tech => (
+    <img src={`./assets/logos/${tech}.svg`} alt={`${tech} logo`} />
+  ))
+  
+
   return (
     <div className="project">
       <div className="project-header">
@@ -60,16 +69,17 @@ function Project ({ title, subtitle, type, date, github }) {
             <span className="separator"></span>
             { date }
             { stars &&
-              <>
+              <Fragment>
                 <span className="separator"></span>
                 { `${stars} ⭐` }
-              </>
+              </Fragment>
             }
           </h5>
         </div>
         <a href="/"><span>Read more</span></a>
       </div>
       <img src={`./assets/thumbnails/${img}.jpg`} alt={`${title} thumbnail`} />
+      <p className="project-footer">{ techStack }</p>
     </div>
   )
 }

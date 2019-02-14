@@ -45,7 +45,7 @@
   margin-bottom: 16px;
 }
 
-.project img {
+.project > img {
   background-color: #eee;
   width: 100%;
   object-fit: contain;
@@ -54,8 +54,20 @@
   transition: filter 0.4s;
 }
 
-.project img:hover {
+.project > img:hover {
   filter: brightness(50%);
+}
+
+.project-footer {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.project-footer img {
+  height: 36px;
+  width: auto;
+  margin-left: 6px;
 }
 
 
