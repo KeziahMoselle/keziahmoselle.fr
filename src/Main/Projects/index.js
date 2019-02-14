@@ -76,9 +76,15 @@ function Project ({ title, subtitle, type, date, github, stack }) {
             }
           </h5>
         </div>
-        <a href="/"><span>Read more</span></a>
+        { github &&
+          <a href={`https://github.com/${github}`}><span>Read more</span></a>
+        }
       </div>
-      <img src={`./assets/thumbnails/${img}.jpg`} alt={`${title} thumbnail`} />
+      <img
+        onClick={() => window.open(`https://github.com/${github}`)}
+        src={`./assets/thumbnails/${img}.jpg`}
+        alt={`${title} thumbnail`}
+      />
       <p className="project-footer">{ techStack }</p>
     </div>
   )
