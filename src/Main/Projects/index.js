@@ -46,7 +46,7 @@ function Project ({ title, subtitle, type, date, url }) {
           <h4 className="grey">{ subtitle }</h4>
           <h5>{ type } <span className="separator">⚬</span> { date }</h5>
         </div>
-        <a href={url}>Read more</a>
+        <a href={url}><span>Read more</span></a>
       </div>
       <img src={`./assets/thumbnails/${img}.jpg`} alt={`${title} thumbnail`} />
     </div>

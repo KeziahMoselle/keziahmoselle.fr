@@ -30,9 +30,8 @@
   }
 
   .project-header a {
-    display: block;
+    display: inline-block;
     margin: 30px 0 20px 0;
-    text-align: right;
   }
 }
 
@@ -51,4 +50,49 @@
   width: 100%;
   object-fit: contain;
   border-radius: 6px;
+  cursor: pointer;
+  transition: filter 0.4s;
+}
+
+.project img:hover {
+  filter: brightness(50%);
+}
+
+
+/**
+ *
+ * BUTTON
+ *
+ */
+
+.project a {
+  border: none;
+  padding: 3px 10px 3px 50px;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+}
+.project a::before {
+  transition: all 0.4s;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.project a::before {
+  border-radius: 50px;
+  width: 25%;
+  background: #d23669;
+}
+.project a:hover::before {
+  background: #d23669;
+  width: 100%;
+}
+
+.project a span {
+  color: #d23669;
+  mix-blend-mode: difference;
 }
