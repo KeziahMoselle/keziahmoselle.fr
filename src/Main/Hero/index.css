@@ -7,6 +7,8 @@
 }
 
 .hero p {
+  max-width: 500px;
+  word-break: break-word;
   font-size: 18px;
   margin-top: 16px;
   margin-bottom: 32px;
@@ -44,7 +46,7 @@
       transform: translateY(-32px);
     }
     to  {
-      transform: translateY(330px);
+      transform: translateY(352px);
     }
   }
 }

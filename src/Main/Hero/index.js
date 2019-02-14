@@ -23,7 +23,7 @@ function Hero () {
       <h2>Front-end developer.</h2>
 
       <p>
-        Autodidacte de 18 ans, je suis passioné par le développement web et l'UI/UX depuis 2014.
+        Autodidacte de 18 ans, je suis passioné par le développement web et l'UI/UX depuis { new Date().getFullYear() - 2014 } ans.
       </p>
 
       <div>

@@ -19,11 +19,11 @@ function Projects () {
 
         <Project
           title="Export GitHub Stars"
-          subtitle="View / Sort / Export your Starred repositories."
-          type="UI/UX, Frontend, GitHub API"
+          subtitle="View / Sort / Export your starred repositories."
+          type="UI/UX, Frontend, API"
           date="2018"
           github="KeziahMoselle/export-github-stars"
-          stack={['vuejs']}
+          stack={['vuejs', 'vuetify']}
         />
 
         <Project
@@ -32,7 +32,7 @@ function Projects () {
           type="UI/UX, Frontend, API"
           date="2017-2018"
           github="KeziahMoselle/gelbooru-client"
-          stack={['javascript', 'electronjs']}
+          stack={['javascript', 'electronjs', 'materialize']}
         />
       </div>
     </div>
@@ -54,7 +54,7 @@ function Project ({ title, subtitle, type, date, github, stack }) {
 
   /* Tech stack */
   const techStack = stack.map(tech => (
-    <img src={`./assets/logos/${tech}.svg`} alt={`${tech} logo`} />
+    <img src={`./assets/logos/${tech}.svg`} alt={`${tech} logo`} title={tech} />
   ))
   
 
