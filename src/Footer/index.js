@@ -76,9 +76,11 @@ function Footer () {
             rows="6"
           ></textarea>
 
-          <button onClick={send}>
-            { status === 'loading' ? '...' : 'Envoyer'}
-          </button>
+          <div className="center">
+            <button className="white rounded" onClick={send}>
+              { status === 'loading' ? '...' : 'Envoyer'}
+            </button>
+          </div>
         </form>
       </div>
     </footer>

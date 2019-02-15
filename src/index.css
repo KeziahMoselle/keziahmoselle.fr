@@ -216,6 +216,7 @@ a {
  */
 
 button {
+  width: fit-content;
   margin: 0px;
   padding: 16px 32px;
   font-family: inherit;
@@ -230,10 +231,6 @@ button {
   transition: background-color 0.3s, color 0.3s;
 }
 
-button.rounded {
-  border-radius: 4px;
-}
-
 button:hover {
   background-color: rgb(47, 47, 47);
 }
@@ -241,6 +238,20 @@ button:hover {
 button:focus {
   background-color: #eeeeee;
   color: black;
+}
+
+button.rounded {
+  border-radius: 4px;
+}
+
+button.white {
+  background-color: white;
+  color: black;
+  transition: transform 0.1s ease-out;
+}
+
+button.white:hover {
+  transform: translateY(-2px);
 }
 
 
