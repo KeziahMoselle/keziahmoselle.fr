@@ -4,21 +4,31 @@ import './index.css'
 function Footer () {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [status, setStatus] = useState('')
 
   async function send (event) {
     event.preventDefault()
+    if (!email || !message) return setStatus('missing_fields') // Missing fields
+    if (status === 'loading') return // Prevent multiple submit
+    setStatus('loading')
 
+    
     const response = await fetch('/.netlify/functions/contact', {
       method: 'POST',
-      headers: new Headers({
-        'Content-Type': 'application/json'
-      }),
+      headers: new Headers({ 'Content-Type': 'application/json' }),
       body: JSON.stringify({
         email,
         message
       })
     })
-    console.log(response)
+    
+    if (response.ok) {
+      setEmail('')
+      setMessage('')
+      setStatus('success')
+    } else {
+      setStatus('error')
+    }
   }
 
   return (
@@ -27,6 +37,27 @@ function Footer () {
         
         <form>
           <h2>Contact</h2>
+
+          { status === 'success' &&
+            <p>
+              Message envoyé ! Merci
+              <span role="img" aria-label="party popper emoji">🎉</span>
+            </p>
+          }
+
+          { status === 'error' &&
+            <p>
+              Il y a eu une erreur, n'hésitez pas à réessayer plus tard.
+              <span role="img" aria-label="crying face emoji">😢</span>
+            </p>
+          }
+
+          { status === 'missing_fields' &&
+            <p>
+              Veillez à remplir tous les champs.
+              <span role="img" aria-label="construction emoji">🚧</span>
+            </p>
+          }
 
           <input
             id="email"
@@ -45,7 +76,9 @@ function Footer () {
             rows="6"
           ></textarea>
 
-          <button onClick={send}>Submit</button>
+          <button onClick={send}>
+            { status === 'loading' ? '...' : 'Envoyer'}
+          </button>
         </form>
       </div>
     </footer>

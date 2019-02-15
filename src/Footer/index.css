@@ -23,6 +23,10 @@ footer form {
   width: 450px;
 }
 
+footer form p {
+  margin-bottom: 12px;
+}
+
 footer form h2 {
   margin-bottom: 16px;
 }

@@ -29,36 +29,28 @@ exports.handler = async (event, context, callback) => {
 
   /* Send */
 
-  const embed = JSON.stringify({
-    content: '',
-    embeds: [{
-      type: 'rich',
-      timestamp: new Date().toDateString(),
-      footer: { text: 'Received' },
-      fields: [
-        {
-          name: 'From',
-          value: email,
-          inline: true
+  const embed = {
+    "content": "keziahmoselle.fr",
+    "embeds": [
+      {
+        "color": 6842567,
+        "timestamp": new Date(),
+        "footer": {
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
         },
-        {
-          name: 'To',
-          value: 'Keziah MOSELLE',
-          inline: true
+        "author": {
+          "name": email,
+          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
         },
-        {
-          name: 'Subject',
-          value: 'Portfolio message',
-          inline: true
-        },
-        {
-          name: 'Content',
-          value: message,
-          inline: true
-        },
-      ]
-    }]
-  })
+        "fields": [
+          {
+            "name": "Received message:",
+            "value": message
+          }
+        ]
+      }
+    ]
+  }
 
   const response = await axios({
     method: 'POST',
@@ -69,6 +61,9 @@ exports.handler = async (event, context, callback) => {
     data: embed
   })
 
-  console.log(response)
+  callback(null, {
+    statusCode: response.status,
+    body: response.statusText
+  })
 
 }
