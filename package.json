@@ -12,15 +12,17 @@
     "react-spring": "^8.0.7"
   },
   "devDependencies": {
+    "concurrently": "^4.1.0",
     "http-proxy-middleware": "^0.19.1",
     "netlify-lambda": "^1.4.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "concurrently \"react-scripts start\" \"netlify-lambda serve src/lambda\"",
+    "build": "npm run build:react && npm run build:lambda",
+    "build:react": "react-scripts build",
+    "build:lambda": "netlify-lambda build src/lambda",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lambda": "netlify-lambda serve src/lambda"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
