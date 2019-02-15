@@ -2,25 +2,22 @@ import React, { useState } from 'react'
 import './index.css'
 
 function Footer () {
-  const [data, setData] = useState({
-    email: '',
-    message: ''
-  })
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
 
   async function send (event) {
     event.preventDefault()
 
-    const { email, message } = data
-    const url = `${window.location.href}.netlify/functions/contact`
-    const response = await fetch(url, {
+    const response = await fetch('/.netlify/functions/contact', {
       method: 'POST',
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      }),
       body: JSON.stringify({
         email,
         message
       })
     })
-    console.log(email, message)
-    console.log(url)
     console.log(response)
   }
 
@@ -33,16 +30,16 @@ function Footer () {
 
           <input
             id="email"
-            type="text"
-            value={data.email}
-            onChange={(event) => setData({ email: event.target.value })}
+            type="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
             placeholder="Email"
           />
 
           <textarea
             id="message"
-            value={data.message}
-            onChange={(event) => setData({ message: event.target.value })}
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
             placeholder="Message"
             spellCheck
             rows="6"

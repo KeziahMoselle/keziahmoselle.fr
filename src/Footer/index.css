@@ -29,7 +29,6 @@ footer form h2 {
 
 input {
   height: 46px;
-  margin-bottom: 12px;
 }
 
 input, textarea {
@@ -39,6 +38,7 @@ input, textarea {
   border: none;
   outline: none;
   border-radius: 6px;
+  margin-bottom: 12px;
 }
 
 textarea {
