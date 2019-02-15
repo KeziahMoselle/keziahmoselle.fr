@@ -5,3 +5,46 @@ footer {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .container div {
+  height: 100%;
+}
+
+footer form {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+}
+
+footer form p {
+  margin-bottom: 12px;
+}
+
+footer form h2 {
+  margin-bottom: 16px;
+}
+
+input {
+  height: 46px;
+}
+
+input, textarea {
+  padding-left: 12px;
+  font-family: 'Lato';
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+textarea {
+  padding: 12px;
+}
