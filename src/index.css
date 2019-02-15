@@ -53,6 +53,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   font-size: 17px;
+  scroll-behavior: smooth;
 }
 
 main {

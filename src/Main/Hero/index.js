@@ -11,6 +11,11 @@ function Hero () {
     from: { x: 200 },
     x: 0, color: 'black'
   })
+
+  function scrollToFooter () {
+    document.querySelector('footer')
+      .scrollIntoView({ behavior: 'smooth' })
+  }
   
   return (
     <animated.div style={{opacity}} className="container hero">
@@ -27,7 +32,7 @@ function Hero () {
       </p>
 
       <div>
-        <button>Get in touch</button>
+        <button onClick={scrollToFooter}>Get in touch</button>
         <div className="circle"></div>
         <animated.div style={{
           backgroundColor: color,
