@@ -1,5 +1,6 @@
 require('dotenv').config()
 const axios = require('axios')
+const { DISCORD_WEBHOOK_URL } = process.env
 
 exports.handler = async (event, context, callback) => {
   /* Check method */
@@ -57,7 +58,7 @@ exports.handler = async (event, context, callback) => {
     headers: {
       'Content-Type': 'application/json'
     },
-    url: process.env.DISCORD_WEBHOOK_URL,
+    url: DISCORD_WEBHOOK_URL,
     data: embed
   })
 
