@@ -14,6 +14,11 @@ function Header () {
       
       <ul className="header-menu">
         <li>
+          <a href="https://blog.keziahmoselle.fr/">
+            Blog
+          </a>
+        </li>
+        <li>
           <a href="https://github.com/KeziahMoselle">
             <img src={githubLogo} alt="GitHub logo" />
           </a>

@@ -18,3 +18,12 @@ header img {
   height: 32px;
   width: 32px;
 }
+
+.header-menu {
+  display: flex;
+  align-items: center;
+}
+
+.header-menu li:last-child {
+  margin-left: 16px;
+}
