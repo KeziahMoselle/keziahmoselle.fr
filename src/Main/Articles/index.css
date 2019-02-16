@@ -1,8 +1,8 @@
-.projects .block {
+.articles .block {
   flex-direction: column;
 }
 
-.project {
+.article {
   width: 100%;
   margin-bottom: 64px;
   display: flex;
@@ -10,7 +10,7 @@
   flex-wrap: wrap;
 }
 
-.project-header {
+.article-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,27 +18,27 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .project-header {
+  .article-header {
     display: block;
   }
 
-  .project-header a {
+  .article-header a {
     display: inline-block;
     margin: 30px 0 20px 0;
   }
 }
 
-.project h3 {
+.article h3 {
   font-size: 36px;
   font-weight: 900;
   margin-bottom: 6px;
 }
 
-.project h4 {
+.article h4 {
   margin-bottom: 16px;
 }
 
-.project > img {
+.article > img {
   background-color: #eee;
   width: 100%;
   object-fit: contain;
@@ -47,17 +47,17 @@
   transition: filter 0.4s;
 }
 
-.project > img:hover {
+.article > img:hover {
   filter: brightness(50%);
 }
 
-.project-footer {
+.article-footer {
   margin-top: 18px;
   display: flex;
   justify-content: flex-end;
 }
 
-.project-footer img {
+.article-footer img {
   height: 36px;
   width: auto;
   margin-left: 6px;
@@ -70,7 +70,7 @@
  *
  */
 
-.project a {
+.article a {
   border: none;
   padding: 3px 10px 3px 50px;
   font-size: 16px;
@@ -78,7 +78,7 @@
   position: relative;
 }
 
-.project a::before {
+.article a::before {
   transition: all 0.4s;
   content: '';
   width: 50%;
@@ -89,18 +89,18 @@
   left: 0;
 }
 
-.project a::before {
+.article a::before {
   border-radius: 50px;
   width: 25%;
   background: #d23669;
 }
 
-.project a:hover::before {
+.article a:hover::before {
   background: #d23669;
   width: 100%;
 }
 
-.project a span {
+.article a span {
   color: #d23669;
   mix-blend-mode: difference;
 }

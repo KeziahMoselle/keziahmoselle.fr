@@ -197,6 +197,14 @@ h5 {
   content: '/'
 }
 
+.chip {
+  display: inline-block;
+  background-color: #eeeeee;
+  padding: 4px 10px;
+  margin-right: 6px;
+  border-radius: 20px;
+}
+
 /**
  *
  * LINKS
