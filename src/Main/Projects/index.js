@@ -1,6 +1,5 @@
 import React, { useState, Fragment } from 'react'
 import './index.css'
-import ky from 'ky'
 
 function Projects () {
   return (
@@ -40,16 +39,20 @@ function Projects () {
 }
 
 function Project ({ title, subtitle, type, date, github, stack }) {
-  const [stars, setStars] = useState(null)
   /* Get the file name in /assets/thumbnails */
-  const img = title.toLowerCase().replace(/\s/g, '_')
+  const formattedTitle = title.toLowerCase().replace(/\s/g, '_')
+
+  const [stars, setStars] = useState(localStorage.getItem(formattedTitle))
 
   /* GitHub project */
-  if (github) {
-    (async () => {
-      const data = await ky.get(`https://api.github.com/repos/${github}`).json()
-      setStars(data.stargazers_count)
-    })()
+  if (!stars) {
+    fetch(`https://api.github.com/repos/${github}`)
+      .then(response => response.json())
+      .then(data => {
+        console.log(`Old: ${stars} | New: ${data.stargazers_count}`)
+        setStars(data.stargazers_count)
+        localStorage.setItem(formattedTitle, data.stargazers_count)
+      })
   }
 
   /* Tech stack */
@@ -82,7 +85,7 @@ function Project ({ title, subtitle, type, date, github, stack }) {
       </div>
       <img
         onClick={() => window.open(`https://github.com/${github}`)}
-        src={`./assets/thumbnails/${img}.jpg`}
+        src={`./assets/thumbnails/${formattedTitle}.jpg`}
         alt={`${title} thumbnail`}
       />
       <p className="project-footer">{ techStack }</p>
