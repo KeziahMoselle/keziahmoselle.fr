@@ -224,7 +224,8 @@ button {
   outline: none;
   border: none;
   box-shadow: none;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s,
+              transform 0.3s ease-out;
 }
 
 button:hover {
@@ -243,10 +244,9 @@ button.rounded {
 button.white {
   background-color: white;
   color: black;
-  transition: transform 0.1s ease-out;
 }
 
-button.white:hover {
+button.translate-y:hover {
   transform: translateY(-2px);
 }
 

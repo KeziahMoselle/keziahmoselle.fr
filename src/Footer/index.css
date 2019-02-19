@@ -20,7 +20,7 @@ footer .container div {
 footer form {
   display: flex;
   flex-direction: column;
-  width: 450px;
+  width: 560px;
 }
 
 footer form p {
