@@ -5,13 +5,13 @@ import ky from 'ky'
 function Projects () {
   return (
     <div className="container medium projects">
-      <h3>Featured projects</h3>
+      <h3>Projets notable</h3>
 
       <div className="block">
         <Project
           title="Pomodoro"
           subtitle="A simple yet featureful pomodoro in the tray/menubar"
-          type="UI/UX, Frontend"
+          type="UI/UX, Front-end"
           date="2019"
           github="KeziahMoselle/pomodoro"
           stack={['reactjs', 'electronjs']}
@@ -20,7 +20,7 @@ function Projects () {
         <Project
           title="Export GitHub Stars"
           subtitle="View / Sort / Export your starred repositories."
-          type="UI/UX, Frontend, API"
+          type="UI/UX, Front-end, API"
           date="2018"
           github="KeziahMoselle/export-github-stars"
           stack={['vuejs', 'vuetify']}
@@ -29,7 +29,7 @@ function Projects () {
         <Project
           title="Gelbooru Client"
           subtitle="A material client to explore an image board."
-          type="UI/UX, Frontend, API"
+          type="UI/UX, Front-end, API"
           date="2017-2018"
           github="KeziahMoselle/gelbooru-client"
           stack={['javascript', 'electronjs', 'materialize']}
@@ -77,7 +77,7 @@ function Project ({ title, subtitle, type, date, github, stack }) {
           </h5>
         </div>
         { github &&
-          <a href={`https://github.com/${github}`}><span>Read more</span></a>
+          <a href={`https://github.com/${github}`}><span>En savoir plus</span></a>
         }
       </div>
       <img

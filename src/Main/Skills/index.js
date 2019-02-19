@@ -30,7 +30,7 @@ class Skills extends Component {
         </div>
 
         <div className="block">
-          <h4>Tooling</h4>
+          <h4>Outils</h4>
 
           <div className="center">
             <Skill name="Git" />

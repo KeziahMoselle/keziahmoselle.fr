@@ -25,14 +25,14 @@ function Hero () {
         Keziah <br/> Moselle
       </animated.h1>
 
-      <h2>Front-end developer.</h2>
+      <h2>Développeur Front-end.</h2>
 
       <p>
         Autodidacte de 18 ans, je suis passioné par le développement web et l'UI/UX depuis { new Date().getFullYear() - 2014 } ans.
       </p>
 
       <div>
-        <button onClick={scrollToFooter}>Get in touch</button>
+        <button className="translate-y" onClick={scrollToFooter}>Me contacter</button>
         <div className="circle"></div>
         <animated.div style={{
           backgroundColor: color,

@@ -10,7 +10,7 @@ function Header () {
         <img src={logo} className="header-logo" alt="Keziah logo" />
       </a>
 
-      <p style={{ color: '#d23669' }}>Website under construction...</p>
+      <p style={{ color: '#d23669' }}>Site en construction...</p>
       
       <ul className="header-menu">
         <li>

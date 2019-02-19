@@ -36,7 +36,7 @@ function Footer () {
       <div className="container">
         
         <form>
-          <h2>Contact</h2>
+          <h2>Me contacter</h2>
 
           { status === 'success' &&
             <p>
@@ -77,7 +77,7 @@ function Footer () {
           ></textarea>
 
           <div className="center">
-            <button className="white rounded" onClick={send}>
+            <button className="white rounded translate-y" onClick={send}>
               { status === 'loading' ? '...' : 'Envoyer'}
             </button>
           </div>
