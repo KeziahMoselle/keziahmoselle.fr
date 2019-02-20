@@ -20,6 +20,7 @@
     "react-spring": "^8.0.7"
   },
   "devDependencies": {
+    "@babel/plugin-transform-object-assign": "^7.2.0",
     "concurrently": "^4.1.0",
     "http-proxy-middleware": "^0.19.1",
     "netlify-lambda": "^1.4.2"
