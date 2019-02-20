@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './index.css'
 
 class Skills extends Component {
   render() {
@@ -49,7 +48,7 @@ function Skill ({ name }) {
 
   return (
     <div className="skill">
-      <img src={`./assets/logos/${img}.svg`} alt={`${name} logo`}></img>
+      <img src={`/static/logos/${img}.svg`} alt={`${name} logo`}></img>
       <span>{name}</span>
     </div>
   )

@@ -1,6 +1,5 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
-import './index.css'
 
 function Hero () {
   const { opacity, y } = useSpring({

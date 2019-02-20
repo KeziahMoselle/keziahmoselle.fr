@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './index.css'
 
 function Footer () {
   const [email, setEmail] = useState('')

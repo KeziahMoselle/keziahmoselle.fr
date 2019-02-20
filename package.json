@@ -1,13 +1,20 @@
 {
   "name": "keziahmoselle.fr",
   "version": "2.0.0",
-  "private": true,
+  "description": "My portfolio",
+  "scripts": {
+    "dev": "concurrently \"next\" \"netlify-lambda serve ./lambda\"",
+    "start": "next start",
+    "build": "npm run build:next && npm run build:lambda",
+    "build:next": "next build",
+    "build:lambda": "netlify-lambda build ./lambda"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "dotenv": "^6.2.0",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "react-scripts": "2.1.5",
+    "next": "^8.0.1",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
     "react-spring": "^8.0.7"
   },
   "devDependencies": {
@@ -15,21 +22,8 @@
     "http-proxy-middleware": "^0.19.1",
     "netlify-lambda": "^1.4.2"
   },
-  "scripts": {
-    "start": "concurrently \"react-scripts start\" \"netlify-lambda serve src/lambda\"",
-    "build": "npm run build:react && npm run build:lambda",
-    "build:react": "react-scripts build",
-    "build:lambda": "netlify-lambda build src/lambda",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "repository": "https://github.com/KeziahMoselle/keziahmoselle.fr.git",
+  "author": "KeziahMoselle <keziah.moselle@gmail.com>",
+  "license": "MIT",
+  "private": true
 }
