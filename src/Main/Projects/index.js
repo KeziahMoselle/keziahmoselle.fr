@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react'
+import React, { useState, Fragment } from 'react'
 import './index.css'
 
 function Projects () {
@@ -42,30 +42,22 @@ function Project ({ title, subtitle, type, date, github, stack }) {
   /* Get the file name in /assets/thumbnails */
   const formattedTitle = title.toLowerCase().replace(/\s/g, '_')
 
-  const [stars, setStars] = useState(null)
+  const [stars, setStars] = useState(localStorage.getItem(formattedTitle))
 
-  useEffect(() => {
-    const isStarsPopulated = localStorage.getItem(formattedTitle)
-    /* GitHub project */
-    if (!isStarsPopulated) {
-      fetch(`https://api.github.com/repos/${github}`)
-        .then(response => response.json())
-        .then(data => {
-          console.log(`Old: ${stars} | New: ${data.stargazers_count}`)
-          setStars(data.stargazers_count)
-          localStorage.setItem(formattedTitle, data.stargazers_count)
-        })
-    }
-  }, [])
+  /* GitHub project */
+  if (!stars) {
+    fetch(`https://api.github.com/repos/${github}`)
+      .then(response => response.json())
+      .then(data => {
+        console.log(`Old: ${stars} | New: ${data.stargazers_count}`)
+        setStars(data.stargazers_count)
+        localStorage.setItem(formattedTitle, data.stargazers_count)
+      })
+  }
 
   /* Tech stack */
-  const techStack = stack.map((tech, index) => (
-    <img
-      src={`./assets/logos/${tech}.svg`}
-      alt={`${tech} logo`}
-      title={tech}
-      key={index}
-    />
+  const techStack = stack.map(tech => (
+    <img src={`./assets/logos/${tech}.svg`} alt={`${tech} logo`} title={tech} />
   ))
   
 
@@ -93,7 +85,7 @@ function Project ({ title, subtitle, type, date, github, stack }) {
       </div>
       <img
         onClick={() => window.open(`https://github.com/${github}`)}
-        src={`/static/thumbnails/${formattedTitle}.jpg`}
+        src={`./assets/thumbnails/${formattedTitle}.jpg`}
         alt={`${title} thumbnail`}
       />
       <p className="project-footer">{ techStack }</p>

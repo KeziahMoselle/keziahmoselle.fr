@@ -1,19 +1,15 @@
-import React, { Fragment } from 'react'
-
-import Seo from './Seo'
+import React from 'react'
 import Header from './Header'
 import Main from './Main'
 import Footer from './Footer'
 
 function App () {
   return (
-    <Fragment>
-      <Seo />
-
+    <div>
       <Header />
       <Main />
       <Footer />
-    </Fragment>
+    </div>
   )
 }
 

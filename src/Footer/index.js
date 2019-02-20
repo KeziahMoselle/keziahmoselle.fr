@@ -59,7 +59,7 @@ function Footer () {
             </p>
           }
 
-          <label htmlFor="email">Email</label>
+          <label for="email">Email</label>
           <input
             id="email"
             type="email"
@@ -68,7 +68,7 @@ function Footer () {
             placeholder="hello@domain.com"
           />
 
-          <label htmlFor="message">Message</label>
+          <label for="message">Message</label>
           <textarea
             id="message"
             value={message}

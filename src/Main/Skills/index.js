@@ -49,7 +49,7 @@ function Skill ({ name }) {
 
   return (
     <div className="skill">
-      <img src={`/static/logos/${img}.svg`} alt={`${name} logo`}></img>
+      <img src={`./assets/logos/${img}.svg`} alt={`${name} logo`}></img>
       <span>{name}</span>
     </div>
   )

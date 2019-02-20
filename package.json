@@ -3,12 +3,8 @@
   "version": "2.0.0",
   "private": true,
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
     "axios": "^0.18.0",
     "dotenv": "^6.2.0",
-    "next": "^8.0.1",
-    "next-purgecss": "^3.0.1",
-    "next-seo": "^1.11.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-scripts": "2.1.5",
@@ -20,10 +16,10 @@
     "netlify-lambda": "^1.4.2"
   },
   "scripts": {
-    "start": "concurrently \"next\" \"netlify-lambda serve /lambda\"",
+    "start": "concurrently \"react-scripts start\" \"netlify-lambda serve src/lambda\"",
     "build": "npm run build:react && npm run build:lambda",
-    "build:react": "next build",
-    "build:lambda": "netlify-lambda build /lambda",
+    "build:react": "react-scripts build",
+    "build:lambda": "netlify-lambda build src/lambda",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
