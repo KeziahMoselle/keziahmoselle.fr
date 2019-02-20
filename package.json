@@ -6,13 +6,15 @@
     "dev": "concurrently \"next\" \"netlify-lambda serve ./lambda\"",
     "start": "next start",
     "build": "npm run build:next && npm run build:lambda",
-    "build:next": "next build",
+    "build:next": "next build && next export",
     "build:lambda": "netlify-lambda build ./lambda"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "axios": "^0.18.0",
     "dotenv": "^6.2.0",
     "next": "^8.0.1",
+    "next-purgecss": "^3.0.1",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-spring": "^8.0.7"
