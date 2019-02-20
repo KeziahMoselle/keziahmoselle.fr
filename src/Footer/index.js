@@ -40,38 +40,40 @@ function Footer () {
 
           { status === 'success' &&
             <p>
-              Message envoyé ! Merci
               <span role="img" aria-label="party popper emoji">🎉</span>
+              Message envoyé ! Merci
             </p>
           }
 
           { status === 'error' &&
             <p>
-              Il y a eu une erreur, n'hésitez pas à réessayer plus tard.
               <span role="img" aria-label="crying face emoji">😢</span>
+              Il y a eu une erreur, n'hésitez pas à réessayer plus tard.
             </p>
           }
 
           { status === 'missing_fields' &&
             <p>
-              Veillez à remplir tous les champs.
               <span role="img" aria-label="construction emoji">🚧</span>
+              Veillez à remplir tous les champs.
             </p>
           }
 
+          <label for="email">Email</label>
           <input
             id="email"
             type="email"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
-            placeholder="Email"
+            placeholder="hello@domain.com"
           />
 
+          <label for="message">Message</label>
           <textarea
             id="message"
             value={message}
             onChange={(event) => setMessage(event.target.value)}
-            placeholder="Message"
+            placeholder="Votre message..."
             spellCheck
             rows="6"
           ></textarea>

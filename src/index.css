@@ -244,10 +244,15 @@ button.rounded {
 button.white {
   background-color: white;
   color: black;
+  transition: box-shadow 0.3s, transform 0.2s;
 }
 
 button.translate-y:hover {
   transform: translateY(-2px);
+}
+
+button.white:focus {
+  box-shadow: 0 0 0 0.2rem #d23669;
 }
 
 
