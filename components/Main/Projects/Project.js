@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 
 function Project ({ title, subtitle, type, date, github, stack }) {
   /* Get the file name in /static/thumbnails */

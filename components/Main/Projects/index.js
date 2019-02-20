@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react'
+import React from 'react'
 import Project from './Project'
 
 function Projects () {
