@@ -1,13 +1,11 @@
 import React from 'react'
-import logo from './logo.svg'
-import githubLogo from './github.svg'
 import './index.css'
 
 function Header () {
   return (
     <header>
       <a href="https://keziahmoselle.fr/">
-        <img src={logo} className="header-logo" alt="Keziah logo" />
+        <img src="/static/logo.svg" className="header-logo" alt="Keziah logo" />
       </a>
       
       <ul className="header-menu">
@@ -18,7 +16,7 @@ function Header () {
         </li>
         <li>
           <a href="https://github.com/KeziahMoselle">
-            <img src={githubLogo} alt="GitHub logo" />
+            <img src="/static/github.svg" alt="GitHub logo" />
           </a>
         </li>
       </ul>
