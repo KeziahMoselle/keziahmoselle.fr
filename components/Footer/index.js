@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react'
 
 function Footer () {
   const [email, setEmail] = useState('')
+  const [isEmailValid, setIsEmailValid] = useState(null)
   const [message, setMessage] = useState('')
+  const [isMessageValid, setIsMessageValid] = useState(null)
   const [status, setStatus] = useState('default')
 
   const messages = {
@@ -35,11 +37,48 @@ function Footer () {
 
   // Check if a message was entered before
   useEffect(() => {
-    const email = window.localStorage.getItem('email')
-    const message = window.localStorage.getItem('message')
-    setEmail(email)
-    setMessage(message)
+    const localEmail = window.localStorage.getItem('email')
+    const localMessage = window.localStorage.getItem('message')
+    if (localEmail) { 
+      setEmail(localEmail)
+      validateEmail(localEmail)
+    }
+    if (localMessage) {
+      setMessage(localMessage)
+      validateMessage(localMessage)
+    }
   }, [])
+
+  function handleEmailInput (event) {
+    setEmail(event.target.value)
+    window.localStorage.setItem('email', event.target.value)
+    validateEmail(event.target.value)
+  }
+
+  function validateEmail (email) {
+    const regex = /\S+@\S+\.\S+/
+
+    if (regex.test(email)) {
+      setIsEmailValid('is-valid')
+    } else {
+      setIsEmailValid('is-invalid')
+    }
+  }
+
+  function handleMessageInput (event) {
+    setMessage(event.target.value)
+    window.localStorage.setItem('message', event.target.value)
+
+    validateMessage(event.target.value)
+  }
+
+  function validateMessage (message) {
+    if (message.length > 0) {
+      setIsMessageValid('is-valid')
+    } else {
+      setIsMessageValid('is-invalid')
+    }
+  }
 
   async function send (event) {
     event.preventDefault()
@@ -89,10 +128,8 @@ function Footer () {
             id="email"
             type="email"
             value={email}
-            onChange={(event) => {
-              setEmail(event.target.value)
-              window.localStorage.setItem('email', event.target.value)
-            }}
+            onChange={(event) => handleEmailInput(event)}
+            className={isEmailValid}
             placeholder="hello@domain.com"
           />
 
@@ -100,10 +137,8 @@ function Footer () {
           <textarea
             id="message"
             value={message}
-            onChange={(event) => {
-              setMessage(event.target.value)
-              window.localStorage.setItem('message', event.target.value)
-            }}
+            onChange={(event) => handleMessageInput(event)}
+            className={isMessageValid}
             placeholder="Votre message..."
             spellCheck
             rows="6"

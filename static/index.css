@@ -367,6 +367,14 @@ input, textarea {
   transition: box-shadow 0.3s;
 }
 
+input.is-valid, textarea.is-valid {
+  box-shadow: 0 0 0 0.2rem #20e289 !important;
+}
+
+input.is-invalid, textarea.is-invalid {
+  box-shadow: 0 0 0 0.2rem #FF5F56 !important;
+}
+
 input {
   height: 46px;
 }
