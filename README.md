@@ -12,6 +12,29 @@
 
 ---
 
+## Install
+
+1. Install dependencies
+```sh
+> yarn
+```
+
+2. Run Next
+```sh
+> yarn dev
+```
+
+3. Open [http://localhost:3000/](http://localhost:3000/)
+
+## Build
+
+To build the App and the Netlify function run :
+```sh
+> yarn build
+```
+
+`/.next`, `/out` and `/functions` will be generated.
+
 ## Archive
 
 - **v2** (2019) [preview](https://keziahmoselle.fr/)
