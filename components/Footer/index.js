@@ -33,7 +33,6 @@ function Footer () {
   return (
     <footer>
       <div className="container">
-        
         <form>
           <h2>Me contacter</h2>
 
@@ -58,7 +57,7 @@ function Footer () {
             </p>
           }
 
-          <label for="email">Email</label>
+          <label htmlFor="email">Email</label>
           <input
             id="email"
             type="email"
@@ -67,7 +66,7 @@ function Footer () {
             placeholder="hello@domain.com"
           />
 
-          <label for="message">Message</label>
+          <label htmlFor="message">Message</label>
           <textarea
             id="message"
             value={message}
@@ -83,6 +82,13 @@ function Footer () {
             </button>
           </div>
         </form>
+      
+        <p>
+          Built with
+            <a href="https://nextjs.org/"><img src="/static/logos/nextjs.svg" alt="Next.js" style={{ height: '32px' }}/></a>
+          and hosted on
+            <a href="https://www.netlify.com/"><img src="/static/logos/netlify.svg" alt="Netlify" style={{ height: '26px' }}/></a>
+        </p>
       </div>
     </footer>
   )

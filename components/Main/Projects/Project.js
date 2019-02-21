@@ -21,8 +21,13 @@ function Project ({ title, subtitle, type, date, github, stack }) {
   })
 
   /* Tech stack */
-  const techStack = stack.map(tech => (
-    <img src={`/static/logos/${tech}.svg`} alt={`${tech} logo`} title={tech} />
+  const techStack = stack.map((tech, index) => (
+    <img
+      src={`/static/logos/${tech}.svg`}
+      alt={`${tech} logo`}
+      title={tech}
+      key={index}
+    />
   ))
   
 
