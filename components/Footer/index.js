@@ -3,7 +3,14 @@ import React, { useState } from 'react'
 function Footer () {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  const [status, setStatus] = useState('')
+  const [status, setStatus] = useState('default')
+
+  const messages = {
+    'default': { text: '', emoji: '' },
+    'success': { text: 'Message envoyé ! Merci', emoji: '🎉' },
+    'error': { text: `Il y a eu une erreur, n'hésitez pas à réessayer plus tard.`, emoji: '😢' },
+    'missing_fields': { text: 'Veuillez remplir tous les champs.', emoji: '🚧' }
+  }
 
   async function send (event) {
     event.preventDefault()
@@ -36,26 +43,12 @@ function Footer () {
         <form>
           <h2>Me contacter</h2>
 
-          { status === 'success' &&
-            <p>
-              <span role="img" aria-label="party popper emoji">🎉</span>
-              Message envoyé ! Merci
-            </p>
-          }
-
-          { status === 'error' &&
-            <p>
-              <span role="img" aria-label="crying face emoji">😢</span>
-              Il y a eu une erreur, n'hésitez pas à réessayer plus tard.
-            </p>
-          }
-
-          { status === 'missing_fields' &&
-            <p>
-              <span role="img" aria-label="construction emoji">🚧</span>
-              Veillez à remplir tous les champs.
-            </p>
-          }
+          <p style={{ height: '32px', lineHeight: '32px' }}>
+            <span role="img" aria-label="party popper emoji" style={{ marginRight: '10px' }}>
+              { messages[status].emoji }
+            </span>
+            { messages[status].text }
+          </p>
 
           <label htmlFor="email">Email</label>
           <input
