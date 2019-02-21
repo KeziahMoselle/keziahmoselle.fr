@@ -341,6 +341,17 @@ footer form h2 {
   margin-bottom: 16px;
 }
 
+footer .status-message {
+  font-weight: 900;
+  font-size: 20px;
+  height: 32px;
+  line-height: 32px;
+}
+
+footer .status-message > span {
+  margin-right: 10px;
+}
+
 label {
   margin-bottom: 6px;
 }

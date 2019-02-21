@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 function Footer () {
   const [email, setEmail] = useState('')
@@ -6,11 +6,40 @@ function Footer () {
   const [status, setStatus] = useState('default')
 
   const messages = {
-    'default': { text: '', emoji: '' },
-    'success': { text: 'Message envoyé ! Merci', emoji: '🎉' },
-    'error': { text: `Il y a eu une erreur, n'hésitez pas à réessayer plus tard.`, emoji: '😢' },
-    'missing_fields': { text: 'Veuillez remplir tous les champs.', emoji: '🚧' }
+    'default': {
+      text: '',
+      emoji: '',
+      color: ''
+    },
+    'loading': {
+      text: 'Envoi en cours...',
+      emoji: '⏳',
+      color: '#2A6CC4'
+    },
+    'success': {
+      text: 'Message envoyé ! Merci',
+      emoji: '🎉',
+      color: '#20e289'
+    },
+    'error': {
+      text: `Il y a eu une erreur, n'hésitez pas à réessayer plus tard.`,
+      emoji: '😢',
+      color: '#FF5F56'
+    },
+    'missing_fields': {
+      text: 'Veuillez remplir tous les champs.',
+      emoji: '🚧',
+      color: '#ffc56f'
+    }
   }
+
+  // Check if a message was entered before
+  useEffect(() => {
+    const email = window.localStorage.getItem('email')
+    const message = window.localStorage.getItem('message')
+    setEmail(email)
+    setMessage(message)
+  }, [])
 
   async function send (event) {
     event.preventDefault()
@@ -18,7 +47,6 @@ function Footer () {
     if (status === 'loading') return // Prevent multiple submit
     setStatus('loading')
 
-    
     const response = await fetch('/.netlify/functions/contact', {
       method: 'POST',
       headers: new Headers({ 'Content-Type': 'application/json' }),
@@ -32,6 +60,10 @@ function Footer () {
       setEmail('')
       setMessage('')
       setStatus('success')
+      
+      // Empty localStorage
+      window.localStorage.removeItem('email')
+      window.localStorage.removeItem('message')
     } else {
       setStatus('error')
     }
@@ -43,8 +75,10 @@ function Footer () {
         <form>
           <h2>Me contacter</h2>
 
-          <p style={{ height: '32px', lineHeight: '32px' }}>
-            <span role="img" aria-label="party popper emoji" style={{ marginRight: '10px' }}>
+          <p className="status-message" style={{
+            color: messages[status].color
+          }}>
+            <span role="img" aria-label="party popper emoji">
               { messages[status].emoji }
             </span>
             { messages[status].text }
@@ -55,7 +89,10 @@ function Footer () {
             id="email"
             type="email"
             value={email}
-            onChange={(event) => setEmail(event.target.value)}
+            onChange={(event) => {
+              setEmail(event.target.value)
+              window.localStorage.setItem('email', event.target.value)
+            }}
             placeholder="hello@domain.com"
           />
 
@@ -63,7 +100,10 @@ function Footer () {
           <textarea
             id="message"
             value={message}
-            onChange={(event) => setMessage(event.target.value)}
+            onChange={(event) => {
+              setMessage(event.target.value)
+              window.localStorage.setItem('message', event.target.value)
+            }}
             placeholder="Votre message..."
             spellCheck
             rows="6"
@@ -71,7 +111,7 @@ function Footer () {
 
           <div className="center">
             <button className="white rounded translate-y" onClick={send}>
-              { status === 'loading' ? '...' : 'Envoyer'}
+              { status === 'loading' ? 'Envoi...' : 'Envoyer'}
             </button>
           </div>
         </form>
