@@ -85,9 +85,9 @@ function Footer () {
       
         <p>
           Built with
-            <a href="https://nextjs.org/"><img src="/static/logos/nextjs.svg" alt="Next.js" style={{ height: '32px' }}/></a>
+          <a href="https://nextjs.org/"><img src="/static/logos/nextjs.svg" alt="Next.js" style={{ height: '32px' }}/></a>
           and hosted on
-            <a href="https://www.netlify.com/"><img src="/static/logos/netlify.svg" alt="Netlify" style={{ height: '26px' }}/></a>
+          <a href="https://www.netlify.com/"><img src="/static/logos/netlify.svg" alt="Netlify" style={{ height: '26px' }}/></a>
         </p>
       </div>
     </footer>

@@ -299,6 +299,8 @@ footer .container div {
 
 footer .container p {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   padding: 64px 0 16px 0;
 }
@@ -311,7 +313,13 @@ footer .container p img {
 footer form {
   display: flex;
   flex-direction: column;
-  width: 560px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+  footer form {
+    width: 560px;
+  }
 }
 
 footer form p {
