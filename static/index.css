@@ -286,13 +286,26 @@ ul {
 
 footer .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 0;
 }
 
 footer .container div {
   height: 100%;
+}
+
+footer .container p {
+  display: flex;
+  align-items: center;
+  padding: 64px 0 16px 0;
+}
+
+footer .container p img {
+  margin: 0 8px;
+  width: auto;
 }
 
 footer form {
