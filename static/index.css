@@ -56,18 +56,6 @@ code {
   }
 }
 
-.container > h3 {
-  border-top: 4px solid black;
-  padding-top: 6px;
-}
-
-@media only screen and (max-width: 600px) {
-  .container > h3 {
-    display: block;
-  }
-}
-
-
 
 /**
  *
@@ -131,6 +119,29 @@ h1 {
 
 h2 {
   font-size: 32px;
+}
+
+form > h2 {
+  width: fit-content;
+  border-top: 4px solid white;
+  padding-top: 6px;
+}
+
+.container > h3 {
+  border-top: 4px solid black;
+  padding-top: 6px;
+}
+
+@media only screen and (max-width: 600px) {
+  form > h2 {
+    width: 100%;
+    border-top: 4px solid white;
+    padding-top: 6px;
+  }
+
+  .container > h3 {
+    display: block;
+  }
 }
 
 h3 {
@@ -297,7 +308,7 @@ footer .container div {
   height: 100%;
 }
 
-footer .container p {
+footer .container > p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
