@@ -37,6 +37,7 @@ function Hero () {
           backgroundColor: color,
           transform: x.interpolate(x => `translateX(${x}px)`)
         }} className="circle"></animated.div>
+        <div className="circle moon"></div>
       </div>
     </animated.div>
   )

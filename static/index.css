@@ -274,10 +274,22 @@ ul {
   border-radius: 50%;
 }
 
+.circle.moon {
+  top: -80px !important;
+  right: -80px !important;
+  border: none;
+  background-color: white;
+  animation: moon 60s linear infinite;
+}
+
 @media only screen and (max-width: 1200px) {
   .circle {
     display: none;
   }
+}
+
+@keyframes moon {
+  
 }
 
 
