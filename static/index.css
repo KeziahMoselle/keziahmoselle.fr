@@ -259,6 +259,11 @@ ul {
   justify-content: center;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
 .valign {
   align-items: center;
 }
@@ -473,8 +478,12 @@ header img {
  *
  */
 
- .formations .block {
-  flex-direction: column;
+.formations .block h4 {
+  margin-bottom: 4px;
+}
+
+.formations .block h5 {
+  margin-bottom: 4px;
 }
 
 

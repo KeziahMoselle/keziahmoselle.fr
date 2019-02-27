@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import '../static/index.css'
 
@@ -9,13 +9,13 @@ import Footer from './Footer'
 
 function App () {
   return (
-    <div>
+    <Fragment>
       <Seo />
   
       <Header />
       <Main />
       <Footer />
-    </div>
+    </Fragment>
   )
 }
 

@@ -19,6 +19,17 @@ function Experience () {
 
       <div className="block">
         <div>
+          <h4>Olympiades de sciences de l'ingénieur</h4>
+          <h5>2017-2018</h5>
+        </div>
+        <ol>
+          <li>Réalisation d'une application mobile avec React Native</li>
+          <li>Développement d'un serveur Node.js sur Raspberry Pi</li>
+        </ol>
+      </div>
+
+      <div className="block">
+        <div>
           <h4>vanessamoselle photographie</h4>
           <h5>2017</h5>
         </div>
