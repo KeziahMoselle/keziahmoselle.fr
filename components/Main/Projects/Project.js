@@ -17,8 +17,10 @@ function Project ({ title, subtitle, type, date, github, stack }) {
           setStars(data.stargazers_count)
           localStorage.setItem(formattedTitle, data.stargazers_count)
         })
+    } else {
+      setStars(localStorage.getItem(formattedTitle))
     }
-  })
+  }, [])
 
   /* Tech stack */
   const techStack = stack.map((tech, index) => (
