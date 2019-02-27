@@ -710,6 +710,14 @@ header img {
   }
 }
 
+.skills .skill {
+  transition: opacity 0.2s;
+}
+
+.skills .center:hover .skill:not(:hover) {
+  opacity: 0.7;
+}
+
 /* SKILL IMAGE */
 
 .skill {
