@@ -344,7 +344,8 @@ footer form h2 {
 footer .status-message {
   font-weight: 900;
   font-size: 20px;
-  height: 32px;
+  min-height: 32px;
+  height: auto;
   line-height: 32px;
 }
 
