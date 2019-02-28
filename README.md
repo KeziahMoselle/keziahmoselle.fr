@@ -19,12 +19,20 @@
 > yarn
 ```
 
-2. Run Next
+2. Run Next and Netlify functions
 ```sh
 > yarn dev
 ```
+Open [http://localhost:3000/](http://localhost:3000/)
 
-3. Open [http://localhost:3000/](http://localhost:3000/)
+3. Run only Next
+
+```sh
+> yarn start
+```
+
+Open [http://192.168.0.12:3000/](http://192.168.0.12:3000/)
+
 
 ## Build
 

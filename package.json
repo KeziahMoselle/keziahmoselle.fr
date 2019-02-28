@@ -4,7 +4,7 @@
   "description": "My portfolio",
   "scripts": {
     "dev": "concurrently \"next\" \"netlify-lambda serve ./lambda\"",
-    "start": "next start",
+    "start": "next --hostname 192.168.0.12",
     "build": "npm run build:next && npm run build:lambda",
     "build:next": "next build && next export",
     "build:lambda": "netlify-lambda build ./lambda"
