@@ -284,6 +284,27 @@ ul {
   }
 }
 
+.circle.animated {
+  overflow: hidden;
+}
+
+.circle.animated::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.1), transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.circle.animated:hover::before {
+  --size: 640px;
+}
+
 
 /**
  *
@@ -530,6 +551,7 @@ header img {
   transform: skewX(-50deg);
   border: 10px solid rgba(0, 0, 0, 0.1);
   border-top: none;
+  pointer-events: none;
 }
 
 

@@ -1,6 +1,13 @@
 import React from 'react'
 
 function Formations () {
+  function updateGradient (event) {
+    const x = event.pageX - event.target.offsetLeft - event.target.offsetParent.offsetLeft
+    const y = event.pageY - event.target.offsetTop - event.target.offsetParent.offsetTop
+    event.target.style.setProperty('--x', x + 'px')
+    event.target.style.setProperty('--y', y + 'px')
+  }
+
   return (
     <div className="container medium formations relative">
       <h3>Formations</h3>
@@ -22,7 +29,7 @@ function Formations () {
         <p>Mention Bien</p>
       </div>
 
-      <div className="circle gradient"></div>
+      <div className="circle gradient animated" onMouseMove={updateGradient}></div>
       <div className="circle"></div>
     </div>
   )

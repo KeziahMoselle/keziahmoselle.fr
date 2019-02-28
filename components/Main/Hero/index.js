@@ -15,6 +15,13 @@ function Hero () {
     document.querySelector('footer')
       .scrollIntoView({ behavior: 'smooth' })
   }
+
+  function updateGradient (event) {
+    const x = event.pageX - event.target.offsetLeft - event.target.offsetParent.offsetLeft
+    const y = event.pageY - event.target.offsetTop - event.target.offsetParent.offsetTop
+    event.target.style.setProperty('--x', x + 'px')
+    event.target.style.setProperty('--y', y + 'px')
+  }
   
   return (
     <animated.div style={{opacity}} className="container hero relative">
@@ -36,7 +43,7 @@ function Hero () {
         <animated.div style={{
           backgroundColor: color,
           transform: x.interpolate(x => `translateX(${x}px)`)
-        }} className="circle"></animated.div>
+        }} className="circle animated" onMouseMove={updateGradient}></animated.div>
       </div>
     </animated.div>
   )
