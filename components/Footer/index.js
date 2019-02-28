@@ -112,10 +112,27 @@ function Footer () {
     <footer>
       <div className="container">
         <form>
-          <h2>Me contacter</h2>
+          <div className="flex space-between">
+            <h2>Me contacter</h2>
+
+            <p className="flex valign">
+              <a href="https://github.com/KeziahMoselle">
+                <img src="/static/github.svg" alt="GitHub logo" />
+              </a>
+
+              <a href="https://twitter.com/KeziahMoselle">
+                <img src="/static/twitter.svg" alt="Twitter logo" />
+              </a>
+
+              <a href="https://blog.keziahmoselle.fr/" title="Mon blog">
+                <img src="/static/edit.svg" alt="Blog icon" />
+              </a>
+            </p>
+          </div>
 
           <p className="status-message" style={{
-            color: messages[status].color
+            color: messages[status].color,
+            margin: '16px 0'
           }}>
             <span role="img" aria-label="party popper emoji">
               { messages[status].emoji }
@@ -144,7 +161,7 @@ function Footer () {
             rows="6"
           ></textarea>
 
-          <div className="center">
+          <div className="flex center">
             <button className="white rounded translate-y" onClick={send}>
               { status === 'loading' ? 'Envoi...' : 'Envoyer'}
             </button>

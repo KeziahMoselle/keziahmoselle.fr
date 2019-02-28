@@ -9,7 +9,7 @@ class Skills extends Component {
         <div className="block">
           <h4>Front-end</h4>
 
-          <div className="center">
+          <div className="flex center">
             <Skill name="JavaScript" />
             <Skill name="Vue.js" />
             <Skill name="React.js" />
@@ -21,7 +21,7 @@ class Skills extends Component {
         <div className="block">
           <h4>Back-end</h4>
 
-          <div className="center">
+          <div className="flex center">
             <Skill name="Node.js" />
             <Skill name="PHP" />
             <Skill name="MySQL" />
@@ -31,7 +31,7 @@ class Skills extends Component {
         <div className="block">
           <h4>Outils</h4>
 
-          <div className="center">
+          <div className="flex center">
             <Skill name="Git" />
             <Skill name="GitHub" />
             <Skill name="SASS" />

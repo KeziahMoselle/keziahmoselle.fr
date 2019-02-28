@@ -121,7 +121,7 @@ h2 {
   font-size: 32px;
 }
 
-form > h2 {
+footer h2 {
   width: fit-content;
   border-top: 4px solid white;
   padding-top: 6px;
@@ -133,12 +133,6 @@ form > h2 {
 }
 
 @media only screen and (max-width: 600px) {
-  form > h2 {
-    width: 100%;
-    border-top: 4px solid white;
-    padding-top: 6px;
-  }
-
   .container > h3 {
     display: block;
   }
@@ -249,19 +243,20 @@ ul {
  *
  */
 
-.space-between {
-  display: flex;
-  justify-content: space-between;
-}
+ .flex {
+   display: flex;
+ }
 
 .center {
-  display: flex;
   justify-content: center;
 }
 
 .column {
-  display: flex;
   flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
 }
 
 .valign {
@@ -311,6 +306,7 @@ footer .container {
 
 footer .container div {
   height: 100%;
+  width: 100%;
 }
 
 footer .container > p {
@@ -338,12 +334,8 @@ footer form {
   }
 }
 
-footer form p {
+footer form p:not(.flex) {
   margin-bottom: 12px;
-}
-
-footer form h2 {
-  margin-bottom: 16px;
 }
 
 footer .status-message {
@@ -357,6 +349,46 @@ footer .status-message {
 footer .status-message > span {
   margin-right: 10px;
 }
+
+footer form > div > p img {
+  height: 32px;
+}
+
+@media only screen and (max-width: 600px) {
+  footer .container {
+    margin: 0;
+  }
+
+  footer form {
+    margin-top: 12px;
+  }
+
+  footer form :first-child {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  footer form > div > p {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 32px 0;
+  }
+
+  footer h2 {
+    width: 100%;
+    border-top: 4px solid white;
+    padding-top: 6px;
+  }
+}
+
+
+/**
+ *
+ * FORM ELEMENTS
+ *
+ */
+
+
 
 label {
   margin-bottom: 6px;
