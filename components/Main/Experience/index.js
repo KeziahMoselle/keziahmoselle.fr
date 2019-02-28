@@ -51,7 +51,12 @@ function Chip ({ link, disabled }) {
   const href = link || '#!'
 
   return (
-    <a className="chip" href={href} disabled={disabled} target={`${link ? '_blank' : '_self'}`}>
+    <a
+      className="chip"
+      href={href}
+      disabled={disabled}
+      target={`${link ? '_blank' : '_self'}`}
+      rel="nofollow noopener noreferrer">
       <img src="/static/link.svg" alt="external link icon" />
     </a>
   )

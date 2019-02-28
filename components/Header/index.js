@@ -14,7 +14,7 @@ function Header () {
           </a>
         </li>
         <li>
-          <a href="https://github.com/KeziahMoselle">
+          <a href="https://github.com/KeziahMoselle" rel="nofollow noopener noreferrer">
             <img src="/static/logos/github.svg" alt="GitHub logo" />
           </a>
         </li>

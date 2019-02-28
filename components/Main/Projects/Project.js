@@ -52,10 +52,12 @@ function Project ({ title, subtitle, type, date, github, stack }) {
           </h5>
         </div>
         { github &&
-          <a className="pill" href={`https://github.com/${github}`}><span>En savoir plus</span></a>
+          <a className="pill" href={`https://github.com/${github}`} rel="nofollow noopener noreferrer">
+            <span>En savoir plus</span>
+          </a>
         }
       </div>
-      <a href={`https://github.com/${github}`}>
+      <a href={`https://github.com/${github}`} rel="nofollow noopener noreferrer">
         <img
           src={`/static/thumbnails/${formattedTitle}.webp`}
           srcSet={`/static/thumbnails/${formattedTitle}.webp, /static/thumbnails/${formattedTitle}.jpg`}
