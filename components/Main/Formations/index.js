@@ -2,7 +2,7 @@ import React from 'react'
 
 function Formations () {
   return (
-    <div className="container medium formations">
+    <div className="container medium formations relative">
       <h3>Formations</h3>
 
       <div className="block flex column">
@@ -21,6 +21,9 @@ function Formations () {
         <h5>2016-2018</h5>
         <p>Mention Bien</p>
       </div>
+
+      <div className="circle gradient"></div>
+      <div className="circle"></div>
     </div>
   )
 }

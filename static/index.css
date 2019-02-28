@@ -243,6 +243,10 @@ ul {
  *
  */
 
+ .relative {
+   position: relative;
+ }
+
  .flex {
    display: flex;
  }
@@ -473,10 +477,6 @@ header img {
  *
  */
 
- .experience {
-  position: relative;
-}
-
 .experience h4 {
   width: 350px;
   margin-right: 32px;
@@ -517,16 +517,27 @@ header img {
   margin-bottom: 4px;
 }
 
+.formations .circle {
+  right: -100px;
+  border: none;
+}
+
+.formations .circle.gradient {
+  background-image: linear-gradient(to bottom, black 0%, rgb(54, 54, 54) 100%);
+}
+
+.formations .circle:last-of-type {
+  transform: skewX(-50deg);
+  border: 10px solid rgba(0, 0, 0, 0.1);
+  border-top: none;
+}
+
 
 /**
  *
  * Hero
  *
  */
-
- .hero {
-  position: relative;
-}
 
 .hero h1 {
   margin-bottom: 20px;

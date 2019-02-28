@@ -4,7 +4,7 @@ import Project from './Project'
 function Projects () {
   return (
     <div className="container medium projects">
-      <h3>Projets notable</h3>
+      <h3>Projets personnels</h3>
 
       <div className="block">
         <Project

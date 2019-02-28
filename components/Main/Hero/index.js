@@ -17,7 +17,7 @@ function Hero () {
   }
   
   return (
-    <animated.div style={{opacity}} className="container hero">
+    <animated.div style={{opacity}} className="container hero relative">
       <div className="bar"></div>
 
       <animated.h1 style={{ transform: y.interpolate(y => `translateY(${y}px)`) }}>
