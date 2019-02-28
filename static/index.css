@@ -341,9 +341,7 @@ footer form p:not(.flex) {
 footer .status-message {
   font-weight: 900;
   font-size: 20px;
-  min-height: 32px;
   height: auto;
-  line-height: 32px;
 }
 
 footer .status-message > span {
@@ -357,6 +355,7 @@ footer form > div > p img {
 @media only screen and (max-width: 600px) {
   footer .container {
     margin: 0;
+    padding: 0 16px;
   }
 
   footer form {
@@ -371,7 +370,7 @@ footer form > div > p img {
   footer form > div > p {
     display: flex;
     justify-content: space-evenly;
-    margin: 32px 0;
+    padding: 8px 0 24px 0;
   }
 
   footer h2 {
