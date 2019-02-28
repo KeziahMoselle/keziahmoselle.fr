@@ -101,6 +101,73 @@ code {
 
 /**
  *
+ * CARDS
+ *
+ */
+
+.card {
+  padding: 30px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.1s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.12);
+}
+
+.card .chip {
+  position: absolute;
+  right: -28px;
+}
+
+
+/**
+ *
+ * CHIPS
+ *
+ */
+
+
+
+.chip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.2s;
+}
+
+.chip:hover {
+  background-color: white;
+  box-shadow: 0 0 0 0.2rem #d23669;
+}
+
+.chip[disabled] {
+  background-color: #eee;
+}
+
+.chip[disabled]:hover {
+  box-shadow: none;
+}
+
+.chip img {
+  height: 24px;
+  width: auto;
+}
+
+
+
+/**
+ *
  * TYPOGRAPHY
  *
  */
@@ -504,29 +571,18 @@ header img {
  *
  */
 
-.experience h4 {
-  width: 350px;
-  margin-right: 32px;
-}
-
 .experience .circle {
   top: -15vh;
   left: -30vw;
   background-color: black;
 }
 
-.experience ol {
-  margin: 0;
+.experience ul {
+  margin-top: 8px;
 }
 
-.experience ol li {
-  margin-bottom: 8px;
-}
-
-@media only screen and (max-width: 960px) {
-  .experience ol {
-    margin-top: 26px;
-  }
+.experience ul li {
+  margin-top: 2px;
 }
 
 
@@ -535,6 +591,17 @@ header img {
  * Formations
  *
  */
+
+.formations .card {
+  width: fit-content;
+  width: auto;
+}
+
+@media only screen and (min-width: 1200px) {
+  .formations .card {
+    width: 400px;
+  }
+}
 
 .formations .block h4 {
   margin-bottom: 4px;
@@ -545,6 +612,7 @@ header img {
 }
 
 .formations .circle {
+  top: 100px;
   right: -100px;
   border: none;
 }
