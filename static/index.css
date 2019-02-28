@@ -23,6 +23,12 @@ body {
 }
 
 code {
+  background-color: #f5f5f5;
+  color: #d23669;
+  padding: 0 8px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

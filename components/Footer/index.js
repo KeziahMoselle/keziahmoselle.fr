@@ -131,7 +131,7 @@ function Footer () {
           </div>
 
           <p className="status-message" style={{
-            color: messages[status].color,
+            color: messages[status].color || 'black',
             margin: '16px 0'
           }}>
             <span role="img" aria-label="party popper emoji">
