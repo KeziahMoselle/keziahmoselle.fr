@@ -33,7 +33,7 @@ To build the App and the Netlify function run :
 > yarn build
 ```
 
-`/.next`, `/out` and `/functions` will be generated.
+`/out` and `/functions` will be generated.
 
 ## Archive
 
