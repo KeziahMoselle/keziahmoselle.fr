@@ -52,14 +52,16 @@ function Project ({ title, subtitle, type, date, github, stack }) {
           </h5>
         </div>
         { github &&
-          <a href={`https://github.com/${github}`}><span>En savoir plus</span></a>
+          <a className="pill" href={`https://github.com/${github}`}><span>En savoir plus</span></a>
         }
       </div>
-      <img
-        onClick={() => window.open(`https://github.com/${github}`)}
-        src={`/static/thumbnails/${formattedTitle}.jpg`}
-        alt={`${title} thumbnail`}
-      />
+      <a href={`https://github.com/${github}`}>
+        <img
+          src={`/static/thumbnails/${formattedTitle}.webp`}
+          srcSet={`/static/thumbnails/${formattedTitle}.jpg`}
+          alt={`${title} thumbnail`}
+        />
+      </a>
       <p className="project-footer">{ techStack }</p>
     </div>
   )

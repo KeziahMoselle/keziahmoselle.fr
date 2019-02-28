@@ -762,7 +762,7 @@ header img {
   margin-bottom: 16px;
 }
 
-.project > img {
+.project a > img {
   background-color: #eee;
   width: 100%;
   object-fit: contain;
@@ -771,7 +771,7 @@ header img {
   transition: filter 0.4s;
 }
 
-.project > img:hover {
+.project a > img:hover {
   filter: brightness(50%);
 }
 
@@ -794,7 +794,7 @@ header img {
  *
  */
 
-.project a {
+a.pill {
   border: none;
   padding: 3px 10px 3px 50px;
   font-size: 16px;
@@ -802,7 +802,7 @@ header img {
   position: relative;
 }
 
-.project a::before {
+a.pill::before {
   transition: all 0.4s;
   content: '';
   width: 50%;
@@ -813,18 +813,18 @@ header img {
   left: 0;
 }
 
-.project a::before {
+a.pill::before {
   border-radius: 50px;
   width: 25%;
   background: #d23669;
 }
 
-.project a:hover::before {
+a.pill:hover::before {
   background: #d23669;
   width: 100%;
 }
 
-.project a span {
+a.pill span {
   color: #d23669;
   mix-blend-mode: difference;
 }

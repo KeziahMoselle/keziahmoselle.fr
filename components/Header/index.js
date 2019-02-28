@@ -4,7 +4,7 @@ function Header () {
   return (
     <header>
       <a href="https://keziahmoselle.fr/">
-        <img src="/static/logos/logo.svg" className="header-logo" alt="Keziah logo" />
+        <img src="/static/logo.svg" className="header-logo" alt="Keziah logo" />
       </a>
       
       <ul className="header-menu">
