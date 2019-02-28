@@ -58,7 +58,7 @@ function Project ({ title, subtitle, type, date, github, stack }) {
       <a href={`https://github.com/${github}`}>
         <img
           src={`/static/thumbnails/${formattedTitle}.webp`}
-          srcSet={`/static/thumbnails/${formattedTitle}.jpg`}
+          srcSet={`/static/thumbnails/${formattedTitle}.webp, /static/thumbnails/${formattedTitle}.jpg`}
           alt={`${title} thumbnail`}
         />
       </a>
