@@ -4,7 +4,41 @@
  *
  */
 
- @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Playfair+Display:900');
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'),
+       url('/static/fonts/lato-v14-latin-regular.woff2') format('woff2'),
+       url('/static/fonts/lato-v14-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'),
+       url('/static/fonts/lato-v14-latin-700.woff2') format('woff2'),
+       url('/static/fonts/lato-v14-latin-700.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Lato Black'), local('Lato-Black'),
+       url('/static/fonts/lato-v14-latin-900.woff2') format('woff2'),
+       url('/static/fonts/lato-v14-latin-900.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Playfair Display Black'), local('PlayfairDisplay-Black'),
+       url('/static/fonts/playfair-display-v14-latin-900.woff2') format('woff2'),
+       url('/static/fonts/playfair-display-v14-latin-900.woff') format('woff');
+}
 
 * {
   box-sizing: border-box;
