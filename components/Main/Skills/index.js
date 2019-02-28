@@ -7,31 +7,21 @@ class Skills extends Component {
         <h3>Compétences</h3>
         
         <div className="block">
-          <h4>Front-end</h4>
+          <div className="flex column center valign">
+            <h4>Front-End</h4>
+            <img src="/static/skills/front-end.svg" alt="Front-End skills" />
+          </div>
 
-          <div className="flex center">
-            <Skill name="JavaScript" />
-            <Skill name="Vue.js" />
-            <Skill name="React.js" />
-            <Skill name="React Native" />
-            <Skill name="Electron.js" />
+          <div className="flex column center valign">
+            <h4>Back-End</h4>
+            <img src="/static/skills/back-end.svg" alt="Back-End skills" />
           </div>
         </div>
 
-        <div className="block">
-          <h4>Back-end</h4>
-
-          <div className="flex center">
-            <Skill name="Node.js" />
-            <Skill name="PHP" />
-            <Skill name="MySQL" />
-          </div>
-        </div>
-
-        <div className="block">
+        <div className="block center column valign">
           <h4>Outils</h4>
-
-          <div className="flex center">
+          
+          <div className="tools">
             <Skill name="Git" />
             <Skill name="GitHub" />
             <Skill name="SASS" />
