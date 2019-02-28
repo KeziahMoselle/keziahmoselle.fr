@@ -421,17 +421,21 @@ footer .container {
   margin-bottom: 0;
 }
 
-footer .container div {
-  height: 100%;
-  width: 100%;
+footer .container > p:first-of-type {
+  padding: 48px 0 0 0;
 }
 
-footer .container > p {
+footer .container > p:first-of-type img {
+  height: 30px;
+  margin: 0 16px;
+}
+
+footer .container > p:last-of-type {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 64px 0 16px 0;
+  padding: 32px 0 16px 0;
 }
 
 footer .container p img {
@@ -471,23 +475,7 @@ footer form > div > p img {
 
 @media only screen and (max-width: 600px) {
   footer .container {
-    margin: 0;
     padding: 0 16px;
-  }
-
-  footer form {
-    margin-top: 12px;
-  }
-
-  footer form :first-child {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  footer form > div > p {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 8px 0 24px 0;
   }
 
   footer h2 {
@@ -596,8 +584,25 @@ header img {
   background-color: black;
 }
 
+.experience h4 {
+  margin-bottom: 8px;
+}
+
+.experience h5 {
+  margin-bottom: 6px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .experience h6 {
+    position: absolute;
+    left: -24px;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
+}
+
 .experience ul {
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 .experience ul li {

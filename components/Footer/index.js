@@ -114,20 +114,6 @@ function Footer () {
         <form>
           <div className="flex space-between">
             <h2>Me contacter</h2>
-
-            <p className="flex valign">
-              <a href="https://github.com/KeziahMoselle">
-                <img src="/static/github.svg" alt="GitHub logo" />
-              </a>
-
-              <a href="https://twitter.com/KeziahMoselle">
-                <img src="/static/twitter.svg" alt="Twitter logo" />
-              </a>
-
-              <a href="https://blog.keziahmoselle.fr/" title="Mon blog">
-                <img src="/static/edit.svg" alt="Blog icon" />
-              </a>
-            </p>
           </div>
 
           <p className="status-message" style={{
@@ -167,6 +153,21 @@ function Footer () {
             </button>
           </div>
         </form>
+
+
+        <p className="flex valign">
+          <a href="https://github.com/KeziahMoselle">
+            <img src="/static/github.svg" alt="GitHub logo" />
+          </a>
+
+          <a href="https://twitter.com/KeziahMoselle">
+            <img src="/static/twitter.svg" alt="Twitter logo" />
+          </a>
+
+          <a href="https://blog.keziahmoselle.fr/" title="Mon blog">
+            <img src="/static/edit.svg" alt="Blog icon" />
+          </a>
+        </p>
       
         <p>
           Built with
