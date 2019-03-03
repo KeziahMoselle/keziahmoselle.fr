@@ -1,10 +1,17 @@
 import React, { Fragment, useState, useEffect } from 'react'
+import hasSupportWebP from 'supports-webp'
 
 function Project ({ title, subtitle, type, date, github, stack }) {
   /* Get the file name in /static/thumbnails */
   const formattedTitle = title.toLowerCase().replace(/\s/g, '_')
 
   const [stars, setStars] = useState(null)
+  const [imgUrl, setImgUrl] = useState(null)
+
+  useEffect(() => {
+    if (hasSupportWebP) return setImgUrl(`/static/thumbnails/${formattedTitle}.webp`)
+    setImgUrl(`/static/thumbnails/${formattedTitle}.jpg`)
+  }, [])
 
   useEffect(() => {
     const localStars = localStorage.getItem(formattedTitle)
@@ -58,11 +65,7 @@ function Project ({ title, subtitle, type, date, github, stack }) {
         }
       </div>
       <a href={`https://github.com/${github}`} rel="nofollow noopener noreferrer">
-        <img
-          src={`/static/thumbnails/${formattedTitle}.webp`}
-          srcSet={`/static/thumbnails/${formattedTitle}.webp, /static/thumbnails/${formattedTitle}.jpg`}
-          alt={`${title} thumbnail`}
-        />
+        <img src={imgUrl} alt={`${title} thumbnail`} />
       </a>
       <p className="project-footer">{ techStack }</p>
     </div>

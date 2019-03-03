@@ -5359,6 +5359,11 @@ supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
+supports-webp@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/supports-webp/-/supports-webp-1.0.7.tgz#6f32b22cc02a38f72d4f6d708b1575e39f914be3"
+  integrity sha512-ZlqT+sCgZKcykOLrk8DYR4t3Em+nyVSHpiV3q7uzOutLwKIYU23n88KibCLw3FzM4NCQeRorvZ55AV/77lQyOQ==
+
 tapable@^1.0.0, tapable@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.1.1.tgz#4d297923c5a72a42360de2ab52dadfaaec00018e"
