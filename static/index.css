@@ -67,6 +67,15 @@ code {
     monospace;
 }
 
+.card.noscript {
+  text-align: center;
+  font-size: 18px;
+  margin: 16px;
+  padding: 16px;
+  background-color: #FF5F56;
+  color: white;
+}
+
 
 /**
  *

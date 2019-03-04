@@ -24,6 +24,13 @@ class HTMLDocument extends Document {
           <meta property="twitter:title" content="Keziah MOSELLE" />
           <meta property="twitter:description" content="Développeur front-end. Autodidacte de 18 ans, je suis passioné par le développement web et l'UI/UX depuis 2014." />
           <meta property="twitter:image" content="https://keziahmoselle.fr/static/cover.png" />
+          <noscript>
+            <div className="flex center">
+              <div className="card noscript">
+                JavaScript est désactivé, ce site fonctionnera mieux si vous l'activez.
+              </div>
+            </div>
+          </noscript>
         </Head>
         <body>
           <Main />
