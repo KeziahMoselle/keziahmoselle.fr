@@ -8,11 +8,12 @@ function Projects () {
 
       <div className="block">
         <Project
-          title="Pomodoro"
+          title="Tempus"
           subtitle="A simple yet featureful pomodoro in the tray/menubar"
           type="UI/UX, Front-end"
           date="2019"
-          github="KeziahMoselle/pomodoro"
+          github="KeziahMoselle/tempus"
+          url="https://tempus.keziahmoselle.fr/"
           stack={['reactjs', 'electronjs']}
         />
 

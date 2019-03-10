@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import hasSupportWebP from 'supports-webp'
 
-function Project ({ title, subtitle, type, date, github, stack }) {
+function Project ({ title, subtitle, type, date, github, stack, url }) {
   /* Get the file name in /static/thumbnails */
   const formattedTitle = title.toLowerCase().replace(/\s/g, '_')
 
@@ -59,7 +59,7 @@ function Project ({ title, subtitle, type, date, github, stack }) {
           </h5>
         </div>
         { github &&
-          <a className="pill" href={`https://github.com/${github}`} rel="nofollow noopener noreferrer">
+          <a className="pill" href={url ? url : `https://github.com/${github}`} rel="nofollow noopener noreferrer">
             <span>En savoir plus</span>
           </a>
         }
