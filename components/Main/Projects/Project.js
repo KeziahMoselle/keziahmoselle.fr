@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import hasSupportWebP from 'supports-webp'
 
 function Project ({
@@ -66,11 +66,9 @@ function Project ({
             }
           </h5>
         </div>
-        { github &&
-          <a className="pill" href={url ? url : `https://github.com/${github}`} rel="nofollow noopener noreferrer">
-            <span>{ url ? 'Voir sur le site' : 'Voir sur GitHub' }</span>
-          </a>
-        }
+        <a className="pill" href={url ? url : `https://github.com/${github}`} rel="nofollow noopener noreferrer">
+          <span>{ url ? 'Voir sur le site' : 'Voir sur GitHub' }</span>
+        </a>
       </div>
       <a href={`https://github.com/${github}`} rel="nofollow noopener noreferrer">
         <img src={imgUrl} alt={`${title} thumbnail`} />
