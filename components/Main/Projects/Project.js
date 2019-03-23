@@ -22,17 +22,19 @@ function Project ({
   }, [])
 
   useEffect(() => {
-    const localStars = localStorage.getItem(formattedTitle)
-    /* GitHub project */
-    if (localStars) {
-      setStars(localStorage.getItem(formattedTitle))
+    const localStars = JSON.parse(localStorage.getItem(formattedTitle))
+    if (localStars && (localStars.date === new Date().getHours())) {
+      setStars(localStars.stars)
     } else {
       fetch(`https://api.github.com/repos/${github}`)
         .then(response => response.json())
         .then(data => {
-          console.log(`Old: ${stars} | New: ${data.stargazers_count}`)
+          console.log(`Fetched ${github} : ${data.stargazers_count}`)
           setStars(data.stargazers_count)
-          localStorage.setItem(formattedTitle, data.stargazers_count)
+          localStorage.setItem(formattedTitle, JSON.stringify({
+            stars: data.stargazers_count,
+            date: new Date().getHours()
+          }))
         })
     }
   }, [])
