@@ -1,7 +1,15 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import hasSupportWebP from 'supports-webp'
 
-function Project ({ title, subtitle, type, date, github, stack, url }) {
+function Project ({
+  title,
+  subtitle,
+  type,
+  date,
+  github,
+  stack,
+  url
+}) {
   /* Get the file name in /static/thumbnails */
   const formattedTitle = title.toLowerCase().replace(/\s/g, '_')
 
@@ -16,7 +24,9 @@ function Project ({ title, subtitle, type, date, github, stack, url }) {
   useEffect(() => {
     const localStars = localStorage.getItem(formattedTitle)
     /* GitHub project */
-    if (!localStars) {
+    if (localStars) {
+      setStars(localStorage.getItem(formattedTitle))
+    } else {
       fetch(`https://api.github.com/repos/${github}`)
         .then(response => response.json())
         .then(data => {
@@ -24,8 +34,6 @@ function Project ({ title, subtitle, type, date, github, stack, url }) {
           setStars(data.stargazers_count)
           localStorage.setItem(formattedTitle, data.stargazers_count)
         })
-    } else {
-      setStars(localStorage.getItem(formattedTitle))
     }
   }, [])
 
@@ -51,7 +59,7 @@ function Project ({ title, subtitle, type, date, github, stack, url }) {
             <span className="separator"></span>
             { date }
             { stars &&
-              <a href={`https://github.com/${github}/stargazers`}>
+              <a href={`https://github.com/${github}/stargazers`} style={{ margin: '0' }}>
                 <span className="separator"></span>
                 { `${stars} ⭐` }
               </a>
@@ -60,7 +68,7 @@ function Project ({ title, subtitle, type, date, github, stack, url }) {
         </div>
         { github &&
           <a className="pill" href={url ? url : `https://github.com/${github}`} rel="nofollow noopener noreferrer">
-            <span>En savoir plus</span>
+            <span>{ url ? 'Voir sur le site' : 'Voir sur GitHub' }</span>
           </a>
         }
       </div>
