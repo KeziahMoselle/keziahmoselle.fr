@@ -44,6 +44,7 @@ function Projects () {
               type={project.type}
               date={project.date}
               github={project.github}
+              url={project.url}
               stack={project.stack}
             />
           ))
