@@ -51,10 +51,10 @@ function Project ({ title, subtitle, type, date, github, stack, url }) {
             <span className="separator"></span>
             { date }
             { stars &&
-              <Fragment>
+              <a href={`https://github.com/${github}/stargazers`}>
                 <span className="separator"></span>
                 { `${stars} ⭐` }
-              </Fragment>
+              </a>
             }
           </h5>
         </div>
