@@ -103,6 +103,10 @@ code {
     padding: 0 32px;
     margin: 64px 0;
   }
+
+  .container.hero {
+    margin: 124px 0;
+  }
 }
 
 
@@ -793,6 +797,10 @@ header img {
     display: inline-block;
     margin: 30px 0 20px 0;
   }
+}
+
+.project-header .pill {
+  margin: 15px 0 10px 0;
 }
 
 .project h3 {

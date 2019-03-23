@@ -1,7 +1,15 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import hasSupportWebP from 'supports-webp'
 
-function Project ({ title, subtitle, type, date, github, stack, url }) {
+function Project ({
+  title,
+  subtitle,
+  type,
+  date,
+  github,
+  stack,
+  url
+}) {
   /* Get the file name in /static/thumbnails */
   const formattedTitle = title.toLowerCase().replace(/\s/g, '_')
 
@@ -14,18 +22,20 @@ function Project ({ title, subtitle, type, date, github, stack, url }) {
   }, [])
 
   useEffect(() => {
-    const localStars = localStorage.getItem(formattedTitle)
-    /* GitHub project */
-    if (!localStars) {
+    const localStars = JSON.parse(localStorage.getItem(formattedTitle))
+    if (localStars && (localStars.date === new Date().getHours())) {
+      setStars(localStars.stars)
+    } else {
       fetch(`https://api.github.com/repos/${github}`)
         .then(response => response.json())
         .then(data => {
-          console.log(`Old: ${stars} | New: ${data.stargazers_count}`)
+          console.log(`Fetched ${github} : ${data.stargazers_count}`)
           setStars(data.stargazers_count)
-          localStorage.setItem(formattedTitle, data.stargazers_count)
+          localStorage.setItem(formattedTitle, JSON.stringify({
+            stars: data.stargazers_count,
+            date: new Date().getHours()
+          }))
         })
-    } else {
-      setStars(localStorage.getItem(formattedTitle))
     }
   }, [])
 
@@ -51,18 +61,16 @@ function Project ({ title, subtitle, type, date, github, stack, url }) {
             <span className="separator"></span>
             { date }
             { stars &&
-              <Fragment>
+              <a href={`https://github.com/${github}/stargazers`} style={{ margin: '0' }}>
                 <span className="separator"></span>
                 { `${stars} ⭐` }
-              </Fragment>
+              </a>
             }
           </h5>
         </div>
-        { github &&
-          <a className="pill" href={url ? url : `https://github.com/${github}`} rel="nofollow noopener noreferrer">
-            <span>En savoir plus</span>
-          </a>
-        }
+        <a className="pill" href={url ? url : `https://github.com/${github}`} rel="nofollow noopener noreferrer">
+          <span>{ url ? 'Voir sur le site' : 'Voir sur GitHub' }</span>
+        </a>
       </div>
       <a href={`https://github.com/${github}`} rel="nofollow noopener noreferrer">
         <img src={imgUrl} alt={`${title} thumbnail`} />
