@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import hasSupportWebP from 'supports-webp'
 
 function Project ({
   title,
@@ -14,12 +13,6 @@ function Project ({
   const formattedTitle = title.toLowerCase().replace(/\s/g, '_')
 
   const [stars, setStars] = useState(null)
-  const [imgUrl, setImgUrl] = useState(null)
-
-  useEffect(() => {
-    if (hasSupportWebP) return setImgUrl(`/static/thumbnails/${formattedTitle}.webp`)
-    setImgUrl(`/static/thumbnails/${formattedTitle}.jpg`)
-  }, [])
 
   useEffect(() => {
     const localStars = JSON.parse(localStorage.getItem(formattedTitle))
@@ -73,7 +66,10 @@ function Project ({
         </a>
       </div>
       <a href={`https://github.com/${github}`} rel="nofollow noopener noreferrer">
-        <img src={imgUrl} alt={`${title} thumbnail`} />
+        <picture>
+          <source srcSet={`/static/thumbnails/${formattedTitle}.webp`} type="image/webp"></source>
+          <img src={`/static/thumbnails/${formattedTitle}.jpg`} alt={`${title} thumbnail`}></img>
+        </picture>
       </a>
       <p className="project-footer">{ techStack }</p>
     </div>

@@ -813,7 +813,7 @@ header img {
   margin-bottom: 16px;
 }
 
-.project a > img {
+.project a img {
   background-color: #eee;
   width: 100%;
   object-fit: contain;
@@ -822,7 +822,7 @@ header img {
   transition: filter 0.4s;
 }
 
-.project a > img:hover {
+.project a img:hover {
   filter: brightness(50%);
 }
 

@@ -17,8 +17,7 @@
     "next-purgecss": "^3.0.1",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-spring": "^8.0.7",
-    "supports-webp": "^1.0.7"
+    "react-spring": "^8.0.7"
   },
   "devDependencies": {
     "@babel/plugin-transform-object-assign": "^7.2.0",
