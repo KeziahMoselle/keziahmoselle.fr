@@ -955,3 +955,26 @@ a.pill span {
 .skill span {
   font-weight: 700;
 }
+
+
+/**
+ *
+ * Achievements
+ *
+ */
+
+.achievements .card {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.achievement-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+}
