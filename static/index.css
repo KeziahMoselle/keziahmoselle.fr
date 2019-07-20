@@ -406,6 +406,10 @@ ul {
   align-items: center;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
 /* CIRCLE */
 
 .circle {
@@ -963,18 +967,40 @@ a.pill span {
  *
  */
 
+.achievements-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .achievements .card {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin:  10px;
+  padding: 24px;
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.2s;
 }
 
-.achievement-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  width: 64px;
-  height: 64px;
+.achievements .card h4 {
+  padding: 24px 40px;
+  opacity: 0;
+}
+
+.achievements .card:hover {
+  filter: brightness(50%);
+}
+
+.achievements .card .badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.badge {
+  background-color: white;
+  border-radius: 16px;
+  padding: 4px 12px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
 }

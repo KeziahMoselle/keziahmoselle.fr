@@ -1,18 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useSpring, animated } from 'react-spring'
 
 function Achievement ({
   name,
+  thumbnail,
   year,
-  description
+  link = '#'
 }) {
-  return (
-    <div class="card">
-      <div class="achievement-logo">
-      <img src={`/static/logos/${name.toLowerCase()}.svg`} alt={`${name} ${year}`} />
-      </div>
+  let styles
 
-      <h4>{ name }</h4>
-    </div>
+  if (thumbnail) {
+    styles = {
+      backgroundImage: `url(/static/thumbnails/${thumbnail})`
+    }
+  }
+
+  return (
+    <a href={link} target="_blank">
+      <div className="card" style={styles}>
+        <h4>{ name }</h4>
+        <div className="badge">aze</div>
+      </div>
+    </a>
   )
 }
 
