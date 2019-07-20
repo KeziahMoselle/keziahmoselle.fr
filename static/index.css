@@ -56,9 +56,27 @@ body {
   scroll-behavior: smooth;
 }
 
+:root {
+  --accent: #d23669;
+  --success: #20e289;
+  --error: #FF5F56;
+}
+
+.accent {
+  background-color: var(--accent);
+}
+
+.success {
+  background-color: var(--success);
+}
+
+.error {
+  background-color: var(--error);
+}
+
 code {
   background-color: #f5f5f5;
-  color: #d23669;
+  color: var(--accent);
   padding: 0 8px;
   border-radius: 3px;
   -webkit-box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
@@ -72,7 +90,7 @@ code {
   font-size: 18px;
   margin: 16px;
   padding: 16px;
-  background-color: #FF5F56;
+  background-color: var(--error);
   color: white;
 }
 
@@ -208,7 +226,7 @@ code {
 
 .chip:hover {
   background-color: white;
-  box-shadow: 0 0 0 0.2rem #d23669;
+  box-shadow: 0 0 0 0.2rem var(--accent);
 }
 
 .chip[disabled] {
@@ -362,7 +380,7 @@ button.translate-y:hover {
 }
 
 button.white:focus {
-  box-shadow: 0 0 0 0.2rem #d23669;
+  box-shadow: 0 0 0 0.2rem var(--accent);
 }
 
 
@@ -561,11 +579,11 @@ input, textarea {
 }
 
 input.is-valid, textarea.is-valid {
-  box-shadow: 0 0 0 0.2rem #20e289 !important;
+  box-shadow: 0 0 0 0.2rem var(--success) !important;
 }
 
 input.is-invalid, textarea.is-invalid {
-  box-shadow: 0 0 0 0.2rem #FF5F56 !important;
+  box-shadow: 0 0 0 0.2rem var(--error) !important;
 }
 
 input {
@@ -577,7 +595,7 @@ textarea {
 }
 
 input:focus, textarea:focus {
-  box-shadow: 0 0 0 0.2rem #d23669;
+  box-shadow: 0 0 0 0.2rem var(--accent);
 }
 
 textarea {
@@ -871,16 +889,16 @@ a.pill::before {
 a.pill::before {
   border-radius: 50px;
   width: 25%;
-  background: #d23669;
+  background: var(--accent);
 }
 
 a.pill:hover::before {
-  background: #d23669;
+  background: var(--accent);
   width: 100%;
 }
 
 a.pill span {
-  color: #d23669;
+  color: var(--accent);
   mix-blend-mode: difference;
 }
 
