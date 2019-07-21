@@ -5,7 +5,10 @@ function Achievement ({
   name,
   thumbnail,
   year,
-  link = '#'
+  link = '#',
+  description,
+  rank,
+  won
 }) {
   let styles
 
@@ -15,13 +18,33 @@ function Achievement ({
     }
   }
 
+  const [isExtended, setIsExtended] = useState(false)
+  const props = useSpring({
+    maxHeight: isExtended ? '1000px' : '0px',
+    padding: isExtended ? '12px' : '0px'
+  })
+
   return (
-    <a href={link} target="_blank">
-      <div className="card" style={styles}>
+    <div className={`achievement ${isExtended ? 'extended' : ''}`}>
+      <div
+        className="achievement-thumbnail"
+        style={styles}
+        onClick={() => setIsExtended(!isExtended)}
+      >
+        { won && <div class="badge">🏆</div> }
         <h4>{ name }</h4>
-        <div className="badge">aze</div>
       </div>
-    </a>
+      <animated.div className="card achievement-body" style={props}>
+        <div className="achievement-title">
+          <h4>{ name }</h4>
+
+          { rank && <div className="badge">{ rank }</div>}
+          { won &&  <div className="badge success">🏆 Won</div>}
+        </div>
+
+        { description && <p>{ description }</p> }
+      </animated.div>
+    </div>
   )
 }
 
