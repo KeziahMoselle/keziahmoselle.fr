@@ -1056,6 +1056,7 @@ a.pill span {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 16px;
 }
 
 .achievement-title h4 {
