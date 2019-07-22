@@ -1050,8 +1050,8 @@ a.pill span {
   margin-bottom: 0;
 }
 
-.achievement-body p {
-  margin-bottom: 24px;
+.achievement-body .btn {
+  margin-top: 18px;
 }
 
 
