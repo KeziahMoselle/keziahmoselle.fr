@@ -6,7 +6,7 @@ function Achievement ({
   thumbnail,
   year,
   link,
-  description,
+  content,
   rank,
   won
 }) {
@@ -21,7 +21,7 @@ function Achievement ({
   const [isExtended, setIsExtended] = useState(false)
   const props = useSpring({
     maxHeight: isExtended ? '1000px' : '0px',
-    padding: isExtended ? '12px' : '0px'
+    padding: isExtended ? '22px' : '0px'
   })
 
   return (
@@ -34,6 +34,8 @@ function Achievement ({
         { won && <div className="badge">🏆</div> }
         <h4>{ name }</h4>
       </div>
+        
+        
       <animated.div className="card achievement-body" style={props}>
         <div className="achievement-title">
           <h4>{ name }</h4>
@@ -42,7 +44,8 @@ function Achievement ({
           { won &&  <div className="badge success">🏆 Won</div>}
         </div>
 
-        { description && <p>{ description }</p> }
+        { content && <p>{ content }</p> }
+        
         { link && 
           <div className="flex center">
             <a className="btn" href={link} target="_blank">En savoir plus</a>
