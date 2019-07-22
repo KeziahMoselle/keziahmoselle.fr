@@ -4,6 +4,7 @@ import Skills from './Skills'
 import Experience from './Experience'
 import Formations from './Formations'
 import Projects from './Projects'
+import Achievements from './Achievements'
 
 function Main () {
   return (
@@ -13,6 +14,7 @@ function Main () {
       <Skills />
       <Experience />
       <Formations />
+      <Achievements />
     </main>
   )
 }

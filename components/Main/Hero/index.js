@@ -38,7 +38,7 @@ function Hero () {
       </p>
 
       <div>
-        <button className="translate-y" onClick={scrollToFooter}>Me contacter</button>
+        <button className="btn translate-y" onClick={scrollToFooter}>Me contacter</button>
         <div className="circle"></div>
         <animated.div style={{
           backgroundColor: color,
