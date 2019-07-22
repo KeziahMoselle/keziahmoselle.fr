@@ -43,6 +43,7 @@ function Achievement ({
         </div>
 
         { description && <p>{ description }</p> }
+        { link && <a className="btn" href={link} target="_blank">En savoir plus</a>}
       </animated.div>
     </div>
   )

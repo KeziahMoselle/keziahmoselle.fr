@@ -339,7 +339,7 @@ a {
  *
  */
 
-button {
+.btn {
   width: fit-content;
   margin: 0px;
   padding: 16px 32px;
@@ -356,30 +356,30 @@ button {
               transform 0.3s ease-out;
 }
 
-button:hover {
+.btn:hover {
   background-color: rgb(47, 47, 47);
 }
 
-button:focus {
+.btn:focus {
   background-color: #eeeeee;
   color: black;
 }
 
-button.rounded {
+.btn.rounded {
   border-radius: 4px;
 }
 
-button.white {
+.btn.white {
   background-color: white;
   color: black;
   transition: box-shadow 0.3s, transform 0.2s;
 }
 
-button.translate-y:hover {
+.btn.translate-y:hover {
   transform: translateY(-2px);
 }
 
-button.white:focus {
+.btn.white:focus {
   box-shadow: 0 0 0 0.2rem var(--accent);
 }
 
