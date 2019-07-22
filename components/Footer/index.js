@@ -148,7 +148,7 @@ function Footer () {
           ></textarea>
 
           <div className="flex center">
-            <button className="white rounded translate-y" onClick={send}>
+            <button className="btn white rounded translate-y" onClick={send}>
               { status === 'loading' ? 'Envoi...' : 'Envoyer'}
             </button>
           </div>
