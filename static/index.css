@@ -340,6 +340,7 @@ a {
  */
 
 .btn {
+  display: inline-block;
   width: fit-content;
   margin: 0px;
   padding: 16px 32px;
@@ -1047,6 +1048,10 @@ a.pill span {
 .achievement-body {
   overflow: hidden;
   margin-bottom: 0;
+}
+
+.achievement-body p {
+  margin-bottom: 24px;
 }
 
 

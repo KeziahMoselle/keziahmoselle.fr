@@ -5,7 +5,7 @@ function Achievement ({
   name,
   thumbnail,
   year,
-  link = '#',
+  link,
   description,
   rank,
   won
@@ -31,7 +31,7 @@ function Achievement ({
         style={styles}
         onClick={() => setIsExtended(!isExtended)}
       >
-        { won && <div class="badge">🏆</div> }
+        { won && <div className="badge">🏆</div> }
         <h4>{ name }</h4>
       </div>
       <animated.div className="card achievement-body" style={props}>
@@ -43,7 +43,11 @@ function Achievement ({
         </div>
 
         { description && <p>{ description }</p> }
-        { link && <a className="btn" href={link} target="_blank">En savoir plus</a>}
+        { link && 
+          <div className="flex center">
+            <a className="btn" href={link} target="_blank">En savoir plus</a>
+          </div>
+        }
       </animated.div>
     </div>
   )
