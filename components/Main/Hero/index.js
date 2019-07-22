@@ -6,9 +6,15 @@ function Hero () {
     from: { opacity: 0, y: 20 },
     opacity: 1, y: 0
   })
+
   const { x, color } = useSpring({
     from: { x: 200 },
     x: 0, color: 'black'
+  })
+
+  const { angle } = useSpring({
+    from: { angle: 0 },
+    angle: 50
   })
 
   function scrollToFooter () {
@@ -45,6 +51,9 @@ function Hero () {
           transform: x.interpolate(x => `translateX(${x}px)`)
         }} className="circle animated" onMouseMove={updateGradient}></animated.div>
       </div>
+      <animated.div style={{
+        transform: angle.interpolate(angle => `skewX(-${angle}deg)`)
+      }} className="circle overlap"></animated.div>
     </animated.div>
   )
 }
