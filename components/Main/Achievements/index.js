@@ -29,7 +29,7 @@ const achievementsList = [
     thumbnail: 'github_education_pins.png',
     content: `Your GitHub profile is a great place to show off your work and projects to the world. It displays your contributions, and you can highlight specific projects by pinning them. Now, you can even pin gists. GitHub gists are a fast and easy way of sharing code snippets and single files. When you pin a gist, a preview of the contents will appear on your profile.`,
     year: '2019',
-    link: 'https://twitter.com/GitHubEducation/status/1151220367966556161',
+    link: 'https://github.blog/2019-09-03-pins-to-win-stunning-student-profiles/',
     won: true
   },
   {
