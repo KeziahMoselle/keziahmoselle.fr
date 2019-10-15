@@ -3,12 +3,20 @@ import Achievement from './Achievement'
 
 const achievementsList = [
   {
-    name: 'Hacktoberfest',
-    thumbnail: 'hacktoberfest.png',
+    name: 'Hacktoberfest 2018',
+    thumbnail: 'hacktoberfest_2018.png',
     year: '2018',
     link: 'https://twitter.com/KeziahMoselle/status/1055202328389865473',
     content: `Hacktoberfest is a month-long celebration of open source software run by DigitalOcean in partnership with GitHub and Twilio.`,
     rank: '10 PR merged'
+  },
+  {
+    name: 'Hacktoberfest 2019',
+    thumbnail: 'hacktoberfest_2019.png',
+    year: '2019',
+    link: 'https://twitter.com/KeziahMoselle/status/1183725853240373248',
+    content: `Hacktoberfest is a month-long celebration of open source software run by DigitalOcean in partnership with GitHub and DEV.to`,
+    rank: '4 PR merged'
   },
   {
     name: 'GitHub Game Off',
@@ -53,13 +61,7 @@ function Achievements () {
           achievementsList.map((achievement, index) => (
             <Achievement
               key={index}
-              name={achievement.name}
-              thumbnail={achievement.thumbnail}
-              content={achievement.content}
-              year={achievement.year}
-              link={achievement.link}
-              rank={achievement.rank}
-              won={achievement.won}
+              {...achievement}
             />
           ))
         }
