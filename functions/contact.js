@@ -1,15 +1,13 @@
-require('dotenv').config()
 const axios = require('axios')
-const { DISCORD_WEBHOOK_URL } = process.env
 
-exports.handler = async (event, context, callback) => {
+exports.handler = async (event, context) => {
   /* Check method */
   
   if (event.httpMethod !== 'POST') {
-    callback(null, {
+    return {
       statusCode: 405,
       body: 'Method Not Allowed'
-    })
+    }
   }
 
 
@@ -21,10 +19,10 @@ exports.handler = async (event, context, callback) => {
   /* Fields missing */
 
   if (!email || !message) {
-    callback(null, {
+    return {
       statusCode: 206,
       body: ''
-    })
+    }
   }
 
 
@@ -58,13 +56,13 @@ exports.handler = async (event, context, callback) => {
     headers: {
       'Content-Type': 'application/json'
     },
-    url: DISCORD_WEBHOOK_URL,
+    url: process.env.DISCORD_WEBHOOK_URL,
     data: embed
   })
 
-  callback(null, {
+  return {
     statusCode: response.status,
     body: response.statusText
-  })
+  }
 
 }

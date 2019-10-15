@@ -3,11 +3,10 @@
   "version": "2.0.0",
   "description": "My portfolio",
   "scripts": {
-    "dev": "concurrently \"next\" \"netlify-lambda serve ./lambda\"",
-    "start": "next --hostname 192.168.0.12",
-    "build": "npm run build:next && npm run build:lambda",
-    "build:next": "next build && next export",
-    "build:lambda": "netlify-lambda build ./lambda"
+    "dev": "next dev",
+    "start": "netlify dev",
+    "build": "npm run compress && next build && next export",
+    "compress": ""
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -20,10 +19,7 @@
     "react-spring": "^8.0.7"
   },
   "devDependencies": {
-    "@babel/plugin-transform-object-assign": "^7.2.0",
-    "concurrently": "^4.1.0",
-    "http-proxy-middleware": "^0.19.1",
-    "netlify-lambda": "^1.4.2"
+    "netlify-cli": "^2.17.0"
   },
   "repository": "https://github.com/KeziahMoselle/keziahmoselle.fr.git",
   "author": "KeziahMoselle <keziah.moselle@gmail.com>",
