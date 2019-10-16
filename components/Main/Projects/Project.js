@@ -56,7 +56,7 @@ function Project ({
             { stars &&
               <a href={`https://github.com/${github}/stargazers`} style={{ margin: '0' }}>
                 <span className="separator"></span>
-                { `${stars} ⭐` }
+                { `${stars} ⭐` } GitHub Stars
               </a>
             }
           </h5>

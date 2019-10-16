@@ -303,6 +303,14 @@ h5 {
   color: rgba(0, 0, 0, 0.7);
 }
 
+h5 a {
+  color: inherit;
+}
+
+h5 a:hover {
+  color: black;
+}
+
 h6 {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.7);
