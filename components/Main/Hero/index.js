@@ -28,6 +28,17 @@ function Hero () {
     event.target.style.setProperty('--x', x + 'px')
     event.target.style.setProperty('--y', y + 'px')
   }
+
+  function age () {
+    const date = new Date()
+    const currentYear = date.getFullYear()
+
+    if (date.getMonth() >= 7) {
+      return currentYear - 2000
+    } else {
+      return currentYear - 2001
+    }
+  }
   
   return (
     <animated.div style={{opacity}} className="container hero relative">
@@ -40,7 +51,7 @@ function Hero () {
       <h2>Développeur Front-end.</h2>
 
       <p>
-        Autodidacte de 18 ans, je suis passioné par le développement web et l'UI/UX depuis { new Date().getFullYear() - 2014 } ans.
+        Autodidacte de { age() } ans, je suis passioné par le développement web et l'UI/UX depuis { new Date().getFullYear() - 2014 } ans.
       </p>
 
       <div>
