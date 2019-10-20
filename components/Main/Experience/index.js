@@ -1,5 +1,17 @@
 import React from 'react'
 
+const experiences = [
+  {
+    company: '',
+    title: '',
+    years: '',
+    url: '',
+    facts: [
+      ''
+    ]
+  }
+]
+
 function Experience () {
   return (
     <div className="container medium experience relative">
