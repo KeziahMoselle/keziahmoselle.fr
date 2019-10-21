@@ -946,11 +946,13 @@ a.pill span {
   width: 100%;
   max-width: 350px;
   object-fit: contain;
+  margin: 16px 0 64px 0;
 }
 
 @media only screen and (min-width: 1200px) {
   .skills .block:first-of-type img {
     height: 400px;
+    margin: 0;
   }
 }
 
