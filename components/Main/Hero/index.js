@@ -1,7 +1,10 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
+import { useTranslation } from 'react-i18next'
 
 function Hero () {
+  const { t } = useTranslation()
+
   const { opacity, y } = useSpring({
     from: { opacity: 0, y: 20 },
     opacity: 1, y: 0
@@ -48,7 +51,7 @@ function Hero () {
         Keziah <br/> Moselle
       </animated.h1>
 
-      <h2>Développeur Front-end.</h2>
+      <h2>{ t('title') }.</h2>
 
       <p>
         Autodidacte de { age() } ans, je suis passioné par le développement web et l'UI/UX depuis { new Date().getFullYear() - 2014 } ans.
