@@ -1,3 +1,15 @@
 {
-  "title": "Web developer"
+  "title": "Web developer",
+  "description": "Autodidacte de {{age}} ans, je suis passioné par le développement web et l'UI/UX depuis {{sinceDate}} ans.",
+  "contactMe": "Contact me",
+  "personalProjects": "Personal projects",
+  "seeWebsite": "See website",
+  "seeRepo": "See GitHub",
+  "skills": "Skills",
+  "tools": "Tools",
+  "experience": "Experience",
+  "education": "Education",
+  "achievements": "Achievements",
+  "message": "Your message",
+  "send": "Submit"
 }

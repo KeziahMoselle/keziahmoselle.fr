@@ -1,5 +1,15 @@
 {
   "title": "Développeur Web",
   "description": "Autodidacte de {{age}} ans, je suis passioné par le développement web et l'UI/UX depuis {{sinceDate}} ans.",
-  "contactMe": "Me contacter"
+  "contactMe": "Me contacter",
+  "personalProjects": "Projets personnels",
+  "seeWebsite": "Voir sur le site",
+  "seeRepo": "Voir sur GitHub",
+  "skills": "Compétences",
+  "tools": "Outils",
+  "experience": "Expérience",
+  "education": "Formations",
+  "achievements": "Achievements",
+  "message": "Votre message",
+  "send": "Envoyer"
 }
