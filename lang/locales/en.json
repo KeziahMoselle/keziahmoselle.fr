@@ -1,15 +1,28 @@
 {
   "title": "Web developer",
-  "description": "Autodidacte de {{age}} ans, je suis passioné par le développement web et l'UI/UX depuis {{sinceDate}} ans.",
+  "description": "Self-taught for {{age}} years, I have been passionate about web development and UI/UX for {{sinceDate}} years.",
   "contactMe": "Contact me",
   "personalProjects": "Personal projects",
-  "seeWebsite": "See website",
-  "seeRepo": "See GitHub",
+  "seeWebsite": "See on the website",
+  "seeRepo": "See on GitHub",
   "skills": "Skills",
   "tools": "Tools",
   "experience": "Experience",
-  "education": "Education",
+  "education": {
+    "title": "Education",
+    "selfTaught": "Self Taught",
+    "learning": "Constantly learning...",
+    "bachelor": "Bachelor's degree",
+    "good": "Acknowledgement"
+  },
   "achievements": "Achievements",
-  "message": "Your message",
-  "send": "Submit"
+  "form": {
+    "message": "Your message",
+    "sending": "Sending...",
+    "success": "Message sent! Thank you",
+    "error": "There's been an error, feel free to try again later.",
+    "missingFields": "Please fill in all fields.",
+    "loading": "Sending...",
+    "send": "Submit"
+  }
 }

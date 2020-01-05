@@ -8,8 +8,21 @@
   "skills": "Compétences",
   "tools": "Outils",
   "experience": "Expérience",
-  "education": "Formations",
+  "education": {
+    "title": "Formations",
+    "selfTaught": "Autodidacte",
+    "learning": "En perpétuel apprentissage...",
+    "bachelor": "Baccalauréat",
+    "good": "Mention bien"
+  },
   "achievements": "Achievements",
-  "message": "Votre message",
-  "send": "Envoyer"
+  "form": {
+    "message": "Votre message",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé ! Merci",
+    "error": "Il y a eu une erreur, n'hésitez pas à réessayer plus tard.",
+    "missingFields": "Veuillez remplir tous les champs.",
+    "loading": "Envoi...",
+    "send": "Envoyer"
+  }
 }

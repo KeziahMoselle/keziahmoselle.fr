@@ -1,4 +1,6 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
+import Chip from './Chip'
 
 const experiences = [
   {
@@ -44,9 +46,11 @@ const experiences = [
 ]
 
 function Experience () {
+  const { t } = useTranslation()
+
   return (
     <div className="container medium experience relative">
-      <h3>Expérience</h3>
+      <h3>{ t('experience') }</h3>
 
       { experiences.map(experience => (
         <div className="block card column">
@@ -65,20 +69,6 @@ function Experience () {
 
       <div className="circle"></div>
     </div>
-  )
-}
-
-function Chip ({ link }) {
-  const href = link || '#!'
-
-  return (
-    <a
-      className="chip"
-      href={href}
-      target="_blank"
-      rel="nofollow noopener noreferrer">
-      <img src="/static/link.svg" alt="external link icon" />
-    </a>
   )
 }
 

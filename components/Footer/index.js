@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 function Footer () {
   const [email, setEmail] = useState('')
@@ -6,6 +7,7 @@ function Footer () {
   const [message, setMessage] = useState('')
   const [isMessageValid, setIsMessageValid] = useState(null)
   const [status, setStatus] = useState('default')
+  const { t } = useTranslation()
 
   const messages = {
     'default': {
@@ -14,22 +16,22 @@ function Footer () {
       color: ''
     },
     'loading': {
-      text: 'Envoi en cours...',
+      text: t('form.sending'),
       emoji: '⏳',
       color: '#2A6CC4'
     },
     'success': {
-      text: 'Message envoyé ! Merci',
+      text: t('form.success'),
       emoji: '🎉',
       color: '#20e289'
     },
     'error': {
-      text: `Il y a eu une erreur, n'hésitez pas à réessayer plus tard.`,
+      text: t('form.error'),
       emoji: '😢',
       color: '#FF5F56'
     },
     'missing_fields': {
-      text: 'Veuillez remplir tous les champs.',
+      text: t('form.missingFields'),
       emoji: '🚧',
       color: '#ffc56f'
     }
@@ -113,7 +115,7 @@ function Footer () {
       <div className="container">
         <form>
           <div className="flex space-between">
-            <h2>Me contacter</h2>
+            <h2>{ t('contactMe') }</h2>
           </div>
 
           <p className="status-message" style={{
@@ -142,14 +144,14 @@ function Footer () {
             value={message}
             onChange={(event) => handleMessageInput(event)}
             className={isMessageValid}
-            placeholder="Votre message..."
+            placeholder={t('form.message')}
             spellCheck
             rows="6"
           ></textarea>
 
           <div className="flex center">
             <button className="btn white rounded translate-y" onClick={send}>
-              { status === 'loading' ? 'Envoi...' : 'Envoyer'}
+              { status === 'loading' ? t('form.loading') : t('form.send')}
             </button>
           </div>
         </form>

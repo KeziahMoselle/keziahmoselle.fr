@@ -23,7 +23,7 @@ i18n
     fallbackLng: ['fr', 'en'],
     ns: ['translations'],
     defaultNS: 'translations',
-    keySeparator: false,
+    keySeparator: '.',
     interpolation: {
       escapeValue: false
     }
