@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 
+import '../lang/i18n'
 import '../static/index.css'
 
 import Header from './Header'

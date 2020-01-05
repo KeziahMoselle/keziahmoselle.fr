@@ -1,6 +1,9 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 function Formations () {
+  const { t } = useTranslation()
+
   function updateGradient (event) {
     const x = event.pageX - event.target.offsetLeft - event.target.offsetParent.offsetLeft
     const y = event.pageY - event.target.offsetTop - event.target.offsetParent.offsetTop
@@ -10,12 +13,13 @@ function Formations () {
 
   return (
     <div className="container medium formations relative">
-      <h3>Formations</h3>
+      <h3>{ t('education.title') }</h3>
 
       <div className="block card flex column">
-        <h4>Autodidacte</h4>
+
+        <h4>{ t('education.selfTaught') }</h4>
         <h5>2014-{new Date().getFullYear()}</h5>
-        <p>En perpétuel apprentissage...</p>
+        <p>{ t('education.learning') }</p>
       </div>
 
       <div className="block card flex column">
@@ -24,9 +28,9 @@ function Formations () {
       </div>
 
       <div className="block card flex column">
-        <h4>Baccalauréat STI2D</h4>
+        <h4>{ t('education.bachelor')} STI2D</h4>
         <h5>2016-2018</h5>
-        <p>Mention Bien</p>
+        <p>{ t('education.good') }</p>
       </div>
 
       <div className="circle gradient animated" onMouseMove={updateGradient}></div>

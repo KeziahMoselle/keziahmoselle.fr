@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import Project from './Project'
 
 const projects = [
@@ -30,9 +31,11 @@ const projects = [
 ]
 
 function Projects () {
+  const { t } = useTranslation()
+
   return (
     <div className="container medium projects">
-      <h3>Projets personnels</h3>
+      <h3>{ t('personalProjects') }</h3>
 
       <div className="block">
         {

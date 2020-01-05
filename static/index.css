@@ -650,7 +650,7 @@ header img {
   align-items: center;
 }
 
-.header-menu li:last-child {
+.header-menu li {
   margin-left: 16px;
 }
 

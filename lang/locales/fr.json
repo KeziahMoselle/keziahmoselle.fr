@@ -1,0 +1,28 @@
+{
+  "title": "Développeur Web",
+  "description": "Autodidacte de {{age}} ans, je suis passioné par le développement web et l'UI/UX depuis {{sinceDate}} ans.",
+  "contactMe": "Me contacter",
+  "personalProjects": "Projets personnels",
+  "seeWebsite": "Voir sur le site",
+  "seeRepo": "Voir sur GitHub",
+  "skills": "Compétences",
+  "tools": "Outils",
+  "experience": "Expérience",
+  "education": {
+    "title": "Formations",
+    "selfTaught": "Autodidacte",
+    "learning": "En perpétuel apprentissage...",
+    "bachelor": "Baccalauréat",
+    "good": "Mention bien"
+  },
+  "achievements": "Achievements",
+  "form": {
+    "message": "Votre message",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé ! Merci",
+    "error": "Il y a eu une erreur, n'hésitez pas à réessayer plus tard.",
+    "missingFields": "Veuillez remplir tous les champs.",
+    "loading": "Envoi...",
+    "send": "Envoyer"
+  }
+}
