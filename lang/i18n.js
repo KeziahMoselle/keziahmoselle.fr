@@ -11,12 +11,12 @@ i18n
     resources: {
       en: {
         translations: {
-          en
+          ...en
         }
       },
       fr: {
         translations: {
-          fr
+          ...fr
         }
       }
     },

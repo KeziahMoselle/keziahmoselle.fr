@@ -54,11 +54,16 @@ function Hero () {
       <h2>{ t('title') }.</h2>
 
       <p>
-        Autodidacte de { age() } ans, je suis passioné par le développement web et l'UI/UX depuis { new Date().getFullYear() - 2014 } ans.
+        { t('description', {
+            age: age(),
+            sinceDate: new Date().getFullYear() - 2014
+        })}
       </p>
 
       <div>
-        <button className="btn translate-y" onClick={scrollToFooter}>Me contacter</button>
+        <button className="btn translate-y" onClick={scrollToFooter}>
+          { t('contactMe') }
+        </button>
         <div className="circle"></div>
         <animated.div style={{
           backgroundColor: color,
