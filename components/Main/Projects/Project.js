@@ -51,21 +51,21 @@ function Project ({
           <h4 className="grey">{ subtitle }</h4>
           <h5>
             { type }
-            <span className="separator"></span>
-            { date }
+            <span className="separator">{ date }</span>
             { stars &&
+            <span className="separator">
               <a href={`https://github.com/${github}/stargazers`} style={{ margin: '0' }}>
-                <span className="separator"></span>
                 { `${stars} ⭐` } GitHub Stars
               </a>
+            </span>
             }
           </h5>
         </div>
         <a className="pill" href={url ? url : `https://github.com/${github}`} rel="nofollow noopener noreferrer">
-          <span>{ url ? 'Voir sur le site' : 'Voir sur GitHub' }</span>
+          <span>{ url ? 'Voir le projet le site' : 'Voir le projet sur GitHub' }</span>
         </a>
       </div>
-      <a href={`https://github.com/${github}`} rel="nofollow noopener noreferrer">
+      <a tabIndex="-1" href={`https://github.com/${github}`} rel="nofollow noopener noreferrer">
         <picture>
           <source srcSet={`/static/thumbnails/${formattedTitle}.webp`} type="image/webp"></source>
           <img src={`/static/thumbnails/${formattedTitle}.jpg`} alt={`${title} thumbnail`}></img>

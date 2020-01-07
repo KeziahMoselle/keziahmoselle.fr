@@ -340,12 +340,9 @@ h6 {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.separator {
-  margin: 0 8px;
-}
-
 .separator::before {
-  content: '/'
+  content: '/';
+  margin: 0 8px;
 }
 
 /**
