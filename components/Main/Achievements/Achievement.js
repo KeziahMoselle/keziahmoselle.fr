@@ -61,7 +61,15 @@ function Achievement ({
         
         { link && 
           <div className="flex center">
-            <a className="btn" href={link} target="_blank">En savoir plus</a>
+            <a 
+              className="btn" 
+              href={link} 
+              target="_blank" 
+              onFocus={() => setIsExtended(true)}
+              onBlur={() => setIsExtended(false)}
+            >
+              En savoir plus <span class="visually-hidden">sur { name }</span>
+            </a>
           </div>
         }
       </animated.div>

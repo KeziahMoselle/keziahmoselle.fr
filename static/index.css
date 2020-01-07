@@ -99,6 +99,16 @@ code {
   box-shadow: 0 0 0 0.2rem var(--accent);
 }
 
+.visually-hidden:not(:focus):not(:active) { 
+  position: absolute !important;
+  height: 1px; 
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
 
 /**
  *
@@ -1100,4 +1110,11 @@ a.pill span {
   padding: 6px 12px;
   border-radius: 17px;
   border: 2px solid var(--accent);
+}
+
+::-webkit-input-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder {
+  color: #626262;
 }
