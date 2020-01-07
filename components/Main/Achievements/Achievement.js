@@ -25,7 +25,10 @@ function Achievement ({
   })
 
   return (
-    <div className={`achievement ${isExtended ? 'extended' : ''}`}>
+    <div
+      className="achievement"
+      aria-expanded={isExtended}
+    >
       <div
         className="achievement-thumbnail"
         style={styles}
@@ -36,12 +39,22 @@ function Achievement ({
       </div>
         
         
-      <animated.div className="card achievement-body" style={props}>
+      <animated.div
+        className="card achievement-body"
+        style={props}
+        aria-hidden={!isExtended}
+      >
         <div className="achievement-title">
           <h4>{ name }</h4>
 
           { rank && <div className="badge">{ rank }</div>}
-          { won &&  <div className="badge success">🏆 Won</div>}
+          { won &&
+            <div
+              className="badge success"
+              role="img"
+              aria-label="trophy emoji">
+              🏆 Won
+            </div>}
         </div>
 
         { content && <p>{ content }</p> }
