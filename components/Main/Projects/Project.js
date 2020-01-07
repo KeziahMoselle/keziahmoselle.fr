@@ -36,7 +36,7 @@ function Project ({
   const techStack = stack.map((tech, index) => (
     <img
       src={`/static/logos/${tech}.svg`}
-      alt={`${tech} logo`}
+      alt={`${tech}`}
       title={tech}
       key={index}
     />

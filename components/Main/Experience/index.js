@@ -54,7 +54,11 @@ function Experience () {
 
       { experiences.map(experience => (
         <div className="block card column">
-          { experience.url && <Chip link={experience.url} /> }
+          { experience.url &&
+            <Chip
+            link={experience.url}
+            company={experience.company}/>
+          }
 
           <h4>{ experience.company }</h4>
           <h5>{ experience.title }</h5>
