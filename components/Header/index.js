@@ -15,7 +15,7 @@ function Header () {
   return (
     <header>
       <a href="https://keziahmoselle.fr/">
-        <img src="/static/logo.svg" className="header-logo" alt="Keziah logo" />
+        <img src="/static/logo.svg" className="header-logo" alt="Homepage" />
       </a>
       
       <ul className="header-menu">
@@ -26,7 +26,7 @@ function Header () {
         </li>
         <li>
           <a href="https://github.com/KeziahMoselle" rel="nofollow noopener noreferrer">
-            <img src="/static/logos/github.svg" alt="GitHub logo" />
+            <img src="/static/logos/github.svg" alt="My GitHub profile" />
           </a>
         </li>
         <li>

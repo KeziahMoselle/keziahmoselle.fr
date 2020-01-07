@@ -135,7 +135,7 @@ function Footer () {
             value={email}
             onChange={(event) => handleEmailInput(event)}
             className={isEmailValid}
-            placeholder="hello@domain.com"
+            placeholder="What's your email address ?"
           />
 
           <label htmlFor="message">Message</label>
@@ -159,15 +159,15 @@ function Footer () {
 
         <p className="flex valign">
           <a href="https://github.com/KeziahMoselle" rel="nofollow noopener noreferrer">
-            <img src="/static/github.svg" alt="GitHub logo" />
+            <img src="/static/github.svg" alt="My GitHub profile" />
           </a>
 
           <a href="https://twitter.com/KeziahMoselle" rel="nofollow noopener noreferrer">
-            <img src="/static/twitter.svg" alt="Twitter logo" />
+            <img src="/static/twitter.svg" alt="My Twitter profile" />
           </a>
 
           <a href="https://blog.keziahmoselle.fr/" title="Mon blog" rel="nofollow noopener noreferrer">
-            <img src="/static/edit.svg" alt="Blog icon" />
+            <img src="/static/edit.svg" alt="My Blog" />
           </a>
         </p>
       

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Chip ({ link }) {
+function Chip ({ link, company }) {
   const href = link || '#!'
 
   return (
@@ -9,7 +9,8 @@ function Chip ({ link }) {
       href={href}
       target="_blank"
       rel="nofollow noopener noreferrer">
-      <img src="/static/link.svg" alt="external link icon" />
+      <img src="/static/link.svg" alt="External link" />
+      <span class="visually-hidden">En lire plus sur { company }</span>
     </a>
   )
 }

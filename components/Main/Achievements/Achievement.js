@@ -25,7 +25,10 @@ function Achievement ({
   })
 
   return (
-    <div className={`achievement ${isExtended ? 'extended' : ''}`}>
+    <div
+      className="achievement"
+      aria-expanded={isExtended}
+    >
       <div
         className="achievement-thumbnail"
         style={styles}
@@ -36,19 +39,37 @@ function Achievement ({
       </div>
         
         
-      <animated.div className="card achievement-body" style={props}>
+      <animated.div
+        className="card achievement-body"
+        style={props}
+        aria-hidden={!isExtended}
+      >
         <div className="achievement-title">
           <h4>{ name }</h4>
 
           { rank && <div className="badge">{ rank }</div>}
-          { won &&  <div className="badge success">🏆 Won</div>}
+          { won &&
+            <div
+              className="badge success"
+              role="img"
+              aria-label="trophy emoji">
+              🏆 Won
+            </div>}
         </div>
 
         { content && <p>{ content }</p> }
         
         { link && 
           <div className="flex center">
-            <a className="btn" href={link} target="_blank">En savoir plus</a>
+            <a 
+              className="btn" 
+              href={link} 
+              target="_blank" 
+              onFocus={() => setIsExtended(true)}
+              onBlur={() => setIsExtended(false)}
+            >
+              En savoir plus <span class="visually-hidden">sur { name }</span>
+            </a>
           </div>
         }
       </animated.div>

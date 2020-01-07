@@ -12,12 +12,12 @@ function Skills() {
       <div className="block">
         <div className="flex column center valign">
           <h4>Front-End</h4>
-          <img src="/static/skills/front-end.svg" alt="Front-End skills" />
+          <img src="/static/skills/front-end.svg" alt="Diagram of my front-end skills" />
         </div>
 
         <div className="flex column center valign">
           <h4>Back-End</h4>
-          <img src="/static/skills/back-end.svg" alt="Back-End skills" />
+          <img src="/static/skills/back-end.svg" alt="Diagram of my back-end skills" />
         </div>
       </div>
 

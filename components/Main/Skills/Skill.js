@@ -5,7 +5,7 @@ function Skill ({ name }) {
 
   return (
     <div className="skill">
-      <img src={`/static/logos/${img}.svg`} alt={`${name} logo`}></img>
+      <img src={`/static/logos/${img}.svg`} alt={`${name}`}></img>
       <span>{name}</span>
     </div>
   )

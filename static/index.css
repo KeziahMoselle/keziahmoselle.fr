@@ -94,6 +94,21 @@ code {
   color: white;
 }
 
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem var(--accent);
+}
+
+.visually-hidden:not(:focus):not(:active) { 
+  position: absolute !important;
+  height: 1px; 
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
 
 /**
  *
@@ -187,6 +202,10 @@ code {
 .card .chip {
   position: absolute;
   right: -28px;
+}
+
+.card .chip:focus {
+  outline: solid;
 }
 
 @media only screen and (max-width: 600px) {
@@ -321,12 +340,9 @@ h6 {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.separator {
-  margin: 0 8px;
-}
-
 .separator::before {
-  content: '/'
+  content: '/';
+  margin: 0 8px;
 }
 
 /**
@@ -370,6 +386,7 @@ a {
 }
 
 .btn:focus {
+  outline: double;
   background-color: #eeeeee;
   color: black;
 }
@@ -1090,4 +1107,11 @@ a.pill span {
   padding: 6px 12px;
   border-radius: 17px;
   border: 2px solid var(--accent);
+}
+
+::-webkit-input-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder {
+  color: #626262;
 }
