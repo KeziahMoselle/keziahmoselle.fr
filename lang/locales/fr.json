@@ -24,5 +24,10 @@
     "missingFields": "Veuillez remplir tous les champs.",
     "loading": "Envoi...",
     "send": "Envoyer"
+  },
+  "projects": {
+    "Tempus": "Un pomodoro dans votre barre des tâches",
+    "Export GitHub Stars": "Liste / Trier / Exporter vos starred repositories",
+    "Gelbooru Client": "Un client Material Design pour explorer des images"
   }
 }

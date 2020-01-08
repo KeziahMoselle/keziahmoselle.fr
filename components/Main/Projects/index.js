@@ -5,7 +5,6 @@ import Project from './Project'
 const projects = [
   {
     title: 'Tempus',
-    subtitle: 'A simple yet featureful pomodoro in the tray/menubar',
     type: 'UI/UX, Front-End',
     date: '2019',
     github: 'KeziahMoselle/tempus',
@@ -14,7 +13,6 @@ const projects = [
   },
   {
     title: 'Export GitHub Stars',
-    subtitle: 'View / Sort / Export your starred repositories.',
     type: 'UI/UX, Front-end, API',
     date: '2018',
     github: 'KeziahMoselle/export-github-stars',
@@ -22,7 +20,6 @@ const projects = [
   },
   {
     title: 'Gelbooru Client',
-    subtitle: 'A material client to explore an image board.',
     type: 'UI/UX, Front-end, API',
     date: '2017-2018',
     github: 'KeziahMoselle/gelbooru-client',

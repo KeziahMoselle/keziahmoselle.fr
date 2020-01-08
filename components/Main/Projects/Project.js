@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 function Project ({
   title,
@@ -13,6 +14,7 @@ function Project ({
   const formattedTitle = title.toLowerCase().replace(/\s/g, '_')
 
   const [stars, setStars] = useState(null)
+  const { t } = useTranslation()
 
   useEffect(() => {
     const localStars = JSON.parse(localStorage.getItem(formattedTitle))
@@ -48,7 +50,7 @@ function Project ({
       <div className="project-header">
         <div>
           <h3>{ title }</h3>
-          <h4 className="grey">{ subtitle }</h4>
+          <h4 className="grey">{ t(`projects.${title}`) }</h4>
           <h5>
             { type }
             <span className="separator">{ date }</span>
