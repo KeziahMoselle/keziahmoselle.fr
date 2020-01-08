@@ -17,6 +17,7 @@
   },
   "achievements": "Achievements",
   "form": {
+    "email": "Quelle est votre adresse email ?",
     "message": "Votre message",
     "sending": "Envoi en cours...",
     "success": "Message envoyé ! Merci",

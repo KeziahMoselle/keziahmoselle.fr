@@ -135,7 +135,7 @@ function Footer () {
             value={email}
             onChange={(event) => handleEmailInput(event)}
             className={isEmailValid}
-            placeholder="What's your email address ?"
+            placeholder={t('form.email')}
           />
 
           <label htmlFor="message">Message</label>
