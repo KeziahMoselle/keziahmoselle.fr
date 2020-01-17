@@ -64,7 +64,7 @@ function Project ({
           </h5>
         </div>
         <a className="pill" href={url ? url : `https://github.com/${github}`} rel="nofollow noopener noreferrer">
-          <span>{ url ? 'Voir le projet le site' : 'Voir le projet sur GitHub' }</span>
+          <span>{ url ? t('seeWebsite') : t('seeRepo') }</span>
         </a>
       </div>
       <a tabIndex="-1" href={`https://github.com/${github}`} rel="nofollow noopener noreferrer">
