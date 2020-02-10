@@ -52,8 +52,8 @@ function Experience () {
     <div className="container medium experience relative">
       <h3>{ t('experience') }</h3>
 
-      { experiences.map(experience => (
-        <div className="block card column">
+      { experiences.map((experience, index) => (
+        <div className="block card column" key={index}>
           { experience.url &&
             <Chip
             link={experience.url}
@@ -64,8 +64,12 @@ function Experience () {
           <h5>{ experience.title }</h5>
           <h6>{ experience.years }</h6>
           <ul>
-            { experience.facts.map(fact => (
-              <li dangerouslySetInnerHTML={{ __html: fact }}></li>
+            { experience.facts.map((fact, index) => (
+              <li
+                key={index}
+                dangerouslySetInnerHTML={{ __html: fact }}
+              >
+              </li>
             )) }
           </ul>
         </div>

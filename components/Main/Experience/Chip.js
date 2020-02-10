@@ -10,7 +10,7 @@ function Chip ({ link, company }) {
       target="_blank"
       rel="nofollow noopener noreferrer">
       <img src="/static/link.svg" alt="External link" />
-      <span class="visually-hidden">En lire plus sur { company }</span>
+      <span className="visually-hidden">En lire plus sur { company }</span>
     </a>
   )
 }
