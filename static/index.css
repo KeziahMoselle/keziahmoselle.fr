@@ -1081,6 +1081,12 @@ a.pill span {
 .achievement-body {
   overflow: hidden;
   margin-bottom: 0;
+  padding: 0;
+  transition: padding 0.6s;
+}
+
+.achievement-body[aria-hidden="false"] {
+  padding: 22px;
 }
 
 .achievement-body .btn {

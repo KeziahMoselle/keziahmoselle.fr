@@ -20,8 +20,7 @@ function Achievement ({
 
   const [isExtended, setIsExtended] = useState(false)
   const props = useSpring({
-    maxHeight: isExtended ? '1000px' : '0px',
-    padding: isExtended ? '22px' : '0px'
+    maxHeight: isExtended ? '1000px' : '0px'
   })
 
   return (
