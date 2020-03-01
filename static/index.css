@@ -204,10 +204,6 @@ code {
   right: -28px;
 }
 
-.card .chip:focus {
-  outline: solid;
-}
-
 @media only screen and (max-width: 600px) {
   .card {
     margin-bottom: 52px;
@@ -245,6 +241,10 @@ code {
 
 .chip:hover {
   background-color: white;
+  box-shadow: 0 0 0 0.2rem var(--accent);
+}
+
+.chip:focus {
   box-shadow: 0 0 0 0.2rem var(--accent);
 }
 
@@ -669,6 +669,10 @@ header img {
 
 .header-menu li {
   margin-left: 16px;
+}
+
+.header-menu li a {
+  display: flex;
 }
 
 
