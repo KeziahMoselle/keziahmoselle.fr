@@ -43,6 +43,7 @@
 * {
   box-sizing: border-box;
   word-wrap: break-word;
+  transition: box-shadow 0.2s;
 }
 
 body {
@@ -126,6 +127,10 @@ code {
   .container.medium {
     width: 1000px;
   }
+
+  .hide-on-desktop {
+    display: none;
+  }
 }
 
 
@@ -139,6 +144,10 @@ code {
 
   .container.hero {
     margin: 124px 0;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
   }
 }
 
@@ -223,6 +232,41 @@ code {
  *
  */
 
+ 
+.chip-inline {
+  display: inline;
+  background-color: #f7f7f7;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin-right: 8px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.2s, background-color 0.2s;
+  user-select: none;
+}
+
+.chip-inline img {
+  vertical-align: bottom;
+}
+
+.chip-inline .img-left {
+  margin-right: 4px;
+}
+
+.chip-inline .img-right {
+  margin-left: 4px;
+}
+
+a.chip-inline {
+  cursor: pointer;
+}
+
+a.chip-inline:hover {
+  background-color: #ebebeb;
+}
+
+.chip-inline:hover {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12);
+}
 
 
 .chip {
@@ -385,7 +429,7 @@ a {
   background-color: rgb(47, 47, 47);
 }
 
-.btn:focus {
+.btn:not(.rounded):focus {
   outline: double;
   background-color: #eeeeee;
   color: black;
@@ -393,6 +437,12 @@ a {
 
 .btn.rounded {
   border-radius: 4px;
+}
+
+.btn.compact {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
 }
 
 .btn.white {
@@ -444,6 +494,10 @@ ul {
 
 .space-between {
   justify-content: space-between;
+}
+
+.flex-end {
+  justify-content: flex-end;
 }
 
 .valign {
@@ -846,17 +900,6 @@ header img {
   margin-bottom: 16px;
 }
 
-@media only screen and (max-width: 1200px) {
-  .project-header {
-    display: block;
-  }
-
-  .project-header a {
-    display: inline-block;
-    margin: 30px 0 20px 0;
-  }
-}
-
 .project-header .pill {
   margin: 15px 0 10px 0;
 }
@@ -868,10 +911,18 @@ header img {
 }
 
 .project h4 {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
-.project a img {
+.project picture {
+  display: flex;
+}
+
+.project .project-thumbnail {
+  border-radius: 6px;
+}
+
+.project .project-thumbnail img {
   background-color: #eee;
   width: 100%;
   object-fit: contain;
@@ -880,20 +931,32 @@ header img {
   transition: filter 0.4s;
 }
 
-.project a img:hover {
+.project .project-thumbnail img:hover {
   filter: brightness(50%);
 }
 
 .project-footer {
-  margin-top: 18px;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
+  margin-top: 18px;
 }
 
 .project-footer img {
   height: 36px;
   width: auto;
   margin-left: 6px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .project-header {
+    display: block;
+  }
+
+  .project-footer {
+    justify-content: space-between;
+  }
 }
 
 

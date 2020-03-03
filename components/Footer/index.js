@@ -159,15 +159,15 @@ function Footer () {
 
         <p className="flex valign">
           <a href="https://github.com/KeziahMoselle" rel="nofollow noopener noreferrer">
-            <img src="/static/github.svg" alt="My GitHub profile" />
+            <img src="/static/icons/github.svg" alt="My GitHub profile" />
           </a>
 
           <a href="https://twitter.com/KeziahMoselle" rel="nofollow noopener noreferrer">
-            <img src="/static/twitter.svg" alt="My Twitter profile" />
+            <img src="/static/icons/twitter.svg" alt="My Twitter profile" />
           </a>
 
           <a href="https://blog.keziahmoselle.fr/" title="Mon blog" rel="nofollow noopener noreferrer">
-            <img src="/static/edit.svg" alt="My Blog" />
+            <img src="/static/icons/edit.svg" alt="My Blog" />
           </a>
         </p>
       

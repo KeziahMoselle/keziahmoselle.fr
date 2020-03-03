@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 function Project ({
   title,
   subtitle,
-  type,
+  tags,
   date,
   github,
   stack,
@@ -34,7 +34,7 @@ function Project ({
     }
   }, [])
 
-  /* Tech stack */
+  /* Tech stack icons at the bottom of the thumbnail */
   const techStack = stack.map((tech, index) => (
     <img
       src={`/static/logos/${tech}.svg`}
@@ -46,35 +46,46 @@ function Project ({
   
 
   return (
-    <div className="project">
+    <article className="project">
       <div className="project-header">
         <div>
           <h3>{ title }</h3>
           <h4 className="grey">{ t(`projects.${title}`) }</h4>
-          <h5>
-            { type }
-            <span className="separator">{ date }</span>
-            { stars &&
-            <span className="separator">
-              <a href={`https://github.com/${github}/stargazers`} style={{ margin: '0' }}>
-                { `${stars} ⭐` } GitHub Stars
-              </a>
-            </span>
-            }
-          </h5>
+          { tags.map((tag, index) => (
+            <span key={index} className="chip-inline">{ tag }</span>
+          ))}
+          <a
+            href={`https://github.com/${github}/stargazers`}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            className="chip-inline"
+            title="Click to see GitHub stargazers"
+          >
+            <img class="img-left" src="/static/icons/star.svg" alt="stars" />
+            { stars }
+          </a>
         </div>
-        <a className="pill" href={url ? url : `https://github.com/${github}`} rel="nofollow noopener noreferrer">
+
+        <a className="pill hide-on-mobile" href={url ? url : `https://github.com/${github}`} rel="nofollow noopener noreferrer">
           <span>{ url ? t('seeWebsite') : t('seeRepo') }</span>
         </a>
       </div>
-      <a tabIndex="-1" href={`https://github.com/${github}`} rel="nofollow noopener noreferrer">
+
+      <a className="project-thumbnail" tabIndex="-1" href={`https://github.com/${github}`} rel="nofollow noopener noreferrer">
         <picture>
           <source srcSet={`/static/thumbnails/${formattedTitle}.webp`} type="image/webp"></source>
           <img src={`/static/thumbnails/${formattedTitle}.jpg`} alt={`${title} thumbnail`}></img>
         </picture>
       </a>
-      <p className="project-footer">{ techStack }</p>
-    </div>
+
+      <div className="project-footer">
+        <a className="pill hide-on-desktop" href={url ? url : `https://github.com/${github}`} rel="nofollow noopener noreferrer">
+          <span>{ url ? t('seeWebsite') : t('seeRepo') }</span>
+        </a>
+
+        <div>{ techStack }</div>
+      </div>
+    </article>
   )
 }
 

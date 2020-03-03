@@ -15,7 +15,7 @@ function Header () {
   return (
     <header>
       <a href="https://keziahmoselle.fr/">
-        <img src="/static/logo.svg" className="header-logo" alt="Homepage" />
+        <img src="/static/icons/logo.svg" className="header-logo" alt="Homepage" />
       </a>
       
       <ul className="header-menu">
@@ -31,7 +31,7 @@ function Header () {
         </li>
         <li>
           <a onClick={handleTranslating} href="#">
-            <img src="/static/translate.svg" alt={`${i18n.language === 'fr' ? 'Translating to english' : 'Traduire en français'}`} />
+            <img src="/static/icons/translate.svg" alt={`${i18n.language === 'fr' ? 'Translating to english' : 'Traduire en français'}`} />
           </a>
         </li>
       </ul>

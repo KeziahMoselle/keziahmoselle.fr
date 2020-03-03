@@ -5,7 +5,7 @@ import Project from './Project'
 const projects = [
   {
     title: 'Tempus',
-    type: 'UI/UX, Front-End',
+    tags: ['UI/UX', 'Front-End'],
     date: '2019',
     github: 'KeziahMoselle/tempus',
     url: 'https://tempus.keziahmoselle.fr/',
@@ -13,14 +13,14 @@ const projects = [
   },
   {
     title: 'Export GitHub Stars',
-    type: 'UI/UX, Front-end, API',
+    tags: ['UI/UX', 'Front-End', 'API'],
     date: '2018',
     github: 'KeziahMoselle/export-github-stars',
     stack: ['vuejs', 'vuetify']
   },
   {
     title: 'Gelbooru Client',
-    type: 'UI/UX, Front-end, API',
+    tags: ['UI/UX', 'Front-End', 'API'],
     date: '2017-2018',
     github: 'KeziahMoselle/gelbooru-client',
     stack: ['javascript', 'electronjs', 'materialize']
@@ -41,7 +41,7 @@ function Projects () {
               key={index}
               title={project.title}
               subtitle={project.subtitle}
-              type={project.type}
+              tags={project.tags}
               date={project.date}
               github={project.github}
               url={project.url}
