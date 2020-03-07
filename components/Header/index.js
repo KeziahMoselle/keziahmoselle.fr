@@ -31,7 +31,7 @@ function Header () {
         </li>
         <li>
           <a onClick={handleTranslating} href="#">
-            <img src="/static/icons/translate.svg" alt={`${i18n.language === 'fr' ? 'Translating to english' : 'Traduire en français'}`} />
+            <img src="/static/icons/translate.svg" alt={`${i18n.language === 'fr' ? 'Translate to english' : 'Traduire en français'}`} />
           </a>
         </li>
       </ul>

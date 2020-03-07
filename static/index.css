@@ -110,6 +110,10 @@ code {
   white-space: nowrap; /* added line */
 }
 
+svg.spacing {
+  margin: 0 4px;
+}
+
 
 /**
  *
@@ -888,41 +892,28 @@ header img {
 .project {
   width: 100%;
   margin-bottom: 64px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.project-header .pill {
-  margin: 15px 0 10px 0;
-}
-
-.project h3 {
-  font-size: 36px;
-  font-weight: 900;
-  margin-bottom: 6px;
-}
-
-.project h4 {
-  margin-bottom: 12px;
+.project a {
+  width: 100%;
 }
 
 .project picture {
   display: flex;
 }
 
-.project .project-thumbnail {
-  border-radius: 6px;
+.project-body h3 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 6px;
 }
 
-.project .project-thumbnail img {
+.project-body h4 {
+  margin-bottom: 0;
+}
+
+.project-thumbnail {
+  position: relative;
   background-color: #eee;
   width: 100%;
   object-fit: contain;
@@ -931,8 +922,45 @@ header img {
   transition: filter 0.4s;
 }
 
-.project .project-thumbnail img:hover {
-  filter: brightness(50%);
+.project-body {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  padding: 4.5rem 2.75rem 1.75rem;
+  width: 100%;
+  color: white;
+  background: linear-gradient(to bottom, rgba(33,36,37,0) 0%,rgba(15, 15, 15, 0.7) 50%,rgba(33,36,37,0.84) 100%);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.project-supplementary {
+  display: flex;
+}
+
+.project-info {
+  display: inline-flex;
+  align-items: center;
+  margin: 0.75rem 0 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.project-info ~ .project-info::before {
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  margin: 0 0.8em;
+  background: white;
+  content: "";
+  opacity: 0.5;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+.project-info span {
+  opacity: 0.6;
 }
 
 .project-footer {
@@ -947,7 +975,6 @@ header img {
   width: auto;
   margin-left: 6px;
 }
-
 
 @media only screen and (max-width: 1200px) {
   .project-header {
@@ -1041,7 +1068,7 @@ a.pill span {
 }
 
 .skills .skill {
-  transition: opacity 0.1s;
+  transition: opacity 0.4s;
 }
 
 .skills .tools:hover .skill:not(:hover) {

@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { IconContext } from 'react-icons';
 
 import '../lang/i18n'
 import '../static/index.css'
@@ -9,11 +10,11 @@ import Footer from './Footer'
 
 function App () {
   return (
-    <Fragment>
+    <IconContext.Provider value={{ size: 18 }}>
       <Header />
       <Main />
       <Footer />
-    </Fragment>
+    </IconContext.Provider>
   )
 }
 
