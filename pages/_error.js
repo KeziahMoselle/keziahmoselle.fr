@@ -6,7 +6,7 @@ import Header from '../components/Header'
 import '../static/index.css'
 
 class Error extends React.Component {
-  render() {
+  render () {
     return (
       <Fragment>
         <Head>

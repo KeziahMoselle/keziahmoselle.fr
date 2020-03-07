@@ -2,7 +2,7 @@ const axios = require('axios')
 
 exports.handler = async (event, context) => {
   /* Check method */
-  
+
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -10,11 +10,9 @@ exports.handler = async (event, context) => {
     }
   }
 
-
   /* Payload data */
 
   const { email, message } = JSON.parse(event.body)
-  
 
   /* Fields missing */
 
@@ -25,26 +23,25 @@ exports.handler = async (event, context) => {
     }
   }
 
-
   /* Send */
 
   const embed = {
-    "content": "keziahmoselle.fr",
-    "embeds": [
+    content: 'keziahmoselle.fr',
+    embeds: [
       {
-        "color": 6842567,
-        "timestamp": new Date(),
-        "footer": {
-          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+        color: 6842567,
+        timestamp: new Date(),
+        footer: {
+          icon_url: 'https://cdn.discordapp.com/embed/avatars/0.png'
         },
-        "author": {
-          "name": email,
-          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+        author: {
+          name: email,
+          icon_url: 'https://cdn.discordapp.com/embed/avatars/0.png'
         },
-        "fields": [
+        fields: [
           {
-            "name": "Received message:",
-            "value": message
+            name: 'Received message:',
+            value: message
           }
         ]
       }
@@ -64,5 +61,4 @@ exports.handler = async (event, context) => {
     statusCode: response.status,
     body: response.statusText
   }
-
 }

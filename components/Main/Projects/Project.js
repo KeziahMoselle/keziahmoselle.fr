@@ -48,7 +48,6 @@ function Project ({
   const tagsChips = tags.map((tag, index) => (
     <span key={index} className="chip-inline">{ tag }</span>
   ))
-  
 
   return (
     <article className="project">
@@ -64,8 +63,8 @@ function Project ({
           className="chip-inline"
           title="Click to see GitHub stargazers"
         >
-        { stars }
-        <GoStar />
+          { stars }
+          <GoStar />
         </a>
       </div>
 
@@ -104,10 +103,10 @@ function Project ({
 
       <div className="project-footer">
         <div className="hide-on-med-and-down">{ tagsChips }</div>
-        
+
         <a
           className="pill show-on-med-and-down"
-          href={url ? url : `https://github.com/${github}`}
+          href={url || `https://github.com/${github}`}
           rel="nofollow noopener noreferrer"
         >
           <span>{ url ? t('seeWebsite') : t('seeRepo') }</span>

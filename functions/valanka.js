@@ -8,14 +8,13 @@ const mailgun = require('mailgun-js')({
 
 exports.handler = async (event, context) => {
   /* Check method */
-  
+
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
       body: 'Method Not Allowed'
     }
   }
-
 
   /* Payload data */
 
@@ -29,7 +28,6 @@ exports.handler = async (event, context) => {
       body: 'Missing fields.'
     }
   }
-
 
   /* Send */
 

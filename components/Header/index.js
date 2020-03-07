@@ -17,7 +17,7 @@ function Header () {
       <a href="https://keziahmoselle.fr/">
         <img src="/static/icons/logo.svg" className="header-logo" alt="Homepage" />
       </a>
-      
+
       <ul className="header-menu">
         <li>
           <a href="https://blog.keziahmoselle.fr/">

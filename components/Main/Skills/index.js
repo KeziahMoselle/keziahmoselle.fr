@@ -2,13 +2,13 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import Skill from './Skill'
 
-function Skills() {
+function Skills () {
   const { t } = useTranslation()
 
   return (
     <div className="container medium skills">
       <h3>{ t('skills') }</h3>
-      
+
       <div className="block">
         <div className="flex column center valign">
           <h4>Front-End</h4>
@@ -23,7 +23,7 @@ function Skills() {
 
       <div className="block center column valign">
         <h4>{ t('tools') }</h4>
-        
+
         <div className="tools">
           <Skill name="Git" />
           <Skill name="GitHub" />
@@ -34,6 +34,5 @@ function Skills() {
     </div>
   )
 }
-
 
 export default Skills

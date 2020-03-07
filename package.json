@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "start": "netlify dev",
-    "build": "next build && next export"
+    "build": "next build && next export",
+    "lint": "eslint components functions lang pages --fix"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -23,6 +24,13 @@
     "react-spring": "^8.0.7"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-standard": "^4.0.1",
     "netlify-cli": "^2.17.0"
   },
   "repository": "https://github.com/KeziahMoselle/keziahmoselle.fr.git",

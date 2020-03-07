@@ -7,12 +7,14 @@ function Hero () {
 
   const { opacity, y } = useSpring({
     from: { opacity: 0, y: 20 },
-    opacity: 1, y: 0
+    opacity: 1,
+    y: 0
   })
 
   const { x, color } = useSpring({
     from: { x: 200 },
-    x: 0, color: 'black'
+    x: 0,
+    color: 'black'
   })
 
   const { angle } = useSpring({
@@ -42,9 +44,9 @@ function Hero () {
       return currentYear - 2001
     }
   }
-  
+
   return (
-    <animated.div style={{opacity}} className="container hero relative">
+    <animated.div style={{ opacity }} className="container hero relative">
       <div className="bar"></div>
 
       <animated.h1 style={{ transform: y.interpolate(y => `translateY(${y}px)`) }}>
@@ -55,8 +57,8 @@ function Hero () {
 
       <p>
         { t('description', {
-            age: age(),
-            sinceDate: new Date().getFullYear() - 2014
+          age: age(),
+          sinceDate: new Date().getFullYear() - 2014
         })}
       </p>
 

@@ -36,8 +36,7 @@ function Achievement ({
         { won && <div className="badge">🏆</div> }
         <h4>{ name }</h4>
       </div>
-        
-        
+
       <animated.div
         className="card achievement-body"
         style={props}
@@ -57,13 +56,13 @@ function Achievement ({
         </div>
 
         { content && <p>{ content }</p> }
-        
-        { link && 
+
+        { link &&
           <div className="flex center">
-            <a 
-              className="btn" 
-              href={link} 
-              target="_blank" 
+            <a
+              className="btn"
+              href={link}
+              target="_blank"
               onFocus={() => setIsExtended(true)}
               onBlur={() => setIsExtended(false)}
             >

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { IconContext } from 'react-icons';
+import { IconContext } from 'react-icons'
 
 import '../lang/i18n'
 import '../static/index.css'

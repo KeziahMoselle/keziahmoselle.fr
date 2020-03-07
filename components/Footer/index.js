@@ -10,27 +10,27 @@ function Footer () {
   const { t } = useTranslation()
 
   const messages = {
-    'default': {
+    default: {
       text: '',
       emoji: '',
       color: ''
     },
-    'loading': {
+    loading: {
       text: t('form.sending'),
       emoji: '⏳',
       color: '#2A6CC4'
     },
-    'success': {
+    success: {
       text: t('form.success'),
       emoji: '🎉',
       color: '#20e289'
     },
-    'error': {
+    error: {
       text: t('form.error'),
       emoji: '😢',
       color: '#FF5F56'
     },
-    'missing_fields': {
+    missing_fields: {
       text: t('form.missingFields'),
       emoji: '🚧',
       color: '#ffc56f'
@@ -41,7 +41,7 @@ function Footer () {
   useEffect(() => {
     const localEmail = window.localStorage.getItem('email')
     const localMessage = window.localStorage.getItem('message')
-    if (localEmail) { 
+    if (localEmail) {
       setEmail(localEmail)
       validateEmail(localEmail)
     }
@@ -96,12 +96,12 @@ function Footer () {
         message
       })
     })
-    
+
     if (response.ok) {
       setEmail('')
       setMessage('')
       setStatus('success')
-      
+
       // Empty localStorage
       window.localStorage.removeItem('email')
       window.localStorage.removeItem('message')
@@ -156,7 +156,6 @@ function Footer () {
           </div>
         </form>
 
-
         <p className="flex valign">
           <a href="https://github.com/KeziahMoselle" rel="nofollow noopener noreferrer">
             <img src="/static/icons/github.svg" alt="My GitHub profile" />
@@ -170,7 +169,7 @@ function Footer () {
             <img src="/static/icons/edit.svg" alt="My Blog" />
           </a>
         </p>
-      
+
         <p>
           Built with
           <a href="https://nextjs.org/" rel="nofollow noopener noreferrer">
