@@ -1183,22 +1183,35 @@ a.pill span {
 }
 
 .achievement {
-  width: 100%;
-  margin-bottom: 16px;
+  position: relative;
+}
+
+.achievement .overlap {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 12px;
+}
+
+.achievement-thumbnail-container {
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .achievement-thumbnail {
+  height: 180px;
   position: relative;
   border-radius: 8px;
   background-color: #eeeeee;
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  transition: filter 0.2s;
+  transition: transform 0.2s;
 }
 
 .achievement-thumbnail:hover {
-  filter: brightness(50%);
+  transform: scale(1.08);
 }
 
 .achievement-thumbnail .badge {

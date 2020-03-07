@@ -10,14 +10,6 @@ function Achievement ({
   rank,
   won
 }) {
-  let styles
-
-  if (thumbnail) {
-    styles = {
-      backgroundImage: `url(/static/thumbnails/${thumbnail})`
-    }
-  }
-
   const [isExtended, setIsExtended] = useState(false)
   const props = useSpring({
     maxHeight: isExtended ? '1000px' : '0px'
@@ -28,14 +20,23 @@ function Achievement ({
       className="achievement"
       aria-expanded={isExtended}
     >
-      <div
-        className="achievement-thumbnail"
-        style={styles}
-        onClick={() => setIsExtended(!isExtended)}
-      >
-        { won && <div className="badge">🏆</div> }
-        <h4>{ name }</h4>
+    
+    { won && (
+      <div className="overlap">
+        <div className="badge">🏆</div>
       </div>
+    )}
+
+    <div className="achievement-thumbnail-container">
+      <div
+      className="achievement-thumbnail"
+      style={{
+        backgroundImage: `url(/static/thumbnails/${thumbnail})`
+      }}
+      onClick={() => setIsExtended(!isExtended)}
+      >
+      </div>
+    </div>
 
       <animated.div
         className="card achievement-body"
