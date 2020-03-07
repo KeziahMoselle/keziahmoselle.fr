@@ -154,6 +154,10 @@ svg.spacing {
   .show-on-med-and-down {
     display: block !important;
   }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
 }
 
 
@@ -277,6 +281,19 @@ a.chip-inline:hover {
 
 .chip-inline:hover {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12);
+}
+
+.chip-inline.inverted {
+  background-color: black;
+  color: white;
+}
+
+.chip-inline.inverted:hover {
+  background-color: #2f2f2f;
+}
+
+.chip-inline.inverted:focus {
+  box-shadow: 0 0 0 0.2rem var(--accent);
 }
 
 
@@ -928,6 +945,13 @@ header img {
   margin-bottom: 8px;
 }
 
+.project-header-supplementary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .project-title h3 {
   font-size: 36px;
   font-weight: 900;
@@ -954,6 +978,19 @@ header img {
   cursor: pointer;
   overflow: hidden;
   transition: filter 0.4s;
+}
+
+.project-thumbnail .overlap {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 8px;
+}
+
+.project-thumbnail .overlap .chip-inline {
+  margin: 0;
 }
 
 .project-thumbnail img {

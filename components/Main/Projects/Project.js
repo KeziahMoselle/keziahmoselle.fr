@@ -55,21 +55,24 @@ function Project ({
       <div className="project-header show-on-med-and-down">
         <h3>{ title }</h3>
         <h4 className="grey">{ t(`projects.${title}`) }</h4>
-        { tagsChips }
-        <a
-          href={`https://github.com/${github}/stargazers`}
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-          className="chip-inline"
-          title="Click to see GitHub stargazers"
-        >
-          { stars }
-          <GoStar />
-        </a>
+        <div className="project-header-supplementary">
+          <div>{ tagsChips }</div>
+          <a
+            href={`https://github.com/${github}/stargazers`}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            className="chip-inline inverted hide-on-mobile"
+            title="Click to see GitHub stargazers"
+          >
+            { stars }
+            <GoStar />
+          </a>
+        </div>
       </div>
 
       <a
         href={`https://github.com/${github}`}
+        target="_blank"
         rel="nofollow noopener noreferrer"
         aria-label={`${title}, ${t(`projects.${title}`)}`}
       >
@@ -98,6 +101,18 @@ function Project ({
             >
             </img>
           </picture>
+
+          <div className="overlap">
+            <a
+              href={`https://github.com/${github}/stargazers`}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="chip-inline show-on-mobile"
+            >
+              { stars }
+              <GoStar />
+            </a>
+          </div>
         </div>
       </a>
 
