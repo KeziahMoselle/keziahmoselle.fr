@@ -53,13 +53,29 @@ function Project ({
   return (
     <article className="project">
 
+      <div className="project-header show-on-med-and-down">
+        <h3>{ title }</h3>
+        <h4 className="grey">{ t(`projects.${title}`) }</h4>
+        { tagsChips }
+        <a
+          href={`https://github.com/${github}/stargazers`}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          className="chip-inline"
+          title="Click to see GitHub stargazers"
+        >
+        { stars }
+        <GoStar />
+        </a>
+      </div>
+
       <a
         href={`https://github.com/${github}`}
         rel="nofollow noopener noreferrer"
         aria-label={`${title}, ${t(`projects.${title}`)}`}
       >
         <div className="project-thumbnail">
-          <div className="project-body">
+          <div className="project-body hide-on-med-and-down">
             <div className="project-subtitle">
               <h5>{ date }</h5>
             </div>
@@ -87,7 +103,15 @@ function Project ({
       </a>
 
       <div className="project-footer">
-        <div>{ tagsChips }</div>
+        <div className="hide-on-med-and-down">{ tagsChips }</div>
+        
+        <a
+          className="pill show-on-med-and-down"
+          href={url ? url : `https://github.com/${github}`}
+          rel="nofollow noopener noreferrer"
+        >
+          <span>{ url ? t('seeWebsite') : t('seeRepo') }</span>
+        </a>
 
         <div>{ techStack }</div>
       </div>
