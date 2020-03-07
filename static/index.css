@@ -995,7 +995,7 @@ header img {
   transition: transform 0.4s;
 }
 
-.project-thumbnail .overlap {
+.project-image .overlap {
   position: absolute;
   z-index: 1;
   top: 0;
