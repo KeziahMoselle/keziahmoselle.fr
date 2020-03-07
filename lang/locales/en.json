@@ -28,6 +28,7 @@
   },
   "projects": {
     "Tempus": "A simple yet featureful pomodoro in the tray/menubar",
+    "Ribbon": "A bookmark manager app with reminders and pinned bookmarks",
     "Export GitHub Stars": "View / Sort / Export your starred repositories.",
     "Gelbooru Client": "A material client to explore an image board."
   }

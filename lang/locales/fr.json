@@ -28,6 +28,7 @@
   },
   "projects": {
     "Tempus": "Un pomodoro dans votre barre des tâches",
+    "Ribbon": "Gestion de signets avec des rappels et des favoris",
     "Export GitHub Stars": "Liste / Trier / Exporter vos starred repositories",
     "Gelbooru Client": "Un client Material Design pour explorer des images"
   }

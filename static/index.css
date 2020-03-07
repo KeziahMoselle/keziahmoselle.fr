@@ -178,8 +178,7 @@ svg.spacing {
  */
 
 .block {
-  margin: 32px 0 32px 32px;
-  padding: 0 36px;
+  margin: 32px 0 32px 0;
   display: flex;
 }
 
@@ -575,8 +574,6 @@ ul {
   background-color: black;
   color: white;
   padding: 16px;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
 }
 
 footer .container {
@@ -895,6 +892,18 @@ header img {
 
 .projects .block {
   flex-direction: column;
+}
+
+.projects .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+@media screen and (max-width: 1200px) {
+  .projects .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project {
