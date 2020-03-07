@@ -76,7 +76,7 @@ function Project ({
         rel="nofollow noopener noreferrer"
         aria-label={`${title}, ${t(`projects.${title}`)}`}
       >
-        <div className="project-thumbnail">
+        <div className="project-image">
           <div className="project-body hide-on-med-and-down">
             <div className="project-subtitle">
               <h5>{ date }</h5>
@@ -102,16 +102,11 @@ function Project ({
             </img>
           </picture>
 
-          <div className="overlap">
-            <a
-              href={`https://github.com/${github}/stargazers`}
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              className="chip-inline show-on-mobile"
-            >
+          <div className="overlap show-on-mobile">
+            <span className="chip-inline show-on-mobile">
               { stars }
               <GoStar />
-            </a>
+            </span>
           </div>
         </div>
       </a>
@@ -122,12 +117,13 @@ function Project ({
         <a
           className="pill show-on-med-and-down"
           href={url || `https://github.com/${github}`}
+          target="_blank"
           rel="nofollow noopener noreferrer"
         >
           <span>{ url ? t('seeWebsite') : t('seeRepo') }</span>
         </a>
 
-        <div>{ techStack }</div>
+        <div className="project-stack">{ techStack }</div>
       </div>
     </article>
   )
