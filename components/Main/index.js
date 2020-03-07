@@ -13,8 +13,8 @@ function Main () {
       <Projects />
       <Skills />
       <Experience />
-      <Formations />
       <Achievements />
+      <Formations />
     </main>
   )
 }

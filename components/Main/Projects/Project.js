@@ -103,7 +103,7 @@ function Project ({
           </picture>
 
           <div className="overlap show-on-mobile">
-            <span className="chip-inline show-on-mobile">
+            <span className="chip-inline">
               { stars }
               <GoStar />
             </span>
