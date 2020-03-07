@@ -53,11 +53,20 @@ function Project ({
   return (
     <article className="project">
 
-      <a href={`https://github.com/${github}`} rel="nofollow noopener noreferrer">
+      <a
+        href={`https://github.com/${github}`}
+        rel="nofollow noopener noreferrer"
+        aria-label={`${title}, ${t(`projects.${title}`)}`}
+      >
         <div className="project-thumbnail">
           <div className="project-body">
-            <h3>{ title }</h3>
-            <h4>{ t(`projects.${title}`) }</h4>
+            <div className="project-subtitle">
+              <h5>{ date }</h5>
+            </div>
+            <div className="project-title">
+              <h3>{ title }</h3>
+              <h4>{ t(`projects.${title}`) }</h4>
+            </div>
             <div className="project-supplementary">
               <p className="project-info">
                 { stars } <GoStar className="spacing" /> <span>Stars</span>

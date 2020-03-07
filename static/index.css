@@ -885,7 +885,7 @@ header img {
  *
  */
 
- .projects .block {
+.projects .block {
   flex-direction: column;
 }
 
@@ -895,20 +895,28 @@ header img {
 }
 
 .project a {
-  width: 100%;
+  display: block;
+  border-radius: 6px;
 }
 
 .project picture {
   display: flex;
 }
 
-.project-body h3 {
+.project-title h3 {
   font-size: 36px;
   font-weight: 900;
-  margin-bottom: 6px;
+  margin: 0.4rem 0 0.1em 0;
+  transition-delay: 0.2s;
 }
 
-.project-body h4 {
+.project-subtitle h5 {
+  color: rgba(255,255,255,0.8);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.project-title h4 {
   margin-bottom: 0;
 }
 
@@ -919,7 +927,30 @@ header img {
   object-fit: contain;
   border-radius: 6px;
   cursor: pointer;
+  overflow: hidden;
   transition: filter 0.4s;
+}
+
+.project-thumbnail img {
+  transition: all 2s;
+}
+
+.project-thumbnail:hover .project-title {
+  transform: translateY(25px);
+}
+
+.project-thumbnail:hover .project-subtitle {
+  opacity: 0;
+  transform: translateY(25px);
+}
+
+.project-thumbnail:hover .project-supplementary {
+  opacity: 0;
+  transform: translateY(25px);
+}
+
+.project-thumbnail:hover img {
+  transform: scale(1.02);
 }
 
 .project-body {
@@ -934,8 +965,13 @@ header img {
   border-bottom-right-radius: 6px;
 }
 
+.project-subtitle, .project-title {
+  transition: all 0.2s ease-in-out;
+}
+
 .project-supplementary {
   display: flex;
+  transition: all 0.2s ease-in-out;
 }
 
 .project-info {
