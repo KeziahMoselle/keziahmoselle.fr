@@ -113,12 +113,20 @@ function Header () {
 
             <ul>
               <li>
-                <a href="https://blog.keziahmoselle.fr/">
+                <a
+                  href="https://blog.keziahmoselle.fr/"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                >
                   Blog
                 </a>
               </li>
               <li>
-                <a href="https://github.com/KeziahMoselle" rel="nofollow noopener noreferrer">
+                <a
+                  href="https://github.com/KeziahMoselle"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                >
                   <img src="/static/logos/github.svg" alt="My GitHub profile" />
                 </a>
               </li>

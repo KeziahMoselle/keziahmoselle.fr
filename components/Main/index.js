@@ -8,7 +8,6 @@ import Achievements from './Achievements'
 import Talks from './Talks'
 
 export const sections = [
-  'Hero',
   'Projects',
   'Skills',
   'Experience',
