@@ -17,6 +17,14 @@ function Header () {
     }
   }, [y])
 
+  useEffect(() => {
+    if (isMenuExpanded) {
+      document.querySelector('body').classList.add('no-scroll')
+    } else {
+      document.querySelector('body').classList.remove('no-scroll')
+    }
+  }, [isMenuExpanded])
+
   function handleTranslating () {
     if (i18n.language === 'fr') {
       i18n.changeLanguage('en')
@@ -110,6 +118,12 @@ function Header () {
           </ul>
         </nav>
       </header>
+
+      <div
+        onClick={() => setIsMenuExpanded(false)}
+        class={`menu-overlay ${isMenuExpanded ? 'opened' : ''}`}
+      >
+      </div>
     </div>
   )
 }
