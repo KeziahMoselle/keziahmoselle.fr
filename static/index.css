@@ -760,6 +760,16 @@ textarea {
   box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
+.sticky-header.stickied header .left-logo {
+  transform: translateY(-64px);
+  opacity: 0;
+}
+
+.sticky-header.stickied header .middle-logo {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 header {
   height: 64px;
   width: 100%;
@@ -767,6 +777,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.left-logo {
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.middle-logo {
+  opacity: 1;
+  transform: translateY(-64px);
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 header button {
@@ -823,8 +843,19 @@ nav.show {
   height: 64px;
 }
 
+.menu ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu li {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
 .menu a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
 }
 
 

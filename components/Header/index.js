@@ -20,6 +20,14 @@ function Header () {
     <div className={`sticky-header ${y > 0 ? 'stickied' : ''}`}>
       <header>
         <a href="https://keziahmoselle.fr/">
+          <img
+            src="/static/icons/logo.svg"
+            className="left-logo"
+            alt="Homepage"
+          />
+        </a>
+
+        <a className="middle-logo" href="https://keziahmoselle.fr/">
           <img src="/static/icons/logo.svg" className="header-logo" alt="Homepage" />
         </a>
 
