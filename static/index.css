@@ -1491,6 +1491,36 @@ a.pill span {
   border-left: 0;
 }
 
+@media only screen and (max-width: 1200px) {
+  .talk {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .talk > div {
+    width: 100%;
+  }
+
+  .talk-header {
+    margin-bottom: 32px;
+  }
+
+  .talk-body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .talk-thumbnail img {
+    max-width: 500px;
+  }
+
+  .talk-links {
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 0;
+  }
+}
+
 
 /**
  *
