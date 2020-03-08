@@ -32,19 +32,38 @@ function Talk ({
       </div>
 
       <div className="talk-body">
-        <a className="talk-thumbnail" href="#">
+        <a
+          className="talk-thumbnail"
+          href={video || slides} target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
           <img src={`/static/thumbnails/${slug}.jpg`} alt={`${title} thumbnail`} />
         </a>
       </div>
 
       <div className="talk-links">
-        <a className="talk-link" href={video}>
+        <a
+          className="talk-link"
+          href={video}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
           <FiVideo className="video" size={26} title="Video" />
         </a>
-        <a className="talk-link" href={slides}>
+        <a
+          className="talk-link"
+          href={slides}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
           <MdSlideshow className="slides" size={26} title="Slides" />
         </a>
-        <a className="talk-link" href={url}>
+        <a
+          className="talk-link"
+          href={url}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
           <FaMeetup className="url" size={26} title="URL" />
         </a>
       </div>
