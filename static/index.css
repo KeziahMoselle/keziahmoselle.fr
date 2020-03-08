@@ -243,6 +243,12 @@ svg.spacing {
   right: -28px;
 }
 
+
+.card.inverted {
+  background-color: #1f1f1f;
+  color: white;
+}
+
 @media only screen and (max-width: 600px) {
   .card {
     margin-bottom: 52px;
@@ -399,7 +405,6 @@ h4 {
 
 h5 {
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.7);
 }
 
 h5 a {
@@ -839,6 +844,7 @@ header img {
 }
 
 .formations .block h5 {
+  color: rgba(0, 0, 0, 0.7);
   margin-bottom: 4px;
 }
 
@@ -1350,6 +1356,147 @@ a.pill span {
   border-radius: 17px;
   border: 2px solid var(--accent);
 }
+
+/**
+ *
+ * Talks
+ *
+ */
+
+
+.talks .block {
+  display: flex;
+  flex-direction: column;
+}
+
+.talk {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  padding: 52px;
+  transition: transform 0.4s;
+}
+
+.talk:hover {
+  transform: translateY(-2px);
+}
+
+.talk > div {
+  width: 50%;
+}
+
+.talk-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.talk h3 {
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.talk h4 {
+  opacity: 0.9;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.talk h5 {
+  opacity: 0.8;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.talk-body a {
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.talk-thumbnail {
+  position: relative;
+}
+
+.talk-thumbnail img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+.talk-thumbnail .overlap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.talk-links {
+  position: absolute;
+  bottom: -18px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding-right: 52px;
+}
+
+.talk-link {
+  background-color: white;
+  display: inline-block;
+  padding: 4px 26px;
+}
+
+.talk-link:focus {
+  box-shadow: none;
+}
+
+.talk-link[href]:hover > .video,
+.talk-link[href]:focus > .video {
+  fill: #FF0000;
+}
+
+.talk-link[href]:hover > .slides,
+.talk-link[href]:focus > .slides {
+  fill: #E5637C;
+}
+
+.talk-link[href]:hover > .url,
+.talk-link[href]:focus > .url {
+  fill: #F64060;
+}
+
+.talk-link:not([href]) > svg {
+  stroke: #a8a8a8;
+}
+
+
+.talk-link:first-of-type {
+  border: 1px solid black;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-right: 0;
+}
+
+.talk-link ~ .talk-link {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.talk-link:last-of-type {
+  border: 1px solid black;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-left: 0;
+}
+
+
+/**
+ *
+ * Other
+ *
+ */
 
 ::-webkit-input-placeholder,
 :-ms-input-placeholder,
