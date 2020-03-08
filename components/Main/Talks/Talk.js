@@ -21,7 +21,7 @@ function Talk ({
 
         { summary && (
           <ol>
-            { summary.map(content => <li>{ content }</li>) }
+            { summary.map((content, index) => <li key={index}>{ content }</li>) }
           </ol>
         )}
 

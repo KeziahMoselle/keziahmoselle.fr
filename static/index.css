@@ -114,6 +114,10 @@ svg.spacing {
   margin: 0 4px;
 }
 
+.btn, button, svg, img, header a {
+  user-select: none;
+}
+
 
 /**
  *
@@ -761,13 +765,45 @@ textarea {
 }
 
 .sticky-header.stickied header .left-logo {
-  transform: translateY(-64px);
+  transform: translateY(-128px);
   opacity: 0;
+}
+
+.sticky-header.stickied header .appear-on-scroll {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .sticky-header.stickied header .middle-logo {
   transform: translateY(0);
   opacity: 1;
+}
+
+.left-logo {
+  position: absolute;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.appear-on-scroll {
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateY(12px);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.appear-on-scroll li {
+  margin-right: 16px;
+}
+
+.middle-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateY(-64px);
+  opacity: 1;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 header {
@@ -779,22 +815,16 @@ header {
   align-items: center;
 }
 
-.left-logo {
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.middle-logo {
-  opacity: 1;
-  transform: translateY(-64px);
-  transition: transform 0.3s, opacity 0.3s;
-}
-
 header button {
   display: flex;
   cursor: pointer;
   border: none;
   background-color: transparent;
   padding: 0;
+}
+
+header a {
+  display: inline-block;
 }
 
 header img {
