@@ -444,17 +444,18 @@ a {
  */
 
 .btn {
-  display: inline-block;
-  width: fit-content;
+  display: inline-flex;
+  align-items: center;
   margin: 0px;
+  height: 50px;
   padding: 16px 32px;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
   background-color: black;
   color: white;
-  font-weight: 700;
   cursor: pointer;
-  outline: none;
   border: none;
   box-shadow: none;
   transition: background-color 0.3s,
@@ -465,7 +466,7 @@ a {
   background-color: rgb(47, 47, 47);
 }
 
-.btn:not(.rounded):focus {
+.btn:not(.rounded):not(.bordered):focus {
   outline: double;
   background-color: #eeeeee;
   color: black;
@@ -479,6 +480,19 @@ a {
   display: flex;
   align-items: center;
   padding: 8px 16px;
+}
+
+.btn.bordered {
+  border: 1px solid black;
+  outline: none;
+}
+
+.btn .left {
+  margin-right: 4px;
+}
+
+.btn .right {
+  margin-left: 4px;
 }
 
 .btn.white {
@@ -862,6 +876,10 @@ header img {
   font-size: 18px;
   margin-top: 16px;
   margin-bottom: 32px;
+}
+
+.hero .btn {
+  margin-right: 24px;
 }
 
 /**

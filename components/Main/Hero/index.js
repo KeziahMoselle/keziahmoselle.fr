@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useTranslation } from 'react-i18next'
+import { FiFile } from 'react-icons/fi'
 
 function Hero () {
   const { t } = useTranslation()
@@ -62,10 +63,20 @@ function Hero () {
         })}
       </p>
 
-      <div>
+      <div className="flex">
         <button className="btn translate-y" onClick={scrollToFooter}>
           { t('contactMe') }
         </button>
+
+        <a
+          href="/static/keziah-moselle-cv-fr.pdf"
+          target="_blank"
+          className="btn white bordered translate-y"
+        >
+          <FiFile className="left" />
+          { t('CV') }
+        </a>
+
         <div className="circle"></div>
         <animated.div style={{
           backgroundColor: color,
