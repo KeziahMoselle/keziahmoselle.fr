@@ -114,6 +114,10 @@ svg.spacing {
   margin: 0 4px;
 }
 
+.btn, button, svg, img, header a {
+  user-select: none;
+}
+
 
 /**
  *
@@ -748,13 +752,84 @@ textarea {
  *
  */
 
- header {
+.sticky-header {
+  z-index: 3;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  transition: box-shadow 0.4s;
+}
+
+.sticky-header.stickied {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.sticky-header.stickied header .left-logo {
+  transform: translateY(-128px);
+  opacity: 0;
+}
+
+.sticky-header.stickied header .appear-on-scroll {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.sticky-header.stickied header .middle-logo {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.left-logo {
+  position: absolute;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.appear-on-scroll {
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateY(12px);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.appear-on-scroll li {
+  margin-right: 16px;
+}
+
+.middle-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateY(-64px);
+  opacity: 1;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+header {
   height: 64px;
   width: 100%;
-  padding: 32px 32px 0 32px;
+  padding: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+header button {
+  display: flex;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+header a {
+  display: inline-block;
+}
+
+header img {
+  height: 32px;
+  width: 32px;
 }
 
 @media only screen and (min-width: 1600px) {
@@ -764,22 +839,53 @@ textarea {
   }
 }
 
-header img {
-  height: 32px;
-  width: 32px;
+header nav {
+  position: fixed;
+  width: 300px;
+  right: 0;
+  top: 0;
+  margin: 0;
+  transform: translateX(-100%);
+  height: 100%;
+  padding-bottom: 60px;
+  background-color: #fff;
+  z-index: 10;
+  overflow-y: auto;
+  transform: translateX(105%);
+  transition: transform 0.3s;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
+              0 3px 1px -2px rgba(0,0,0,0.12),
+              0 1px 5px 0 rgba(0,0,0,0.2);
 }
 
-.header-menu {
+nav.show {
+  transform: translateX(0%);
+}
+
+.menu {
+  padding: 0 32px;
+}
+
+.menu-header {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  height: 64px;
 }
 
-.header-menu li {
-  margin-left: 16px;
-}
-
-.header-menu li a {
+.menu ul {
   display: flex;
+  flex-direction: column;
+}
+
+.menu li {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.menu a {
+  display: inline-flex;
+  align-items: center;
 }
 
 
