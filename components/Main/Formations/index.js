@@ -12,7 +12,7 @@ function Formations () {
   }
 
   return (
-    <div className="container medium formations relative">
+    <section id="formations" className="container medium formations relative">
       <h3>{ t('education.title') }</h3>
 
       <div className="block card flex column">
@@ -35,7 +35,7 @@ function Formations () {
 
       <div className="circle gradient animated" onMouseMove={updateGradient}></div>
       <div className="circle"></div>
-    </div>
+    </section>
   )
 }
 

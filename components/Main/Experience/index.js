@@ -49,7 +49,7 @@ function Experience () {
   const { t } = useTranslation()
 
   return (
-    <div className="container medium experience relative">
+    <section id="experience" className="container medium experience relative">
       <h3>{ t('experience') }</h3>
 
       { experiences.map((experience, index) => (
@@ -76,7 +76,7 @@ function Experience () {
       ))}
 
       <div className="circle"></div>
-    </div>
+    </section>
   )
 }
 

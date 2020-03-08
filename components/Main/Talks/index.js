@@ -43,13 +43,13 @@ function Talks () {
   ))
 
   return (
-    <div className="container medium talks">
+    <section id="talks" className="container medium talks">
       <h3>Talks</h3>
 
       <div className="block">
         { talksList }
       </div>
-    </div>
+    </section>
   )
 }
 

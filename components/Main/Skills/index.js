@@ -6,7 +6,7 @@ function Skills () {
   const { t } = useTranslation()
 
   return (
-    <div className="container medium skills">
+    <section id="skills" className="container medium skills">
       <h3>{ t('skills') }</h3>
 
       <div className="block">
@@ -31,7 +31,7 @@ function Skills () {
           <Skill name="Webpack" />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

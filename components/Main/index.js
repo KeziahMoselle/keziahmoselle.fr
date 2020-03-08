@@ -7,7 +7,17 @@ import Projects from './Projects'
 import Achievements from './Achievements'
 import Talks from './Talks'
 
-function Main () {
+export const sections = [
+  'Hero',
+  'Projects',
+  'Skills',
+  'Experience',
+  'Achievements',
+  'Talks',
+  'Formations'
+]
+
+export function Main () {
   return (
     <main>
       <Hero />
@@ -20,5 +30,3 @@ function Main () {
     </main>
   )
 }
-
-export default Main

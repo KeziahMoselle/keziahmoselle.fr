@@ -55,7 +55,7 @@ function Projects () {
   ))
 
   return (
-    <div className="container projects">
+    <section id="projects" className="container projects">
       <h3>{ t('personalProjects') }</h3>
 
       <div className="block">
@@ -65,7 +65,7 @@ function Projects () {
       <div className="grid">
         { smallProjects }
       </div>
-    </div>
+    </section>
   )
 }
 

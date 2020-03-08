@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
 import { useTranslation } from 'react-i18next'
 import { useWindowScroll } from 'react-use'
+import { sections } from '../Main/index'
 
 function Header () {
   const { i18n } = useTranslation()
   const { y } = useWindowScroll()
   const [isStickied, setIsStickied] = useState('')
-  const [isMenuExpanded, setIsMenuExpanded] = useState(false)
+  const [isMenuExpanded, setIsMenuExpanded] = useState(true)
 
   useEffect(() => {
     if (y > 30) {
@@ -96,32 +97,48 @@ function Header () {
             </button>
           </div>
 
-          <ul>
-            <li>
-              <a href="https://blog.keziahmoselle.fr/">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/KeziahMoselle" rel="nofollow noopener noreferrer">
-                <img src="/static/logos/github.svg" alt="My GitHub profile" />
-              </a>
-            </li>
-            <li>
-              <a onClick={handleTranslating} href="#">
-                <img
-                  src="/static/icons/translate.svg"
-                  alt={`${i18n.language === 'fr' ? 'Translate to english' : 'Traduire en français'}`}
-                />
-              </a>
-            </li>
-          </ul>
+          <div className="menu-body">
+          
+            <ul>
+            
+              { sections.map((section, index) => (
+                <li key={index}>
+                  <a href={`#${section.toLowerCase()}`}>
+                    { section }
+                  </a>
+                </li>
+              ))}
+            
+            </ul>
+
+            <ul>
+              <li>
+                <a href="https://blog.keziahmoselle.fr/">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/KeziahMoselle" rel="nofollow noopener noreferrer">
+                  <img src="/static/logos/github.svg" alt="My GitHub profile" />
+                </a>
+              </li>
+              <li>
+                <a onClick={handleTranslating} href="#">
+                  <img
+                    src="/static/icons/translate.svg"
+                    alt={`${i18n.language === 'fr' ? 'Translate to english' : 'Traduire en français'}`}
+                  />
+                </a>
+              </li>
+            </ul>
+
+          </div>
         </nav>
       </header>
 
       <div
         onClick={() => setIsMenuExpanded(false)}
-        class={`menu-overlay ${isMenuExpanded ? 'opened' : ''}`}
+        className={`menu-overlay ${isMenuExpanded ? 'opened' : ''}`}
       >
       </div>
     </div>

@@ -52,7 +52,7 @@ const achievementsList = [
 
 function Achievements () {
   return (
-    <div className="container medium achievements">
+    <section id="achievements" className="container medium achievements">
       <h3>Achievements</h3>
 
       <div className="block achievements-list">
@@ -65,7 +65,7 @@ function Achievements () {
           ))
         }
       </div>
-    </div>
+    </section>
   )
 }
 
