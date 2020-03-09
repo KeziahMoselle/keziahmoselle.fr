@@ -45,26 +45,42 @@ To build the App and the Netlify function run :
 
 ## Archive
 
-### [See v2 online](https://5c61cc3acb9cd0000840a695--keziahmoselle.netlify.com/) (2019)
+### [See v2 online](https://keziahmoselle.fr/) (2019)
 
-<p align="center">
-  <img width="100%" src="./.github/v2.png" alt="preview">
-</p>
+<a href="https://keziahmoselle.fr/" target="_blank">
+  <p align="center">
+    <img width="100%" src="./.github/v2.png" alt="preview">
+  </p>
+</a>
 
 ### [See v1 online](https://v1.keziahmoselle.fr/) (2018)
 
-<p align="center">
-  <img width="100%" src="./.github/v1.png" alt="preview">
-</p>
+<a href="https://v1.keziahmoselle.fr/" target="_blank">
+  <p align="center">
+    <img width="100%" src="./.github/v1.png" alt="preview">
+  </p>
+</a>
 
-### [See beta online](https://alpha-2.keziahmoselle.fr/) (2017)
+### [See beta online](https://beta.keziahmoselle.fr/) (2017)
 
-<p align="center">
-  <img width="100%" src="./.github/beta.png" alt="preview">
-</p>
+<a href="https://beta.keziahmoselle.fr/" target="_blank">
+  <p align="center">
+    <img width="100%" src="./.github/beta.png" alt="preview">
+  </p>
+</a>
+
+### [See alpha-2 online](https://alpha-2.keziahmoselle.fr/) (2016-2017)
+
+<a href="https://alpha-2.keziahmoselle.fr/" target="_blank">
+  <p align="center">
+    <img width="100%" src="./.github/alpha-2.png" alt="preview">
+  </p>
+</a>
 
 ### [See alpha online](https://alpha.keziahmoselle.fr/) (2015-2016)
 
-<p align="center">
-  <img width="100%" src="./.github/alpha.png" alt="preview">
-</p>
+<a href="https://alpha.keziahmoselle.fr/" target="_blank">
+  <p align="center">
+    <img width="100%" src="./.github/alpha.png" alt="preview">
+  </p>
+</a>
