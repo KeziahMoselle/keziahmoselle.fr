@@ -8,7 +8,7 @@ function Header () {
   const { i18n } = useTranslation()
   const { y } = useWindowScroll()
   const [isStickied, setIsStickied] = useState('')
-  const [isMenuExpanded, setIsMenuExpanded] = useState(true)
+  const [isMenuExpanded, setIsMenuExpanded] = useState(false)
 
   useEffect(() => {
     if (y > 30) {
