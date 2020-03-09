@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useSpring, animated } from 'react-spring'
+import { FiChevronDown } from 'react-icons/fi'
 
 function Achievement ({
   name,
@@ -22,10 +23,14 @@ function Achievement ({
     >
     
     { won && (
-      <div className="overlap">
+      <div className="won-overlap">
         <div className="badge">🏆</div>
       </div>
     )}
+
+    <button className="expanded-overlap">
+      <FiChevronDown size={24} />
+    </button>
 
     <div className="achievement-thumbnail-container">
       <div
