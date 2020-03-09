@@ -1,0 +1,63 @@
+  <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Maëlys.M</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection"/>
+      </head>
+
+      <body>
+        <header>
+          <nav>
+            <div class="nav-wrapper white row">
+              <div class="col  s10 offset-s1">
+                <a class="brand-logo center black-text" href="#"><img src="https://puu.sh/uRyeC/a3cc89bd72.png" alt="Logo"></a>
+                <a id="menu" href="#" class="black-text">Menu</a>
+                <ul class="right">
+                  <li><a class="black-text" href=".html">Contact</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                  <li><a class="black-text" href=".html">Link</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+          <ul id="menu-list">
+            <li>Link</li>
+            <li>Link 2</li>
+            <li>Link 3</li>
+          </ul>
+
+        <main class="row">
+          <div class="text-presentation col s12 center">
+            <p class="col s6 offset-s3"> Maëlys.M, realisator/ videographer.<br/> I'm 18 years old and I just live my life and make some stuff like videos and photographies!</p>
+            <div class="col s8 offset-s2">
+              <div class="video-container">
+                <iframe width="600" height="400" src="https://www.youtube.com/embed/MigVQBipzEE" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </main>
+
+        <footer class="page-footer transparent center">
+          <a href="https://www.instagram.com/maelysmoselle/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram"></a>
+          <a href="https://www.youtube.com/channel/UC9lJzOhsv77JQwqq1ZD_QcA"><img src="img/youtube_text.png" alt="Youtube"></a>
+          <a href="https://www.facebook.com/maelysmos/?fref=ts"><img src="https://en.facebookbrand.com/wp-content/uploads/2016/05/FB-fLogo-Blue-broadcast-2.png" alt="Facebook"></a>
+        </footer>
+
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript">
+          $("#menu-list").hide();
+          $("#menu").click(function(){
+            $("#menu-list").fadeToggle();
+          })
+        </script>
+      </body>
+    </html>

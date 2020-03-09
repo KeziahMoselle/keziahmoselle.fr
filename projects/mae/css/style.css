@@ -1,0 +1,15 @@
+.main-color {background-color: #3367D6 !important;}
+.lighten-color {background-color: #4285F4 !important;}
+
+body {display: flex;min-height: 100vh;flex-direction: column; font-family: 'Raleway', sans-serif;}
+main {flex: 1 0 auto;}
+
+
+/* MARGIN - PADDING */
+
+nav img {margin-top: 20px; height: 64px; width: auto;}
+main {margin-top: 150px;}
+footer{margin-bottom: 100px;}
+footer img {height: 54px; width: auto; margin-left: 10px;}
+p {font-size: 20px;}
+ul#menu-list {margin-left: 8.3333333333%;}

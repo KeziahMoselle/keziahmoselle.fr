@@ -1,0 +1,11 @@
+.main-color {background-color: #3367D6 !important;}
+.lighten-color {background-color: #4285F4 !important;}
+
+
+/* MARGIN - PADDING */
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}

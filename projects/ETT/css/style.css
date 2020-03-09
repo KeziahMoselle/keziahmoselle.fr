@@ -1,0 +1,97 @@
+/* BODY */
+body {display: -webkit-box;display: -ms-flexbox;display: flex;min-height: 100vh;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;background-color: #FFF;}
+main {-webkit-box-flex: 1;-ms-flex: 1 0 auto;flex: 1 0 auto;}
+footer.page-footer {margin-top: 0; padding-top: 0;}
+footer li {display: inline-block;}
+.row { margin: 0;}
+
+/* RESET DES PADDINGS MOBILE */
+.row .col {
+    float: left;
+    box-sizing: border-box;
+    padding: 0;
+    min-height: 1px;
+}
+
+
+  /* PANEL */
+  .panel {height: 20px; width: 100%;}
+  .panel-large {height: 70px; width: 100%; padding-top: 16px;}
+
+
+  /* PROGRESS BAR */
+  .progress {height: 6px; margin: 0; background-color: #1de9b6;}
+  .progress .indeterminate {background-color: #FFF;}
+
+
+  /* SEARCH BAR */
+  nav .input-field input {font-size: 1.4rem;}
+
+
+  /* COLLAPSIBLE */
+  div.collapsible-header {padding: 0; font-size: 20px; font-weight: 300; -webkit-transition: 0.4s; transition: 0.4s;}
+  div.collapsible-pane {padding: 2px; background-color: #37474f;}
+  div.collapsible-title {padding: 5px 20px 5px 20px;}
+    .click {background-color: #37474f; color: #FFF;}
+  div.collapsible-body {padding: 10px 20px 10px 20px; font-size: 15px;}
+
+    /* COLLAPSIBLE FAB */
+    .collapsible-header i {width: 40px; margin-right: 0;}
+    .btn-halfway {
+      position: absolute;
+      right: 24px;
+      bottom: -20px;
+    }
+
+
+  /* BTN FIXED */
+
+  .fixed-action-btn {
+    position: fixed;
+    right: 23px;
+    bottom: 60px;
+    padding-top: 15px;
+    margin-bottom: 0;
+    z-index: 998;
+  }
+
+
+/* POSITIONNEMENT */
+.wrapper-padding {padding: 0 0.75rem;}
+div.collapsible-header {margin-top: 20px;}
+
+/* FORMATAGE */
+.collapsible-body p {
+    margin: 0;
+    padding: 1rem;
+}
+
+.card .card-title {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    line-height: 110%;
+    margin: 0;
+    color: #FFF;
+}
+
+h2 {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 110%;
+    margin: 0;
+    color: #000;
+    margin-left: 2rem;
+}
+
+h3 {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0;
+}

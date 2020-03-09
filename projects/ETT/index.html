@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Radar RFID</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+    </head>
+    <body>
+
+      <header>
+        <div class="panel blue-grey darken-3"></div>
+        <div class="panel-large blue-grey darken-4 center">
+          <h1>Radar RFID</h1>
+        </div>
+        <div class="progress"><div class="indeterminate"></div></div>
+      </header>
+
+      <main class="wrapper-padding row">
+          <div class="col s12 m6 offset-m3 l4 offset-l4">
+
+            <!-- Liste des voitures -->
+            <ul id="cars" class="collapsible popout" data-collapsible="accordion">
+
+              <li>
+                <div class="collapsible-header">
+                  <div class="collapsible-pane"></div>
+                  <div class="collapsible-title">
+                    <span>row.groupe</span>
+                    <span class="right">row.speed</span>
+                  </div>
+                </div>
+                <div class="collapsible-body">
+                  <ul class="center-align">
+                    <li>Classe : <b>row.classe</b></li>
+                    <li>Heure du premier capteur : <b>row.time1</b></li>
+                    <li>Heure du deuxième capteur : <b>row.time2</b></li>
+                    <li>Temps total entre les capteurs : <b>row.tt</b></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <div class="collapsible-header">
+                  <div class="collapsible-pane"></div>
+                  <div class="collapsible-title">
+                    <span>row.groupe</span>
+                    <span class="right">row.speed</span>
+                  </div>
+                </div>
+                <div class="collapsible-body">
+                  <ul class="center-align">
+                    <li>Classe : <b>row.classe</b></li>
+                    <li>Heure du premier capteur : <b>row.time1</b></li>
+                    <li>Heure du deuxième capteur : <b>row.time2</b></li>
+                    <li>Temps total entre les capteurs : <b>row.tt</b></li>
+                  </ul>
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+      </main>
+
+      <footer class="page-footer">
+        <!-- Btn sorting -->
+        <div class="fixed-action-btn click-to-toggle">
+          <a class="btn-floating btn-large waves-effect waves teal darken-1"><i class="large material-icons">sort</i></a>
+            <ul>
+              <li><a id="sort_id" class="btn-floating waves-effect waves" onclick="Materialize.toast('Trié par : Position ', 3000)"><i class="material-icons">directions_car</i></a></li>
+              <li><a id="sort_speed" class="btn-floating waves-effect waves" onclick="Materialize.toast('Trié par : Vitesse ', 3000)"><i class="material-icons">show_chart</i></a></li>
+            </ul>
+        </div>
+
+        <!-- Auteurs -->
+        <div class="footer-copyright blue-grey darken-3">
+          <div class="container center-align">
+           Développée par SEGET Yann & MOSELLE Keziah (1°STI2D3)
+          </div>
+        </div>
+      </footer>
+
+
+      <!-- Dépendances -->
+        <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/hammer-time.js"></script>
+        <script type="text/javascript" src="js/socket.io.js"></script>
+      <!-- Modules -->
+        <script type="text/javascript" src="js/sort.js"></script>
+        <script type="text/javascript" src="js/cars.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('.collapsible').collapsible();
+            $(".collapsible-header").click(function(){
+              if($(this).hasClass("click")){
+                  $(this).removeClass("click");
+              } else {
+                  $(".collapsible-header").removeClass("click");
+                  $(this).addClass("click");
+              }
+            });
+        });
+        </script>
+    </body>
+  </html>
