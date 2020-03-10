@@ -853,6 +853,7 @@ header img {
 
 header nav {
   position: fixed;
+  visibility: hidden;
   width: 300px;
   right: 0;
   top: 0;
@@ -870,6 +871,7 @@ header nav {
 }
 
 nav.show {
+  visibility: visible;
   transform: translateX(0%);
 }
 
@@ -1398,10 +1400,9 @@ a.pill span {
 .achievements-list {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-gap: 16px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
   .achievements-list {
     grid-template-columns: 100%;
   }
@@ -1424,6 +1425,7 @@ a.pill span {
 
 .achievement {
   position: relative;
+  margin: 0 8px 28px 8px;
 }
 
 .achievement .won-overlap {
@@ -1538,6 +1540,11 @@ a.pill span {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.3s;
+}
+
+.talk:hover {
+  transform: scale(1.02);
 }
 
 .talk-header {
@@ -1628,6 +1635,12 @@ a.pill span {
   fill: #F64060;
 }
 
+@media only screen and (min-width: 1200px) {
+  .talk-link svg {
+    height: 28px;
+    width: 28px;
+  }
+}
 
 
 /**
