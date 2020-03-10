@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useSpring, animated } from 'react-spring'
+import { FiChevronDown } from 'react-icons/fi'
 
 function Achievement ({
   name,
@@ -15,6 +16,8 @@ function Achievement ({
     maxHeight: isExtended ? '1000px' : '0px'
   })
 
+  const toggleExpanded = () => setIsExtended(!isExtended)
+
   return (
     <div
       className="achievement"
@@ -22,10 +25,17 @@ function Achievement ({
     >
     
     { won && (
-      <div className="overlap">
+      <div className="won-overlap">
         <div className="badge">🏆</div>
       </div>
     )}
+
+    <button
+      className="expanded-overlap"
+      onClick={toggleExpanded}
+    >
+      <FiChevronDown size={24} />
+    </button>
 
     <div className="achievement-thumbnail-container">
       <div
@@ -33,7 +43,7 @@ function Achievement ({
       style={{
         backgroundImage: `url(/static/thumbnails/${thumbnail})`
       }}
-      onClick={() => setIsExtended(!isExtended)}
+      onClick={toggleExpanded}
       >
       </div>
     </div>

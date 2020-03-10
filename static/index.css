@@ -121,6 +121,10 @@ svg.spacing {
   margin: 0 4px;
 }
 
+svg {
+  transition: transform 0.3s ease;
+}
+
 .btn, button, svg, img, header a {
   user-select: none;
 }
@@ -1394,7 +1398,7 @@ a.pill span {
 .achievements-list {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-gap: 12px;
+  grid-gap: 16px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -1422,12 +1426,30 @@ a.pill span {
   position: relative;
 }
 
-.achievement .overlap {
+.achievement .won-overlap {
   z-index: 1;
   position: absolute;
   top: 0;
   right: 0;
   padding: 12px;
+}
+
+.achievement .expanded-overlap {
+  z-index: 1;
+  display: inline-flex;
+  position: absolute;
+  top: 164px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2px 12px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.achievement[aria-expanded="true"] .expanded-overlap svg {
+  transform: rotate(180deg);
 }
 
 .achievement-thumbnail-container {
