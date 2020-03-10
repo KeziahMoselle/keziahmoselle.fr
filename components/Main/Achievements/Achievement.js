@@ -16,6 +16,8 @@ function Achievement ({
     maxHeight: isExtended ? '1000px' : '0px'
   })
 
+  const toggleExpanded = () => setIsExtended(!isExtended)
+
   return (
     <div
       className="achievement"
@@ -28,7 +30,10 @@ function Achievement ({
       </div>
     )}
 
-    <button className="expanded-overlap">
+    <button
+      className="expanded-overlap"
+      onClick={toggleExpanded}
+    >
       <FiChevronDown size={24} />
     </button>
 
@@ -38,7 +43,7 @@ function Achievement ({
       style={{
         backgroundImage: `url(/static/thumbnails/${thumbnail})`
       }}
-      onClick={() => setIsExtended(!isExtended)}
+      onClick={toggleExpanded}
       >
       </div>
     </div>
