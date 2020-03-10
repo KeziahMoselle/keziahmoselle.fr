@@ -1535,82 +1535,78 @@ a.pill span {
 }
 
 .talk {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 36px;
-  padding: 52px;
-  transition: transform 0.4s;
-}
-
-.talk:hover {
-  transform: translateY(-2px);
-}
-
-.talk > div {
-  width: 50%;
-}
-
-.talk-header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.talk h3 {
-  font-weight: 900;
-  margin-bottom: 8px;
-}
-
-.talk h4 {
-  opacity: 0.9;
-  font-weight: 600;
-  font-size: 1rem;
-  margin-bottom: 4px;
-}
-
-.talk h5 {
-  opacity: 0.8;
-  font-weight: 300;
-  font-size: 0.9rem;
-}
-
-.talk-body a {
-  display: inline-block;
-  border-radius: 8px;
-}
-
-.talk-thumbnail {
-  position: relative;
-}
-
-.talk-thumbnail img {
-  display: block;
-  width: 100%;
-  border-radius: 8px;
-}
-
-
-.talk-thumbnail .overlap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.talk-links {
-  position: absolute;
-  bottom: -18px;
-  right: 0;
+.talk-header {
   display: flex;
-  justify-content: center;
-  padding-right: 52px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.talk-header .img-container {
+  height: 48px;
+  width: 48px;
+  padding: 6px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.talk-header .img-container img {
+  height: 100%;
+}
+
+.talk-header time {
+  opacity: 0.9;
+}
+
+.talk-body {
+  padding: 52px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.talk-body > * {
+  width: 50%;
+}
+
+.talk-body h4 {
+  font-size: 32px;
+  font-family: monospace;
+}
+
+.talk-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.talk-footer address {
+  font-style: normal;
+  opacity: 0.9;
+}
+
+.talk-footer ul {
+  display: flex;
+}
+
+.talk-footer li {
+  margin: 0 12px;
+}
+
+.talk-footer li svg {
+  fill: white;
 }
 
 .talk-link {
-  background-color: white;
   display: inline-block;
-  padding: 4px 26px;
+}
+
+.talk-link svg {
+  transition: fill 0.2s;
 }
 
 .talk-link:focus {
@@ -1632,59 +1628,6 @@ a.pill span {
   fill: #F64060;
 }
 
-.talk-link:not([href]) > svg {
-  stroke: #a8a8a8;
-}
-
-
-.talk-link:first-of-type {
-  border: 1px solid black;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  border-right: 0;
-}
-
-.talk-link ~ .talk-link {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
-.talk-link:last-of-type {
-  border: 1px solid black;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  border-left: 0;
-}
-
-@media only screen and (max-width: 1200px) {
-  .talk {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .talk > div {
-    width: 100%;
-  }
-
-  .talk-header {
-    margin-bottom: 32px;
-  }
-
-  .talk-body {
-    display: flex;
-    justify-content: center;
-  }
-
-  .talk-thumbnail img {
-    max-width: 500px;
-  }
-
-  .talk-links {
-    left: 50%;
-    transform: translateX(-50%);
-    padding-right: 0;
-  }
-}
 
 
 /**

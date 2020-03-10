@@ -46,7 +46,7 @@ function Header () {
 
         <ul className="appear-on-scroll">
           <li>
-            <button onClick={handleTranslating} href="#">
+            <button onClick={handleTranslating}>
               <img
                 src="/static/icons/translate.svg"
                 alt={`${i18n.language === 'fr' ? 'Translate to english' : 'Traduire en français'}`}

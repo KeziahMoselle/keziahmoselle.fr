@@ -1,72 +1,71 @@
 import React from 'react'
-import { FiVideo } from 'react-icons/fi'
+import { FiYoutube } from 'react-icons/fi'
 import { MdSlideshow } from 'react-icons/md'
 import { FaMeetup } from 'react-icons/fa'
 
 function Talk ({
   title,
-  slug,
+  imgSlug,
   date,
   at,
-  summary,
+  group,
+  groupUrl,
   slides,
   repository,
   url,
-  video
+  video,
+  intl
 }) {
   return (
     <div className="talk card inverted">
+
       <div className="talk-header">
-        <h3>{ title }</h3>
+        <a 
+          href={groupUrl}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          className="img-container"
+        >
+          <img src="/static/logos/vuestrasbourg.png" alt={group} />
+        </a>
 
-        { summary && (
-          <ol>
-            { summary.map((content, index) => <li key={index}>{ content }</li>) }
-          </ol>
-        )}
-
-        <span>
-          <h4>{ at }</h4>
-          <h5>{ date }</h5>
-        </span>
+        <time dateTime={date}>{ intl.format(new Date(date)) }</time>
       </div>
 
       <div className="talk-body">
-        <a
-          className="talk-thumbnail"
-          href={video || slides} target="_blank"
-          rel="nofollow noopener noreferrer"
-        >
-          <img src={`/static/thumbnails/${slug}.jpg`} alt={`${title} thumbnail`} />
-        </a>
+        <h4>{ title }</h4>
       </div>
 
-      <div className="talk-links">
-        <a
-          className="talk-link"
-          href={video}
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-        >
-          <FiVideo className="video" size={26} title="Video" />
-        </a>
-        <a
-          className="talk-link"
-          href={slides}
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-        >
-          <MdSlideshow className="slides" size={26} title="Slides" />
-        </a>
-        <a
-          className="talk-link"
-          href={url}
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-        >
-          <FaMeetup className="url" size={26} title="URL" />
-        </a>
+      <div className="talk-footer">
+        <address>{ at }</address>
+        
+        <ul>
+          { video && (
+            <li>
+              <a className="talk-link" href={video}>
+                <FiYoutube className="video" size={26} title="Video" />
+              </a>
+            </li>
+          )}
+
+          { slides && (
+            <li>
+              <a className="talk-link" href={slides}>
+                <MdSlideshow className="slides" size={26} title="Slides" />
+              </a>
+            </li>
+          )}
+
+          { url && (
+            <li>
+              <a className="talk-link" href={url}>
+                <FaMeetup className="url" size={26} title="Meetup link" />
+              </a>
+            </li>
+          )}
+        </ul>
       </div>
+
     </div>
   )
 }
