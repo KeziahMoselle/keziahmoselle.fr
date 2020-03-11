@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { FiGithub, FiTwitter, FiEdit3 } from 'react-icons/fi'
 
 function Footer () {
+  const { t } = useTranslation()
   const [email, setEmail] = useState('')
   const [isEmailValid, setIsEmailValid] = useState(null)
   const [message, setMessage] = useState('')
   const [isMessageValid, setIsMessageValid] = useState(null)
   const [status, setStatus] = useState('default')
-  const { t } = useTranslation()
 
   const messages = {
     default: {
@@ -156,17 +157,17 @@ function Footer () {
           </div>
         </form>
 
-        <p className="flex valign">
+        <p className="footer-links">
           <a href="https://github.com/KeziahMoselle" rel="nofollow noopener noreferrer">
-            <img src="/static/icons/github.svg" alt="My GitHub profile" />
+            <FiGithub size={30} stroke="white" />
           </a>
 
           <a href="https://twitter.com/KeziahMoselle" rel="nofollow noopener noreferrer">
-            <img src="/static/icons/twitter.svg" alt="My Twitter profile" />
+            <FiTwitter size={30} stroke="white" />
           </a>
 
           <a href="https://blog.keziahmoselle.fr/" title="Mon blog" rel="nofollow noopener noreferrer">
-            <img src="/static/icons/edit.svg" alt="My Blog" />
+            <FiEdit3 size={30} stroke="white" />
           </a>
         </p>
 

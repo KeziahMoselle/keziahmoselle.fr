@@ -58,6 +58,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   font-size: 17px;
+  border: 8px solid black;
 }
 
 body.no-scroll {
@@ -708,6 +709,22 @@ footer form > div > p img {
   }
 }
 
+.footer-links a {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.footer-links a:focus {
+  box-shadow: none;
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.footer-links a:hover > svg,
+.footer-links a:focus > svg {
+  fill: white;
+}
+
 
 /**
  *
@@ -792,7 +809,6 @@ textarea {
 }
 
 .left-logo {
-  position: absolute;
   transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -803,6 +819,22 @@ textarea {
   opacity: 0;
   transform: translateY(12px);
   transition: transform 0.3s, opacity 0.3s;
+}
+
+@media only screen and (max-width: 600px) {
+  .appear-on-scroll {
+    display: none;
+  }
+
+  .sticky-header.stickied header {
+    justify-content: flex-end !important;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .left-logo {
+    position: absolute;
+  }
 }
 
 .appear-on-scroll li {
@@ -1583,6 +1615,7 @@ a.pill span {
 .talk-body h4 {
   font-size: 32px;
   font-family: monospace;
+  overflow-wrap: normal;
 }
 
 .talk-footer {

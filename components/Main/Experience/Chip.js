@@ -1,4 +1,5 @@
 import React from 'react'
+import { FiLink } from 'react-icons/fi'
 
 function Chip ({ link, company }) {
   const href = link || '#!'
@@ -9,7 +10,7 @@ function Chip ({ link, company }) {
       href={href}
       target="_blank"
       rel="nofollow noopener noreferrer">
-      <img src="/static/icons/link.svg" alt="External link" />
+      <FiLink size={24} />
       <span className="visually-hidden">En lire plus sur { company }</span>
     </a>
   )

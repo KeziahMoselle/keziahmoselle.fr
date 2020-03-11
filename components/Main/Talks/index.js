@@ -24,7 +24,8 @@ const allTalks = [
     groupUrl: 'https://vue.alsace/',
     slides: 'https://slides.com/keziahmoselle/an-introduction-to-accessibility-in-react-and-vue#/',
     repository: 'https://github.com/VueStrasbourg/alsacreations-accessibility-react-vue',
-    url: 'https://www.meetup.com/fr-FR/StrasbourgJS/events/268379010/'
+    url: 'https://www.meetup.com/fr-FR/StrasbourgJS/events/268379010/',
+    video: 'https://youtu.be/8GiLpgGmOw4'
   }
 ]
 
