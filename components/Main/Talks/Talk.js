@@ -42,24 +42,36 @@ function Talk ({
         <ul>
           { video && (
             <li>
-              <a className="talk-link" href={video}>
-                <FiYoutube className="video" size={26} title="Video" />
+              <a
+                className="talk-link"
+                href={video}
+                aria-label="Video"
+              >
+                <FiYoutube className="video" size={26} />
               </a>
             </li>
           )}
 
           { slides && (
             <li>
-              <a className="talk-link" href={slides}>
-                <MdSlideshow className="slides" size={26} title="Slides" />
+              <a
+                className="talk-link"
+                href={slides}
+                aria-label="Slides"
+              >
+                <MdSlideshow className="slides" size={26} />
               </a>
             </li>
           )}
 
           { url && (
             <li>
-              <a className="talk-link" href={url}>
-                <FaMeetup className="url" size={26} title="Meetup link" />
+              <a
+                className="talk-link"
+                href={url}
+                aria-label="Meetup"
+              >
+                <FaMeetup className="url" size={26} />
               </a>
             </li>
           )}

@@ -1642,7 +1642,48 @@ a.pill span {
 }
 
 .talk-link {
+  display: flex;
+  justify-content: center;
+}
+
+.talk-link:hover::before,
+.talk-link:focus::before {
+  opacity: 1;
+  transform: translateY(-125%);
+}
+
+.talk-link:hover::after,
+.talk-link:focus::after {
+  opacity: 1;
+  transform: translateY(-80%);
+}
+
+.talk-link::before {
+  background-color: #333;
+  border-radius: 3px;
+  color: #fff;
+  content: attr(aria-label);
   display: inline-block;
+  opacity: 0;
+  padding: 5px 10px;
+  position: absolute;
+  text-align: center;
+  transform: translateY(-150%);
+  transition: all 0.25s ease;
+}
+
+.talk-link::after {
+  border-bottom: solid transparent 5px;
+  border-left: solid transparent 5px;
+  border-right: solid transparent 5px;
+  border-top: solid #333 5px;
+  content: "";
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  transform: translateY(-150%);
+  transition: all 0.25s ease;
+  width: 0;
 }
 
 .talk-link svg {
