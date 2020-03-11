@@ -17,8 +17,8 @@
   },
   "achievements": "Achievements",
   "form": {
-    "email": "Quelle est votre adresse email ?",
-    "message": "Votre message",
+    "email": "Email",
+    "message": "Message",
     "sending": "Envoi en cours...",
     "success": "Message envoyé ! Merci",
     "error": "Il y a eu une erreur, n'hésitez pas à réessayer plus tard.",

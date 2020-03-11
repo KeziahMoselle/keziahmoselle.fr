@@ -158,15 +158,27 @@ function Footer () {
         </form>
 
         <p className="footer-links">
-          <a href="https://github.com/KeziahMoselle" rel="nofollow noopener noreferrer">
+          <a
+            href="https://github.com/KeziahMoselle"
+            rel="nofollow noopener noreferrer"
+            aria-label="GitHub"
+          >
             <FiGithub size={30} stroke="white" />
           </a>
 
-          <a href="https://twitter.com/KeziahMoselle" rel="nofollow noopener noreferrer">
+          <a
+            href="https://twitter.com/KeziahMoselle"
+            rel="nofollow noopener noreferrer"
+            aria-label="Twitter"
+          >
             <FiTwitter size={30} stroke="white" />
           </a>
 
-          <a href="https://blog.keziahmoselle.fr/" title="Mon blog" rel="nofollow noopener noreferrer">
+          <a
+            href="https://blog.keziahmoselle.fr/"
+            rel="nofollow noopener noreferrer"
+            aria-label="Blog"
+          >
             <FiEdit3 size={30} stroke="white" />
           </a>
         </p>
@@ -177,7 +189,7 @@ function Footer () {
             <img src="/static/logos/nextjs.svg" alt="Next.js" style={{ height: '32px' }}/>
           </a>
           and hosted on
-          <a href="https://www.netlify.com/" rel="nofollow noopener noreferrer">
+          <a href="https://netlify.com/" rel="nofollow noopener noreferrer">
             <img src="/static/logos/netlify.svg" alt="Netlify" style={{ height: '26px' }}/>
           </a>
         </p>
