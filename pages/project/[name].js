@@ -1,7 +1,9 @@
 import React, { Fragment } from 'react'
 import Head from 'next/head'
-
+import mdx from '@next/mdx'
 import { useRouter } from 'next/router'
+import { parseContent, listContent } from '../../utils/parseContent'
+
 
 export default ({ project }) => {
   return (
@@ -28,11 +30,14 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
+  const projects = listContent('projects')
+
+  const allProjects = projects.map(project => ({
+    params: { name: project }
+  }))
 
   return {
-    paths: [
-      { params: { name: 'tempus' } }
-    ],
+    paths: allProjects,
     fallback: false
   }
 }
