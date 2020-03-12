@@ -3,21 +3,20 @@ import Link from 'next/link'
 import Head from 'next/head'
 
 import Header from '../components/Header'
-import '../static/index.css'
 
 class Error extends React.Component {
   render () {
     return (
       <Fragment>
         <Head>
-          <title>Erreur - Keziah MOSELLE</title>
+          <title>Error - Keziah MOSELLE</title>
         </Head>
 
         <Header />
 
         <div className="flex column valign" style={{ marginTop: '124px' }}>
           <h2><code>404 Not Found</code></h2>
-          <img src="/static/not-found.svg" alt="404 Page not found" style={{
+          <img src="/static/icons/not-found.svg" alt="404 Page not found" style={{
             objectFit: 'contain',
             width: '100%',
             maxHeight: '300px',
@@ -25,7 +24,11 @@ class Error extends React.Component {
             padding: '0 32px'
           }} />
 
-          <div className="center"><Link href="/"><button>Revenir sur le site</button></Link></div>
+          <div className="center">
+            <Link href="/">
+              <button className="btn">Revenir sur le site</button>
+            </Link>
+          </div>
         </div>
       </Fragment>
     )
