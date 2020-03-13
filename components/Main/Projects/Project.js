@@ -18,6 +18,7 @@ function Project ({
   const { t } = useTranslation()
 
   useEffect(() => {
+
     const localStars = JSON.parse(localStorage.getItem(formattedTitle))
     if (localStars && (localStars.date === new Date().getHours())) {
       setStars(localStars.stars)

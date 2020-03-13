@@ -18,7 +18,7 @@ export const sections = [
 
 export function Main () {
   return (
-    <main>
+    <React.Fragment>
       <Hero />
       <Projects />
       <Skills />
@@ -26,6 +26,6 @@ export function Main () {
       <Achievements />
       <Talks />
       <Formations />
-    </main>
+    </React.Fragment>
   )
 }

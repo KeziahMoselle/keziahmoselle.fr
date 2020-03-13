@@ -9,20 +9,19 @@
     "lint": "eslint components functions lang pages --fix"
   },
   "dependencies": {
-    "@mdx-js/loader": "^1.5.7",
-    "@next/mdx": "^9.3.0",
-    "@zeit/next-css": "^1.0.1",
     "axios": "^0.18.1",
     "dotenv": "^6.2.0",
+    "gray-matter": "^4.0.2",
     "i18next": "^19.0.0",
     "i18next-browser-languagedetector": "^4.0.1",
     "mailgun-js": "^0.22.0",
     "next": "^9.3.0",
-    "next-purgecss": "^3.0.1",
+    "raw-loader": "^4.0.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-i18next": "^11.0.1",
     "react-icons": "^3.9.0",
+    "react-markdown": "^4.3.1",
     "react-spring": "^8.0.7",
     "react-use": "^13.27.0"
   },

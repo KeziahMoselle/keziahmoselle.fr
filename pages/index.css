@@ -58,7 +58,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   font-size: 17px;
-  border: 8px solid black;
 }
 
 body.no-scroll {
