@@ -1301,6 +1301,21 @@ nav.show {
   margin-left: 6px;
 }
 
+/**
+ *
+ * Project Case Studies
+ *
+ */
+
+.case-study {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.case-study > img {
+  width: 100%;
+}
+
 
 /**
  *

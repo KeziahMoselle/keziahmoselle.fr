@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { GoStar } from 'react-icons/go'
 
 function Project ({
+  slug,
   title,
   subtitle,
   tags,
@@ -11,15 +13,12 @@ function Project ({
   stack,
   url
 }) {
-  /* Get the file name in /static/thumbnails */
-  const formattedTitle = title.toLowerCase().replace(/\s/g, '_')
-
   const [stars, setStars] = useState(null)
   const { t } = useTranslation()
 
   useEffect(() => {
 
-    const localStars = JSON.parse(localStorage.getItem(formattedTitle))
+    const localStars = JSON.parse(localStorage.getItem(slug))
     if (localStars && (localStars.date === new Date().getHours())) {
       setStars(localStars.stars)
     } else {
@@ -28,7 +27,7 @@ function Project ({
         .then(data => {
           console.log(`Fetched ${github} : ${data.stargazers_count}`)
           setStars(data.stargazers_count)
-          localStorage.setItem(formattedTitle, JSON.stringify({
+          localStorage.setItem(slug, JSON.stringify({
             stars: data.stargazers_count,
             date: new Date().getHours()
           }))
@@ -71,46 +70,43 @@ function Project ({
         </div>
       </div>
 
-      <a
-        href={`https://github.com/${github}`}
-        target="_blank"
-        rel="nofollow noopener noreferrer"
-        aria-label={`${title}, ${t(`projects.${title}`)}`}
-      >
-        <div className="project-image">
-          <div className="project-body hide-on-med-and-down">
-            <div className="project-subtitle">
-              <h5>{ date }</h5>
+      <Link href={`/project/${slug}`}>
+        <a aria-label={`${title}, ${t(`projects.${title}`)}`}>
+          <div className="project-image">
+            <div className="project-body hide-on-med-and-down">
+              <div className="project-subtitle">
+                <h5>{ date }</h5>
+              </div>
+              <div className="project-title">
+                <h3>{ title }</h3>
+                <h4>{ t(`projects.${title}`) }</h4>
+              </div>
+              <div className="project-supplementary">
+                <p className="project-info">
+                  { stars } <GoStar className="spacing" /> <span>Stars</span>
+                </p>
+              </div>
             </div>
-            <div className="project-title">
-              <h3>{ title }</h3>
-              <h4>{ t(`projects.${title}`) }</h4>
-            </div>
-            <div className="project-supplementary">
-              <p className="project-info">
-                { stars } <GoStar className="spacing" /> <span>Stars</span>
-              </p>
+
+            <picture>
+              <source srcSet={`/static/thumbnails/${slug}.webp`} type="image/webp"></source>
+              <img
+                className="project-thumbnail"
+                src={`/static/thumbnails/${slug}.jpg`}
+                alt={`${title} thumbnail`}
+              >
+              </img>
+            </picture>
+
+            <div className="overlap show-on-mobile">
+              <span className="chip-inline">
+                { stars }
+                <GoStar />
+              </span>
             </div>
           </div>
-
-          <picture>
-            <source srcSet={`/static/thumbnails/${formattedTitle}.webp`} type="image/webp"></source>
-            <img
-              className="project-thumbnail"
-              src={`/static/thumbnails/${formattedTitle}.jpg`}
-              alt={`${title} thumbnail`}
-            >
-            </img>
-          </picture>
-
-          <div className="overlap show-on-mobile">
-            <span className="chip-inline">
-              { stars }
-              <GoStar />
-            </span>
-          </div>
-        </div>
-      </a>
+        </a>
+      </Link>
 
       <div className="project-footer">
         <div className="hide-on-med-and-down">{ tagsChips }</div>

@@ -2,57 +2,22 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import Project from './Project'
 
-const projects = [
-  {
-    title: 'Tempus',
-    tags: ['UI/UX', 'Front-End'],
-    date: '2019',
-    github: 'KeziahMoselle/tempus',
-    url: 'https://tempus.keziahmoselle.fr/',
-    stack: ['reactjs', 'electronjs']
-  },
-  {
-    title: 'Ribbon',
-    tags: ['UI/UX', 'Front-End', 'Mobile', 'API', 'OAuth'],
-    date: '2020',
-    github: 'KeziahMoselle/ribbon',
-    stack: ['reactjs', 'reactnative', 'typescript']
-  }
-]
-
-const othersProjects = [
-  {
-    title: 'Export GitHub Stars',
-    tags: ['UI/UX', 'Front-End', 'API'],
-    date: '2018',
-    github: 'KeziahMoselle/export-github-stars',
-    stack: ['vuejs', 'vuetify']
-  },
-  {
-    title: 'Gelbooru Client',
-    tags: ['UI/UX', 'Front-End', 'API'],
-    date: '2017-2018',
-    github: 'KeziahMoselle/gelbooru-client',
-    stack: ['javascript', 'electronjs', 'materialize']
-  }
-]
-
-function Projects () {
+function Projects ({ projects }) {
   const { t } = useTranslation()
 
-  const bigProjects = projects.map((project, index) => (
-    <Project
-      key={index}
-      {...project}
-    />
-  ))
+  const bigProjects = projects.reduce((acc, project, index) => {
+    if (project.isBigProject) {
+      acc.push(<Project key={index} {...project} />)
+    }
+    return acc
+  }, [])
 
-  const smallProjects = othersProjects.map((project, index) => (
-    <Project
-      key={index}
-      {...project}
-    />
-  ))
+  const smallProjects = projects.reduce((acc, project, index) => {
+    if (!project.isBigProject) {
+      acc.push(<Project key={index} {...project} />)
+    }
+    return acc
+  }, [])
 
   return (
     <section id="projects" className="container projects">

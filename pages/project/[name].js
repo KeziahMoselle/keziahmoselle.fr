@@ -4,19 +4,18 @@ import ReactMarkdown from 'react-markdown'
 import React, { Fragment } from 'react'
 import Head from 'next/head'
 import Layout from '../../components/Layout'
+import Project from '../../components/Main/Project'
 
 
 export default ({ project }) => {
-  const { name, content, data } = project
-
   return (
     <Fragment>
       <Head>
-        <title>{ name } - Keziah MOSELLE</title>
+        <title>{ project.name } - Keziah MOSELLE</title>
       </Head>
 
       <Layout>
-        <ReactMarkdown source={content} />
+        <Project {...project} />
       </Layout>
     </Fragment>
   )
@@ -29,10 +28,13 @@ export async function getStaticProps(context) {
 
   const { content, data } = matter(markdown)
 
-  const name = projectName[0].toUpperCase() + projectName.substring(1)
+  const slug = data.title
+    .toLowerCase()
+    .replace(/ /g, '-')
 
   const project = {
-    name,
+    name: data.title,
+    slug,
     content,
     data
   }

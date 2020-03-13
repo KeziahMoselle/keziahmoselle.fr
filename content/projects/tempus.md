@@ -1,6 +1,14 @@
 ---
-title: "The coastal red giants"
-author: Watson & Crick
-date: "2019-07-10"
+title: Tempus
+date: 2019
+github: KeziahMoselle/tempus
+url: https://tempus.keziahmoselle.fr/
+tags:
+  - UI/UX
+  - Front-End
+stack:
+  - reactjs
+  - electronjs
+isBigProject: true
 ---
 Brain is the seed of intelligence something incredible is waiting to be known.
