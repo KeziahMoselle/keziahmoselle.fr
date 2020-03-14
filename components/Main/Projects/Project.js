@@ -38,7 +38,7 @@ function Project ({
   /* Tech stack icons at the bottom of the thumbnail */
   const techStack = stack.map((tech, index) => (
     <img
-      src={`/static/logos/${tech}.svg`}
+      src={`/logos/${tech}.svg`}
       alt={`${tech}`}
       title={tech}
       key={index}
@@ -89,10 +89,10 @@ function Project ({
             </div>
 
             <picture>
-              <source srcSet={`/static/thumbnails/${slug}.webp`} type="image/webp"></source>
+              <source srcSet={`/thumbnails/${slug}.webp`} type="image/webp"></source>
               <img
                 className="project-thumbnail"
-                src={`/static/thumbnails/${slug}.jpg`}
+                src={`/thumbnails/${slug}.jpg`}
                 alt={`${title} thumbnail`}
               >
               </img>

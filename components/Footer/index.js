@@ -186,11 +186,11 @@ function Footer () {
         <p>
           Built with
           <a href="https://nextjs.org/" rel="nofollow noopener noreferrer">
-            <img src="/static/logos/nextjs.svg" alt="Next.js" style={{ height: '32px' }}/>
+            <img src="/logos/nextjs.svg" alt="Next.js" style={{ height: '32px' }}/>
           </a>
           and hosted on
           <a href="https://netlify.com/" rel="nofollow noopener noreferrer">
-            <img src="/static/logos/netlify.svg" alt="Netlify" style={{ height: '26px' }}/>
+            <img src="/logos/netlify.svg" alt="Netlify" style={{ height: '26px' }}/>
           </a>
         </p>
       </div>

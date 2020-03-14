@@ -41,7 +41,7 @@ function Achievement ({
       <div
       className="achievement-thumbnail"
       style={{
-        backgroundImage: `url(/static/thumbnails/${thumbnail})`
+        backgroundImage: `url(/thumbnails/${thumbnail})`
       }}
       onClick={toggleExpanded}
       >

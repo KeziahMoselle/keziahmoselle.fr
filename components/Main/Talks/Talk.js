@@ -26,7 +26,7 @@ function Talk ({
           rel="nofollow noopener noreferrer"
           className="img-container"
         >
-          <img src="/static/logos/vuestrasbourg.png" alt={group} />
+          <img src="/logos/vuestrasbourg.png" alt={group} />
         </a>
 
         <time dateTime={date}>{ intl.format(new Date(date)) }</time>

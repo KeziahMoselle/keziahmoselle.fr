@@ -16,7 +16,7 @@ class Error extends React.Component {
 
         <div className="flex column valign" style={{ marginTop: '124px' }}>
           <h2><code>404 Not Found</code></h2>
-          <img src="/static/icons/not-found.svg" alt="404 Page not found" style={{
+          <img src="/icons/not-found.svg" alt="404 Page not found" style={{
             objectFit: 'contain',
             width: '100%',
             maxHeight: '300px',

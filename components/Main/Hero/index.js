@@ -69,7 +69,7 @@ function Hero () {
         </button>
 
         <a
-          href="/static/keziah-moselle-cv-fr.pdf"
+          href="/keziah-moselle-cv-fr.pdf"
           target="_blank"
           className="btn white bordered translate-y"
         >

@@ -39,7 +39,7 @@ function Header () {
       <header>
         <a className="left-logo" href="https://keziahmoselle.fr/">
           <img
-            src="/static/icons/logo.svg"
+            src="/icons/logo.svg"
             alt="Homepage"
           />
         </a>
@@ -48,7 +48,7 @@ function Header () {
           <li>
             <button onClick={handleTranslating}>
               <img
-                src="/static/icons/translate.svg"
+                src="/icons/translate.svg"
                 alt={`${i18n.language === 'fr' ? 'Translate to english' : 'Traduire en français'}`}
               />
             </button>
@@ -61,7 +61,7 @@ function Header () {
               target="_blank"
               rel="nofollow noopener noreferrer"
             >
-              <img src="/static/logos/github.svg" alt="KeziahMoselle's GitHub profile" />
+              <img src="/logos/github.svg" alt="KeziahMoselle's GitHub profile" />
             </a>
           </li>
 
@@ -73,7 +73,7 @@ function Header () {
         </ul>
 
         <a className="middle-logo" href="https://keziahmoselle.fr/">
-          <img src="/static/icons/logo.svg" className="header-logo" alt="Homepage" />
+          <img src="/icons/logo.svg" className="header-logo" alt="Homepage" />
         </a>
 
         <button
@@ -127,13 +127,13 @@ function Header () {
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                 >
-                  <img src="/static/logos/github.svg" alt="My GitHub profile" />
+                  <img src="/logos/github.svg" alt="My GitHub profile" />
                 </a>
               </li>
               <li>
                 <button onClick={handleTranslating}>
                   <img
-                    src="/static/icons/translate.svg"
+                    src="/icons/translate.svg"
                     alt={`${i18n.language === 'fr' ? 'Translate to english' : 'Traduire en français'}`}
                   />
                 </button>

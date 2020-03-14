@@ -14,7 +14,7 @@ export default function Project ({
 
   return (
     <article className="case-study">
-      <img src={`/static/thumbnails/${slug}.jpg`} />
+      <img src={`/thumbnails/${slug}.jpg`} />
 
       <h2>{ data.title }</h2>
       <h3>{ t(`projects.${data.title}`) }</h3>
