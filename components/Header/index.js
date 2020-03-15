@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { FiMenu, FiX } from 'react-icons/fi'
 import { useTranslation } from 'react-i18next'
 import { useWindowScroll } from 'react-use'
@@ -37,12 +38,14 @@ function Header () {
   return (
     <div className={`sticky-header ${isStickied}`}>
       <header>
-        <a className="left-logo" href="https://keziahmoselle.fr/">
-          <img
-            src="/icons/logo.svg"
-            alt="Homepage"
-          />
-        </a>
+        <Link href="/">
+          <a className="left-logo">
+            <img
+              src="/icons/logo.svg"
+              alt="Homepage"
+            />
+          </a>
+        </Link>
 
         <ul className="appear-on-scroll">
           <li>
@@ -72,9 +75,11 @@ function Header () {
           </li>
         </ul>
 
-        <a className="middle-logo" href="https://keziahmoselle.fr/">
-          <img src="/icons/logo.svg" className="header-logo" alt="Homepage" />
-        </a>
+        <Link href="/">
+          <a className="middle-logo">
+            <img src="/icons/logo.svg" className="header-logo" alt="Homepage" />
+          </a>
+        </Link>
 
         <button
           onClick={() => setIsMenuExpanded(!isMenuExpanded)}
@@ -84,7 +89,7 @@ function Header () {
         >
           <FiMenu size={28} />
         </button>
-        
+
         <nav id="menu" className={`menu ${isMenuExpanded ? 'show' : ''}`}>
           <div className="menu-header">
             <button
@@ -98,9 +103,9 @@ function Header () {
           </div>
 
           <div className="menu-body">
-          
+
             <ul>
-            
+
               { sections.map((section, index) => (
                 <li key={index}>
                   <a href={`#${section.toLowerCase()}`}>
@@ -108,7 +113,7 @@ function Header () {
                   </a>
                 </li>
               ))}
-            
+
             </ul>
 
             <ul>

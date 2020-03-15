@@ -17,7 +17,6 @@ function Project ({
   const { t } = useTranslation()
 
   useEffect(() => {
-
     const localStars = JSON.parse(localStorage.getItem(slug))
     if (localStars && (localStars.date === new Date().getHours())) {
       setStars(localStars.stars)
@@ -39,7 +38,7 @@ function Project ({
   const techStack = stack.map((tech, index) => (
     <img
       src={`/logos/${tech}.svg`}
-      alt={`${tech}`}
+      alt={tech}
       title={tech}
       key={index}
     />

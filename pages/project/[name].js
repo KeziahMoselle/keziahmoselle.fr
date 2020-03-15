@@ -15,6 +15,10 @@ export default ({ project }) => {
       </Head>
 
       <Layout>
+        <div className="page-title">
+          <h1>Case Study</h1>
+        </div>
+
         <Project {...project} />
       </Layout>
     </Fragment>

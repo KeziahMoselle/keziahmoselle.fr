@@ -77,12 +77,11 @@ function Hero () {
           { t('CV') }
         </a>
 
-        <div className="circle"></div>
         <animated.div style={{
-          backgroundColor: color,
-          transform: x.interpolate(x => `translateX(${x}px)`)
+          backgroundColor: color
         }} className="circle animated" onMouseMove={updateGradient}></animated.div>
       </div>
+
       <animated.div style={{
         transform: angle.interpolate(angle => `skewX(-${angle}deg)`)
       }} className="circle overlap"></animated.div>

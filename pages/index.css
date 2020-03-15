@@ -1306,14 +1306,61 @@ nav.show {
  * Project Case Studies
  *
  */
+.page-title {
+  text-align: center;
+}
+
+.page-title > h1 {
+  font-size: 3.5rem;
+}
 
 .case-study {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 32px auto 128px auto;
 }
 
-.case-study > img {
+.case-study-header {
+  margin: 0 32px;
+  text-align: center;
+}
+
+.case-study-header::after {
+  content: '';
+  border: 1px solid #eeeeee;
+  display: inline-block;
+  width: 70%;
+  margin: 40px 0px 20px 0px;
+}
+
+.case-study-header > img {
   width: 100%;
+  border-radius: 8px;
+}
+
+.case-study-header h3 {
+  opacity: 0.8;
+  margin: 8px 0 16px 0;
+}
+
+.case-study-header .tags {
+  margin-bottom: 24px;
+}
+
+.case-study-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.case-study-info img {
+  height: 32px;
+  width: auto;
+  margin-left: 6px;
+}
+
+.case-study-body {
+  margin: 32px 32px 0 32px;
+  font-size: 1.2rem;
 }
 
 
