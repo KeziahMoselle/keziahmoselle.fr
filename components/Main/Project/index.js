@@ -7,6 +7,13 @@ import {
   GoCode,
   GoRepo
 } from 'react-icons/go'
+import {
+  MdFiberManualRecord,
+  MdDateRange
+} from 'react-icons/md'
+import {
+  IoMdPricetag
+} from 'react-icons/io'
 import Icon from '../../Icon'
 import { useTranslation } from 'react-i18next'
 import ReactMarkdown from 'react-markdown'
@@ -29,12 +36,23 @@ export default function Project ({
     <div className="card">
       <div className="card-header">
         <GoRepo size={32} />
-        <h4>Project status</h4>
+        <h4>Project</h4>
       </div>
 
       <div className="card-body">
         <div className="card-info">
+          <Icon icon={<MdFiberManualRecord size={28} fill="#20e289" />} name="Status" />
+          <span>Released</span>
+        </div>
 
+        <div className="card-info">
+          <Icon icon={<MdDateRange size={28} />} name="Created date" />
+          <span>{ data.date }</span>
+        </div>
+
+        <div className="card-info">
+          <Icon icon={<IoMdPricetag size={28} />} name="Version" />
+          <span>1.0.0</span>
         </div>
       </div>
     </div>
@@ -86,6 +104,7 @@ export default function Project ({
               title={tech}
               key={index}
             />
+            <span>{ tech }</span>
           </div>
         ))}
       </div>

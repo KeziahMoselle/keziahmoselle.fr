@@ -298,6 +298,10 @@ svg {
   width: 80px;
 }
 
+.card .card-info span:last-child {
+  margin-top: 8px;
+}
+
 
 /**
  *
@@ -1336,18 +1340,6 @@ nav.show {
   font-size: 3.5rem;
 }
 
-@media screen and (max-width: 1179px) {
-  .case-study-info > * {
-    width: 450px;
-  }
-}
-
-@media screen and (max-width: 930) {
-  .case-study-info > * {
-    width: 500px;
-  }
-}
-
 .case-study {
   max-width: 1200px;
   margin: 32px auto 128px auto;
@@ -1389,7 +1381,7 @@ nav.show {
 
 .case-study-info > * {
   margin: 16px;
-  width: 400px;
+  width: 344px;
 }
 
 .case-study-info img {
@@ -1399,8 +1391,25 @@ nav.show {
 }
 
 .case-study-body {
-  margin: 32px 32px 0 32px;
+  margin: 32px auto;
   font-size: 1.2rem;
+  max-width: 800px;
+}
+
+@media screen and (max-width: 1200px) {
+  .case-study-info > * {
+    width: 450px;
+  }
+
+  .case-study-body {
+    margin: 32px;
+  }
+}
+
+@media screen and (max-width: 930) {
+  .case-study-info > * {
+    max-width: 500px;
+  }
 }
 
 
