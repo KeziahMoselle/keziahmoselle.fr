@@ -5,7 +5,8 @@ import {
   GoGitCommit,
   GoClock,
   GoCode,
-  GoRepo
+  GoRepo,
+  GoGlobe
 } from 'react-icons/go'
 import {
   MdFiberManualRecord,
@@ -26,13 +27,36 @@ export default function Project ({
 }) {
   const { t } = useTranslation()
 
-  console.log(arguments)
-
   const tags = data.tags.map((tag, index) => (
     <span key={index} className="chip-inline">{ tag }</span>
   ))
 
-  const InfoCard = (
+  const WebsiteCard = (
+    <div className="card small">
+      <div className="card-header">
+        <GoGlobe size={32} />
+        <h4>Website</h4>
+      </div>
+
+      <div className="card-body">
+        <a
+          href={data.url}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          <img src="/thumbnails/ribbon.jpg" alt="" />
+          <button
+            className="btn white rounded focused absolute-btn"
+            tabIndex="-1"
+          >
+            { t('seeWebsite') }
+          </button>
+        </a>
+      </div>
+    </div>
+  )
+
+  const ProjectCard = (
     <div className="card">
       <div className="card-header">
         <GoRepo size={32} />
@@ -117,9 +141,18 @@ export default function Project ({
         <h2>{ data.title }</h2>
         <h3>{ t(`projects.${data.title}`) }</h3>
         <p className="tags">{ tags }</p>
-        <img src={`/thumbnails/${slug}.jpg`} />
+        <a
+          href={data.url}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          <img src={`/thumbnails/${slug}.jpg`} alt={`${data.title} link to website`} />
+        </a>
+
+        { WebsiteCard }
+
         <div className="case-study-info">
-          { InfoCard }
+          { ProjectCard }
 
           { GitHubCard }
 

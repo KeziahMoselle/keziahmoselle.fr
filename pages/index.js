@@ -5,7 +5,7 @@ import matter from 'gray-matter'
 import Layout from '../components/Layout'
 import { Main } from '../components/Main'
 
-export default function Index(props) {
+export default function Index (props) {
   return (
     <Fragment>
       <Head>
@@ -18,24 +18,22 @@ export default function Index(props) {
   )
 }
 
-export function getStaticProps() {
+export function getStaticProps () {
   const projects = (context => {
     const keys = context.keys()
 
     const values = keys.map(context)
 
     const data = keys.map((key, index) => {
-    const slug = key
-      .replace(/^.*[\\\/]/, '')
-      .split('.')
-      .slice(0, -1)
-      .join('.')
+      const slug = key
+        .replace(/^.*[\\\/]/, '')
+        .split('.')
+        .slice(0, -1)
+        .join('.')
 
       const value = values[index]
 
       const document = matter(value.default)
-
-      console.log(document)
 
       return {
         slug,
@@ -45,8 +43,6 @@ export function getStaticProps() {
 
     return data
   })(require.context('../content/projects', true, /\.md$/))
-
-  console.log(projects)
 
   return {
     props: {

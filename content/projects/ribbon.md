@@ -1,13 +1,14 @@
 ---
 title: Ribbon
+date: '2020'
+github: KeziahMoselle/ribbon
+url: https://github.com/KeziahMoselle/ribbon
 tags:
   - UI/UX
   - Front-End
   - Mobile
   - API
   - OAuth
-date: '2020'
-github: KeziahMoselle/ribbon
 stack:
   - reactjs
   - reactnative

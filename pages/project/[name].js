@@ -36,6 +36,7 @@ export async function getStaticProps(context) {
     .toLowerCase()
     .replace(/ /g, '-')
 
+
   const project = {
     name: data.title,
     slug,

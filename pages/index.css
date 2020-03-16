@@ -129,6 +129,28 @@ svg {
   user-select: none;
 }
 
+.card.small {
+  padding: 0;
+}
+
+.card.small .card-header {
+  margin-bottom: 0;
+  padding: 12px 32px;
+}
+
+.card.small .card-body {
+  height: 200px;
+  position: relative;
+}
+
+.card.small img {
+  margin: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
 
 /**
  *
@@ -552,6 +574,10 @@ a {
 }
 
 .btn.white:focus {
+  box-shadow: 0 0 0 0.2rem var(--accent);
+}
+
+.btn.focused {
   box-shadow: 0 0 0 0.2rem var(--accent);
 }
 
@@ -1358,7 +1384,12 @@ nav.show {
   margin: 40px 0px 20px 0px;
 }
 
-.case-study-header > img {
+.case-study-header > a {
+  display: flex;
+  border-radius: 8px;
+}
+
+.case-study-header > a img {
   width: 100%;
   border-radius: 8px;
 }
@@ -1388,6 +1419,34 @@ nav.show {
   height: 32px;
   width: auto;
   margin-left: 6px;
+}
+
+.case-study .card.small {
+  max-width: 500px;
+  margin: 24px auto 0 auto;
+}
+
+.case-study .card.small .card-body {
+  border-radius: 8px;
+}
+
+.case-study .card.small .card-body:focus-within {
+  box-shadow: 0 0 0 0.2rem var(--accent);
+}
+
+.case-study .card.small .card-body > a {
+  border-radius: 8px;
+}
+
+.case-study .card.small img {
+  filter: brightness(50%);
+}
+
+.case-study .card .absolute-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .case-study-body {

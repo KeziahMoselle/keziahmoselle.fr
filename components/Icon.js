@@ -8,6 +8,8 @@ function Icon ({ icon, name, href }) {
           className="talk-link"
           href={href}
           aria-label={name}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
         >
           { icon }
         </a>
