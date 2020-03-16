@@ -246,7 +246,7 @@ svg {
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
-  transition: box-shadow 0.1s;
+  transition: box-shadow 0.3s;
 }
 
 .card:hover {
@@ -274,6 +274,28 @@ svg {
     transform: translateX(-50%);
     bottom: -28px;
   }
+}
+
+.card .card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.card .card-header > svg {
+  margin-right: 16px;
+}
+
+.card .card-body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card .card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
 }
 
 
@@ -1314,6 +1336,18 @@ nav.show {
   font-size: 3.5rem;
 }
 
+@media screen and (max-width: 1179px) {
+  .case-study-info > * {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 930) {
+  .case-study-info > * {
+    width: 500px;
+  }
+}
+
 .case-study {
   max-width: 1200px;
   margin: 32px auto 128px auto;
@@ -1349,7 +1383,13 @@ nav.show {
 .case-study-info {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 16px;
+}
+
+.case-study-info > * {
+  margin: 16px;
+  width: 400px;
 }
 
 .case-study-info img {
