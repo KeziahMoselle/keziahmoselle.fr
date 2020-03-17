@@ -12,4 +12,4 @@ stack:
   - vuetify
 ---
 
-Export GitHub Stars
+Brain is the seed of intelligence something incredible is waiting to be known.
