@@ -1,4 +1,5 @@
 const axios = require('axios')
+const mailgun = require('./utils/mail')
 
 exports.handler = async (event, context) => {
   /* Check method */
@@ -25,7 +26,42 @@ exports.handler = async (event, context) => {
 
   /* Send */
 
-  const embed = {
+  const sendEmail = mailgun.messages().send({
+    from: email,
+    to: 'naty.moselle@gmail.com',
+    subject: `[keziahmoselle.fr] ${email} vous a envoyé un message`,
+    text: message,
+    html: `<p>${message}</p>`
+  })
+
+  const sendEmbed = axios({
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    url: process.env.DISCORD_WEBHOOK_URL,
+    data: generateEmbed(email, message)
+  })
+
+  const results = await Promise.allSettled([sendEmail, sendEmbed])
+
+  const response = {
+    statusCode: 200,
+    body: 'Success'
+  }
+
+  for (const result of results) {
+    if (result.status === 'rejected') {
+      response.statusCode = 500
+      response.body = 'Error'
+    }
+  }
+
+  return response
+}
+
+function generateEmbed (email, message) {
+  return {
     content: 'keziahmoselle.fr',
     embeds: [
       {
@@ -46,19 +82,5 @@ exports.handler = async (event, context) => {
         ]
       }
     ]
-  }
-
-  const response = await axios({
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    url: process.env.DISCORD_WEBHOOK_URL,
-    data: embed
-  })
-
-  return {
-    statusCode: response.status,
-    body: response.statusText
   }
 }
