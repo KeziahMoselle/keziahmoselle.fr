@@ -1,0 +1,137 @@
+import React from 'react'
+import {
+  GoMarkGithub,
+  GoRepoForked,
+  GoGitCommit,
+  GoClock,
+  GoCode,
+  GoRepo,
+  GoGlobe
+} from 'react-icons/go'
+import {
+  MdFiberManualRecord,
+  MdDateRange
+} from 'react-icons/md'
+import { IoMdPricetag } from 'react-icons/io'
+import { FiExternalLink } from 'react-icons/fi'
+import Icon from '../../Icon'
+import { useTranslation } from 'react-i18next'
+import ReactMarkdown from 'react-markdown'
+
+export default function Project ({
+  name,
+  slug,
+  content,
+  data
+}) {
+  const { t } = useTranslation()
+
+  const tags = data.tags.map((tag, index) => (
+    <span key={index} className="chip-inline">{ tag }</span>
+  ))
+
+  const GitHubCard = (
+    <div className="card">
+      <div className="card-header">
+        <GoMarkGithub size={32} />
+        <h4>GitHub</h4>
+      </div>
+
+      <div className="card-body">
+        <div className="card-info">
+          <Icon icon={<GoGitCommit size={28} />} name="Commits" />
+          <span>300</span>
+        </div>
+
+        <div className="card-info">
+          <Icon icon={<GoRepoForked size={28} />} name="Forks" />
+          <span>14</span>
+        </div>
+
+        <div className="card-info">
+          <Icon icon={<GoClock size={28} />} name="Last Activity" />
+
+          <span>2 days ago</span>
+        </div>
+      </div>
+    </div>
+  )
+
+  const CodeCard = (
+    <div className="card" style={{
+      boxShadow: `rgb(0, 122, 204) 0px 5px 0px 0px inset,
+                    0 4px 4px rgba(0, 0, 0, 0.12)`
+    }}>
+      <div className="card-header">
+        <GoCode size={32} />
+        <h4>Code</h4>
+      </div>
+
+      <div className="card-body">
+        { data.stack.map((tech, index) => (
+          <div className="card-info">
+            <img
+              src={`/logos/${tech}.svg`}
+              alt={tech}
+              title={tech}
+              key={index}
+            />
+            <span>{ tech }</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+
+  return (
+    <article className="case-study">
+      <div className="case-study-header">
+        <h2>{ data.title }</h2>
+        <h3>{ t(`projects.${data.title}`) }</h3>
+        <p className="tags">{ tags }</p>
+        <div className="case-study-thumbnail">
+          <a
+            href={data.url}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
+            <img src={`/thumbnails/${slug}.jpg`} alt={`${data.title} link to website`} />
+          </a>
+          <a
+            className="btn white bordered"
+            href={data.url}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
+            { t('viewProject') }
+            <FiExternalLink className="right" />
+          </a>
+        </div>
+
+        <div className="case-study-info">
+
+          <span>
+            <Icon icon={<MdFiberManualRecord size={16} fill="#20e289" />} name="Status" />
+            Released
+          </span>
+
+          <span>
+            <Icon icon={<MdDateRange size={16} />} name="Created date" />
+            { data.date }
+          </span>
+
+          <span>
+            <Icon icon={<IoMdPricetag size={16} />} name="Version" />
+            1.0.0
+          </span>
+        </div>
+      </div>
+
+      <ReactMarkdown
+        source={content}
+        className="case-study-body"
+        escapeHtml={false}
+      />
+    </article>
+  )
+}

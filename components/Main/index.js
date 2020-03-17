@@ -16,16 +16,16 @@ export const sections = [
   'Formations'
 ]
 
-export function Main () {
+export function Main ({ projects }) {
   return (
-    <main>
+    <React.Fragment>
       <Hero />
-      <Projects />
+      <Projects projects={projects} />
       <Skills />
       <Experience />
       <Achievements />
       <Talks />
       <Formations />
-    </main>
+    </React.Fragment>
   )
 }

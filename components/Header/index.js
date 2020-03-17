@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { FiMenu, FiX } from 'react-icons/fi'
 import { useTranslation } from 'react-i18next'
 import { useWindowScroll } from 'react-use'
@@ -37,18 +38,20 @@ function Header () {
   return (
     <div className={`sticky-header ${isStickied}`}>
       <header>
-        <a className="left-logo" href="https://keziahmoselle.fr/">
-          <img
-            src="/static/icons/logo.svg"
-            alt="Homepage"
-          />
-        </a>
+        <Link href="/">
+          <a className="left-logo">
+            <img
+              src="/icons/logo.svg"
+              alt="Homepage"
+            />
+          </a>
+        </Link>
 
         <ul className="appear-on-scroll">
           <li>
             <button onClick={handleTranslating}>
               <img
-                src="/static/icons/translate.svg"
+                src="/icons/translate.svg"
                 alt={`${i18n.language === 'fr' ? 'Translate to english' : 'Traduire en français'}`}
               />
             </button>
@@ -61,7 +64,7 @@ function Header () {
               target="_blank"
               rel="nofollow noopener noreferrer"
             >
-              <img src="/static/logos/github.svg" alt="KeziahMoselle's GitHub profile" />
+              <img src="/logos/github.svg" alt="KeziahMoselle's GitHub profile" />
             </a>
           </li>
 
@@ -72,9 +75,11 @@ function Header () {
           </li>
         </ul>
 
-        <a className="middle-logo" href="https://keziahmoselle.fr/">
-          <img src="/static/icons/logo.svg" className="header-logo" alt="Homepage" />
-        </a>
+        <Link href="/">
+          <a className="middle-logo">
+            <img src="/icons/logo.svg" className="header-logo" alt="Homepage" />
+          </a>
+        </Link>
 
         <button
           onClick={() => setIsMenuExpanded(!isMenuExpanded)}
@@ -84,7 +89,7 @@ function Header () {
         >
           <FiMenu size={28} />
         </button>
-        
+
         <nav id="menu" className={`menu ${isMenuExpanded ? 'show' : ''}`}>
           <div className="menu-header">
             <button
@@ -98,9 +103,9 @@ function Header () {
           </div>
 
           <div className="menu-body">
-          
+
             <ul>
-            
+
               { sections.map((section, index) => (
                 <li key={index}>
                   <a href={`#${section.toLowerCase()}`}>
@@ -108,7 +113,7 @@ function Header () {
                   </a>
                 </li>
               ))}
-            
+
             </ul>
 
             <ul>
@@ -127,13 +132,13 @@ function Header () {
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                 >
-                  <img src="/static/logos/github.svg" alt="My GitHub profile" />
+                  <img src="/logos/github.svg" alt="My GitHub profile" />
                 </a>
               </li>
               <li>
                 <button onClick={handleTranslating}>
                   <img
-                    src="/static/icons/translate.svg"
+                    src="/icons/translate.svg"
                     alt={`${i18n.language === 'fr' ? 'Translate to english' : 'Traduire en français'}`}
                   />
                 </button>

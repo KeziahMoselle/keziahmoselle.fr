@@ -1,4 +1,9 @@
-const withCSS = require('@zeit/next-css')
-const withPurgeCss = require('next-purgecss')
-
-module.exports = withCSS(withPurgeCss())
+module.exports = {
+  webpack: function(config) {
+    config.module.rules.push({
+      test: /\.md$/,
+      use: 'raw-loader'
+    })
+    return config
+  }
+}

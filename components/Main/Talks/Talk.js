@@ -2,6 +2,7 @@ import React from 'react'
 import { FiYoutube } from 'react-icons/fi'
 import { MdSlideshow } from 'react-icons/md'
 import { FaMeetup } from 'react-icons/fa'
+import Icon from '../../Icon'
 
 function Talk ({
   title,
@@ -20,13 +21,13 @@ function Talk ({
     <div className="talk card inverted">
 
       <div className="talk-header">
-        <a 
+        <a
           href={groupUrl}
           target="_blank"
           rel="nofollow noopener noreferrer"
           className="img-container"
         >
-          <img src="/static/logos/vuestrasbourg.png" alt={group} />
+          <img src="/logos/vuestrasbourg.png" alt={group} />
         </a>
 
         <time dateTime={date}>{ intl.format(new Date(date)) }</time>
@@ -38,41 +39,35 @@ function Talk ({
 
       <div className="talk-footer">
         <address>{ at }</address>
-        
+
         <ul>
           { video && (
             <li>
-              <a
+              <Icon
                 className="talk-link"
                 href={video}
-                aria-label="Video"
-              >
-                <FiYoutube className="video" size={26} />
-              </a>
+                icon={<FiYoutube className="video" size={26} />}
+                name="Video" />
             </li>
           )}
 
           { slides && (
             <li>
-              <a
+              <Icon
                 className="talk-link"
                 href={slides}
-                aria-label="Slides"
-              >
-                <MdSlideshow className="slides" size={26} />
-              </a>
+                icon={<MdSlideshow className="slides" size={26} />}
+                name="Slides" />
             </li>
           )}
 
           { url && (
             <li>
-              <a
+              <Icon
                 className="talk-link"
                 href={url}
-                aria-label="Meetup"
-              >
-                <FaMeetup className="url" size={26} />
-              </a>
+                icon={<FaMeetup className="url" size={26} />}
+                name="Meetup" />
             </li>
           )}
         </ul>

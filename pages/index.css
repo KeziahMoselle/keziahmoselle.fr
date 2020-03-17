@@ -9,8 +9,8 @@
   font-style: normal;
   font-weight: 400;
   src: local('Lato Regular'), local('Lato-Regular'),
-       url('/static/fonts/lato-v14-latin-regular.woff2') format('woff2'),
-       url('/static/fonts/lato-v14-latin-regular.woff') format('woff');
+       url('/fonts/lato-v14-latin-regular.woff2') format('woff2'),
+       url('/fonts/lato-v14-latin-regular.woff') format('woff');
 }
 
 @font-face {
@@ -18,8 +18,8 @@
   font-style: normal;
   font-weight: 700;
   src: local('Lato Bold'), local('Lato-Bold'),
-       url('/static/fonts/lato-v14-latin-700.woff2') format('woff2'),
-       url('/static/fonts/lato-v14-latin-700.woff') format('woff');
+       url('/fonts/lato-v14-latin-700.woff2') format('woff2'),
+       url('/fonts/lato-v14-latin-700.woff') format('woff');
 }
 
 @font-face {
@@ -27,8 +27,8 @@
   font-style: normal;
   font-weight: 900;
   src: local('Lato Black'), local('Lato-Black'),
-       url('/static/fonts/lato-v14-latin-900.woff2') format('woff2'),
-       url('/static/fonts/lato-v14-latin-900.woff') format('woff');
+       url('/fonts/lato-v14-latin-900.woff2') format('woff2'),
+       url('/fonts/lato-v14-latin-900.woff') format('woff');
 }
 
 @font-face {
@@ -36,8 +36,8 @@
   font-style: normal;
   font-weight: 900;
   src: local('Playfair Display Black'), local('PlayfairDisplay-Black'),
-       url('/static/fonts/playfair-display-v14-latin-900.woff2') format('woff2'),
-       url('/static/fonts/playfair-display-v14-latin-900.woff') format('woff');
+       url('/fonts/playfair-display-v14-latin-900.woff2') format('woff2'),
+       url('/fonts/playfair-display-v14-latin-900.woff') format('woff');
 }
 
 * {
@@ -58,7 +58,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   font-size: 17px;
-  border: 8px solid black;
 }
 
 body.no-scroll {
@@ -126,8 +125,34 @@ svg {
   transition: transform 0.3s ease;
 }
 
+.icon {
+  display: flex;
+}
+
 .btn, button, svg, img, header a {
   user-select: none;
+}
+
+.card.small {
+  padding: 0;
+}
+
+.card.small .card-header {
+  margin-bottom: 0;
+  padding: 12px 32px;
+}
+
+.card.small .card-body {
+  height: 200px;
+  position: relative;
+}
+
+.card.small img {
+  margin: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
 }
 
 
@@ -247,7 +272,7 @@ svg {
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
-  transition: box-shadow 0.1s;
+  transition: box-shadow 0.3s;
 }
 
 .card:hover {
@@ -275,6 +300,32 @@ svg {
     transform: translateX(-50%);
     bottom: -28px;
   }
+}
+
+.card .card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.card .card-header > svg {
+  margin-right: 16px;
+}
+
+.card .card-body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card .card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+
+.card .card-info span:last-child {
+  margin-top: 8px;
 }
 
 
@@ -527,6 +578,10 @@ a {
 }
 
 .btn.white:focus {
+  box-shadow: 0 0 0 0.2rem var(--accent);
+}
+
+.btn.focused {
   box-shadow: 0 0 0 0.2rem var(--accent);
 }
 
@@ -853,7 +908,7 @@ textarea {
 header {
   height: 64px;
   width: 100%;
-  padding: 32px;
+  padding: 0 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -868,7 +923,7 @@ header button {
 }
 
 header a {
-  display: inline-block;
+  display: inline-flex;
 }
 
 header img {
@@ -1300,6 +1355,89 @@ nav.show {
   height: 36px;
   width: auto;
   margin-left: 6px;
+}
+
+/**
+ *
+ * Project Case Studies
+ *
+ */
+.page-title {
+  text-align: center;
+}
+
+.page-title > h1 {
+  font-size: 3.5rem;
+}
+
+.case-study {
+  max-width: 1200px;
+  margin: 32px auto 128px auto;
+}
+
+.case-study-header {
+  margin: 0 32px;
+  text-align: center;
+}
+
+.case-study-header::after {
+  content: '';
+  border: 1px solid #eeeeee;
+  display: inline-block;
+  width: 70%;
+  margin: 40px 0px 20px 0px;
+}
+
+.case-study-header h3 {
+  opacity: 0.8;
+  margin: 8px 0 16px 0;
+}
+
+.case-study-header .tags {
+  margin-bottom: 24px;
+}
+
+.case-study-thumbnail {
+  position: relative;
+}
+
+.case-study-thumbnail > a img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.case-study-thumbnail > a:first-of-type {
+  display: flex;
+  border-radius: 8px;
+}
+
+.case-study-thumbnail .btn {
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.case-study-info {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.case-study-info > span {
+  display: flex;
+  align-items: center;
+  margin: 8px 16px;
+  min-width: 75px;
+}
+
+.case-study-info svg {
+  margin-right: 4px;
+}
+
+.case-study-body {
+  margin: 32px auto;
+  font-size: 1.2rem;
+  max-width: 800px;
 }
 
 
