@@ -26,9 +26,9 @@ exports.handler = async (event, context) => {
   /* Send */
 
   try {
-    const response = await mailgun.messages().send({
+    await mailgun.messages().send({
       from: email,
-      to: 'naty.moselle@gmail.com',
+      to: process.env.EMAIL_VALANKA,
       subject: `[valanka] ${name} vous a envoyé un message`,
       text: message,
       html: `<p>${message}</p>`
@@ -36,12 +36,12 @@ exports.handler = async (event, context) => {
 
     return {
       statusCode: 200,
-      body: ''
+      body: 'Success'
     }
   } catch (error) {
     return {
       statusCode: 500,
-      body: ''
+      body: 'Error'
     }
   }
 }

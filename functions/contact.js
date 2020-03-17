@@ -28,7 +28,7 @@ exports.handler = async (event, context) => {
 
   const sendEmail = mailgun.messages().send({
     from: email,
-    to: 'naty.moselle@gmail.com',
+    to: process.env.MY_EMAIL_ADDRESS,
     subject: `[keziahmoselle.fr] ${email} vous a envoyé un message`,
     text: message,
     html: `<p>${message}</p>`
