@@ -125,6 +125,10 @@ svg {
   transition: transform 0.3s ease;
 }
 
+.icon {
+  display: flex;
+}
+
 .btn, button, svg, img, header a {
   user-select: none;
 }
@@ -1384,16 +1388,6 @@ nav.show {
   margin: 40px 0px 20px 0px;
 }
 
-.case-study-header > a {
-  display: flex;
-  border-radius: 8px;
-}
-
-.case-study-header > a img {
-  width: 100%;
-  border-radius: 8px;
-}
-
 .case-study-header h3 {
   opacity: 0.8;
   margin: 8px 0 16px 0;
@@ -1403,72 +1397,47 @@ nav.show {
   margin-bottom: 24px;
 }
 
+.case-study-thumbnail {
+  position: relative;
+}
+
+.case-study-thumbnail > a img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.case-study-thumbnail > a:first-of-type {
+  display: flex;
+  border-radius: 8px;
+}
+
+.case-study-thumbnail .btn {
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .case-study-info {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 16px;
+  justify-content: flex-start;
 }
 
-.case-study-info > * {
-  margin: 16px;
-  width: 344px;
+.case-study-info > span {
+  display: flex;
+  align-items: center;
+  margin: 8px 16px;
+  min-width: 75px;
 }
 
-.case-study-info img {
-  height: 32px;
-  width: auto;
-  margin-left: 6px;
-}
-
-.case-study .card.small {
-  max-width: 500px;
-  margin: 24px auto 0 auto;
-}
-
-.case-study .card.small .card-body {
-  border-radius: 8px;
-}
-
-.case-study .card.small .card-body:focus-within {
-  box-shadow: 0 0 0 0.2rem var(--accent);
-}
-
-.case-study .card.small .card-body > a {
-  border-radius: 8px;
-}
-
-.case-study .card.small img {
-  filter: brightness(50%);
-}
-
-.case-study .card .absolute-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.case-study-info svg {
+  margin-right: 4px;
 }
 
 .case-study-body {
   margin: 32px auto;
   font-size: 1.2rem;
   max-width: 800px;
-}
-
-@media screen and (max-width: 1200px) {
-  .case-study-info > * {
-    width: 450px;
-  }
-
-  .case-study-body {
-    margin: 32px;
-  }
-}
-
-@media screen and (max-width: 930) {
-  .case-study-info > * {
-    max-width: 500px;
-  }
 }
 
 

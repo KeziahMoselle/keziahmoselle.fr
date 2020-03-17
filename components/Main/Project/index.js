@@ -12,9 +12,8 @@ import {
   MdFiberManualRecord,
   MdDateRange
 } from 'react-icons/md'
-import {
-  IoMdPricetag
-} from 'react-icons/io'
+import { IoMdPricetag } from 'react-icons/io'
+import { FiExternalLink } from 'react-icons/fi'
 import Icon from '../../Icon'
 import { useTranslation } from 'react-i18next'
 import ReactMarkdown from 'react-markdown'
@@ -30,57 +29,6 @@ export default function Project ({
   const tags = data.tags.map((tag, index) => (
     <span key={index} className="chip-inline">{ tag }</span>
   ))
-
-  const WebsiteCard = (
-    <div className="card small">
-      <div className="card-header">
-        <GoGlobe size={32} />
-        <h4>Website</h4>
-      </div>
-
-      <div className="card-body">
-        <a
-          href={data.url}
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-        >
-          <img src="/thumbnails/ribbon.jpg" alt="" />
-          <button
-            className="btn white rounded focused absolute-btn"
-            tabIndex="-1"
-          >
-            { t('seeWebsite') }
-          </button>
-        </a>
-      </div>
-    </div>
-  )
-
-  const ProjectCard = (
-    <div className="card">
-      <div className="card-header">
-        <GoRepo size={32} />
-        <h4>Project</h4>
-      </div>
-
-      <div className="card-body">
-        <div className="card-info">
-          <Icon icon={<MdFiberManualRecord size={28} fill="#20e289" />} name="Status" />
-          <span>Released</span>
-        </div>
-
-        <div className="card-info">
-          <Icon icon={<MdDateRange size={28} />} name="Created date" />
-          <span>{ data.date }</span>
-        </div>
-
-        <div className="card-info">
-          <Icon icon={<IoMdPricetag size={28} />} name="Version" />
-          <span>1.0.0</span>
-        </div>
-      </div>
-    </div>
-  )
 
   const GitHubCard = (
     <div className="card">
@@ -141,22 +89,41 @@ export default function Project ({
         <h2>{ data.title }</h2>
         <h3>{ t(`projects.${data.title}`) }</h3>
         <p className="tags">{ tags }</p>
-        <a
-          href={data.url}
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-        >
-          <img src={`/thumbnails/${slug}.jpg`} alt={`${data.title} link to website`} />
-        </a>
-
-        { WebsiteCard }
+        <div className="case-study-thumbnail">
+          <a
+            href={data.url}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
+            <img src={`/thumbnails/${slug}.jpg`} alt={`${data.title} link to website`} />
+          </a>
+          <a
+            className="btn white bordered"
+            href={data.url}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
+            { t('viewProject') }
+            <FiExternalLink className="right" />
+          </a>
+        </div>
 
         <div className="case-study-info">
-          { ProjectCard }
 
-          { GitHubCard }
+          <span>
+            <Icon icon={<MdFiberManualRecord size={16} fill="#20e289" />} name="Status" />
+            Released
+          </span>
 
-          { CodeCard }
+          <span>
+            <Icon icon={<MdDateRange size={16} />} name="Created date" />
+            { data.date }
+          </span>
+
+          <span>
+            <Icon icon={<IoMdPricetag size={16} />} name="Version" />
+            1.0.0
+          </span>
         </div>
       </div>
 

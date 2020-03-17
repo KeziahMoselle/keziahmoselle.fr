@@ -43,19 +43,31 @@ function Talk ({
         <ul>
           { video && (
             <li>
-              <Icon href={video} icon={<FiYoutube className="video" size={26} />} name="Video" />
+              <Icon
+                className="talk-link"
+                href={video}
+                icon={<FiYoutube className="video" size={26} />}
+                name="Video" />
             </li>
           )}
 
           { slides && (
             <li>
-              <Icon href={slides} icon={<MdSlideshow className="slides" size={26} />} name="Slides" />
+              <Icon
+                className="talk-link"
+                href={slides}
+                icon={<MdSlideshow className="slides" size={26} />}
+                name="Slides" />
             </li>
           )}
 
           { url && (
             <li>
-              <Icon href={url} icon={<FaMeetup className="url" size={26} />} name="Meetup" />
+              <Icon
+                className="talk-link"
+                href={url}
+                icon={<FaMeetup className="url" size={26} />}
+                name="Meetup" />
             </li>
           )}
         </ul>
