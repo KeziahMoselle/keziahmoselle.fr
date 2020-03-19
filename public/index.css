@@ -1201,6 +1201,10 @@ nav.show {
   border-radius: 6px;
 }
 
+.project > a:hover {
+  box-shadow: 0 0 0 0.2rem var(--accent);
+}
+
 .project picture {
   display: flex;
 }
@@ -1627,6 +1631,10 @@ a.pill span {
 .achievement-thumbnail-container {
   overflow: hidden;
   border-radius: 8px;
+}
+
+.achievement-thumbnail-container:hover {
+  box-shadow: 0 0 0 0.2rem var(--accent);
 }
 
 .achievement-thumbnail {

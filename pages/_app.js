@@ -1,9 +1,9 @@
 import App from 'next/app'
 
 import '../lang/i18n'
-import './index.css'
+import '../public/index.css'
 
-function MyApp({ Component, pageProps }) {
+function MyApp ({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 
