@@ -6,8 +6,10 @@ import Formations from './Formations'
 import Projects from './Projects'
 import Achievements from './Achievements'
 import Talks from './Talks'
+import About from './About'
 
 export const sections = [
+  'About',
   'Projects',
   'Skills',
   'Experience',
@@ -20,6 +22,7 @@ export function Main ({ projects }) {
   return (
     <React.Fragment>
       <Hero />
+      <About />
       <Projects projects={projects} />
       <Skills />
       <Experience />
