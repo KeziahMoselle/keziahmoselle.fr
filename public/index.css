@@ -634,50 +634,6 @@ ul {
   flex-wrap: wrap;
 }
 
-/* CIRCLE */
-
-.circle {
-  position: absolute;
-  top: 0;
-  height: 320px;
-  width: 320px;
-  border: 4px solid black;
-  border-radius: 50%;
-}
-
-@media only screen and (max-width: 1200px) {
-  .circle {
-    display: none;
-  }
-}
-
-.circle.animated {
-  overflow: hidden;
-}
-
-.circle.animated::before {
-  --size: 0;
-  content: '';
-  position: absolute;
-  left: var(--x);
-  top: var(--y);
-  width: var(--size);
-  height: var(--size);
-  background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.1), transparent);
-  transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease;
-}
-
-.circle.animated:hover::before {
-  --size: 640px;
-}
-
-.circle.overlap {
-  border: 10px solid rgba(0,0,0,.1);
-  border-top: none;
-  pointer-events: none;
-}
-
 
 /**
  *
@@ -1026,12 +982,6 @@ nav.show {
  *
  */
 
-.experience .circle {
-  top: -15vh;
-  left: -30vw;
-  background-color: black;
-}
-
 .experience h4 {
   margin-bottom: 8px;
 }
@@ -1082,12 +1032,6 @@ nav.show {
 .formations .block h5 {
   color: rgba(0, 0, 0, 0.7);
   margin-bottom: 4px;
-}
-
-.formations .circle {
-  top: 100px;
-  right: -100px;
-  border: none;
 }
 
 .formations .circle.gradient {
@@ -1162,10 +1106,52 @@ nav.show {
 }
 
 
-/* CIRCLE */
+/* PLANET and CIRCLE */
 
-.hero .circle {
+.planet > * {
+  position: absolute;
+  top: 0;
   right: 0;
+}
+
+.planet .circle {
+  height: 320px;
+  width: 320px;
+  border-radius: 50%;
+}
+
+.planet .overlap {
+  border: 10px solid rgba(0,0,0,.1);
+  border-top: none;
+  pointer-events: none;
+}
+
+.circle.animated {
+  overflow: hidden;
+  background-image: linear-gradient(180deg,#000 0,#363636);
+}
+
+.circle.animated::before {
+  --size: 0;
+  content: "";
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side,hsla(0,0%,100%,.1),transparent);
+  transform: translate(-50%,-50%);
+  transition: width .2s ease,height .2s ease;
+}
+
+.circle.animated:hover::before {
+  --size: 640px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .planet {
+    display: none;
+  }
 }
 
 

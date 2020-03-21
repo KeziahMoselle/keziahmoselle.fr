@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import Chip from './Chip'
+import Planet from '../../Planet'
 
 const experiences = [
   {
@@ -69,7 +70,13 @@ function Experience () {
         </div>
       ))}
 
-      <div className="circle"></div>
+      <Planet
+        style={{
+          position: 'absolute',
+          top: '-15vh',
+          left: '-30vw'
+        }}
+      />
     </section>
   )
 }
