@@ -697,7 +697,7 @@ footer .container {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 0;
+  margin: 64px auto 0 auto;
 }
 
 footer .container > p:first-of-type {
@@ -729,7 +729,7 @@ footer form {
 }
 
 @media only screen and (min-width: 700px) {
-  footer form {
+  footer .container {
     width: 560px;
   }
 }
@@ -1779,8 +1779,8 @@ a.pill span {
   display: flex;
 }
 
-.talk-footer li {
-  margin: 0 12px;
+.talk-footer li > a {
+  padding: 0 12px;
 }
 
 .talk-footer li svg {
