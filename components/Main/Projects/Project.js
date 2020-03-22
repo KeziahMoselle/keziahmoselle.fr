@@ -39,7 +39,6 @@ function Project ({
     <img
       src={`/logos/${tech}.svg`}
       alt={tech}
-      title={tech}
       key={index}
     />
   ))
@@ -56,16 +55,6 @@ function Project ({
         <h4 className="grey">{ t(`projects.${title}`) }</h4>
         <div className="project-header-supplementary">
           <div>{ tagsChips }</div>
-          <a
-            href={`https://github.com/${github}/stargazers`}
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            className="chip-inline inverted hide-on-mobile"
-            title="Click to see GitHub stargazers"
-          >
-            { stars }
-            <GoStar />
-          </a>
         </div>
       </div>
 
@@ -92,7 +81,7 @@ function Project ({
               <img
                 className="project-thumbnail"
                 src={`/thumbnails/${slug}.jpg`}
-                alt={`${title} thumbnail`}
+                alt=""
               >
               </img>
             </picture>

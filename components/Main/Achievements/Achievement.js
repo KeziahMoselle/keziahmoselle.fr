@@ -23,30 +23,32 @@ function Achievement ({
       className="achievement"
       aria-expanded={isExtended}
     >
-    
-    { won && (
-      <div className="won-overlap">
-        <div className="badge">🏆</div>
-      </div>
-    )}
 
-    <button
-      className="expanded-overlap"
-      onClick={toggleExpanded}
-    >
-      <FiChevronDown size={24} />
-    </button>
+      { won && (
+        <div className="won-overlap">
+          <div className="badge">🏆</div>
+        </div>
+      )}
 
-    <div className="achievement-thumbnail-container">
-      <div
-      className="achievement-thumbnail"
-      style={{
-        backgroundImage: `url(/thumbnails/${thumbnail})`
-      }}
-      onClick={toggleExpanded}
+      <button
+        className="expanded-overlap"
+        onClick={toggleExpanded}
+        tabIndex="-1"
+        aria-label="Open achievement card"
       >
+        <FiChevronDown size={24} />
+      </button>
+
+      <div className="achievement-thumbnail-container">
+        <div
+          className="achievement-thumbnail"
+          style={{
+            backgroundImage: `url(/thumbnails/${thumbnail})`
+          }}
+          onClick={toggleExpanded}
+        >
+        </div>
       </div>
-    </div>
 
       <animated.div
         className="card achievement-body"

@@ -30,7 +30,8 @@ const achievementsList = [
     name: 'Climate Fixathon',
     thumbnail: 'climate_fixathon.jpg',
     content: 'The world\'s first online hackathon to help fix the climate',
-    year: '2019'
+    year: '2019',
+    link: 'https://github.com/purpose-fixathon'
   },
   {
     name: 'GitHub Education #PinsToWin',
