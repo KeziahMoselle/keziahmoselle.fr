@@ -27,7 +27,7 @@ function Projects ({ projects }) {
         { bigProjects }
       </div>
 
-      <div className="grid">
+      <div className="projects-small grid">
         { smallProjects }
       </div>
     </section>

@@ -48,6 +48,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 125%;
 }
 
 body {
@@ -57,7 +58,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  font-size: 17px;
 }
 
 body.no-scroll {
@@ -425,6 +425,12 @@ a.chip-inline:hover {
   width: auto;
 }
 
+@media only screen and (max-width: 700px) {
+  .chip-inline {
+    font-size: 0.8rem;
+  }
+}
+
 
 
 /**
@@ -440,49 +446,26 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 h1 {
   font-family: 'Playfair Display';
-  line-height: 76px;
-  font-size: 76px;
-}
-
-/* MOBILE */
-@media only screen and (max-width: 500px) {
-  h1 {
-    font-size: 64px;
-  }
+  line-height: 4rem;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 32px;
-}
-
-footer h2 {
-  width: fit-content;
-  border-top: 4px solid var(--primary);
-  padding-top: 6px;
-}
-
-.container > h3 {
-  border-top: 4px solid var(--secondary);
-  padding-top: 6px;
-}
-
-@media only screen and (max-width: 600px) {
-  .container > h3 {
-    display: block;
-  }
+  font-size: 1.6rem;
+  letter-spacing: 1px;
 }
 
 h3 {
   display: inline-block;
-  font-size: 24px;
+  font-size: 1.3rem;
 }
 
 h4 {
-  font-size: 22px;
+  font-size: 1.2rem;
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 0.8rem;
 }
 
 h5 a {
@@ -506,6 +489,33 @@ h6 {
 .separator::before {
   content: '/';
   margin: 0 8px;
+}
+
+footer h2 {
+  width: fit-content;
+  border-top: 4px solid var(--primary);
+  padding-top: 6px;
+}
+
+.container > h3 {
+  border-top: 4px solid var(--secondary);
+  padding-top: 6px;
+}
+
+address, time {
+  font-size: 0.9rem;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .container > h3 {
+    display: block;
+  }
 }
 
 /**
@@ -1008,7 +1018,13 @@ nav.show {
   transition: box-shadow 0s;
 }
 
-.about article {}
+.about article .block {
+  display: block;
+}
+
+.about article .block p ~ p {
+  margin-top: 16px;
+}
 
 @media only screen and (max-width: 1200px) {
   .container.about {
@@ -1050,6 +1066,7 @@ nav.show {
 }
 
 .experience ul li {
+  font-size: 16px;
   margin-top: 6px;
 }
 
@@ -1103,9 +1120,9 @@ nav.show {
 }
 
 .hero p {
-  max-width: 500px;
+  max-width: 450px;
   word-break: break-word;
-  font-size: 18px;
+  font-size: 1em;
   margin-top: 16px;
   margin-bottom: 32px;
 }
@@ -1294,12 +1311,9 @@ nav.show {
   margin-bottom: 8px;
 }
 
-.project-header h3 {
-  margin-bottom: 4px;
-}
-
 .project-header h4 {
   margin-bottom: 10px;
+  font-size: 1rem;
 }
 
 .project-header-supplementary {
@@ -1312,7 +1326,7 @@ nav.show {
 .project-title h3 {
   font-size: 36px;
   font-weight: 900;
-  margin: 0.4rem 0 0.1em 0;
+  margin: 0.3rem 0 0.1rem 0;
   transition-delay: 0.2s;
 }
 
@@ -1322,9 +1336,15 @@ nav.show {
   font-weight: 600;
 }
 
+.project-title h3 {
+  font-size: 1.7rem;
+}
+
 .project-title h4 {
+  font-size: 1rem;
   margin-bottom: 0;
 }
+
 
 .project-thumbnail {
   position: relative;
@@ -1433,6 +1453,14 @@ nav.show {
   height: 36px;
   width: auto;
   margin-left: 6px;
+}
+
+.projects-small h3 {
+  font-size: 1.3rem;
+}
+
+.projects-small h4 {
+  font-size: 0.9rem;
 }
 
 /**
@@ -1658,7 +1686,7 @@ a.pill span {
 
 @media only screen and (min-width: 1200px) {
   .achievements-list {
-    grid-gap: 32px;
+    grid-gap: 12px;
   }
 
   .achievement-body .achievement-title {
@@ -1767,9 +1795,15 @@ a.pill span {
 .achievement-title h4 {
   text-align: center;
   margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.achievement p {
+  font-size: 0.9rem;
 }
 
 .badge {
+  font-size: 0.9rem;
   background-color: var(--primary);
   padding: 6px 12px;
   border-radius: 17px;

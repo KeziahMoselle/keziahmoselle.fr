@@ -20,10 +20,10 @@ function About () {
 
         <h3>{ t('about.title') }</h3>
 
-        <div className="block">
-          <p>
-            { t('about.description') }
-          </p>
+        <div
+          className="block"
+          dangerouslySetInnerHTML={{ __html: t('about.description') }}
+        >
         </div>
       </article>
     </section>

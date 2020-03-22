@@ -11,7 +11,7 @@
   "experience": "Expérience",
   "about": {
     "title": "À Propos",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "description": "<p>Je suis passionné par le <strong>développement front-end</strong> et le <strong>web design</strong>, étant sensibilisé à l'<strong>expérience utilisateur</strong> et l'<strong>accessibilité</strong> je développe des projets centré autour de l'<strong>Humain</strong>.</p> <p>Je suis également passionné par le monde de l'<strong>open-source</strong>, je suis contributeur de plusieurs projets (nodejs.org, romejs.dev, streaker...) et je suis également passionné par <strong>l'enseignement</strong> (talks, articles, mentoring).</p>"
   },
   "education": {
     "title": "Formations",
