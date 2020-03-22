@@ -9,10 +9,12 @@ function About () {
     <section id="about" className="container about">
       <article className="relative">
         <Planet
-          color="var(--secondary-dark)"
-          className="flowing"
+          isAnimated
+          hasBelt
+          beltClassName="crescent"
+          color="#0d0d0d"
           style={{
-            left: -60,
+            left: -105,
             top: '50%',
             transform: 'translateY(-50%)'
           }}

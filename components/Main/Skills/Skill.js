@@ -1,7 +1,8 @@
 import React from 'react'
+import toFilename from '../../utils/toFilename'
 
 function Skill ({ name }) {
-  const img = name.toLowerCase().replace(' ', '').replace('.', '')
+  const img = toFilename(name)
 
   return (
     <div className="skill">

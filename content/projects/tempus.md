@@ -7,8 +7,8 @@ tags:
   - UI/UX
   - Front-End
 stack:
-  - reactjs
-  - electronjs
+  - React.js
+  - Electron.js
 isBigProject: true
 ---
 

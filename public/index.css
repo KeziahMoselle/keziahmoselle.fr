@@ -1217,46 +1217,10 @@ nav.show {
   }
 }
 
-.flowing {
-  overflow: hidden;
-}
-
-.flowing::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle closest-side,hsla(0,0%,100%,.1),transparent);
-
-  transform: translate(-280px,-280px);
-  opacity: 1;
-
-  animation-name: color-flowing;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-@keyframes color-flowing {
-  50% {
-    transform: translate(280px, 280px);
-    opacity: 0;
-  }
-
-  51% {
-    opacity: 0;
-    transform: translate(-280px, -280px);
-  }
-
-  52% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(280px, 280px);
-  }
+.circle.overlap.crescent {
+  border: 10px solid rgba(255, 255, 255, 0.1);
+  border-top: none;
+  border-left: none;
 }
 
 
@@ -1663,7 +1627,9 @@ a.pill span {
 }
 
 .skill span {
-  font-weight: 700;
+  margin-top: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 

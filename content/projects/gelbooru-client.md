@@ -8,9 +8,9 @@ tags:
   - Front-End
   - API
 stack:
-  - javascript
-  - electronjs
-  - materialize
+  - JavaScript
+  - Electron.js
+  - Materialize
 ---
 
 Brain is the seed of intelligence something incredible is waiting to be known.

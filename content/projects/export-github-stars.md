@@ -8,7 +8,7 @@ tags:
   - Front-End
   - API
 stack:
-  - vuejs
+  - Vue.js
   - vuetify
 ---
 

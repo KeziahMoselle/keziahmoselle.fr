@@ -1,7 +1,14 @@
 import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 
-function Planet ({ color = 'black', style, hasBelt, isAnimated, className }) {
+function Planet ({
+  color = 'black',
+  style,
+  hasBelt,
+  isAnimated,
+  className,
+  beltClassName
+}) {
   const { angle } = useSpring({
     from: { angle: 0 },
     angle: 50
@@ -33,7 +40,7 @@ function Planet ({ color = 'black', style, hasBelt, isAnimated, className }) {
             position: 'absolute',
             ...style
           }}
-          className="circle overlap"
+          className={`circle overlap ${beltClassName || ''}`}
         >
         </animated.div>
       )}

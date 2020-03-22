@@ -10,9 +10,9 @@ tags:
   - API
   - OAuth
 stack:
-  - reactjs
-  - reactnative
-  - typescript
+  - React.js
+  - React Native
+  - TypeScript
 isBigProject: true
 ---
 

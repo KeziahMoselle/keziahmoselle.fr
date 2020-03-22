@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { GoStar } from 'react-icons/go'
+import toFilename from '../../utils/toFilename'
 
 function Project ({
   slug,
@@ -37,7 +38,7 @@ function Project ({
   /* Tech stack icons at the bottom of the thumbnail */
   const techStack = stack.map((tech, index) => (
     <img
-      src={`/logos/${tech}.svg`}
+      src={`/logos/${toFilename(tech)}.svg`}
       alt={tech}
       key={index}
     />
