@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 
-function Planet ({ color = 'black', style, hasBelt, isAnimated }) {
+function Planet ({ color = 'black', style, hasBelt, isAnimated, className }) {
   const { angle } = useSpring({
     from: { angle: 0 },
     angle: 50
@@ -22,8 +22,8 @@ function Planet ({ color = 'black', style, hasBelt, isAnimated }) {
           position: 'absolute',
           ...style
         }}
-        className={`circle ${isAnimated ? 'animated' : ''}`}
-        onMouseMove={updateGradient}
+        className={`circle ${isAnimated ? 'animated' : ''} ${className || ''}`}
+        onMouseMove={isAnimated ? updateGradient : undefined}
       ></div>
 
       { hasBelt && (

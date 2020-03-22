@@ -7,13 +7,25 @@ function About () {
 
   return (
     <section id="about" className="container about">
-      <h3>{ t('about.title') }</h3>
+      <article className="relative">
+        <Planet
+          color="var(--secondary-dark)"
+          className="flowing"
+          style={{
+            left: -60,
+            top: '50%',
+            transform: 'translateY(-50%)'
+          }}
+        />
 
-      <div className="block">
-        <p>
-          { t('about.description') }
-        </p>
-      </div>
+        <h3>{ t('about.title') }</h3>
+
+        <div className="block">
+          <p>
+            { t('about.description') }
+          </p>
+        </div>
+      </article>
     </section>
   )
 }
