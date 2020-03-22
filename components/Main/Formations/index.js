@@ -1,15 +1,9 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import Planet from '../../Planet'
 
 function Formations () {
   const { t } = useTranslation()
-
-  function updateGradient (event) {
-    const x = event.pageX - event.target.offsetLeft - event.target.offsetParent.offsetLeft
-    const y = event.pageY - event.target.offsetTop - event.target.offsetParent.offsetTop
-    event.target.style.setProperty('--x', x + 'px')
-    event.target.style.setProperty('--y', y + 'px')
-  }
 
   return (
     <section id="formations" className="container medium formations relative">
@@ -33,8 +27,14 @@ function Formations () {
         <p>{ t('education.good') }</p>
       </div>
 
-      <div className="circle gradient animated" onMouseMove={updateGradient}></div>
-      <div className="circle"></div>
+      <Planet
+        hasBelt={true}
+        isAnimated={true}
+        style={{
+          top: '100px',
+          right: '-100px'
+        }}
+      />
     </section>
   )
 }

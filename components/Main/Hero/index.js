@@ -2,6 +2,7 @@ import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useTranslation } from 'react-i18next'
 import { FiFile } from 'react-icons/fi'
+import Planet from '../../Planet'
 
 function Hero () {
   const { t } = useTranslation()
@@ -12,27 +13,9 @@ function Hero () {
     y: 0
   })
 
-  const { x, color } = useSpring({
-    from: { x: 200 },
-    x: 0,
-    color: 'black'
-  })
-
-  const { angle } = useSpring({
-    from: { angle: 0 },
-    angle: 50
-  })
-
   function scrollToFooter () {
     document.querySelector('footer')
       .scrollIntoView({ behavior: 'smooth' })
-  }
-
-  function updateGradient (event) {
-    const x = event.pageX - event.target.offsetLeft - event.target.offsetParent.offsetLeft
-    const y = event.pageY - event.target.offsetTop - event.target.offsetParent.offsetTop
-    event.target.style.setProperty('--x', x + 'px')
-    event.target.style.setProperty('--y', y + 'px')
   }
 
   function age () {
@@ -76,15 +59,13 @@ function Hero () {
           <FiFile className="left" />
           { t('CV') }
         </a>
-
-        <animated.div style={{
-          backgroundColor: color
-        }} className="circle animated" onMouseMove={updateGradient}></animated.div>
       </div>
 
-      <animated.div style={{
-        transform: angle.interpolate(angle => `skewX(-${angle}deg)`)
-      }} className="circle overlap"></animated.div>
+      <Planet
+        isAnimated={true}
+        hasBelt={true}
+        color="black"
+      />
     </animated.section>
   )
 }
