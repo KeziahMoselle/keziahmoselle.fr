@@ -1317,6 +1317,10 @@ nav.show {
   .projects-small h4 {
     font-size: 0.9rem;
   }
+
+  .projects-small .project-info {
+    font-size: 0.8rem;
+  }
 }
 
 
