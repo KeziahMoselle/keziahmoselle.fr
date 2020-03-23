@@ -648,6 +648,10 @@ ul {
   justify-content: space-between;
 }
 
+.space-around {
+  justify-content: space-around;
+}
+
 .flex-end {
   justify-content: flex-end;
 }
@@ -1650,6 +1654,10 @@ a.pill span {
  *
  */
 
+.code .block {
+  margin-bottom: 64px;
+}
+
 .pull-request {
   padding: 16px 24px;
   width: auto;
@@ -1732,12 +1740,70 @@ a.pill span {
   fill: #6f42c1;
 }
 
+.inverted .MERGED {
+  fill: #9E80D6;
+}
+
 .OPEN, .additions {
   fill: #2cbe4e; 
 }
 
+.inverted .additions {
+  fill: #165F22;
+}
+
 .CLOSED, .deletions {
   fill: #cb2431;
+}
+
+.NEUTRAL {
+  fill: #0366d6;
+}
+
+.inverted .NEUTRAL {
+  fill: #4098FC;
+}
+
+.user-stats {
+  display: flex;
+  justify-content: center;
+}
+
+.user-stats .card.inverted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  min-width: 200px;
+  margin: 0 20px;
+}
+
+.user-stats .card.inverted svg {
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 800px) {
+  .user-stats {
+    flex-direction: column;
+  }
+
+  .user-stats .card.inverted {
+    margin-bottom: 16px;
+  }
+
+  .code .block.space-around.valign {
+    flex-direction: column;
+  }
+
+  .code .block h4 {
+    margin-bottom: 24px;
+  }
+
+  .reverse-on-mobile {
+    flex-direction: column-reverse !important;
+  }
 }
 
 

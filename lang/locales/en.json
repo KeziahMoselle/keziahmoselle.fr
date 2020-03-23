@@ -7,6 +7,11 @@
   "seeRepo": "See on GitHub",
   "viewProject": "See project",
   "skills": "My skills",
+  "code": {
+    "title": "Git statistics",
+    "mostActivePR": "Most active PR",
+    "userStats": "Stats"
+  },
   "tools": "Tools",
   "experience": "Work experience",
   "about": {
