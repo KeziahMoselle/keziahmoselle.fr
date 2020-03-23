@@ -13,6 +13,7 @@ export async function getMostPopularPullRequest () {
       contributionsCollection {
         popularPullRequestContribution {
           pullRequest {
+            bodyText
             commits {
               totalCount
             }
@@ -21,6 +22,9 @@ export async function getMostPopularPullRequest () {
             }
             publishedAt
             repository {
+              owner {
+                avatarUrl
+              }
               homepageUrl
               nameWithOwner
               stargazers {
@@ -37,10 +41,6 @@ export async function getMostPopularPullRequest () {
               totalCount
             }
           }
-          user {
-            avatarUrl
-          }
-          url
         }
       }
     }
@@ -77,6 +77,30 @@ export async function getRepoInfo (nameWithOwner) {
   const variables = {
     github_username: process.env.GITHUB_USERNAME,
     repository_name: name
+  }
+
+  const response = await graphql.request(query, variables)
+
+  return response
+}
+
+export async function getUserStats () {
+  const query = /* GraphQL */ `query UserStats($github_username: String!) {
+    user(login: $github_username) {
+      issues {
+        totalCount
+      }
+      pullRequests {
+        totalCount
+      }
+      repositories(first: 100) {
+        totalCount
+      }
+    }
+  }`
+
+  const variables = {
+    github_username: process.env.GITHUB_USERNAME
   }
 
   const response = await graphql.request(query, variables)

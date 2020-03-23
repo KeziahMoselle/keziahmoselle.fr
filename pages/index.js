@@ -2,7 +2,11 @@ import React, { Fragment } from 'react'
 import Head from 'next/head'
 import matter from 'gray-matter'
 
-import { getMostPopularPullRequest, getRepoInfo } from '../components/utils/graphql'
+import {
+  getMostPopularPullRequest,
+  getRepoInfo,
+  getUserStats
+} from '../components/utils/graphql'
 import Layout from '../components/Layout'
 import { Main } from '../components/Main'
 
@@ -21,7 +25,8 @@ export default function Index (props) {
 
 export async function getStaticProps () {
   const projects = getProjectsData()
-  const mostPopularPR = await getMostPopularPullRequest()
+  const mostActivePR = await getMostPopularPullRequest()
+  const userStats = await getUserStats()
 
   for (const project of projects) {
     if (!project.github) return
@@ -30,10 +35,15 @@ export async function getStaticProps () {
     project.repo = repo
   }
 
+  const codeStats = {
+    mostActivePR,
+    userStats
+  }
+
   return {
     props: {
       projects,
-      mostPopularPR
+      codeStats
     }
   }
 }
