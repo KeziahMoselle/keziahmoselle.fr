@@ -30,8 +30,8 @@ const allTalks = [
 ]
 
 function Talks () {
-  const { i18n } = useTranslation()
-  
+  const { t, i18n } = useTranslation()
+
   const intl = new Intl.DateTimeFormat(i18n.language, {
     year: 'numeric',
     month: 'long',
@@ -48,7 +48,7 @@ function Talks () {
 
   return (
     <section id="talks" className="container medium talks">
-      <h3>Talks</h3>
+      <h3>{ t('talks') }</h3>
 
       <div className="block">
         { talksList }

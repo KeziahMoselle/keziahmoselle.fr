@@ -21,8 +21,6 @@ function Project ({
 
   const projectDate = formatDate(repository.createdAt, repository.updatedAt) || date
 
-  console.log(repository)
-
   /* Tech stack icons at the bottom of the thumbnail */
   const techStack = stack.map((tech, index) => (
     <img

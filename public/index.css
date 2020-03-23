@@ -1288,7 +1288,7 @@ nav.show {
 }
 
 .project-title h3 {
-  font-size: 36px;
+  font-size: 2rem;
   font-weight: 900;
   margin: 0.3rem 0 0.1rem 0;
   transition-delay: 0.2s;
@@ -1307,6 +1307,16 @@ nav.show {
 .project-title h4 {
   font-size: 1rem;
   margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .projects-small h3 {
+    font-size: 1.3rem;
+  }
+  
+  .projects-small h4 {
+    font-size: 0.9rem;
+  }
 }
 
 
@@ -1417,14 +1427,6 @@ nav.show {
   height: 36px;
   width: auto;
   margin-left: 6px;
-}
-
-.projects-small h3 {
-  font-size: 1.3rem;
-}
-
-.projects-small h4 {
-  font-size: 0.9rem;
 }
 
 /**

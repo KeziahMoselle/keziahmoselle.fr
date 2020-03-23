@@ -2,16 +2,16 @@
   "title": "Web developer",
   "description": "Self-taught of {{age}} years, I have been passionate about web development and UI/UX for {{sinceDate}} years.",
   "contactMe": "Contact me",
-  "personalProjects": "Personal projects",
+  "personalProjects": "Case studies of personal projects",
   "seeWebsite": "See on the website",
   "seeRepo": "See on GitHub",
   "viewProject": "See project",
-  "skills": "Skills",
+  "skills": "My skills",
   "tools": "Tools",
-  "experience": "Experience",
+  "experience": "Work experience",
   "about": {
     "title": "About Me",
-    "description": "<p>I am passionate about <strong>front-end development</strong> and <strong>web design</strong>, <strong>user experience</strong> and <strong>accessibility</strong> I develop <strong>Human-centered</strong> projects.</p> <p>I'm also passionate about <strong>open-source</strong>, I am a contributor to several projects (nodejs.org, romejs.dev, streaker...) and I'm also passionate about <strong>teaching</strong> (talks, articles, mentoring).</p>"
+    "description": "<p>I am passionate about <strong>front-end development</strong> and <strong>web design</strong>, <strong>user experience</strong> and <strong>accessibility</strong> I develop <strong>Human-centered</strong> projects.</p> <p>I'm also passionate about <strong>open-source</strong>, I am a contributor to several projects and I'm also passionate about <strong>teaching</strong> (talks, articles, mentoring).</p>"
   },
   "education": {
     "title": "Education",
@@ -21,6 +21,7 @@
     "good": "Acknowledgement"
   },
   "achievements": "Achievements",
+  "talks": "My talks",
   "form": {
     "email": "What's your email address ?",
     "message": "Your message",
@@ -28,7 +29,6 @@
     "success": "Message sent! Thank you",
     "error": "There's been an error, feel free to try again later.",
     "missingFields": "Please fill in all fields.",
-    "loading": "Sending...",
     "send": "Submit"
   },
   "projects": {

@@ -152,7 +152,7 @@ function Footer () {
 
           <div className="flex center">
             <button className="btn white rounded translate-y" onClick={send}>
-              { status === 'loading' ? t('form.loading') : t('form.send')}
+              { status === 'loading' ? t('form.sending') : t('form.send')}
             </button>
           </div>
         </form>
