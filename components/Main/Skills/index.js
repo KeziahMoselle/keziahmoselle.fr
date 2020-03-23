@@ -4,6 +4,7 @@ import Skill from './Skill'
 
 const tools = [
   'TypeScript',
+  'GraphQL',
   'Git',
   'GitHub',
   'SASS',
