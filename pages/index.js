@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import Head from 'next/head'
 import matter from 'gray-matter'
 
+import { getMostPopularPullRequest } from '../components/utils/graphql'
 import Layout from '../components/Layout'
 import { Main } from '../components/Main'
 
@@ -18,7 +19,19 @@ export default function Index (props) {
   )
 }
 
-export function getStaticProps () {
+export async function getStaticProps () {
+  const projects = getProjectsData()
+  const mostPopularPR = await getMostPopularPullRequest()
+
+  return {
+    props: {
+      projects,
+      mostPopularPR
+    }
+  }
+}
+
+function getProjectsData () {
   const projects = (context => {
     const keys = context.keys()
 
@@ -44,9 +57,5 @@ export function getStaticProps () {
     return data
   })(require.context('../content/projects', true, /\.md$/))
 
-  return {
-    props: {
-      projects
-    }
-  }
+  return projects
 }

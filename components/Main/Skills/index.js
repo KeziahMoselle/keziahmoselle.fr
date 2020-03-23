@@ -14,7 +14,7 @@ function Skills () {
   const { t } = useTranslation()
 
   const allTools = tools.map(tool => (
-    <Skill name={tool} />
+    <Skill name={tool} key={tool} />
   ))
 
   return (
