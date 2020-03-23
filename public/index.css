@@ -221,16 +221,24 @@ svg {
 }
 
 
-/* MOBILE */
+/* Tablet */
 @media only screen and (max-width: 1200px) {
   .container {
     width: auto;
     padding: 0 24px;
-    margin: 64px 0;
+    margin: 90px 0;
   }
 
   .container.hero {
     margin: 124px 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    width: auto;
+    padding: 0 24px;
+    margin: 64px 0;
   }
 }
 
@@ -1784,7 +1792,7 @@ a.pill span {
   margin-bottom: 12px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .user-stats {
     flex-direction: column;
   }
@@ -1795,6 +1803,10 @@ a.pill span {
 
   .code .block.space-around.valign {
     flex-direction: column;
+  }
+
+  .code .block:not(:last-of-type) {
+    margin-bottom: 34px;
   }
 
   .code .block h4 {
