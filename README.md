@@ -21,22 +21,31 @@
 
 2. Run Next and Netlify functions
 ```sh
-> yarn dev
-```
-Open [http://localhost:3000/](http://localhost:3000/)
-
-3. Run only Next
-
-```sh
 > yarn start
 ```
+Open [http://localhost:8888/](http://localhost:8888/)
 
-Open [http://192.168.0.12:3000/](http://192.168.0.12:3000/)
+3. Environment variables
+
+```
+MAILGUN_DOMAIN=            Used to send emails
+MAILGUN_API_KEY=           Used to send emails
+MY_EMAIL_ADDRESS=          Send emails to this address
+
+DISCORD_WEBHOOK_URL=       Contact form messages being sent to this webhook URL
+
+GITHUB_BEARER_TOKEN=       Used for the GraphQL Api
+GITHUB_USERNAME=           Used for the GraphQL Api
+
+NODE_VERSION=              Specify the Node version to use
+
+EMAIL_VALANKA=             Specific endpoint
+```
 
 
 ## Build
 
-To build the App and the Netlify function run :
+To build the App and the Netlify functions run :
 ```sh
 > yarn build
 ```

@@ -565,6 +565,11 @@ a {
   color: var(--secondary);
 }
 
+.btn.bordered:not(.rounded):focus {
+  outline: double;
+  box-shadow: none;
+}
+
 .btn.rounded {
   border-radius: 4px;
 }

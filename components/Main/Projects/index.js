@@ -14,8 +14,6 @@ function Projects ({ projects }) {
     }, [])
     .sort((a, b) => b.props.repo.user.repository.stargazers.totalCount - a.props.repo.user.repository.stargazers.totalCount)
 
-  console.log(bigProjects)
-
   const smallProjects = projects.reduce((acc, project, index) => {
     if (!project.isBigProject) {
       acc.push(<Project key={index} {...project} />)
