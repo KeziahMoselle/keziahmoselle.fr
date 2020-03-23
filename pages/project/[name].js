@@ -1,8 +1,9 @@
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
-
 import React, { Fragment } from 'react'
 import Head from 'next/head'
+import { getRepoInfo } from '../../components/utils/graphql'
+
 import Layout from '../../components/Layout'
 import Project from '../../components/Main/Project'
 
@@ -26,23 +27,7 @@ export default ({ project }) => {
 }
 
 export async function getStaticProps(context) {
-  const { name: projectName } = context.params
-
-  const { default: markdown } = await import(`../../content/projects/${projectName}.md`)
-
-  const { content, data } = matter(markdown)
-
-  const slug = data.title
-    .toLowerCase()
-    .replace(/ /g, '-')
-
-
-  const project = {
-    name: data.title,
-    slug,
-    content,
-    data
-  }
+  const project = await getMarkdownData()
 
   return {
     props: {
@@ -75,5 +60,25 @@ export async function getStaticPaths() {
   return {
     paths,
     fallback: false
+  }
+}
+
+async function getMarkdownData () {
+  const { name: projectName } = context.params
+
+  const { default: markdown } = await import(`../../content/projects/${projectName}.md`)
+
+  const { content, data } = matter(markdown)
+
+  const slug = data.title
+    .toLowerCase()
+    .replace(/ /g, '-')
+
+
+  return {
+    name: data.title,
+    slug,
+    content,
+    data
   }
 }

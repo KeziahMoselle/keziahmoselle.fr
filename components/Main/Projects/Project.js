@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
-import { GoStar } from 'react-icons/go'
+import { GoStar, GoRepoForked } from 'react-icons/go'
 import toFilename from '../../utils/toFilename'
 
 function Project ({
@@ -12,28 +12,16 @@ function Project ({
   date,
   github,
   stack,
-  url
+  url,
+  repo
 }) {
-  const [stars, setStars] = useState(null)
   const { t } = useTranslation()
 
-  useEffect(() => {
-    const localStars = JSON.parse(localStorage.getItem(slug))
-    if (localStars && (localStars.date === new Date().getHours())) {
-      setStars(localStars.stars)
-    } else {
-      fetch(`https://api.github.com/repos/${github}`)
-        .then(response => response.json())
-        .then(data => {
-          console.log(`Fetched ${github} : ${data.stargazers_count}`)
-          setStars(data.stargazers_count)
-          localStorage.setItem(slug, JSON.stringify({
-            stars: data.stargazers_count,
-            date: new Date().getHours()
-          }))
-        })
-    }
-  }, [])
+  const repository = repo && repo.user.repository
+
+  const projectDate = formatDate(repository.createdAt, repository.updatedAt) || date
+
+  console.log(repository)
 
   /* Tech stack icons at the bottom of the thumbnail */
   const techStack = stack.map((tech, index) => (
@@ -64,7 +52,7 @@ function Project ({
           <div className="project-image">
             <div className="project-body hide-on-med-and-down">
               <div className="project-subtitle">
-                <h5>{ date }</h5>
+                <h5>{ projectDate }</h5>
               </div>
               <div className="project-title">
                 <h3>{ title }</h3>
@@ -72,8 +60,13 @@ function Project ({
               </div>
               <div className="project-supplementary">
                 <p className="project-info">
-                  { stars } <GoStar className="spacing" /> <span>Stars</span>
+                  { repository.stargazers.totalCount } <GoStar className="spacing" /> <span>Stars</span>
                 </p>
+                { repository.forkCount > 0 && (
+                  <p className="project-info">
+                    { repository.forkCount } <GoRepoForked className="spacing" /> <span>Forks</span>
+                  </p>
+                )}
               </div>
             </div>
 
@@ -89,7 +82,7 @@ function Project ({
 
             <div className="overlap show-on-mobile">
               <span className="chip-inline">
-                { stars }
+                { repository.stargazers.totalCount }
                 <GoStar />
               </span>
             </div>
@@ -113,6 +106,17 @@ function Project ({
       </div>
     </article>
   )
+}
+
+function formatDate (begin, end) {
+  if (!begin || !end) return
+
+  const createdAt = new Date(begin).getFullYear()
+  const updatedAt = new Date(end).getFullYear()
+
+  if (createdAt === updatedAt) return createdAt
+
+  return `${createdAt}-${updatedAt}`
 }
 
 export default Project

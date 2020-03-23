@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import Head from 'next/head'
 import matter from 'gray-matter'
 
-import { getMostPopularPullRequest } from '../components/utils/graphql'
+import { getMostPopularPullRequest, getRepoInfo } from '../components/utils/graphql'
 import Layout from '../components/Layout'
 import { Main } from '../components/Main'
 
@@ -22,6 +22,13 @@ export default function Index (props) {
 export async function getStaticProps () {
   const projects = getProjectsData()
   const mostPopularPR = await getMostPopularPullRequest()
+
+  for (const project of projects) {
+    if (!project.github) return
+
+    const repo = await getRepoInfo(project.github)
+    project.repo = repo
+  }
 
   return {
     props: {
