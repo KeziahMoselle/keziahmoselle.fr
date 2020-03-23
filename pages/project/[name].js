@@ -27,7 +27,7 @@ export default ({ project }) => {
 }
 
 export async function getStaticProps(context) {
-  const project = await getMarkdownData()
+  const project = await getMarkdownData(context)
 
   return {
     props: {
@@ -63,7 +63,7 @@ export async function getStaticPaths() {
   }
 }
 
-async function getMarkdownData () {
+async function getMarkdownData (context) {
   const { name: projectName } = context.params
 
   const { default: markdown } = await import(`../../content/projects/${projectName}.md`)
