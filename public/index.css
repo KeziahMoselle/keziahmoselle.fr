@@ -1646,6 +1646,103 @@ a.pill span {
 
 /**
  *
+ * Code Stats
+ *
+ */
+
+.pull-request {
+  padding: 16px 24px;
+  width: auto;
+}
+
+.pull-request:focus-within {
+  box-shadow: 0 0 0 0.2rem var(--accent);
+}
+
+.pull-request .owner-avatar {
+  height: 38px;
+  width: 38px;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.pull-request .owner-avatar:hover,
+.pull-request .owner-avatar:focus {
+  background-color: var(--primary-darker);
+}
+
+.pull-request .owner-avatar img {
+  width: 100%;
+}
+
+.pull-request .card-body {
+  flex-direction: column;
+  margin-left: 34px;
+}
+
+.pull-request h4 {
+  margin: 0 8px 0 0;
+}
+
+.pull-request-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.pull-request a:focus {
+  box-shadow: none;
+}
+
+.pull-request p {
+  font-size: 0.8rem;
+  max-width: 400px;
+}
+
+.pull-request-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.pull-request-info a, .pull-request-info span {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 16px;
+  color: var(--secondary-ligther);
+}
+
+.pull-request-info svg {
+  margin-right: 4px;
+}
+
+@media only screen and (max-width: 700px) {
+  .pull-request-info {
+    justify-content: center;
+  }
+
+  .pull-request .card-body {
+    margin-left: 0;
+  }
+}
+
+.MERGED {
+  fill: #6f42c1;
+}
+
+.OPEN, .additions {
+  fill: #2cbe4e; 
+}
+
+.CLOSED, .deletions {
+  fill: #cb2431;
+}
+
+
+/**
+ *
  * Achievements
  *
  */

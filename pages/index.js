@@ -30,10 +30,14 @@ export async function getStaticProps () {
     project.repo = repo
   }
 
+  const codeStats = {
+    mostPopularPR
+  }
+
   return {
     props: {
       projects,
-      mostPopularPR
+      codeStats
     }
   }
 }

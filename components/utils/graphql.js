@@ -13,6 +13,7 @@ export async function getMostPopularPullRequest () {
       contributionsCollection {
         popularPullRequestContribution {
           pullRequest {
+            bodyText
             commits {
               totalCount
             }
@@ -21,6 +22,9 @@ export async function getMostPopularPullRequest () {
             }
             publishedAt
             repository {
+              owner {
+                avatarUrl
+              }
               homepageUrl
               nameWithOwner
               stargazers {
@@ -37,10 +41,6 @@ export async function getMostPopularPullRequest () {
               totalCount
             }
           }
-          user {
-            avatarUrl
-          }
-          url
         }
       }
     }

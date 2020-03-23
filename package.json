@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "My portfolio",
   "scripts": {
+    "dev": "next dev",
     "start": "netlify dev",
     "build": "next build && next export",
     "lint": "eslint components functions lang pages --fix"
