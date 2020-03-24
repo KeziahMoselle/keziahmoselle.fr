@@ -2,17 +2,17 @@ import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import React, { Fragment } from 'react'
 import Head from 'next/head'
-import { getRepoInfo } from '../../components/utils/graphql'
+import { getCaseStudyInfo } from '../../components/utils/graphql'
 
 import Layout from '../../components/Layout'
 import Project from '../../components/Main/Project'
 
 
-export default ({ project }) => {
+export default (props) => {
   return (
     <Fragment>
       <Head>
-        <title>{ project.name } - Keziah MOSELLE</title>
+        <title>{ props.project.name } - Keziah MOSELLE</title>
       </Head>
 
       <Layout>
@@ -20,7 +20,7 @@ export default ({ project }) => {
           <h1>Case Study</h1>
         </div>
 
-        <Project {...project} />
+        <Project {...props} />
       </Layout>
     </Fragment>
   )
@@ -28,10 +28,12 @@ export default ({ project }) => {
 
 export async function getStaticProps(context) {
   const project = await getMarkdownData(context)
+  const github = await getCaseStudyInfo(project.data.github)
 
   return {
     props: {
-      project  
+      project,
+      github
     }
   }
 }

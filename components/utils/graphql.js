@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { GraphQLClient } from 'graphql-request'
 
 const GITHUB_GRAPHQL_ENDPOINT = 'https://api.github.com/graphql'
@@ -112,6 +113,31 @@ export async function getUserStats () {
 
   const variables = {
     github_username: process.env.GITHUB_USERNAME
+  }
+
+  const response = await graphql.request(query, variables)
+
+  return response
+}
+
+export async function getCaseStudyInfo (github) {
+  const query = /* GraphQL */ `query getRepositoryInfo($repository_owner: String!, $repository: String!) {
+    repository(owner: $repository_owner, name: $repository) {
+      pushedAt
+      releases (last: 1) {
+        nodes {
+          name
+          isPrerelease
+        }
+      }
+    }
+  }`
+
+  const [repository_owner, repository] = github.split('/')
+
+  const variables = {
+    repository_owner,
+    repository
   }
 
   const response = await graphql.request(query, variables)

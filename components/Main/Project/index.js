@@ -18,70 +18,16 @@ import Icon from '../../Icon'
 import { useTranslation } from 'react-i18next'
 import ReactMarkdown from 'react-markdown'
 
-export default function Project ({
-  name,
-  slug,
-  content,
-  data
-}) {
+export default function Project ({ project, github }) {
   const { t } = useTranslation()
+
+  const { slug, content, data } = project
+
+  const release = github.repository.releases.nodes[0]
 
   const tags = data.tags.map((tag, index) => (
     <span key={index} className="chip-inline">{ tag }</span>
   ))
-
-  const GitHubCard = (
-    <div className="card">
-      <div className="card-header">
-        <GoMarkGithub size={32} />
-        <h4>GitHub</h4>
-      </div>
-
-      <div className="card-body">
-        <div className="card-info">
-          <Icon icon={<GoGitCommit size={28} />} name="Commits" />
-          <span>300</span>
-        </div>
-
-        <div className="card-info">
-          <Icon icon={<GoRepoForked size={28} />} name="Forks" />
-          <span>14</span>
-        </div>
-
-        <div className="card-info">
-          <Icon icon={<GoClock size={28} />} name="Last Activity" />
-
-          <span>2 days ago</span>
-        </div>
-      </div>
-    </div>
-  )
-
-  const CodeCard = (
-    <div className="card" style={{
-      boxShadow: `rgb(0, 122, 204) 0px 5px 0px 0px inset,
-                    0 4px 4px rgba(0, 0, 0, 0.12)`
-    }}>
-      <div className="card-header">
-        <GoCode size={32} />
-        <h4>Code</h4>
-      </div>
-
-      <div className="card-body">
-        { data.stack.map((tech, index) => (
-          <div className="card-info">
-            <img
-              src={`/logos/${tech}.svg`}
-              alt={tech}
-              title={tech}
-              key={index}
-            />
-            <span>{ tech }</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
 
   return (
     <article className="case-study">
@@ -111,18 +57,27 @@ export default function Project ({
         <div className="case-study-info">
 
           <span>
-            <Icon icon={<MdFiberManualRecord size={16} fill="#20e289" />} name="Status" />
-            Released
+            { !release.isPrerelease && (
+              <React.Fragment>
+                <Icon icon={<MdFiberManualRecord size={16} fill="var(--success)" />} name="Status" />
+              Released
+              </React.Fragment>
+            ) || (
+              <React.Fragment>
+                <Icon icon={<MdFiberManualRecord size={16} fill="var(--error)" />} name="Status" />
+              Not released
+              </React.Fragment>
+            )}
           </span>
 
           <span>
             <Icon icon={<MdDateRange size={16} />} name="Created date" />
-            { data.date }
+            { new Date(github.repository.pushedAt).getFullYear() || data.date }
           </span>
 
           <span>
             <Icon icon={<IoMdPricetag size={16} />} name="Version" />
-            1.0.0
+            { release.name }
           </span>
         </div>
       </div>

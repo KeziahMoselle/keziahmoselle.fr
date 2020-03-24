@@ -1588,8 +1588,18 @@ nav.show {
 
 .case-study-body {
   margin: 32px auto;
-  font-size: 1.2rem;
+  font-size: 1rem;
   max-width: 800px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .case-study-info {
+    display: none;
+  }
+
+  .case-study-body {
+    padding: 0 16px;
+  }
 }
 
 
