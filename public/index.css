@@ -565,6 +565,14 @@ address, time {
   font-size: 0.9rem;
 }
 
+.translate-y {
+  transition: transform 0.3s;
+}
+
+.translate-y:hover {
+  transform: translateY(-5px);
+}
+
 /* MOBILE */
 
 @media only screen and (max-width: 600px) {
@@ -1714,7 +1722,7 @@ a.pill span {
  */
 
 .code .block {
-  margin-bottom: 64px;
+  margin-bottom: 44px;
 }
 
 .pull-request {
@@ -1748,14 +1756,14 @@ a.pill span {
   margin-left: 34px;
 }
 
-.pull-request h4 {
+.pull-request h5 {
+  font-size: 1rem;
   margin: 0 8px 0 0;
 }
 
 .pull-request-title {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
 }
 
 .pull-request a:focus {
@@ -1862,10 +1870,6 @@ a.pill span {
 
   .code .block h4 {
     margin-bottom: 24px;
-  }
-
-  .reverse-on-mobile {
-    flex-direction: column-reverse !important;
   }
 }
 

@@ -13,20 +13,20 @@ function MostActivePR ({ pullRequest }) {
   const { t } = useTranslation()
 
   return (
-    <div className="block space-around valign">
+    <div className="block column valign">
       <h4>{ t('code.mostActivePR') }</h4>
 
-      <div className="card pull-request">
+      <div className="card pull-request translate-y">
         <GoGitMerge
           className={`${pullRequest.state} hide-on-mobile`}
           size={24}
-          style={{ float: 'left', marginTop: '6px' }}
+          style={{ float: 'left', marginTop: '8px' }}
         />
 
         <div className="card-body">
           <a href={pullRequest.permalink}>
             <div className="pull-request-title">
-              <h4>{ pullRequest.title }</h4>
+              <h5>{ pullRequest.title }</h5>
               <div className="owner-avatar hide-on-mobile">
                 <img
                   src={pullRequest.repository.owner.avatarUrl}
