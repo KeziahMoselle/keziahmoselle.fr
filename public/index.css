@@ -1872,6 +1872,11 @@ a.pill span {
   text-indent: -9999px;
 }
 
+.language-label {
+  height: 20px;
+  font-size: 0.8rem;
+}
+
 @media screen and (max-width: 900px) {
   .user-stats {
     flex-direction: column;
