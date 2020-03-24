@@ -9,7 +9,7 @@ tags:
   - API
 stack:
   - Vue.js
-  - vuetify
+  - Vuetify
 ---
 
 Brain is the seed of intelligence something incredible is waiting to be known.
