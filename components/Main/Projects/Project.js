@@ -25,10 +25,10 @@ function Project ({
   /* Tech stack icons at the bottom of the thumbnail */
   const techStack = stack.map((tech, index) => (
     <Icon
+      key={index}
       icon={<img
         src={`/logos/${toFilename(tech)}.svg`}
         alt={tech}
-        key={index}
       />}
       name={tech}
     />

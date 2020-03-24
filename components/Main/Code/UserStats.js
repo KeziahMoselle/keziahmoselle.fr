@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
 import {
   GoIssueOpened,
   GoGitPullRequest,
@@ -7,8 +6,6 @@ import {
 } from 'react-icons/go'
 
 function UserStats ({ userStats }) {
-  const { t } = useTranslation()
-
   return (
     <div className="block space-around valign">
       <div className="user-stats">

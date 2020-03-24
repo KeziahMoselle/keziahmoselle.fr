@@ -95,6 +95,17 @@ export async function getUserStats () {
       }
       repositories(first: 100) {
         totalCount
+        nodes {
+          languages (first: 5) {
+            edges {
+              size
+              node {
+                name
+                color
+              }
+            }
+          }
+        }
       }
     }
   }`

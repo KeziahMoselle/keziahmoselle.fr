@@ -10,7 +10,8 @@
   "code": {
     "title": "Git statistics",
     "mostActivePR": "Most active PR",
-    "userStats": "Stats"
+    "userStats": "Stats",
+    "languagesStats": "% by languages"
   },
   "tools": "Tools",
   "experience": "Work experience",

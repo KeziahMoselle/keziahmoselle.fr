@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 
 import MostActivePR from './MostActivePR'
 import UserStats from './UserStats'
+import LanguagesStats from './LanguagesStats'
 
 function Code ({ codeStats }) {
   const { t } = useTranslation()
@@ -18,6 +19,8 @@ function Code ({ codeStats }) {
       <MostActivePR pullRequest={pullRequest} />
 
       <UserStats userStats={userStats} />
+
+      <LanguagesStats userStats={userStats} />
 
     </section>
   )

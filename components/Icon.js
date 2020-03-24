@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Icon ({ icon, name, href, className }) {
-  const classesToApply = `icon ${className || ''}`
+  const classesToApply = `tooltipped ${className || ''}`
 
   return (
     <React.Fragment>
