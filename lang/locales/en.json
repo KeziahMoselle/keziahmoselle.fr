@@ -11,7 +11,7 @@
     "title": "Git statistics",
     "mostActivePR": "Most active PR",
     "userStats": "Stats",
-    "languagesStats": "% by languages"
+    "languagesStats": "% of bytes written by languages"
   },
   "tools": "Tools",
   "experience": "Work experience",
