@@ -1,6 +1,6 @@
 ---
 title: Ribbon
-date: '2020'
+date: 2020
 github: KeziahMoselle/ribbon
 url: https://github.com/KeziahMoselle/ribbon
 tags:
