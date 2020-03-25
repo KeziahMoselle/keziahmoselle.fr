@@ -24,6 +24,7 @@ export default function Project ({ project, github }) {
   const { slug, content, data } = project
 
   const release = github.repository.releases.nodes[0]
+  const isPrerelease = (release && release.isPrerelease) || false
 
   const tags = data.tags.map((tag, index) => (
     <span key={index} className="chip-inline">{ tag }</span>
@@ -57,7 +58,7 @@ export default function Project ({ project, github }) {
         <div className="case-study-info">
 
           <span>
-            { !release.isPrerelease && (
+            { !isPrerelease && (
               <React.Fragment>
                 <Icon icon={<MdFiberManualRecord size={16} fill="var(--success)" />} name="Status" />
               Released
@@ -76,8 +77,12 @@ export default function Project ({ project, github }) {
           </span>
 
           <span>
-            <Icon icon={<IoMdPricetag size={16} />} name="Version" />
-            { release.name }
+            {(release && release.name) && (
+              <React.Fragment>
+                <Icon icon={<IoMdPricetag size={16} />} name="Version" />
+                { release.name }
+              </React.Fragment>
+            )}
           </span>
         </div>
       </div>
