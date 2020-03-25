@@ -576,8 +576,8 @@ address, time {
 /* MOBILE */
 
 @media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 4rem;
+  html {
+    font-size: 17px;
   }
 
   .container > h3 {
@@ -1599,6 +1599,21 @@ nav.show {
 
   .case-study-body {
     padding: 0 16px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .page-title > h1 {
+    font-size: 2.5rem;
+  }
+
+  .case-study-thumbnail .btn {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    position: unset;
+    bottom: unset;
+    left: unset;
+    transform: none;
   }
 }
 
