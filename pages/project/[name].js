@@ -13,6 +13,7 @@ export default (props) => {
     <Fragment>
       <Head>
         <title>{ props.project.name } - Keziah MOSELLE</title>
+        <link rel="stylesheet" href="/markdown.css" />
       </Head>
 
       <Layout>

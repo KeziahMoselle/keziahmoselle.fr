@@ -16,4 +16,14 @@ stack:
 isBigProject: true
 ---
 
-Brain is the seed of intelligence something incredible is waiting to be known.
+## Concept
+
+## Problème
+
+## Solution
+
+### Technologies
+
+### UI/UX
+
+## Évolution du projet

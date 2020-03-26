@@ -1592,6 +1592,20 @@ nav.show {
   max-width: 800px;
 }
 
+.case-study-body h2 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eaecef;
+}
+
+.case-study-body h3 {
+  display: block;
+  font-size: 1.1rem;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eaecef;
+}
+
 @media only screen and (max-width: 1200px) {
   .case-study-info {
     display: none;
