@@ -1589,7 +1589,7 @@ nav.show {
 .case-study-body {
   margin: 32px auto;
   font-size: 1rem;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .case-study-body h2 {
@@ -1604,6 +1604,19 @@ nav.show {
   margin-top: 24px;
   margin-bottom: 16px;
   border-bottom: 1px solid #eaecef;
+}
+
+.case-study-body p {
+  position: relative;
+}
+
+.case-study-body img {
+  display: block;
+  margin: 0 auto;
+  max-height: 400px;
+  padding: 10px;
+  background-color: var(--primary-darker);
+  border-radius: 8px;
 }
 
 @media only screen and (max-width: 1200px) {

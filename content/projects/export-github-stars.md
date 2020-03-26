@@ -18,8 +18,20 @@ stack:
 
 ## Solution
 
-### Technologies
+### Fonctionnalités
+
+####
+
+### Choix des technologies
+
+####
 
 ### UI/UX
+
+#### L'interface
+
+
+#### Expérience utilisateur
+
 
 ## Évolution du projet

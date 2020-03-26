@@ -14,51 +14,64 @@ isBigProject: true
 
 ## Concept
 
-Tempus est un logiciel de productivité suivant la technique du [pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique), cette technique consiste à travailler 25 minutes puis faire une pause durant 5 minutes puis de répéter l'opération.
+Tempus est un logiciel de productivité basé sur la technique du [pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique).
 
-![TODO_IMAGE]()
+Cette technique consiste à travailler 25 minutes puis de faire une pause durant 5 minutes et de répéter l'opération.
 
-## Problème
+![Tempus](/projects/tempus/tempus.png)
+
+## Quel problème ce projet résout-il ?
 
 La raison initial de la création de Tempus était un prétexte dans le but d'apprendre la librairie [React.js](https://reactjs.org/).
 
 Mais il se trouve qu'à ce moment même je cherchais des outils dans le but d'améliorer ma productivité, un outil gérant le temps de travail était donc intéressant à développer tant sur le plan de l'apprentissage que le plan personnel.
 
-Hélas, je ne trouvais pas de logiciels de bureau convaincaint, les problèmes les plus communs étaient :
+Hélas, je ne trouvais pas de logiciels de bureau convaincaint, les problèmes récurrents parmis les solutions existantes étaient les suivants :
 
 - UI/UX pauvre
 - Uniquement la possibilité de travailler 25 minutes avec 5 minutes de pause
 - Pas de statistiques
 - Non open-source ou payant
 
-J'ai donc décidé d'améliorer le simple pomodoro qu'était Tempus à cet époque là :
+Par conséquent, j'ai décidé d'améliorer le simple pomodoro qu'était Tempus à cette époque là :
 
-![TODO_IMAGE]()
+![Tempus v0](/projects/tempus/tempus-v0.png)
 
 ## Solution
 
 ### Fonctionnalités
 
-Après 3 mois, Tempus se dote de plusieurs fonctionnalités qui le démarque de ses "concurrents" :
+Après 3 mois de développement, Tempus a été doté de plusieurs fonctionnalités qui peut le démarquer des solutions existantes :
 
 #### Horloge
 
 Il est possible de changer le temps de travail et de pause sans restrictions
 
-#### Travailler jusqu'à la fin de l'heure
+![Changing the work time and pause time](/projects/tempus/change-clock.gif)
+
+
+#### Travailler jusqu'à la fin de l'heure automatiquement
 
 Au clic d'un bouton, calcule le temps restant jusqu'à la prochaine heure et met automatiquement la valeur de travail en minutes
 Cela permet de travailler directement jusqu'à la fin de l'heure sans calculer le nombre de minutes soi même. (n'altère pas la configuration finale)
 
+![Demonstration of the work till next hour btn](/projects/tempus/work-till-next-hour.gif)
+
 #### Objectifs (Goals)
 
-Des objectifs de temps par jour/semaine/mois...
+Des objectifs de temps par jour/semaine/mois ou année
+
+![objectifs](/projects/tempus/goals.gif)
 
 #### Streaks
 
-"Streak" plus vous travailler, plus votre streak sera haut, il se cumule si vous travailler tous les jours.
+"Streak" plus vous travailler, plus votre streak sera haut, il se cumule si vous travaillez tous les jours.
 
-Cela permet à certaines personnes de se motiver pour ne pas perdre ce streak. (Est aussi considéré comme un dark pattern pour certaines personnes !)
+Cela permet à certaines personnes de se motiver pour ne pas perdre ce streak.
+
+> Il peut également être considéré comme un dark pattern pour certaines personnes !
+
+![Streaks](/projects/tempus/streaks.png)
 
 #### Statistiques
 
@@ -67,19 +80,24 @@ Cela permet à certaines personnes de se motiver pour ne pas perdre ce streak. (
 - Semaine : Minutes de travail par jour
 - Mois : Minutes de travail et streak
 
+![Stats](/projects/tempus/stats.gif)
+
 #### Cycles
 
 Les cycles permettent de répéter un nombre défini de fois le pomodoro.  
-(Exemple : répéter 3x la séquence : 25 minutes et 5 minutes de pause sans redémarrer le compteur à chaque fois)
+(Exemple : répéter qu'une fois la séquence : 25 minutes et 5 minutes de pause sans redémarrer le compteur à chaque fois)
+
+![Cycles](/projects/tempus/cycles.gif)
 
 #### Notifications
 
 Notifications lorsqu'un pomodoro est terminé
 
+![Notifications](/projects/tempus/notification.png)
 
 Grâce à ces fonctionnalités Tempus couvre un besoin fonctionnel suffisant pour la plupart des utilisateurs.
 
-### Technologies
+### Choix des technologies
 
 #### React.js
 
@@ -116,27 +134,25 @@ Electron nous offre par dessus tout la possibilité d'être compatible à traver
 C'est un des choix principal concernant l'expérience utilisateur de Tempus,
 l'icône au sein du tray de votre système est l'endroit auquel la fenêtre de Tempus va s'accrocher (par défaut), ce qui permet un accès rapide à la fenêtre de Tempus via un clique droit de simples actions telles que "démarrer" ou "arrêter" le pomodoro.
 
-![TODO_IMAGE]()
+![Tray](/projects/tempus/tray.png)
 
 #### L'interface, la fenêtre
 
 La fenêtre de Tempus fait par défaut 400x550px, un petit format rectangulaire donc, qui permet de ne pas polluer l'espace de l'utilisateur tout en affichant les principales informations.
 
-![TODO_IMAGE]()
+![Tempus annotated](/projects/tempus/tempus-annotated.png)
 
 La fenêtre est redimensionnable via un bouton situé à gauche du bouton fermer comme ceci :
 
-![TODO_IMAGE]()
+![Reduce the window size](/projects/tempus/reduce-window.gif)
 
 #### Expérience utilisateur
 
 La première fois que l'utilisateur lancera l'application, un onboarding lui présentera les différentes fonctionnalités de l'application.
 
-![TODO_IMAGE]()
+![Onboarding](/projects/tempus/onboarding.gif)
 
-Une fois l'onboarding terminé, l'utilisateur est présenté devant l'interface principale :
-
-![TODO_IMAGE]()
+Une fois l'onboarding terminé, l'utilisateur est présenté devant l'interface principale.
 
 Il y a 3 principales actions au sein de la bottom bar navigation :
 
@@ -152,9 +168,9 @@ Dans le header nous avons :
 - Minimiser l'application (mode mini)
 - Fermer l'application
 
-Le corps principal de l'application est composé d'une couloir noir profonde et est présenté à l'utilisateur le % de temps passé par rapport au temps total (de travail ou de pause), l'utilisateur peut cliquer sur ce nombre pour passer du mode % à un mode "minutes/secondes".
+Le corps principal de l'application est composé d'une couleur noire profonde et est présenté à l'utilisateur le % de temps passé par rapport au temps total (de travail ou de pause), l'utilisateur peut cliquer sur ce nombre pour passer du mode % à un mode "minutes/secondes".
 
-Et en dessous le bouton pour initialiser un pomodoro qui durera jusqu'à la fin de l'heure. Qui est rapide d'accès sans pour autant polluer la vue principale.
+En dessous se trouve le bouton pour initialiser un pomodoro qui durera jusqu'à la fin de l'heure. Qui est rapide d'accès sans pour autant polluer la vue principale.
 
 ## Évolution du projet
 
