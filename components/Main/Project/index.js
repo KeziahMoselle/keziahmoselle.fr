@@ -34,7 +34,7 @@ export default function Project ({ project, github }) {
     <article className="case-study">
       <div className="case-study-header">
         <h2>{ data.title }</h2>
-        <h3>{ t(`projects.${data.title}`) }</h3>
+        <h3>{ t(`projects.descriptions.${data.title}`) }</h3>
         <p className="tags">{ tags }</p>
         <div className="case-study-thumbnail">
           <a

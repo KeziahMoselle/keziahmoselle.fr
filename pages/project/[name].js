@@ -2,18 +2,27 @@ import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import React, { Fragment } from 'react'
 import Head from 'next/head'
+import Seo from '../../components/Seo'
 import { getCaseStudyInfo } from '../../components/utils/graphql'
+import getExcerpt from '../../components/utils/getExcerpt'
 
 import Layout from '../../components/Layout'
 import Project from '../../components/Main/Project'
 
 
 export default (props) => {
+  const cover = `/thumbnails/${props.project.slug}.jpg`;
+
   return (
     <Fragment>
       <Head>
         <title>{ props.project.name } - Keziah MOSELLE</title>
         <link rel="stylesheet" href="/markdown.css" />
+        <Seo
+          name={`${props.project.name} - Keziah MOSELLE`}
+          metaDescription={props.project.excerpt}
+          coverImageUrl={cover}
+        />
       </Head>
 
       <Layout>
@@ -77,11 +86,16 @@ async function getMarkdownData (context) {
     .toLowerCase()
     .replace(/ /g, '-')
 
+  const pureExcerpt = getExcerpt(content, 300)
+  const excerpt = pureExcerpt.replace(/(#|"|\r?\n|\r)/g, '')
+    .trim()
+
 
   return {
     name: data.title,
     slug,
     content,
+    excerpt,
     data
   }
 }

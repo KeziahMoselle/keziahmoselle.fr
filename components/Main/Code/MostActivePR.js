@@ -8,6 +8,7 @@ import {
   GoDiffAdded,
   GoDiffRemoved
 } from 'react-icons/go'
+import getExcerpt from '../../utils/getExcerpt'
 
 function MostActivePR ({ pullRequest }) {
   const { t } = useTranslation()
@@ -74,12 +75,6 @@ function MostActivePR ({ pullRequest }) {
       </div>
     </div>
   )
-}
-
-function getExcerpt (str, limit = 140) {
-  if (!str) return
-  const lastWordIndex = str.lastIndexOf(' ', limit)
-  return `${str.substr(0, lastWordIndex)}...`
 }
 
 export default MostActivePR

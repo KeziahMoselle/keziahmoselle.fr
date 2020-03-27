@@ -9,12 +9,14 @@ import {
 } from '../components/utils/graphql'
 import Layout from '../components/Layout'
 import { Main } from '../components/Main'
+import Seo from '../components/Seo'
 
 export default function Index (props) {
   return (
     <Fragment>
       <Head>
         <title>Portfolio - Keziah MOSELLE</title>
+        <Seo />
       </Head>
       <Layout>
         <Main {...props}></Main>
