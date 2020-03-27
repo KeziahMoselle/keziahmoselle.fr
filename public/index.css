@@ -929,22 +929,6 @@ textarea {
   transition: transform 0.3s, opacity 0.3s;
 }
 
-@media only screen and (max-width: 600px) {
-  .appear-on-scroll {
-    display: none;
-  }
-
-  .sticky-header.stickied header {
-    justify-content: flex-end !important;
-  }
-}
-
-@media only screen and (min-width: 601px) {
-  .left-logo {
-    position: absolute;
-  }
-}
-
 .appear-on-scroll li {
   margin-right: 16px;
 }
@@ -1013,6 +997,31 @@ header nav {
 nav.show {
   visibility: visible;
   transform: translateX(0%);
+}
+
+@media only screen and (max-width: 600px) {
+  .appear-on-scroll {
+    display: none;
+  }
+
+  .middle-logo {
+    display: none;
+  }
+
+  .sticky-header.stickied header .left-logo {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  .sticky-header.stickied header {
+    justify-content: space-between !important;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .left-logo {
+    position: absolute;
+  }
 }
 
 .menu-header {
