@@ -1849,6 +1849,7 @@ a.pill span {
 .pull-request-title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .pull-request a:focus {
