@@ -50,7 +50,7 @@ function Project ({
       </div>
 
       <Link href={`/project/${slug}`}>
-        <a aria-label={`${title}, ${t(`projects.${title}`)}`}>
+        <a aria-label={`${title}, ${t(`projects.descriptions.${title}`)}`}>
           <div className="project-image">
             <div className="project-body hide-on-med-and-down">
               <div className="project-subtitle">
@@ -58,7 +58,7 @@ function Project ({
               </div>
               <div className="project-title">
                 <h3>{ title }</h3>
-                <h4>{ t(`projects.${title}`) }</h4>
+                <h4>{ t(`projects.descriptions.${title}`) }</h4>
               </div>
               <div className="project-supplementary">
                 <p className="project-info">

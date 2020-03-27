@@ -2,7 +2,18 @@
   "title": "Développeur Web",
   "description": "Autodidacte de {{age}} ans, je suis passionné par le développement web et l'UI/UX depuis {{sinceDate}} ans.",
   "contactMe": "Me contacter",
-  "personalProjects": "Études de projets personnels",
+  "projects": {
+    "title": "Études de projets personnels",
+    "subtitle": "Voici une sélection de projets personnels, si vous cliquez sur l'un d'eux vous pourrez lire une étude concernant le projet.",
+    "big": "Projets d'envergure",
+    "small": "Petits projets",
+    "descriptions": {
+      "Tempus": "Un pomodoro dans votre barre des tâches",
+      "Ribbon": "Gestion de signets avec des rappels et des favoris",
+      "Export GitHub Stars": "Liste / Trier / Exporter vos starred repositories",
+      "Gelbooru Client": "Un client Material Design pour explorer des images"
+    }
+  },
   "seeWebsite": "Voir le site",
   "seeRepo": "Voir sur GitHub",
   "viewProject": "Voir le projet",
@@ -36,11 +47,5 @@
     "error": "Il y a eu une erreur, n'hésitez pas à réessayer plus tard.",
     "missingFields": "Veuillez remplir tous les champs.",
     "send": "Envoyer"
-  },
-  "projects": {
-    "Tempus": "Un pomodoro dans votre barre des tâches",
-    "Ribbon": "Gestion de signets avec des rappels et des favoris",
-    "Export GitHub Stars": "Liste / Trier / Exporter vos starred repositories",
-    "Gelbooru Client": "Un client Material Design pour explorer des images"
   }
 }

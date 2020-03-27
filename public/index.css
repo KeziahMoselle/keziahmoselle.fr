@@ -1310,6 +1310,30 @@ nav.show {
   flex-direction: column;
 }
 
+.projects > p {
+  margin-top: 12px;
+}
+
+.projects > h4 {
+  margin: 36px 0;
+  position: relative;
+  background-color: var(--primary);
+}
+
+.projects > h4::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-darker);
+  height: 4px;
+}
+
+.projects .block {
+  margin-top: 24px;
+}
+
 .projects .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

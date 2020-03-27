@@ -2,7 +2,18 @@
   "title": "Web developer",
   "description": "Self-taught of {{age}} years, I have been passionate about web development and UI/UX for {{sinceDate}} years.",
   "contactMe": "Contact me",
-  "personalProjects": "Case studies of personal projects",
+  "projects": {
+    "title": "Case studies of personal projects",
+    "subtitle": "Here is a selection of my personal projects, if you click on one of them you can read a case study about it.",
+    "big": "Big projects",
+    "small": "Small projects",
+    "descriptions": {
+      "Tempus": "A simple yet featureful pomodoro in the tray/menubar",
+      "Ribbon": "A bookmark manager app with reminders and pinned bookmarks",
+      "Export GitHub Stars": "View / Sort / Export your starred repositories.",
+      "Gelbooru Client": "A material client to explore an image board."
+    }
+  },
   "seeWebsite": "See on the website",
   "seeRepo": "See on GitHub",
   "viewProject": "See project",
@@ -36,11 +47,5 @@
     "error": "There's been an error, feel free to try again later.",
     "missingFields": "Please fill in all fields.",
     "send": "Submit"
-  },
-  "projects": {
-    "Tempus": "A simple yet featureful pomodoro in the tray/menubar",
-    "Ribbon": "A bookmark manager app with reminders and pinned bookmarks",
-    "Export GitHub Stars": "View / Sort / Export your starred repositories.",
-    "Gelbooru Client": "A material client to explore an image board."
   }
 }
