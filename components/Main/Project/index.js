@@ -89,7 +89,7 @@ export default function Project ({ project, github }) {
 
       <ReactMarkdown
         source={content}
-        className="case-study-body"
+        className="case-study-body markdown-body"
         escapeHtml={false}
       />
     </article>

@@ -576,8 +576,8 @@ address, time {
 /* MOBILE */
 
 @media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 4rem;
+  html {
+    font-size: 17px;
   }
 
   .container > h3 {
@@ -1310,6 +1310,30 @@ nav.show {
   flex-direction: column;
 }
 
+.projects > p {
+  margin-top: 12px;
+}
+
+.projects > h4 {
+  margin: 36px 0;
+  position: relative;
+  background-color: var(--primary);
+}
+
+.projects > h4::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-darker);
+  height: 4px;
+}
+
+.projects .block {
+  margin-top: 24px;
+}
+
 .projects .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1589,7 +1613,34 @@ nav.show {
 .case-study-body {
   margin: 32px auto;
   font-size: 1rem;
-  max-width: 800px;
+  max-width: 1000px;
+}
+
+.case-study-body h2 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eaecef;
+}
+
+.case-study-body h3 {
+  display: block;
+  font-size: 1.1rem;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eaecef;
+}
+
+.case-study-body p {
+  position: relative;
+}
+
+.case-study-body img {
+  display: block;
+  margin: 0 auto;
+  max-height: 400px;
+  padding: 10px;
+  background-color: var(--primary-darker);
+  border-radius: 8px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1599,6 +1650,21 @@ nav.show {
 
   .case-study-body {
     padding: 0 16px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .page-title > h1 {
+    font-size: 2.5rem;
+  }
+
+  .case-study-thumbnail .btn {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    position: unset;
+    bottom: unset;
+    left: unset;
+    transform: none;
   }
 }
 

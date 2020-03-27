@@ -13,4 +13,26 @@ stack:
   - Materialize
 ---
 
-Brain is the seed of intelligence something incredible is waiting to be known.
+## Concept
+
+## Problème
+
+## Solution
+
+### Fonctionnalités
+
+####
+
+### Choix des technologies
+
+####
+
+### UI/UX
+
+#### L'interface
+
+
+#### Expérience utilisateur
+
+
+## Évolution du projet

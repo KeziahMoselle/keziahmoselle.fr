@@ -23,12 +23,15 @@ function Projects ({ projects }) {
 
   return (
     <section id="projects" className="container projects">
-      <h3>{ t('personalProjects') }</h3>
+      <h3>{ t('projects.title') }</h3>
+      <p>{ t('projects.subtitle') }</p>
 
+      <h4>{ t('projects.big') }</h4>
       <div className="block">
         { bigProjects }
       </div>
 
+      <h4>{ t('projects.small') }</h4>
       <div className="projects-small grid">
         { smallProjects }
       </div>

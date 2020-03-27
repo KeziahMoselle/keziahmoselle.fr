@@ -1,6 +1,6 @@
 ---
 title: Export GitHub Stars
-date: '2018'
+date: 2018
 github: KeziahMoselle/export-github-stars
 url: https://github.com/KeziahMoselle/export-github-stars
 tags:
@@ -12,4 +12,26 @@ stack:
   - Vuetify
 ---
 
-Brain is the seed of intelligence something incredible is waiting to be known.
+## Concept
+
+## Problème
+
+## Solution
+
+### Fonctionnalités
+
+####
+
+### Choix des technologies
+
+####
+
+### UI/UX
+
+#### L'interface
+
+
+#### Expérience utilisateur
+
+
+## Évolution du projet
