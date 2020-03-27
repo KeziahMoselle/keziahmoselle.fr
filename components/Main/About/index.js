@@ -16,7 +16,8 @@ function About () {
           style={{
             left: -105,
             top: '50%',
-            transform: 'translateY(-50%)'
+            transform: 'translateY(-50%)',
+            '--secondary-dark': '#1b1b1b'
           }}
         />
 

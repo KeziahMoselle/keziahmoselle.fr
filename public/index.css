@@ -1303,7 +1303,7 @@ nav.show {
 }
 
 .circle.overlap.crescent {
-  border: 10px solid rgba(255, 255, 255, 0.1);
+  border: 15px solid rgba(255, 255, 255, 0.1);
   border-top: none;
   border-left: none;
 }
