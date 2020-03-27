@@ -11,8 +11,8 @@ import Project from '../../components/Main/Project'
 
 
 export default (props) => {
-  const cover = `/thumbnails/${props.project.slug}.jpg`;
-
+  const cover = `${process.env.BASEURL}thumbnails/${props.project.slug}.jpg`;
+  
   return (
     <Fragment>
       <Head>
