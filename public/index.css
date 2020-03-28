@@ -1335,7 +1335,7 @@ nav.show {
   bottom: -8px;
   left: 0;
   width: 100%;
-  background-color: var(--primary-darker);
+  background-color: var(--primary-ligther);
   height: 4px;
 }
 
@@ -2248,8 +2248,8 @@ a.pill span {
 
 @media only screen and (min-width: 1200px) {
   .talk-link svg {
-    height: 28px;
-    width: 28px;
+    height: 32px;
+    width: 32px;
   }
 }
 

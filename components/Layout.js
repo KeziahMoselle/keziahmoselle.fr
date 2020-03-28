@@ -5,10 +5,10 @@ import Header from './Header'
 import { Main } from './Main'
 import Footer from './Footer'
 
-function App ({ children }) {
+function App ({ children, navLinks }) {
   return (
     <IconContext.Provider value={{ size: 18 }}>
-      <Header />
+      <Header navLinks={navLinks} />
       <main> { children } </main>
       <Footer />
     </IconContext.Provider>

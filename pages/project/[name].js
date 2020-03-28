@@ -25,7 +25,7 @@ export default (props) => {
         />
       </Head>
 
-      <Layout>
+      <Layout navLinks={['']}>
         <div className="page-title">
           <h1>Case Study</h1>
         </div>

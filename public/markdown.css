@@ -1,3 +1,7 @@
+.twitter-tweet {
+  margin: 0 auto;
+}
+
 .markdown-body :focus {
   outline: inherit;
   box-shadow: none;

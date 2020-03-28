@@ -37,6 +37,8 @@ Par conséquent, j'ai décidé d'améliorer le simple pomodoro qu'était Tempus 
 
 ![Tempus v0](/projects/tempus/tempus-v0.png)
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Day #102 of <a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> :<br>My React pomodoro app is now in my system tray o/<br><br>Next tasks :<br>- Notification when a phase is finished<br>- Display percentage as the tray icon<br>- Better window position<br>- Better UI <a href="https://t.co/tOZO53sLz1">pic.twitter.com/tOZO53sLz1</a></p>&mdash; Keziah 🌸 (@KeziahMoselle) <a href="https://twitter.com/KeziahMoselle/status/1080291122629488640?ref_src=twsrc%5Etfw">January 2, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## Solution
 
 ### Fonctionnalités

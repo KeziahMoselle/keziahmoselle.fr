@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { useWindowScroll } from 'react-use'
 import { sections } from '../Main/index'
 
-function Header () {
+function Header ({ navLinks = sections }) {
   const { i18n } = useTranslation()
   const { y } = useWindowScroll()
   const [isStickied, setIsStickied] = useState('')
@@ -106,11 +106,13 @@ function Header () {
 
             <ul>
 
-              { sections.map((section, index) => (
+              { navLinks.map((section, index) => (
                 <li key={index}>
-                  <a href={`#${section.toLowerCase()}`}>
-                    { section }
-                  </a>
+                  <Link href={`#${section.toLowerCase()}`}>
+                    <a>
+                      { section }
+                    </a>
+                  </Link>
                 </li>
               ))}
 
