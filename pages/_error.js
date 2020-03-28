@@ -26,7 +26,7 @@ class Error extends React.Component {
 
           <div className="center">
             <Link href="/">
-              <button className="btn">Revenir sur le site</button>
+              <a className="btn">Revenir sur le site</a>
             </Link>
           </div>
         </div>
