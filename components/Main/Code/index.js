@@ -10,7 +10,7 @@ function Code ({ codeStats }) {
 
   const pullRequest = codeStats.mostActivePR.user.contributionsCollection.popularPullRequestContribution.pullRequest
 
-  const userStats = codeStats.userStats.user
+  const userStats = codeStats.userStats.viewer
 
   return (
     <section id="code" className="container medium code">
