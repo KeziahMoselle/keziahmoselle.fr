@@ -43,7 +43,7 @@ function Project ({
 
       <div className="project-header show-on-med-and-down">
         <h3>{ title }</h3>
-        <h4 className="grey">{ t(`projects.${title}`) }</h4>
+        <h4 className="grey">{ t(`projects.descriptions.${title}`) }</h4>
         <div className="project-header-supplementary">
           <div>{ tagsChips }</div>
         </div>
