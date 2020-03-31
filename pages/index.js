@@ -12,8 +12,6 @@ import { Main } from '../components/Main'
 import Seo from '../components/Seo'
 
 export default function Index (props) {
-  console.log(props)
-
   return (
     <Fragment>
       <Head>

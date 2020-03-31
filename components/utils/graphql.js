@@ -108,7 +108,7 @@ export async function getUserStats () {
           }
         }
       }
-      repositoriesContributedTo(first: 100, orderBy: {field: STARGAZERS, direction: DESC}) {
+      repositoriesContributedTo(first: 100, orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC, contributionTypes: COMMIT) {
         nodes {
           owner {
             avatarUrl

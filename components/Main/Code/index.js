@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import MostActivePR from './MostActivePR'
 import UserStats from './UserStats'
 import LanguagesStats from './LanguagesStats'
+import ContributedTo from './ContributedTo'
 
 function Code ({ codeStats }) {
   const { t } = useTranslation()
@@ -11,6 +12,8 @@ function Code ({ codeStats }) {
   const pullRequest = codeStats.mostActivePR.user.contributionsCollection.popularPullRequestContribution.pullRequest
 
   const userStats = codeStats.userStats.viewer
+
+  const repositoriesContributedTo = codeStats.userStats.viewer.repositoriesContributedTo.nodes
 
   return (
     <section id="code" className="container medium code">
@@ -22,6 +25,7 @@ function Code ({ codeStats }) {
 
       <LanguagesStats userStats={userStats} />
 
+      <ContributedTo repositories={repositoriesContributedTo} />
     </section>
   )
 }
