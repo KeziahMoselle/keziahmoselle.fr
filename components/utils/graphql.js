@@ -86,8 +86,8 @@ export async function getRepoInfo (nameWithOwner) {
 }
 
 export async function getUserStats () {
-  const query = /* GraphQL */ `query UserStats($github_username: String!) {
-    user(login: $github_username) {
+  const query = /* GraphQL */ `query UserStats {
+    viewer {
       issues {
         totalCount
       }
@@ -97,7 +97,7 @@ export async function getUserStats () {
       repositories(first: 100) {
         totalCount
         nodes {
-          languages (first: 5) {
+          languages(first: 5) {
             edges {
               size
               node {
@@ -108,14 +108,25 @@ export async function getUserStats () {
           }
         }
       }
+      repositoriesContributedTo(first: 100, orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC, contributionTypes: COMMIT) {
+        nodes {
+          owner {
+            avatarUrl
+          }
+          nameWithOwner
+          primaryLanguage {
+            color
+          }
+          stargazers {
+            totalCount
+          }
+          url
+        }
+      }
     }
   }`
 
-  const variables = {
-    github_username: process.env.GITHUB_USERNAME
-  }
-
-  const response = await graphql.request(query, variables)
+  const response = await graphql.request(query)
 
   return response
 }

@@ -2002,6 +2002,48 @@ a.pill span {
   }
 }
 
+.contributions-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.repository-contributed {
+  height: 90px;
+  width: 250px;
+  margin: 16px 0;
+  background-color: var(--primary-ligther);
+  padding: 14px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.repository-contributed:focus-within {
+  box-shadow: 0 0 0 0.1rem var(--secondary);
+}
+
+.repository-contributed:hover {
+  transform: scale(1.1);
+}
+
+.repository-contributed a {
+  display: block;
+  box-shadow: none;
+}
+
+.repository-contributed img {
+  float: left;
+  height: 48px;
+  width: 48px;
+  border-radius: 6px;
+  margin-right: 8px;
+}
+
+.repository-contributed span {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
 
 /**
  *

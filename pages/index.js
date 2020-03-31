@@ -27,11 +27,13 @@ export default function Index (props) {
 
 export async function getStaticProps () {
   const projects = getProjectsData()
-  const mostActivePR = await getMostPopularPullRequest()
-  const userStats = await getUserStats()
+  const [mostActivePR, userStats] = await Promise.all([
+    getMostPopularPullRequest(),
+    getUserStats()
+  ])
 
   for (const project of projects) {
-    if (!project.github) return
+    if (!project.github) continue
 
     const repo = await getRepoInfo(project.github)
     project.repo = repo
