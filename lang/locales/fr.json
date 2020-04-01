@@ -41,6 +41,7 @@
   "achievements": "Achievements",
   "talks": "Mes talks",
   "form": {
+    "defaultMessage": "Ou, si vous préférez un formulaire :",
     "email": "Email",
     "message": "Message",
     "sending": "Envoi en cours...",

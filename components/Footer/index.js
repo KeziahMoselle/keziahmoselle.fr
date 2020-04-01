@@ -17,7 +17,7 @@ function Footer () {
 
   const messages = {
     default: {
-      text: 'If you prefer a form :',
+      text: t('form.defaultMessage'),
       emoji: '📧',
       color: ''
     },
