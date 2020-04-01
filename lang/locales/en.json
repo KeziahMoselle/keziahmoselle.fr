@@ -47,6 +47,7 @@
     "success": "Message sent! Thank you",
     "error": "There's been an error, feel free to try again later.",
     "missingFields": "Please fill in all fields.",
-    "send": "Submit"
+    "send": "Submit",
+    "copied": "Email copied to clipboard"
   }
 }

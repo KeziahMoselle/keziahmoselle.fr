@@ -47,6 +47,7 @@
     "success": "Message envoyé ! Merci",
     "error": "Il y a eu une erreur, n'hésitez pas à réessayer plus tard.",
     "missingFields": "Veuillez remplir tous les champs.",
-    "send": "Envoyer"
+    "send": "Envoyer",
+    "copied": "Copié dans le presse-papiers"
   }
 }

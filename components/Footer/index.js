@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { FiGithub, FiTwitter, FiEdit3 } from 'react-icons/fi'
+import { FaRegClipboard, FaClipboardCheck } from 'react-icons/fa'
+import copy from 'copy-to-clipboard'
+
+const emailAddress = 'contact@keziahmoselle.fr'
 
 function Footer () {
   const { t } = useTranslation()
@@ -9,11 +13,12 @@ function Footer () {
   const [message, setMessage] = useState('')
   const [isMessageValid, setIsMessageValid] = useState(null)
   const [status, setStatus] = useState('default')
+  const [copied, setCopied] = useState(false)
 
   const messages = {
     default: {
-      text: '',
-      emoji: '',
+      text: 'If you prefer a form :',
+      emoji: '📧',
       color: ''
     },
     loading: {
@@ -111,16 +116,33 @@ function Footer () {
     }
   }
 
+  function copyEmailToClipboard () {
+    copy(emailAddress)
+    setCopied(true)
+
+    setTimeout(() => {
+      setCopied(false)
+    }, 1000)
+  }
+
   return (
     <footer>
       <div className="container">
-        <form>
-          <div className="flex space-between">
-            <h2>{ t('contactMe') }</h2>
-          </div>
+        <h2>{ t('contactMe') }</h2>
 
+        <button
+          className={`email-address ${copied ? 'copied' : ''}`}
+          onClick={copyEmailToClipboard}
+        >
+          <span>{ copied ? t('form.copied') : emailAddress }</span>
+
+          { !copied && <FaRegClipboard size={28} /> }
+          { copied && <FaClipboardCheck size={28} /> }
+        </button>
+
+        <form>
           <p className="status-message" style={{
-            color: messages[status].color || 'black',
+            color: messages[status].color || 'var(--primary)',
             margin: '16px 0'
           }}>
             <span role="img" aria-label="party popper emoji">

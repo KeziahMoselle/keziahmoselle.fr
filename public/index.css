@@ -745,11 +745,6 @@ ul {
 }
 
 footer .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   margin: 64px auto 0 auto;
 }
 
@@ -775,10 +770,41 @@ footer .container p img {
   width: auto;
 }
 
+footer .email-address {
+  --current-color: #E486A6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: var(--secondary-darker);
+  border-radius: 8px;
+  margin-top: 24px;
+  color: var(--current-color);
+  font-size: 1.1rem;
+  padding: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+footer .email-address.copied {
+  --current-color: var(--success);
+}
+
+footer .email-address:hover {
+  background-color: var(--secondary-dark);
+}
+
+footer .email-address:focus {
+  box-shadow: 0 0 0 0.1em var(--current-color);
+}
+
+
 footer form {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 16px;
 }
 
 @media only screen and (min-width: 700px) {
@@ -815,6 +841,10 @@ footer form > div > p img {
     border-top: 4px solid var(--primary);
     padding-top: 6px;
   }
+}
+
+.footer-links {
+  text-align: center;
 }
 
 .footer-links a {
