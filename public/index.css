@@ -1840,6 +1840,10 @@ a.pill span {
   margin-bottom: 44px;
 }
 
+.code .block > h4 {
+  margin-bottom: 16px;
+}
+
 .pull-request {
   padding: 16px 24px;
   width: auto;
@@ -1905,6 +1909,14 @@ a.pill span {
   color: var(--secondary-ligther);
 }
 
+.pull-request-info a:focus {
+  color: var(--accent);
+}
+
+.pull-request-info a:focus > span {
+  color: var(--accent);
+}
+
 .pull-request-info svg {
   margin-right: 4px;
 }
@@ -1961,6 +1973,10 @@ a.pill span {
   font-weight: bold;
   min-width: 200px;
   margin: 0 20px;
+}
+
+.user-stats .card.inverted:focus {
+  box-shadow: 0 0 0 0.2em var(--accent);
 }
 
 .user-stats .card.inverted svg {
@@ -2039,6 +2055,9 @@ a.pill span {
 }
 
 .repository-contributed {
+  place-self: center;
+  display: flex;
+  align-items: center;
   height: 90px;
   width: 250px;
   margin: 16px 0;
@@ -2054,6 +2073,10 @@ a.pill span {
 
 .repository-contributed:hover {
   transform: scale(1.1);
+}
+
+.repository-contributed > div {
+  overflow: hidden;
 }
 
 .repository-contributed a {

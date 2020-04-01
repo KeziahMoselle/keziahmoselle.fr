@@ -22,16 +22,20 @@ function ContributedTo ({ repositories }) {
 
 function Repository ({ repository }) {
   return (
-    <div className="repository-contributed">
-      <a href={repository.url}>
-        <img src={repository.owner.avatarUrl} alt="" />
+    <a
+      className="repository-contributed"
+      href={repository.url}
+    >
+      <img src={repository.owner.avatarUrl} alt="" />
+
+      <div>
         <h5>{ repository.nameWithOwner }</h5>
         <span>
           <GoStar size={16} />
           { repository.stargazers.totalCount }
         </span>
-      </a>
-    </div>
+      </div>
+    </a>
   )
 }
 
