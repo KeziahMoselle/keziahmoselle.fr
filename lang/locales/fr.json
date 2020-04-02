@@ -38,7 +38,17 @@
     "bachelor": "Baccalauréat",
     "good": "Mention bien"
   },
-  "achievements": "Achievements",
+  "achievements": {
+    "title": "Achievements",
+    "descriptions": {
+      "Hacktoberfest 2018": "Hacktoberfest is a month-long celebration of open source software run by DigitalOcean in partnership with GitHub and Twilio.",
+      "Hacktoberfest 2019": "Hacktoberfest is a month-long celebration of open source software run by DigitalOcean in partnership with GitHub and DEV.to",
+      "GitHub Game Off": "Game Off is our annual game jam, where participants spend the month of November creating games based on a theme that we provide. The theme for this year's Game Off was HYBRID!",
+      "Climate Fixathon": "The world's first online hackathon to help fix the climate",
+      "GitHub Education #PinsToWin": "Your GitHub profile is a great place to show off your work and projects to the world. It displays your contributions, and you can highlight specific projects by pinning them. Now, you can even pin gists. GitHub gists are a fast and easy way of sharing code snippets and single files. When you pin a gist, a preview of the contents will appear on your profile.",
+      "#100DaysOfCode": "Code minimum an hour every day for the next 100 days. Tweet your progress every day with the #100DaysOfCode hashtag."
+    }
+  },
   "talks": "Mes talks",
   "form": {
     "defaultMessage": "Ou, si vous préférez un formulaire :",

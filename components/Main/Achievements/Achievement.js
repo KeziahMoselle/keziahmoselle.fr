@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useSpring, animated } from 'react-spring'
 import { FiChevronDown } from 'react-icons/fi'
+import { useTranslation } from 'react-i18next'
 
 function Achievement ({
   name,
@@ -11,6 +12,7 @@ function Achievement ({
   rank,
   won
 }) {
+  const { t } = useTranslation()
   const [isExtended, setIsExtended] = useState(false)
   const props = useSpring({
     maxHeight: isExtended ? '1000px' : '0px'
@@ -68,7 +70,7 @@ function Achievement ({
             </div>}
         </div>
 
-        { content && <p>{ content }</p> }
+        <p>{ t(`achievements.descriptions.${name}`) }</p>
 
         { link &&
           <div className="flex center">
