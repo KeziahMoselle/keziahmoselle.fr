@@ -97,11 +97,11 @@ function Project ({
 
         <a
           className="pill show-on-med-and-down"
-          href={url || `https://github.com/${github}`}
+          href={`/project/${slug}`}
           target="_blank"
           rel="nofollow noopener noreferrer"
         >
-          <span>{ url ? t('seeWebsite') : t('seeRepo') }</span>
+          <span>{ t('seeCasestudy') }</span>
         </a>
 
         <div className="project-stack">{ techStack }</div>

@@ -2,6 +2,8 @@ import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import React, { Fragment } from 'react'
 import Head from 'next/head'
+import { FiArrowLeft } from 'react-icons/fi'
+
 import Seo from '../../components/Seo'
 import { getCaseStudyInfo } from '../../components/utils/graphql'
 import getExcerpt from '../../components/utils/getExcerpt'
@@ -25,7 +27,7 @@ export default (props) => {
         />
       </Head>
 
-      <Layout navLinks={['']}>
+      <Layout goBack>
         <div className="page-title">
           <h1>Case Study</h1>
         </div>
