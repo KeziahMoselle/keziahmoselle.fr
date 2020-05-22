@@ -8,6 +8,7 @@ import Achievements from './Achievements'
 import Talks from './Talks'
 import About from './About'
 import Code from './Code'
+import LatestPost from './LatestPost'
 
 export const sections = [
   'About',
@@ -20,7 +21,7 @@ export const sections = [
   'Formations'
 ]
 
-export function Main ({ projects, codeStats }) {
+export function Main ({ projects, codeStats, latestBlogPost }) {
   return (
     <React.Fragment>
       <Hero />
@@ -31,6 +32,7 @@ export function Main ({ projects, codeStats }) {
       <Achievements />
       <Talks />
       <Code codeStats={codeStats} />
+      <LatestPost latestBlogPost={latestBlogPost} />
       <Formations />
     </React.Fragment>
   )
