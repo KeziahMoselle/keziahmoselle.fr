@@ -5,7 +5,7 @@ import { GoStar } from 'react-icons/go'
 function ContributedTo ({ repositories }) {
   const { t } = useTranslation()
 
-  const contributedRepos = repositories.filter(repository => repository.stargazers.totalCount > 0)
+  const contributedRepos = repositories.filter(repository => repository.stargazers.totalCount > 1)
 
   return (
     <div className="block column valign">
