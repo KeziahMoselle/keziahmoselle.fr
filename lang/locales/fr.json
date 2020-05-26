@@ -61,5 +61,8 @@
     "missingFields": "Veuillez remplir tous les champs.",
     "send": "Envoyer",
     "copied": "Copié dans le presse-papiers"
-  }
+  },
+  "latestPost": "Mon dernier article",
+  "readArticle": "Lire l'article",
+  "published": "Publié le"
 }
