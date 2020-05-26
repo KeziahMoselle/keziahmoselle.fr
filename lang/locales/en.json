@@ -61,5 +61,8 @@
     "missingFields": "Please fill in all fields.",
     "send": "Submit",
     "copied": "Email copied to clipboard"
-  }
+  },
+  "latestPost": "My last blog post",
+  "readArticle": "Read post",
+  "published": "published on"
 }

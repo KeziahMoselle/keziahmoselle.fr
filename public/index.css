@@ -1720,6 +1720,7 @@ nav.show {
  */
 
 a.pill {
+  height: fit-content;
   border: none;
   padding: 3px 10px 3px 50px;
   font-size: 16px;
@@ -1752,6 +1753,10 @@ a.pill:hover::before {
 a.pill span {
   color: var(--accent);
   mix-blend-mode: difference;
+}
+
+a.pill:focus {
+  box-shadow: none;
 }
 
 

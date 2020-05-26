@@ -1,5 +1,17 @@
 import React from 'react'
+import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
+import marked from 'marked'
+
+const renderer = {
+  heading (text, level) { return '' },
+  paragraph (str) {
+    if (!str) return
+    return str
+  }
+}
+
+marked.use({ renderer })
 
 function LatestPost ({ latestBlogPost }) {
   const { t, i18n } = useTranslation()
@@ -20,30 +32,33 @@ function LatestPost ({ latestBlogPost }) {
 
       <div className="block">
 
-        <div className="article card">
-          <div className="article-header">
-            <div className="article-title">
-              <h3>{ latestBlogPost.data.title }</h3>
-              <small className="grey show-on-desktop">{ t('published') } { date }</small>
-            </div>
-            <p className="grey">{ latestBlogPost.excerpt }</p>
-          </div>
-
-          <div className="article-footer">
-            <p className="pill">
-              <span>{ t('readArticle') }</span>
-            </p>
-
-            <div>
-              <div className="show-on-tablet-and-down">
-                <small className="chip-inline grey white show-on-tablet-and-down">
-                  { t('published') } { date }
-                </small>
+        <Link href={`${process.env.BLOG_URL}${latestBlogPost.slug}`}>
+          <a>
+            <div className="article card">
+              <div className="article-header">
+                <div className="article-title">
+                  <h3>{ latestBlogPost.data.title }</h3>
+                </div>
+                <p className="grey" dangerouslySetInnerHTML={{
+                  __html: marked(latestBlogPost.excerpt)
+                }}></p>
               </div>
-            </div>
-          </div>
 
-        </div>
+              <div className="article-footer">
+                <a className="pill">{ t('readArticle') }</a>
+
+                <div>
+                  <div className="show-on-tablet-and-down">
+                    <small className="chip-inline grey white">
+                      { t('published') } { date }
+                    </small>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </a>
+        </Link>
 
       </div>
     </section>
