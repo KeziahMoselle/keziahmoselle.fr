@@ -2463,10 +2463,6 @@ a.pill:focus {
 }
 
 @media only screen and (max-width: 600px) {
-  .block {
-    margin: 0;
-  }
-
   .article-header {
     display: block;
   }
