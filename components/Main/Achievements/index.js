@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import Achievement from './Achievement'
 
 const achievementsList = [
@@ -46,9 +47,11 @@ const achievementsList = [
 ]
 
 function Achievements () {
+  const { t } = useTranslation()
+
   return (
     <section id="achievements" className="container medium achievements">
-      <h3>Achievements</h3>
+      <h3>{ t('achievements.title') }</h3>
 
       <div className="block achievements-list">
         {

@@ -40,14 +40,14 @@
     "good": "Mention bien"
   },
   "achievements": {
-    "title": "Achievements",
+    "title": "Implications",
     "descriptions": {
-      "Hacktoberfest 2018": "Hacktoberfest is a month-long celebration of open source software run by DigitalOcean in partnership with GitHub and Twilio.",
-      "Hacktoberfest 2019": "Hacktoberfest is a month-long celebration of open source software run by DigitalOcean in partnership with GitHub and DEV.to",
-      "GitHub Game Off": "Game Off is our annual game jam, where participants spend the month of November creating games based on a theme that we provide. The theme for this year's Game Off was HYBRID!",
-      "Climate Fixathon": "The world's first online hackathon to help fix the climate",
-      "GitHub Education #PinsToWin": "Your GitHub profile is a great place to show off your work and projects to the world. It displays your contributions, and you can highlight specific projects by pinning them. Now, you can even pin gists. GitHub gists are a fast and easy way of sharing code snippets and single files. When you pin a gist, a preview of the contents will appear on your profile.",
-      "#100DaysOfCode": "Code minimum an hour every day for the next 100 days. Tweet your progress every day with the #100DaysOfCode hashtag."
+      "Hacktoberfest 2018": "L'Hacktoberfest 2018 était la première édition à laquelle j'ai participé. J'ai contribué à 10 projets notamment Streaker un logiciel qui track vos contributions quotidiennes sur GitHub.",
+      "Hacktoberfest 2019": "Pour cette deuxième édition j'ai contribué à 4 projets dont le site de Node.js où j'ai pu ajouter une fonctionnalité qui consiste à afficher un contributeur aléatoire dans le footer.",
+      "GitHub Game Off": "Le concours GitHub Game Off consiste à créer un jeu vidéo en 1 mois. J'ai décidé de participer 1 semaine avant sa fermeture et j'ai pu découvrir les prémices du développement d'un jeu vidéo.",
+      "Climate Fixathon": "Le Climate Fixathon est un hackaton qui encourage la création de projets innovants dans le but de réduire la pollution globale de notre planète. Nous avons créer une équipe constitué d'un designer et de deux développeurs. Le projet était une application pour construire de meilleurs habitudes https://purposehabits.com/ et de les partager à la manière d'un réseau social.",
+      "GitHub Education #PinsToWin": "Le concours #PinsToWin organisé par GitHub Education consiste à décorer son profil à l'aide de Gists. J'ai réalisé un gist qui affichait ma dernière activité sur Twitter et un autre pour GitHub.",
+      "#100DaysOfCode": "Le mouvement #100DaysOfCode consiste à développer minimum 1h par jour dans le but d'apprendre et de partager son apprentissage sur les réseaux. J'ai réalisé ce mouvement 2x."
     }
   },
   "talks": "Mes talks",
