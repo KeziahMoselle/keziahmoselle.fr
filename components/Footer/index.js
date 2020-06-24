@@ -18,7 +18,7 @@ function Footer () {
   const messages = {
     default: {
       text: t('form.defaultMessage'),
-      emoji: '📧',
+      emoji: '',
       color: ''
     },
     loading: {
@@ -145,9 +145,11 @@ function Footer () {
             color: messages[status].color || 'var(--primary)',
             margin: '16px 0'
           }}>
-            <span role="img" aria-label="party popper emoji">
-              { messages[status].emoji }
-            </span>
+            { messages[status].emoji && (
+              <span role="img" aria-label="party popper emoji">
+                { messages[status].emoji }
+              </span>
+            )}
             { messages[status].text }
           </p>
 
