@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 import Header from '../components/Header'
 
-function Error ({ statusCode }) {
+export default function Error404 () {
   return (
     <Fragment>
       <Head>
@@ -14,7 +14,14 @@ function Error ({ statusCode }) {
       <Header />
 
       <div className="flex column valign" style={{ marginTop: '124px' }}>
-        <h2><code>Error { statusCode }</code></h2>
+        <h2><code>404 Not Found</code></h2>
+        <img src="/not-found.svg" alt="404 Page not found" style={{
+          objectFit: 'contain',
+          width: '100%',
+          maxHeight: '300px',
+          margin: '64px 0',
+          padding: '0 32px'
+        }} />
 
         <div className="center">
           <Link href="/">
@@ -25,10 +32,3 @@ function Error ({ statusCode }) {
     </Fragment>
   )
 }
-
-Error.getInitialProps = ({ res, err }) => {
-  const statusCode = res ? res.statusCode : err ? err.statusCode : 404
-  return { statusCode }
-}
-
-export default Error
