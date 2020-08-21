@@ -4,18 +4,6 @@ import { useTranslation } from 'react-i18next'
 
 const allTalks = [
   {
-    title: 'Advanced JavaScript and design patterns',
-    imgSlug: 'advanced-js-patterns',
-    date: '2019-12-04',
-    at: 'Plage Digitale, Strasbourg',
-    group: 'VueStrasbourg',
-    groupUrl: 'https://vue.alsace/',
-    slides: 'https://slides.com/edimitchel/advancedjs-design-pattern/#/1',
-    repository: 'https://github.com/VueStrasbourg/alsacreations-accessibility-react-vue',
-    url: 'https://www.meetup.com/fr-FR/StrasbourgJS/events/266231677/',
-    video: 'https://youtu.be/UEOV1HQIEug'
-  },
-  {
     title: 'Comment rendre ses sites plus accessibles',
     imgSlug: 'accessibility-react-vue',
     date: '2020-03-05',
@@ -26,6 +14,18 @@ const allTalks = [
     repository: 'https://github.com/VueStrasbourg/alsacreations-accessibility-react-vue',
     url: 'https://www.meetup.com/fr-FR/StrasbourgJS/events/268379010/',
     video: 'https://youtu.be/8GiLpgGmOw4'
+  },
+  {
+    title: 'Advanced JavaScript and design patterns',
+    imgSlug: 'advanced-js-patterns',
+    date: '2019-12-04',
+    at: 'Plage Digitale, Strasbourg',
+    group: 'VueStrasbourg',
+    groupUrl: 'https://vue.alsace/',
+    slides: 'https://slides.com/edimitchel/advancedjs-design-pattern/#/1',
+    repository: 'https://github.com/VueStrasbourg/alsacreations-accessibility-react-vue',
+    url: 'https://www.meetup.com/fr-FR/StrasbourgJS/events/266231677/',
+    video: 'https://youtu.be/UEOV1HQIEug'
   }
 ]
 

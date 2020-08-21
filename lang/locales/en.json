@@ -58,8 +58,8 @@
   "talks": "My talks",
   "form": {
     "defaultMessage": "Or, if you prefer a form :",
-    "email": "What's your email address ?",
-    "message": "Your message",
+    "email": "john@doe.fr",
+    "message": "What do you want to say ?",
     "sending": "Sending...",
     "success": "Message sent! Thank you",
     "error": "There's been an error, feel free to try again later.",

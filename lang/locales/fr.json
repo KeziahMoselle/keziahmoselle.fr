@@ -58,8 +58,8 @@
   "talks": "Mes talks",
   "form": {
     "defaultMessage": "Ou, si vous préférez un formulaire :",
-    "email": "Email",
-    "message": "Message",
+    "email": "john@doe.fr",
+    "message": "Que souhaitez-vous dire ?",
     "sending": "Envoi en cours...",
     "success": "Message envoyé ! Merci",
     "error": "Il y a eu une erreur, n'hésitez pas à réessayer plus tard.",
