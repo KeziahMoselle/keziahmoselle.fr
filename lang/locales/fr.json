@@ -3,6 +3,10 @@
   "description": "Autodidacte de {{age}} ans, je suis passionné par le développement web, l'UI/UX et l'accessibilité depuis {{sinceDate}} ans.",
   "contactMe": "Me contacter",
   "resume": "CV",
+  "translateTo": {
+    "english": "Translate to english",
+    "french": "Traduire en français"
+  },
   "projects": {
     "title": "Études de projets personnels",
     "subtitle": "Voici une sélection de projets personnels, si vous cliquez sur l'un d'eux vous pourrez lire une étude concernant le projet.",

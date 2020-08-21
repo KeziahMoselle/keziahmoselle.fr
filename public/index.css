@@ -448,6 +448,10 @@ a.chip-inline:hover {
   box-shadow: 0 0 0 0.2rem var(--accent);
 }
 
+.chip-inline.bordered {
+  border: 1px solid var(--secondary);
+}
+
 
 .chip {
   display: flex;
@@ -971,6 +975,15 @@ textarea {
   transform: translateY(-64px);
   opacity: 1;
   transition: transform 0.3s, opacity 0.3s;
+}
+
+.right-list {
+  display: flex;
+  align-items: center;
+}
+
+.right-list li + li {
+  margin-left: 16px;
 }
 
 header {

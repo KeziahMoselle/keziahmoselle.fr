@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { FiMenu, FiX, FiArrowLeft } from 'react-icons/fi'
+import { MdTranslate } from 'react-icons/md'
 import { useTranslation } from 'react-i18next'
 import { useWindowScroll } from 'react-use'
 import { sections } from '../Main/index'
 
 function Header ({ navLinks = sections, goBack }) {
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   const { y } = useWindowScroll()
   const [isStickied, setIsStickied] = useState('')
   const [isMenuExpanded, setIsMenuExpanded] = useState(false)
@@ -41,7 +42,7 @@ function Header ({ navLinks = sections, goBack }) {
         <Link href="/">
           <a className="left-logo">
             <img
-              src="/icons/logo.svg"
+              src="/logos/keziahmoselle.svg"
               alt="Homepage"
             />
           </a>
@@ -50,15 +51,6 @@ function Header ({ navLinks = sections, goBack }) {
         <ul className="appear-on-scroll">
           { !goBack && (
             <React.Fragment>
-              <li>
-                <button onClick={handleTranslating}>
-                  <img
-                    src="/icons/translate.svg"
-                    alt={`${i18n.language === 'fr' ? 'Translate to english' : 'Traduire en français'}`}
-                  />
-                </button>
-              </li>
-
               <li>
                 <a
                   className="appear-logo"
@@ -93,19 +85,32 @@ function Header ({ navLinks = sections, goBack }) {
 
         <Link href="/">
           <a className="middle-logo">
-            <img src="/icons/logo.svg" className="header-logo" alt="Homepage" />
+            <img src="/logos/keziahmoselle.svg" className="header-logo" alt="Homepage" />
           </a>
         </Link>
 
         { !goBack && (
-          <button
-            onClick={() => setIsMenuExpanded(!isMenuExpanded)}
-            aria-label="Menu"
-            aria-expanded={isMenuExpanded}
-            aria-controls="menu"
-          >
-            <FiMenu size={28} />
-          </button>
+          <ul className="right-list">
+            <li>
+              <button onClick={handleTranslating} className="flex valign chip-inline bordered">
+                <MdTranslate />
+                { i18n.language === 'fr'
+                  ? 'Français'
+                  : 'English'
+                }
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => setIsMenuExpanded(!isMenuExpanded)}
+                aria-label="Menu"
+                aria-expanded={isMenuExpanded}
+                aria-controls="menu"
+              >
+                <FiMenu size={28} />
+              </button>
+            </li>
+          </ul>
         )}
 
         <nav id="menu" className={`menu ${isMenuExpanded ? 'show' : ''}`}>
@@ -157,10 +162,11 @@ function Header ({ navLinks = sections, goBack }) {
               </li>
               <li>
                 <button onClick={handleTranslating}>
-                  <img
-                    src="/icons/translate.svg"
-                    alt={`${i18n.language === 'fr' ? 'Translate to english' : 'Traduire en français'}`}
-                  />
+                  <MdTranslate size={32} />
+                  { i18n.language === 'fr'
+                    ? t('translateTo.english')
+                    : t('translateTo.french')
+                  }
                 </button>
               </li>
             </ul>
