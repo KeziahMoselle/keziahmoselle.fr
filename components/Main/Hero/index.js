@@ -35,7 +35,7 @@ function Hero () {
           className="btn white bordered translate-y"
         >
           <FiFile className="left" />
-          { t('CV') }
+          { t('resume') }
         </a>
       </div>
 

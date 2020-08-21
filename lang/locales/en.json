@@ -1,7 +1,8 @@
 {
   "title": "Web developer",
-  "description": "Self-taught of {{age}} years, I have been passionate about web development and UI/UX for {{sinceDate}} years.",
+  "description": "Self-taught of {{age}} years, I have been passionate about web development, UI/UX and accessibility for {{sinceDate}} years.",
   "contactMe": "Contact me",
+  "resume": "Resume",
   "projects": {
     "title": "Case studies of personal projects",
     "subtitle": "Here is a selection of my personal projects, if you click on one of them you can read a case study about it.",
