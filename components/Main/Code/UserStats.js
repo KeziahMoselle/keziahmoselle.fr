@@ -14,24 +14,31 @@ function UserStats ({ userStats }) {
           href="https://github.com/KeziahMoselle"
           target="_blank"
           rel="nofollow noopener noreferrer"
+          data-aos="fade-up"
         >
           <GoIssueOpened size={24} className="OPEN" />
           { userStats.issues.totalCount } issues
         </a>
+
         <a
           className="card inverted translate-y"
           href="https://github.com/KeziahMoselle"
           target="_blank"
           rel="nofollow noopener noreferrer"
+          data-aos="fade-up"
+          data-aos-delay="50"
         >
           <GoGitPullRequest size={24} className="MERGED" />
           { userStats.pullRequests.totalCount } pull requests
         </a>
+
         <a
           className="card inverted translate-y"
           href="https://github.com/KeziahMoselle?tab=repositories"
           target="_blank"
           rel="nofollow noopener noreferrer"
+          data-aos="fade-up"
+          data-aos-delay="100"
         >
           <GoRepo size={24} className="NEUTRAL" />
           { userStats.repositories.totalCount } repositories

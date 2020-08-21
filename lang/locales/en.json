@@ -25,7 +25,7 @@
   "viewProject": "See project",
   "skills": "My skills",
   "code": {
-    "title": "Git statistics",
+    "title": "GitHub statistics",
     "mostActivePR": "Most active PR",
     "userStats": "Stats",
     "languagesStats": "% of bytes written by languages",
