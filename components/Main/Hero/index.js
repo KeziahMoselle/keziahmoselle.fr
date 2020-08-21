@@ -8,7 +8,7 @@ function Hero () {
   const { t } = useTranslation()
 
   return (
-    <section id="hero" className="container hero relative">
+    <section id="hero" className="container hero relative" data-aos="fade-up">
       <div className="bar"></div>
 
       <h1>

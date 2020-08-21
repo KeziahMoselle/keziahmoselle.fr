@@ -39,7 +39,7 @@ function Project ({
   ))
 
   return (
-    <article className="project">
+    <article className="project" data-aos="fade-up">
 
       <div className="project-header show-on-med-and-down">
         <h3>{ title }</h3>

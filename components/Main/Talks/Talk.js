@@ -18,7 +18,7 @@ function Talk ({
   intl
 }) {
   return (
-    <div className="talk card inverted">
+    <div className="talk card inverted" data-aos="fade-up">
 
       <div className="talk-header">
         <a

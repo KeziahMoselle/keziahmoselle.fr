@@ -54,7 +54,7 @@ function Experience () {
       <h3>{ t('experience') }</h3>
 
       { experiences.map((experience, index) => (
-        <div className="block card column" key={index}>
+        <div className="block card column" key={index} data-aos="fade-up">
           <h4>{ experience.company }</h4>
           <h5>{ experience.title }</h5>
           <h6>{ experience.years }</h6>
