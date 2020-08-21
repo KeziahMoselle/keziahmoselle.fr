@@ -13,7 +13,7 @@ function ContributedTo ({ repositories }) {
 
       <div className="contributions-list">
         { contributedRepos.map(repository => (
-          <Repository repository={repository} />
+          <Repository key={repository.nameWithOwner} repository={repository} />
         ))}
       </div>
     </div>

@@ -1719,7 +1719,7 @@ nav.show {
  *
  */
 
-a.pill {
+.pill {
   height: fit-content;
   border: none;
   padding: 3px 10px 3px 50px;
@@ -1728,7 +1728,7 @@ a.pill {
   position: relative;
 }
 
-a.pill::before {
+.pill::before {
   transition: all 0.4s;
   content: '';
   width: 50%;
@@ -1739,23 +1739,23 @@ a.pill::before {
   left: 0;
 }
 
-a.pill::before {
+.pill::before {
   border-radius: 50px;
   width: 25%;
   background: var(--accent);
 }
 
-a.pill:hover::before {
+.pill:hover::before {
   background: var(--accent);
   width: 100%;
 }
 
-a.pill span {
+.pill span {
   color: var(--accent);
   mix-blend-mode: difference;
 }
 
-a.pill:focus {
+.pill:focus {
   box-shadow: none;
 }
 

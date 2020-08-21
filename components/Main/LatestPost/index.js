@@ -1,22 +1,21 @@
 import React from 'react'
-import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import marked from 'marked'
 
 const renderer = {
-  heading (text, level) { return '' },
+  heading () { return '' },
   paragraph (str) {
-    if (!str) return
+    if (!str) return ''
     return str
-  }
+  },
+  image () { return '' },
+  link (href, title, text) { return text }
 }
 
 marked.use({ renderer })
 
 function LatestPost ({ latestBlogPost }) {
   const { t, i18n } = useTranslation()
-
-  console.log(latestBlogPost)
 
   const intl = new Intl.DateTimeFormat(i18n.language, {
     year: 'numeric',
@@ -32,8 +31,8 @@ function LatestPost ({ latestBlogPost }) {
 
       <div className="block">
 
-        <Link href={`${process.env.BLOG_URL}${latestBlogPost.slug}`}>
-          <a>
+        <a href={`${process.env.BLOG_URL}${latestBlogPost.slug}`}>
+          <div>
             <div className="article card">
               <div className="article-header">
                 <div className="article-title">
@@ -45,7 +44,7 @@ function LatestPost ({ latestBlogPost }) {
               </div>
 
               <div className="article-footer">
-                <a className="pill">{ t('readArticle') }</a>
+                <span className="pill">{ t('readArticle') }</span>
 
                 <div>
                   <div className="show-on-tablet-and-down">
@@ -57,8 +56,8 @@ function LatestPost ({ latestBlogPost }) {
               </div>
 
             </div>
-          </a>
-        </Link>
+          </div>
+        </a>
 
       </div>
     </section>
