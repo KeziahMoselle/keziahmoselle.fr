@@ -4,7 +4,7 @@ import Head from 'next/head'
 function Seo ({
   name = 'Keziah MOSELLE',
   domainUrl = 'https://keziahmoselle.fr/',
-  metaDescription = "Portfolio de Keziah Moselle, développeur front-end autodidacte depuis 6 ans et passionné par le développement web et l'UI/UX depuis 2014.",
+  metaDescription = "Portfolio de Keziah MOSELLE, développeur front-end autodidacte depuis 6 ans et passionné par le développement web, l'UI/UX, l'accessibilité et l'enseignement.",
   coverImageUrl = 'https://keziahmoselle.fr/cover.png'
 }) {
   return (
