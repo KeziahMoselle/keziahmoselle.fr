@@ -1103,6 +1103,12 @@ nav.show {
   padding: 12px 32px;
 }
 
+@media only screen and (max-width: 600px) {
+  .menu-body a, .menu-body button {
+    font-size: 1rem;
+  }
+}
+
 .menu-body a:focus {
   box-shadow: none;
 }
