@@ -69,5 +69,7 @@
   },
   "latestPost": "My last blog post",
   "readArticle": "Read post",
-  "published": "published on"
+  "published": "published on",
+  "builtWith": "Built with",
+  "hostedOn": "and hosted on"
 }

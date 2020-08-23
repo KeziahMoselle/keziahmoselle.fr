@@ -45,7 +45,7 @@
     "good": "Mention bien"
   },
   "achievements": {
-    "title": "Implications",
+    "title": "Initiatives",
     "descriptions": {
       "Hacktoberfest 2018": "L'Hacktoberfest 2018 était la première édition à laquelle j'ai participé. J'ai contribué à 10 projets notamment Streaker un logiciel qui track vos contributions quotidiennes sur GitHub.",
       "Hacktoberfest 2019": "Pour cette deuxième édition j'ai contribué à 4 projets dont le site de Node.js où j'ai pu ajouter une fonctionnalité qui consiste à afficher un contributeur aléatoire dans le footer.",
@@ -69,5 +69,7 @@
   },
   "latestPost": "Mon dernier article",
   "readArticle": "Lire l'article",
-  "published": "Publié le"
+  "published": "Publié le",
+  "builtWith": "Développé avec",
+  "hostedOn": "et hébergé avec"
 }
