@@ -71,5 +71,8 @@
   "readArticle": "Lire l'article",
   "published": "Publié le",
   "builtWith": "Développé avec",
-  "hostedOn": "et hébergé avec"
+  "hostedOn": "et hébergé avec",
+  "services": {
+    "title": "Mes services"
+  }
 }

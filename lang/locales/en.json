@@ -71,5 +71,8 @@
   "readArticle": "Read post",
   "published": "published on",
   "builtWith": "Built with",
-  "hostedOn": "and hosted on"
+  "hostedOn": "and hosted on",
+  "services": {
+    "title": "My services"
+  }
 }

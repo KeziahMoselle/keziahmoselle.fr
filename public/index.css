@@ -1172,6 +1172,43 @@ nav.show {
   }
 }
 
+/**
+ *
+ * Services
+ *
+ */
+
+ .services-list {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+ }
+
+.service {
+  background-color: var(--primary-ligther);
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 32px;
+  margin: 32px;
+}
+
+.service:hover {
+  box-shadow: 0 0 0 0.2rem var(--primary-darker) inset;
+}
+
+.service > svg {
+  margin-bottom: 16px;
+}
+
+.service > h4 {
+  margin-bottom: 8px;
+}
+
+.service > p {
+  color: var(--secondary-ligther);
+}
+
 
 /**
  *

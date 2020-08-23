@@ -9,9 +9,11 @@ import Talks from './Talks'
 import About from './About'
 import Code from './Code'
 import LatestPost from './LatestPost'
+import Services from './Services'
 
 export const sections = [
   'About',
+  'Services',
   'Projects',
   'Skills',
   'Experience',
@@ -26,6 +28,7 @@ export function Main ({ projects, codeStats, latestBlogPost }) {
     <React.Fragment>
       <Hero />
       <About />
+      <Services />
       <Projects projects={projects} />
       <Skills />
       <Experience />
