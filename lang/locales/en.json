@@ -71,5 +71,20 @@
   "readArticle": "Read post",
   "published": "published on",
   "builtWith": "Built with",
-  "hostedOn": "and hosted on"
+  "hostedOn": "and hosted on",
+  "services": {
+    "title": "My services",
+    "applications": {
+      "title": "Applications",
+      "description": "Developing all kind of websites, e-commerces, mainly web applications, mobile and desktop applications."
+    },
+    "uiux": {
+      "title": "User Experience & Design",
+      "description": "Client-focused, user-friendly experiences. beautifully crafted."
+    },
+    "accessibility": {
+      "title": "Accessibility in mind",
+      "description": "We all have the right to explore the web. Using different techniques like ARIA and semantic HTML where needed."
+    }
+  }
 }

@@ -1172,6 +1172,46 @@ nav.show {
   }
 }
 
+/**
+ *
+ * Services
+ *
+ */
+
+ .services-list {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+ }
+
+.service {
+  background-color: var(--primary-ligther);
+background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligther) 80%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 320px;
+  padding: 32px;
+  margin: 32px;
+}
+
+.service:hover {
+  box-shadow: 0 0 0 0.2rem var(--primary-darker) inset;
+}
+
+.service > img {
+  height: 96px;
+  margin-bottom: 24px;
+}
+
+.service > h4 {
+  margin-bottom: 16px;
+}
+
+.service > p {
+  color: var(--secondary-ligther);
+}
+
 
 /**
  *
