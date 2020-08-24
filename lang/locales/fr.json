@@ -73,6 +73,18 @@
   "builtWith": "Développé avec",
   "hostedOn": "et hébergé avec",
   "services": {
-    "title": "Mes services"
+    "title": "Mes services",
+    "applications": {
+      "title": "Applications",
+      "description": "Développe des sites vitrines, e-commerce, applications web, mobile ou de bureau."
+    },
+    "uiux": {
+      "title": "Expérience utilisateur & Design",
+      "description": "Une expérience fluide et magnifique pour vos clients."
+    },
+    "accessibility": {
+      "title": "Accessibilité",
+      "description": "Nous avons tous le droit d'explorer le web. HTML sémantique et ARIA si pertinent."
+    }
   }
 }

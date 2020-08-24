@@ -1,23 +1,19 @@
 import React from 'react'
 import Service from './Service'
-import { FiCode } from 'react-icons/fi'
 import { useTranslation } from 'react-i18next'
 
 const MY_SERVICES = [
   {
-    Icon: FiCode,
-    title: 'Title',
-    description: 'Description'
+    illustration: 'landing_page',
+    service: 'applications'
   },
   {
-    Icon: FiCode,
-    title: 'Title',
-    description: 'Description'
+    illustration: 'wireframe',
+    service: 'uiux'
   },
   {
-    Icon: FiCode,
-    title: 'Title',
-    description: 'Description'
+    illustration: 'knowledge',
+    service: 'accessibility'
   }
 ]
 
@@ -29,8 +25,8 @@ function Services () {
       <h3>{ t('services.title') }</h3>
 
       <div className="services-list">
-        { MY_SERVICES.map(service => (
-          <Service {...service} />
+        { MY_SERVICES.map((service, index) => (
+          <Service key={service.title} {...service} index={index} />
         ))}
       </div>
     </section>
