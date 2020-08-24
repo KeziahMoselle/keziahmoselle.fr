@@ -26,7 +26,7 @@ function LatestPost ({ latestBlogPost }) {
   const date = intl.format(new Date(latestBlogPost.data.date))
 
   return (
-    <section id="talks" className="container medium talks">
+    <section id="article" className="container medium last-article">
       <h3>{ t('latestPost') }</h3>
 
       <div className="block">

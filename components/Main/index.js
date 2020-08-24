@@ -19,6 +19,7 @@ export const sections = [
   'Experience',
   'Achievements',
   'Talks',
+  'Article',
   'Code',
   'Formations'
 ]
@@ -34,8 +35,8 @@ export function Main ({ projects, codeStats, latestBlogPost }) {
       <Experience />
       <Achievements />
       <Talks />
-      <Code codeStats={codeStats} />
       <LatestPost latestBlogPost={latestBlogPost} />
+      <Code codeStats={codeStats} />
       <Formations />
     </React.Fragment>
   )
