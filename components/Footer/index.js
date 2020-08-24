@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { FaRegClipboard, FaClipboardCheck } from 'react-icons/fa'
-import copy from 'copy-to-clipboard'
+import CopyButton from '../CopyButton'
 
-const emailAddress = 'contact@keziahmoselle.fr'
+const EMAIL_ADDRESS = 'contact@keziahmoselle.fr'
 
 function Footer () {
   const { t } = useTranslation()
@@ -12,7 +12,6 @@ function Footer () {
   const [message, setMessage] = useState('')
   const [isMessageValid, setIsMessageValid] = useState(null)
   const [status, setStatus] = useState('default')
-  const [copied, setCopied] = useState(false)
 
   const messages = {
     default: {
@@ -115,29 +114,15 @@ function Footer () {
     }
   }
 
-  function copyEmailToClipboard () {
-    copy(emailAddress)
-    setCopied(true)
-
-    setTimeout(() => {
-      setCopied(false)
-    }, 1000)
-  }
-
   return (
     <footer>
       <div className="container">
         <h2>{ t('contactMe') }</h2>
 
-        <a
-          className={`email-address ${copied ? 'copied' : ''}`}
-          onClick={copyEmailToClipboard}
-        >
-          <span>{ copied ? t('form.copied') : emailAddress }</span>
-
-          { !copied && <FaRegClipboard size={28} /> }
-          { copied && <FaClipboardCheck size={28} /> }
-        </a>
+        <CopyButton
+          className="email-address"
+          value={EMAIL_ADDRESS}
+        />
 
         <form>
           <p className="status-message" style={{

@@ -683,6 +683,13 @@ a {
   box-shadow: 0 0 0 0.2rem var(--accent);
 }
 
+.copy-button {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 /* LIST */
 
@@ -777,9 +784,6 @@ footer .container p img {
 
 footer .email-address {
   --current-color: #E486A6;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
   background-color: var(--secondary-darker);
   border-radius: 8px;
