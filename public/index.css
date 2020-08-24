@@ -2565,6 +2565,13 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
   column-gap: 42px;
 }
 
+@media only screen and (max-width: 600px) {
+  .socials-list {
+    grid-template-columns: 1fr;
+    margin-top: 18px;
+  }
+}
+
 .social {
   color: white;
   display: flex;
