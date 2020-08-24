@@ -767,7 +767,7 @@ footer .container > p:last-of-type {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 32px 0 16px 0;
+  padding: 64px 0 16px 0;
 }
 
 footer .container p img {
@@ -2544,6 +2544,43 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
   .article-footer > div {
     display: none;
   }
+}
+
+/**
+ *
+ * Socials
+ *
+ */
+
+.socials-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  margin-top: 24px;
+  row-gap: 16px;
+  column-gap: 42px;
+}
+
+.social {
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  padding: 18px;
+  transition: transform 0.2s;
+}
+
+.social:hover {
+  transform: translateY(-3px);
+}
+
+.social > svg {
+  margin-right: 16px;
+}
+
+.social[aria-label="GitHub"] {
+  grid-row: span 2;
 }
 
 

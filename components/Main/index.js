@@ -10,6 +10,7 @@ import About from './About'
 import Code from './Code'
 import LatestPost from './LatestPost'
 import Services from './Services'
+import Socials from './Socials'
 
 export const sections = [
   'About',
@@ -38,6 +39,7 @@ export function Main ({ projects, codeStats, latestBlogPost }) {
       <LatestPost latestBlogPost={latestBlogPost} />
       <Code codeStats={codeStats} />
       <Formations />
+      <Socials />
     </React.Fragment>
   )
 }
