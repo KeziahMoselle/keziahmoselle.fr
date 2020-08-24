@@ -86,5 +86,8 @@
       "title": "Accessibilité",
       "description": "Nous avons tous le droit d'explorer le web. HTML sémantique et ARIA si pertinent."
     }
+  },
+  "socials": {
+    "title": "Réseaux sociaux"
   }
 }

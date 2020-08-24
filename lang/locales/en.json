@@ -86,5 +86,8 @@
       "title": "Accessibility in mind",
       "description": "We all have the right to explore the web. Using different techniques like ARIA and semantic HTML where needed."
     }
+  },
+  "socials": {
+    "title": "Social networks"
   }
 }
