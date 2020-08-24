@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { FiGithub, FiTwitter, FiEdit3 } from 'react-icons/fi'
 import { FaRegClipboard, FaClipboardCheck } from 'react-icons/fa'
 import copy from 'copy-to-clipboard'
 
@@ -130,7 +129,7 @@ function Footer () {
       <div className="container">
         <h2>{ t('contactMe') }</h2>
 
-        <button
+        <a
           className={`email-address ${copied ? 'copied' : ''}`}
           onClick={copyEmailToClipboard}
         >
@@ -138,7 +137,7 @@ function Footer () {
 
           { !copied && <FaRegClipboard size={28} /> }
           { copied && <FaClipboardCheck size={28} /> }
-        </button>
+        </a>
 
         <form>
           <p className="status-message" style={{
@@ -180,32 +179,6 @@ function Footer () {
             </button>
           </div>
         </form>
-
-        <p className="footer-links">
-          <a
-            href="https://github.com/KeziahMoselle"
-            rel="nofollow noopener noreferrer"
-            aria-label="GitHub"
-          >
-            <FiGithub size={30} stroke="white" />
-          </a>
-
-          <a
-            href="https://twitter.com/KeziahMoselle"
-            rel="nofollow noopener noreferrer"
-            aria-label="Twitter"
-          >
-            <FiTwitter size={30} stroke="white" />
-          </a>
-
-          <a
-            href="https://blog.keziahmoselle.fr/"
-            rel="nofollow noopener noreferrer"
-            aria-label="Blog"
-          >
-            <FiEdit3 size={30} stroke="white" />
-          </a>
-        </p>
 
         <p>
           { t('builtWith') }
