@@ -5,14 +5,14 @@ import Achievement from './Achievement'
 const achievementsList = [
   {
     name: 'Hacktoberfest 2018',
-    thumbnail: 'hacktoberfest_2018.png',
+    thumbnail: 'hacktoberfest_2018.jpg',
     year: '2018',
     link: 'https://twitter.com/KeziahMoselle/status/1055202328389865473',
     rank: '10 PR merged'
   },
   {
     name: 'Hacktoberfest 2019',
-    thumbnail: 'hacktoberfest_2019.png',
+    thumbnail: 'hacktoberfest_2019.jpg',
     year: '2019',
     link: 'https://twitter.com/KeziahMoselle/status/1183725853240373248',
     rank: '4 PR merged'
@@ -32,14 +32,14 @@ const achievementsList = [
   },
   {
     name: 'GitHub Education #PinsToWin',
-    thumbnail: 'github_education_pins.png',
+    thumbnail: 'github_education_pins.jpg',
     year: '2019',
     link: 'https://github.blog/2019-09-03-pins-to-win-stunning-student-profiles/',
     won: true
   },
   {
     name: '#100DaysOfCode',
-    thumbnail: '100daysofcode.png',
+    thumbnail: '100daysofcode.jpg',
     year: '2018',
     link: 'https://github.com/KeziahForks/100-days-of-code',
     won: true
