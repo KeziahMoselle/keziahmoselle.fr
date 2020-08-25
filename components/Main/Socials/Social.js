@@ -3,7 +3,7 @@ import CopyButton from '../../CopyButton'
 
 function Social ({ name, href, color, Icon, index }) {
   return (
-    <div data-aos="fade-up" data-aos-delay={index * 50}>
+    <div data-aos="fade" data-aos-delay={index * 50}>
       { href && (
         <a
           className="social"

@@ -9,7 +9,7 @@ function Formations () {
     <section id="formations" className="container medium formations relative">
       <h3>{ t('education.title') }</h3>
 
-      <div data-aos="fade-up">
+      <div data-aos="fade">
         <div className="block card flex column">
           <h4>{ t('education.selfTaught') }</h4>
           <h5>2014-{new Date().getFullYear()}</h5>
@@ -17,14 +17,14 @@ function Formations () {
         </div>
       </div>
 
-      <div data-aos="fade-up">
+      <div data-aos="fade">
         <div className="block card flex column">
           <h4>DUT MMI</h4>
           <h5>2018-2019</h5>
         </div>
       </div>
 
-      <div data-aos="fade-up">
+      <div data-aos="fade">
         <div className="block card flex column">
           <h4>{ t('education.bachelor')} STI2D</h4>
           <h5>2016-2018</h5>

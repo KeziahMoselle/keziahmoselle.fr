@@ -24,7 +24,7 @@ function Achievement ({
     <div
       className="achievement"
       aria-expanded={isExtended}
-      data-aos="fade-up"
+      data-aos="fade"
     >
 
       { won && (
