@@ -9,8 +9,8 @@
   },
   "projects": {
     "title": "Études de projets personnels",
-    "subtitle": "Voici une sélection de projets personnels, si vous cliquez sur l'un d'eux vous pourrez lire une étude concernant le projet.",
-    "big": "Projets d'envergure",
+    "subtitle": "Voici une sélection de projets personnels 👨🏽‍💻",
+    "big": "Gros projets",
     "small": "Petits projets",
     "descriptions": {
       "Tempus": "Un pomodoro dans votre barre des tâches",

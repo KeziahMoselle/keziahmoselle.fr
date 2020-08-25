@@ -1423,18 +1423,18 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
 
 .projects > h4 {
   margin: 36px 0;
+  padding-left: 70px;
   position: relative;
   background-color: var(--primary);
 }
 
-.projects > h4::after {
+.projects > h4::before {
   content: '';
   position: absolute;
-  bottom: -8px;
   left: 0;
-  width: 100%;
-  background-color: var(--primary-ligther);
-  height: 4px;
+  background-color: var(--secondary-darker);
+  height: 100%;
+  width: 60px;
 }
 
 .projects .block {
