@@ -35,7 +35,7 @@
   "experience": "Expériences professionnelles",
   "about": {
     "title": "À propos de moi",
-    "description": "<p>Je suis passionné par le <strong>développement front-end</strong> et le <strong>web design</strong>, étant sensibilisé à l'<strong>expérience utilisateur</strong> et l'<strong>accessibilité</strong> je développe des projets centré autour de l'<strong>Humain</strong>.</p> <p>Je suis également passionné par le monde de l'<strong>open-source</strong>, je suis contributeur de plusieurs projets et je suis également passionné par <strong>l'enseignement</strong> (talks, articles, mentoring).</p>"
+    "description": "<p>Je suis passionné par le <strong>développement front-end</strong> et le <strong>web design</strong>, étant sensibilisé à <strong>l'expérience utilisateur</strong> et l'<strong>accessibilité</strong>, je développe des projets centré autour de l'<strong>Humain</strong>. De plus, je suis intéressé par le monde de l'<strong>open-source</strong>, je suis contributeur de plusieurs projets et je suis en parallèle attiré par l'<strong>enseignement</strong> (talks, articles, mentoring).</p>"
   },
   "education": {
     "title": "Mes formations",
