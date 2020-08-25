@@ -5,6 +5,8 @@ import { FiHeart } from 'react-icons/fi'
 
 import animationData from './lottie/party-popper.json'
 
+const ENDPOINT = '/.netlify/functions/appreciations'
+
 const animationsOptions = {
   animationData
 }
@@ -12,12 +14,38 @@ const animationsOptions = {
 function LikeButton () {
   const { t } = useTranslation()
   const [isLiked, setIsLiked] = useState(false)
+  const [appreciations, setAppreciations] = useState(0)
+
+  useEffect(() => {
+    getAppreciations()
+  }, [])
+
+  async function getAppreciations () {
+    const response = await fetch(ENDPOINT)
+
+    if (response.ok) {
+      const data = await response.json()
+      setAppreciations(data.Item.total)
+    }
+  }
+
+  function incrementAppreciations () {
+    fetch(ENDPOINT, {
+      method: 'POST'
+    })
+  }
+
+  function handleLike () {
+    setIsLiked(true)
+    setAppreciations(appreciations + 1)
+    incrementAppreciations()
+  }
 
   return (
     <React.Fragment>
       <button
         className={`chip like-button ${isLiked ? 'liked' : ''}`}
-        onClick={() => setIsLiked(true)}
+        onClick={handleLike}
 
       >
         <FiHeart size={24} fill={isLiked ? 'var(--accent)' : ''} />
@@ -37,6 +65,8 @@ function LikeButton () {
           />
         </div>
       </button>
+
+      <span>{ appreciations }</span>
     </React.Fragment>
   )
 }
