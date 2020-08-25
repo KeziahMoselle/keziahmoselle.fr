@@ -26,7 +26,7 @@ const SOCIALS = [
   },
   {
     name: 'Nemesis#6631',
-    color: '#7289DA',
+    color: '#2D52A9',
     Icon: SiDiscord
   },
   {
