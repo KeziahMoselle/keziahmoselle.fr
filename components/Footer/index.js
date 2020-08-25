@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { FaRegClipboard, FaClipboardCheck } from 'react-icons/fa'
+import { MdErrorOutline } from 'react-icons/md'
 import CopyButton from '../CopyButton'
 
 const EMAIL_ADDRESS = 'contact@keziahmoselle.fr'
+const EMAIL_REGEX = /\S+@\S+\.\S+/
 
 function Footer () {
   const { t } = useTranslation()
@@ -12,6 +14,8 @@ function Footer () {
   const [message, setMessage] = useState('')
   const [isMessageValid, setIsMessageValid] = useState(null)
   const [status, setStatus] = useState('default')
+
+  const textareaRef = React.createRef()
 
   const messages = {
     default: {
@@ -43,6 +47,10 @@ function Footer () {
 
   // Check if a message was entered before
   useEffect(() => {
+    restorePreviousValues()
+  }, [])
+
+  function restorePreviousValues () {
     const localEmail = window.localStorage.getItem('email')
     const localMessage = window.localStorage.getItem('message')
     if (localEmail) {
@@ -53,7 +61,7 @@ function Footer () {
       setMessage(localMessage)
       validateMessage(localMessage)
     }
-  }, [])
+  }
 
   function handleEmailInput (event) {
     setEmail(event.target.value)
@@ -62,9 +70,7 @@ function Footer () {
   }
 
   function validateEmail (email) {
-    const regex = /\S+@\S+\.\S+/
-
-    if (regex.test(email)) {
+    if (EMAIL_REGEX.test(email)) {
       setIsEmailValid('is-valid')
     } else {
       setIsEmailValid('is-invalid')
@@ -73,9 +79,17 @@ function Footer () {
 
   function handleMessageInput (event) {
     setMessage(event.target.value)
-    window.localStorage.setItem('message', event.target.value)
-
+    autogrow()
     validateMessage(event.target.value)
+
+    window.localStorage.setItem('message', event.target.value)
+  }
+
+  function autogrow () {
+    const defaultHeight = window.getComputedStyle(textareaRef.current).height
+
+    textareaRef.current.style.height = defaultHeight
+    textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`
   }
 
   function validateMessage (message) {
@@ -86,8 +100,7 @@ function Footer () {
     }
   }
 
-  async function send (event) {
-    event.preventDefault()
+  async function send () {
     if (!email || !message) return setStatus('missing_fields') // Missing fields
     if (status === 'loading') return // Prevent multiple submit
     setStatus('loading')
@@ -138,28 +151,49 @@ function Footer () {
           </p>
 
           <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            type="email"
-            value={email}
-            onChange={(event) => handleEmailInput(event)}
-            className={isEmailValid}
-            placeholder={t('form.email')}
-          />
+          <div className="input-field">
+            <input
+              id="email"
+              type="email"
+              value={email}
+              onChange={(event) => handleEmailInput(event)}
+              className={isEmailValid}
+              placeholder={t('form.email')}
+            />
+            { isEmailValid === 'is-invalid' && (
+              <React.Fragment>
+                <MdErrorOutline size={28} />
+                <p aria-live="polite">{ t('form.emailError') }</p>
+              </React.Fragment>
+            )}
+          </div>
 
           <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            value={message}
-            onChange={(event) => handleMessageInput(event)}
-            className={isMessageValid}
-            placeholder={t('form.message')}
-            spellCheck
-            rows="6"
-          ></textarea>
+          <div className="input-field">
+            <textarea
+              ref={textareaRef}
+              id="message"
+              value={message}
+              onChange={(event) => handleMessageInput(event)}
+              className={isMessageValid}
+              placeholder={t('form.message')}
+              spellCheck
+              rows="6"
+            ></textarea>
+            { isMessageValid === 'is-invalid' && (
+              <React.Fragment>
+                <MdErrorOutline size={28} />
+                <p aria-live="polite">{ t('form.messageError') }</p>
+              </React.Fragment>
+            )}
+          </div>
 
-          <div className="flex center">
-            <button className="btn white rounded translate-y" onClick={send}>
+          <div className="flex center" style={{ marginTop: 8 }}>
+            <button
+              ref={submitBtnRef}
+              className="btn white rounded translate-y"
+              onClick={send}
+            >
               { status === 'loading' ? t('form.sending') : t('form.send')}
             </button>
           </div>

@@ -1,6 +1,8 @@
 const axios = require('axios')
 const mailgun = require('./utils/mail')
 
+const EMAIL_REGEX = /\S+@\S+\.\S+/
+
 exports.handler = async (event, context) => {
   /* Check method */
 
@@ -20,7 +22,14 @@ exports.handler = async (event, context) => {
   if (!email || !message) {
     return {
       statusCode: 206,
-      body: ''
+      body: 'either "email" or "message" is empty.'
+    }
+  }
+
+  if (!EMAIL_REGEX.test(email)) {
+    return {
+      statusCode: 206,
+      body: 'Email is invalid.'
     }
   }
 

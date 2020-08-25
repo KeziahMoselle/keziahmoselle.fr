@@ -882,7 +882,7 @@ footer form > div > p img {
 
 
 label {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 input, textarea {
@@ -909,15 +909,29 @@ input {
 }
 
 textarea {
-  margin-bottom: 24px;
+  resize: none;
+  margin-bottom: 12px;
+  padding: 12px;
 }
 
 input:focus, textarea:focus {
   box-shadow: 0 0 0 0.2rem var(--accent);
 }
 
-textarea {
-  padding: 12px;
+.input-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field > svg {
+  position: absolute;
+  left: -50px;
+  top: 8px;
+}
+
+.input-field > p {
+  margin-left: 8px;
 }
 
 

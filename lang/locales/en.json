@@ -65,7 +65,9 @@
     "error": "There's been an error, feel free to try again later.",
     "missingFields": "Please fill in all fields.",
     "send": "Submit",
-    "copied": "Email copied to clipboard"
+    "copied": "Email copied to clipboard",
+    "emailError": "Email address is invalid.",
+    "messageError": "Your message is empty."
   },
   "latestPost": "My last blog post",
   "readArticle": "Read post",
