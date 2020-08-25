@@ -21,7 +21,7 @@
   },
   "seeWebsite": "Voir le site",
   "seeRepo": "Voir sur GitHub",
-  "seeCasestudy": "Lire l'étude de projet",
+  "seeCasestudy": "Lire l'étude",
   "viewProject": "Voir le projet",
   "skills": "Mes compétences",
   "code": {
@@ -57,7 +57,7 @@
   },
   "talks": "Mes talks",
   "form": {
-    "defaultMessage": "Ou, si vous préférez un formulaire :",
+    "defaultMessage": "Ou, si vous préférez un formulaire",
     "email": "john@doe.fr",
     "message": "Que souhaitez-vous dire ?",
     "sending": "Envoi en cours...",

@@ -45,7 +45,18 @@ function Project ({
         <h3>{ title }</h3>
         <h4 className="grey">{ t(`projects.descriptions.${title}`) }</h4>
         <div className="project-header-supplementary">
-          <div>{ tagsChips }</div>
+          <div>
+            { tagsChips }
+            <span className="chip-inline">
+              { repository.stargazers.totalCount }
+              <GoStar />
+            </span>
+
+            <span className="chip-inline">
+              { repository.forkCount }
+              <GoRepoForked />
+            </span>
+          </div>
         </div>
       </div>
 
@@ -81,13 +92,6 @@ function Project ({
               >
               </img>
             </picture>
-
-            <div className="overlap show-on-mobile">
-              <span className="chip-inline">
-                { repository.stargazers.totalCount }
-                <GoStar />
-              </span>
-            </div>
           </div>
         </a>
       </Link>

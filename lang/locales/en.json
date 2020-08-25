@@ -21,7 +21,7 @@
   },
   "seeWebsite": "See on the website",
   "seeRepo": "See on GitHub",
-  "seeCasestudy": "Read Case Study",
+  "seeCasestudy": "Read more",
   "viewProject": "See project",
   "skills": "My skills",
   "code": {
@@ -57,7 +57,7 @@
   },
   "talks": "My talks",
   "form": {
-    "defaultMessage": "Or, if you prefer a form :",
+    "defaultMessage": "Or, if you prefer a form",
     "email": "john@doe.fr",
     "message": "What do you want to say ?",
     "sending": "Sending...",

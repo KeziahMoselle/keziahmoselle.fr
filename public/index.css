@@ -1458,6 +1458,12 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
   margin-bottom: 64px;
 }
 
+@media only screen and (max-width: 600px) {
+  .project {
+    margin-bottom: 32px;
+  }
+}
+
 .project > a {
   display: block;
   border-radius: 6px;
