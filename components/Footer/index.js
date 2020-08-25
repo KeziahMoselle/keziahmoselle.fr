@@ -190,7 +190,6 @@ function Footer () {
 
           <div className="flex center" style={{ marginTop: 8 }}>
             <button
-              ref={submitBtnRef}
               className="btn white rounded translate-y"
               onClick={send}
             >
