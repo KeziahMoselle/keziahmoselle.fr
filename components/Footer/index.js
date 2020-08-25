@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { FaRegClipboard, FaClipboardCheck } from 'react-icons/fa'
 import { MdErrorOutline } from 'react-icons/md'
 import CopyButton from '../CopyButton'
+import LikeButton from '../LikeButton'
 
 const EMAIL_ADDRESS = 'contact@keziahmoselle.fr'
 const EMAIL_REGEX = /\S+@\S+\.\S+/
@@ -199,14 +200,22 @@ function Footer () {
         </form>
 
         <p>
-          { t('builtWith') }
-          <a href="https://nextjs.org/" rel="nofollow noopener noreferrer">
-            <img src="/logos/nextjs.svg" alt="Next.js" style={{ height: '32px' }}/>
-          </a>
-          { t('hostedOn') }
-          <a href="https://netlify.com/" rel="nofollow noopener noreferrer">
-            <img src="/logos/netlify.svg" alt="Netlify" style={{ height: '26px' }}/>
-          </a>
+          <span className="text-center">
+            { t('footNote') }
+          </span>
+
+          <LikeButton />
+
+          <span>
+            { t('builtWith') }
+            <a href="https://nextjs.org/" rel="nofollow noopener noreferrer">
+              <img src="/logos/nextjs.svg" alt="Next.js" style={{ height: '32px' }}/>
+            </a>
+            { t('hostedOn') }
+            <a href="https://netlify.com/" rel="nofollow noopener noreferrer">
+              <img src="/logos/netlify.svg" alt="Netlify" style={{ height: '26px' }}/>
+            </a>
+          </span>
         </p>
       </div>
     </footer>

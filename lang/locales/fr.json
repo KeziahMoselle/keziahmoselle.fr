@@ -74,6 +74,7 @@
   "published": "Publié le",
   "builtWith": "Développé avec",
   "hostedOn": "et hébergé avec",
+  "footNote": "Ce site a été réalisé à la main et ne collecte aucune donnée. Vous pouvez trouver le code source sur mon GitHub. Merci de votre visite, passez une bonne journée ! 👋",
   "services": {
     "title": "Mes services",
     "applications": {
