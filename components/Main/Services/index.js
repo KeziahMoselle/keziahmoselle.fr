@@ -26,7 +26,7 @@ function Services () {
 
       <div className="services-list">
         { MY_SERVICES.map((service, index) => (
-          <Service key={service.title} {...service} index={index} />
+          <Service key={service.service} {...service} index={index} />
         ))}
       </div>
     </section>

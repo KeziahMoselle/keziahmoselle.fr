@@ -1,9 +1,9 @@
 import React from 'react'
 import CopyButton from '../../CopyButton'
 
-function Social ({ name, href, color, Icon }) {
+function Social ({ name, href, color, Icon, index }) {
   return (
-    <React.Fragment>
+    <div data-aos="fade-up" data-aos-delay={index * 50}>
       { href && (
         <a
           className="social"
@@ -25,7 +25,7 @@ function Social ({ name, href, color, Icon }) {
           leftIcon={<Icon size={30} stroke="white" style={{ marginRight: 16 }} />}
         />
       )}
-    </React.Fragment>
+    </div>
   )
 }
 

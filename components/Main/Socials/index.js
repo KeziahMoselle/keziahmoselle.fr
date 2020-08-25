@@ -43,6 +43,7 @@ function Socials () {
   return (
     <section id="socials" className="container medium socials">
       <h3>{ t('socials.title') }</h3>
+      <p>{ t('socials.description') }</p>
 
       <div className="socials-list">
         { SOCIALS.map((social, index) => (

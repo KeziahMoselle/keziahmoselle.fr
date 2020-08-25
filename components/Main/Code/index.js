@@ -19,9 +19,9 @@ function Code ({ codeStats }) {
     <section id="code" className="container medium code">
       <h3>{ t('code.title') }</h3>
 
-      <MostActivePR pullRequest={pullRequest} />
-
       <UserStats userStats={userStats} />
+
+      <MostActivePR pullRequest={pullRequest} />
 
       <LanguagesStats userStats={userStats} />
 

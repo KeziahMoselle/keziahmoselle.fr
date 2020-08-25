@@ -5,17 +5,17 @@ function Service ({ illustration, service, index }) {
   const { t } = useTranslation()
 
   return (
-    <div
-      className="service"
-      style={{
-        '--degree': `${(index + 1) * 90}deg`
-      }}
-      data-aos="fade-up"
-      data-aos-delay={index * 50}
-    >
-      <img src={`/illustrations/${illustration}.svg`} alt="" />
-      <h4>{ t(`services.${service}.title`) }</h4>
-      <p>{ t(`services.${service}.description`) }</p>
+    <div data-aos="fade-up" data-aos-delay={index * 50}>
+      <div
+        className="service"
+        style={{
+          '--degree': `${(index + 1) * 90}deg`
+        }}
+      >
+        <img src={`/illustrations/${illustration}.svg`} alt="" />
+        <h4>{ t(`services.${service}.title`) }</h4>
+        <p>{ t(`services.${service}.description`) }</p>
+      </div>
     </div>
   )
 }

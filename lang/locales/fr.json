@@ -28,7 +28,7 @@
     "title": "Statistiques GitHub",
     "mostActivePR": "PR le plus actif",
     "userStats": "Statistiques",
-    "languagesStats": "% de bits écrit par langages",
+    "languagesStats": "% écrit par langages",
     "someContributions": "Quelques contributions open-source"
   },
   "tools": "Outils",
@@ -88,6 +88,7 @@
     }
   },
   "socials": {
-    "title": "Réseaux sociaux"
+    "title": "Réseaux sociaux et liens",
+    "description": "Vous pouvez me retrouver sur ces plateformes 👇"
   }
 }

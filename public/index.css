@@ -2556,6 +2556,10 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
  *
  */
 
+.socials > h3 {
+  margin-bottom: 12px;
+}
+
 .socials-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2573,6 +2577,7 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
 }
 
 .social {
+  height: 100%;
   color: white;
   display: flex;
   align-items: center;
@@ -2590,7 +2595,7 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
   margin-right: 16px;
 }
 
-.social[aria-label="GitHub"] {
+.socials-list > :first-child {
   grid-row: span 2;
 }
 
