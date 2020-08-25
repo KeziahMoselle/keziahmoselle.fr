@@ -39,11 +39,13 @@ function Talks () {
   })
 
   const talksList = allTalks.map((talk, index) => (
-    <Talk
-      key={index}
-      {...talk}
-      intl={intl}
-    />
+    <div data-aos="fade-up">
+      <Talk
+        key={index}
+        {...talk}
+        intl={intl}
+      />
+    </div>
   ))
 
   return (
