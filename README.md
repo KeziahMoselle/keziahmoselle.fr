@@ -12,6 +12,12 @@
 
 ---
 
+## Requirements
+
+- Node.js >= 12.9.0
+- Yarn >= 1.22.4 
+- Netlify platform
+
 ## Install
 
 1. Install dependencies
@@ -19,29 +25,38 @@
 > yarn
 ```
 
-2. Run Next and Netlify functions
-```sh
-> yarn start
-```
-Open [http://localhost:8888/](http://localhost:8888/)
+2. Set environment variables
 
-3. Environment variables
+- Create a website on Netlify
+- Go to : `Settings > Build & deploy > Environment` and set these variables :
 
 ```
+BASEURL=                   The base URL of the website (i.e: https://keziahmoselle.fr/)
+BLOG_URL=                  The base URL of the blog (i.e: https://blog.keziahmoselle.fr/)
+
 MAILGUN_DOMAIN=            Used to send emails
 MAILGUN_API_KEY=           Used to send emails
 MY_EMAIL_ADDRESS=          Send emails to this address
 
 DISCORD_WEBHOOK_URL=       Contact form messages being sent to this webhook URL
 
-GITHUB_BEARER_TOKEN=       Used for the GraphQL Api
-GITHUB_USERNAME=           Used for the GraphQL Api
+GITHUB_BEARER_TOKEN=       Used for the GraphQL API
+GITHUB_USERNAME=           Used for the GraphQL API
+
+DYNAMO_ACCESS_KEY_ID=      Used for DynamoDB (for the appreciations thing in the footer)
+DYNAMO_SECRET_ACCESS_KEY=  Used for DynamoDB (for the appreciations thing in the footer)
+DYNAMO_REGION=             Used for DynamoDB (for the appreciations thing in the footer)
 
 NODE_VERSION=              Specify the Node version to use
 
 EMAIL_VALANKA=             Specific endpoint
 ```
 
+3. Run Next and Netlify functions
+```sh
+> yarn start
+```
+Open [http://localhost:8888/](http://localhost:8888/)
 
 ## Build
 
