@@ -41,10 +41,16 @@ function Header ({ navLinks = sections, goBack }) {
       <header>
         <Link href="/">
           <a className="left-logo">
-            <img
-              src="/logos/keziahmoselle.svg"
-              alt="Homepage"
-            />
+            { !goBack && (
+              <img
+                src="/logos/keziahmoselle.svg"
+                alt="Homepage"
+              />
+            )}
+
+            { goBack && (
+              <FiArrowLeft size={28} />
+            )}
           </a>
         </Link>
 
@@ -71,15 +77,13 @@ function Header ({ navLinks = sections, goBack }) {
           )}
 
           { goBack && (
-            <React.Fragment>
-              <li>
-                <Link href="/" scroll={false}>
-                  <a>
-                    <FiArrowLeft size={28} />
-                  </a>
-                </Link>
-              </li>
-            </React.Fragment>
+            <li>
+              <Link href="/" scroll={false}>
+                <a>
+                  <FiArrowLeft size={28} />
+                </a>
+              </Link>
+            </li>
           )}
         </ul>
 
