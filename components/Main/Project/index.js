@@ -32,8 +32,17 @@ export default function Project ({ project, github }) {
   ))
 
   useEffect(() => {
-    mediumZoom('.case-study-body img')
+    subscribeImagesZoom()
   }, [])
+
+  function subscribeImagesZoom () {
+    window.addEventListener('load', () => {
+      const allImages = Array.from(document.querySelectorAll('.case-study-body img'))
+      const noZoomImages = allImages
+        .filter(img => !img.classList.contains('medium-zoom-image'))
+      mediumZoom(noZoomImages)
+    })
+  }
 
   return (
     <article className="case-study">
