@@ -7,6 +7,8 @@ module.exports = {
     return config
   },
   env: {
-    BLOG_URL: process.env.BLOG_URL
+    BLOG_URL: process.env.BLOG_URL,
+    MY_EMAIL_ADDRESS: process.env.MY_EMAIL_ADDRESS,
+    BASEURL: process.env.BASEURL
   }
 }

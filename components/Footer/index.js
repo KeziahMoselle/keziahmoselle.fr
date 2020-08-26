@@ -5,7 +5,7 @@ import { MdErrorOutline } from 'react-icons/md'
 import CopyButton from '../CopyButton'
 import LikeButton from '../LikeButton'
 
-const EMAIL_ADDRESS = 'contact@keziahmoselle.fr'
+const EMAIL_ADDRESS = process.env.MY_EMAIL_ADDRESS
 const EMAIL_REGEX = /\S+@\S+\.\S+/
 
 function Footer () {

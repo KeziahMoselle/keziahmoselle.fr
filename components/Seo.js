@@ -3,9 +3,9 @@ import Head from 'next/head'
 
 function Seo ({
   name = 'Keziah MOSELLE',
-  domainUrl = 'https://keziahmoselle.fr/',
+  domainUrl = process.env.BASEURL,
   metaDescription = "Portfolio de Keziah MOSELLE, développeur front-end autodidacte depuis 6 ans et passionné par le développement web, l'UI/UX, l'accessibilité et l'enseignement.",
-  coverImageUrl = 'https://keziahmoselle.fr/cover.png'
+  coverImageUrl = `${process.env.BASEURL}cover.png`
 }) {
   return (
     <React.Fragment>

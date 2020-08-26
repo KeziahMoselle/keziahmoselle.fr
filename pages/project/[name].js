@@ -12,7 +12,7 @@ import Layout from '../../components/Layout'
 import Project from '../../components/Main/Project'
 
 
-export default (props) => {
+function ProjectStudy (props) {
   const cover = `${process.env.BASEURL}thumbnails/${props.project.slug}.jpg`;
   
   return (
@@ -37,6 +37,8 @@ export default (props) => {
     </Fragment>
   )
 }
+
+export default ProjectStudy
 
 export async function getStaticProps(context) {
   const project = await getMarkdownData(context)
