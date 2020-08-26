@@ -18,7 +18,8 @@ Export GitHub Stars est un petit utilitaire qui a été crée dans le but d'anal
 
 ## Problème
 
-Je souhaitais pouvoir trier et analyser mes dépôts favoris pour pouvoir les retrouver facilement (par langages notamment)
+Je souhaitais pouvoir trier et analyser mes dépôts favoris pour pouvoir les retrouver facilement (par langages notamment).
+De plus suite au rachat de GitHub par Microsoft, l'outil peut être utilisé pour exporter tous les dépôts favoris, cela peut être utile notamment si l'utilisateur souhaite supprimer son compte.
 
 ## Solution
 
