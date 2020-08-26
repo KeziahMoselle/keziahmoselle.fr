@@ -1,8 +1,16 @@
 process.env.AWS_ACCESS_KEY_ID = process.env.DYNAMO_ACCESS_KEY_ID
 process.env.AWS_SECRET_ACCESS_KEY = process.env.DYNAMO_SECRET_ACCESS_KEY
+
 const AWS = require('aws-sdk')
 
-const client = new AWS.DynamoDB.DocumentClient()
+const client = new AWS.DynamoDB.DocumentClient({
+  region: process.env.DYNAMO_REGION
+})
+
+console.log(process.env.AWS_ACCESS_KEY_ID)
+console.log(process.env.AWS_SECRET_ACCESS_KEY)
+console.log(process.env.DYNAMO_REGION)
+
 const TableName = 'appreciations'
 const id = 0
 
