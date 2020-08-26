@@ -38,10 +38,6 @@ const PARAMS = {
 exports.handler = (event, context, callback) => {
   switch (event.httpMethod) {
     case 'GET':
-      console.log(process.env.AWS_ACCESS_KEY_ID)
-      console.log(process.env.AWS_SECRET_ACCESS_KEY)
-      console.log(process.env.DYNAMO_REGION)
-
       client.get(PARAMS.get, (error, data) => {
         if (error) {
           console.error(error)
