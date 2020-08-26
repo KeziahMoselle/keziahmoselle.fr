@@ -17,7 +17,6 @@ import { FiExternalLink } from 'react-icons/fi'
 import Icon from '../../Icon'
 import { useTranslation } from 'react-i18next'
 import ReactMarkdown from 'react-markdown'
-import mediumZoom from 'medium-zoom'
 
 export default function Project ({ project, github }) {
   const { t } = useTranslation()
@@ -30,19 +29,6 @@ export default function Project ({ project, github }) {
   const tags = data.tags.map((tag, index) => (
     <span key={index} className="chip-inline">{ tag }</span>
   ))
-
-  useEffect(() => {
-    subscribeImagesZoom()
-  }, [])
-
-  function subscribeImagesZoom () {
-    window.addEventListener('load', () => {
-      const allImages = Array.from(document.querySelectorAll('.case-study-body img'))
-      const noZoomImages = allImages
-        .filter(img => !img.classList.contains('medium-zoom-image'))
-      mediumZoom(noZoomImages)
-    })
-  }
 
   return (
     <article className="case-study">
