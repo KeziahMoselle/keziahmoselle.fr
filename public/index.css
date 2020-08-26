@@ -784,8 +784,10 @@ footer .container > p:last-of-type {
 
 footer .container > p:last-of-type > * {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 12px;
+  flex-wrap: wrap;
+  margin: 12px 0;
 }
 
 footer .container p img {
@@ -1221,6 +1223,12 @@ nav.show {
   .about article {
     box-shadow: none;
     padding: 120px 32px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about article {
+    padding: 64px 0;
   }
 }
 
