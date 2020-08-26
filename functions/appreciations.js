@@ -2,13 +2,6 @@ process.env.AWS_ACCESS_KEY_ID = process.env.DYNAMO_ACCESS_KEY_ID
 process.env.AWS_SECRET_ACCESS_KEY = process.env.DYNAMO_SECRET_ACCESS_KEY
 const AWS = require('aws-sdk')
 
-const AWS_REGION = process.env.DYNAMO_REGION
-
-AWS.config.update({
-  region: AWS_REGION,
-  endpoint: `dynamodb.${AWS_REGION}.amazonaws.com`
-})
-
 const client = new AWS.DynamoDB.DocumentClient()
 const TableName = 'appreciations'
 const id = 0
