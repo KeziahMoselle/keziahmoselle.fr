@@ -50,7 +50,6 @@ function Socials () {
           <Social
             key={index}
             {...social}
-            index={index}
           />
         ))}
       </div>
