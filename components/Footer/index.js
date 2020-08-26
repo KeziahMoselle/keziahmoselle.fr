@@ -200,9 +200,12 @@ function Footer () {
         </form>
 
         <p>
-          <span className="text-center">
-            { t('footNote') }
-          </span>
+          <span
+            className="text-center"
+            dangerouslySetInnerHTML={{
+              __html: t('footNote')
+            }}
+          ></span>
 
           <LikeButton />
 

@@ -790,6 +790,10 @@ footer .container > p:last-of-type > * {
   margin: 12px 0;
 }
 
+footer span a {
+  color: #FF4884;
+}
+
 footer .container p img {
   margin: 0 8px;
   width: auto;
@@ -889,9 +893,15 @@ footer form > div > p img {
   font-size: 24px;
   border: none;
   cursor: pointer;
+  box-shadow: 0 0 0 0.2rem var(--accent);
+  transition: transform 0.2s;
 }
 
-.like-button:focus > svg {
+.like-button:hover {
+  transform: scale(1.1);
+}
+
+.like-button > svg {
   transition: fill 0.2s;
 }
 

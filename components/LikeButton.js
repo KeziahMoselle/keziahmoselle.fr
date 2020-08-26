@@ -12,7 +12,6 @@ const animationsOptions = {
 }
 
 function LikeButton () {
-  const { t } = useTranslation()
   const [isLiked, setIsLiked] = useState(false)
   const [appreciations, setAppreciations] = useState(0)
 

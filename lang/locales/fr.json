@@ -74,7 +74,7 @@
   "published": "Publié le",
   "builtWith": "Développé avec",
   "hostedOn": "et hébergé sur",
-  "footNote": "Ce site a été réalisé à la main et ne collecte aucune donnée. Vous pouvez trouver le code source sur mon GitHub. Merci de votre visite, passez une bonne journée ! 👋",
+  "footNote": "<span>Ce site a été réalisé à la main et ne collecte aucune donnée. Vous pouvez trouver le code source sur <a href='https://github.com/KeziahMoselle/keziahmoselle.fr'>GitHub</a>. Merci de votre visite, passez une bonne journée ! 👋</span>",
   "services": {
     "title": "Mes services",
     "applications": {
