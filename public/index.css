@@ -1798,7 +1798,7 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
 .case-study-body img {
   display: block;
   margin: 0 auto;
-  max-height: 400px;
+  max-height: 800px;
   padding: 10px;
   background-color: var(--primary-darker);
   border-radius: 8px;
