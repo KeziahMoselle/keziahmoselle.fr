@@ -76,7 +76,7 @@ To build the App and the Netlify functions run :
 
 ## Archive
 
-### [See v2 online](https://keziahmoselle.fr/) (2019)
+### [See v2 online](https://keziahmoselle.fr/) (2019-NOW)
 
 <a href="https://keziahmoselle.fr/" target="_blank">
   <p align="center">
