@@ -26,12 +26,12 @@ function Projects ({ projects }) {
       <h3>{ t('projects.title') }</h3>
       <p>{ t('projects.subtitle') }</p>
 
-      <h4>{ t('projects.big') }</h4>
+      <h4 className="squared-title">{ t('projects.big') }</h4>
       <div className="block">
         { bigProjects }
       </div>
 
-      <h4>{ t('projects.small') }</h4>
+      <h4 className="squared-title">{ t('projects.small') }</h4>
       <div className="projects-small grid">
         { smallProjects }
       </div>

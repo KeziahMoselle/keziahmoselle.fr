@@ -24,6 +24,9 @@
   "seeCasestudy": "Lire l'étude",
   "viewProject": "Voir le projet",
   "skills": "Mes compétences",
+  "workedWith": "J'ai pu travailler avec",
+  "workedWithServices": "J'ai utilisé ces services",
+  "workedWithTools": "Les outils que j'utilise",
   "code": {
     "title": "Statistiques GitHub",
     "mostActivePR": "PR le plus actif",
@@ -31,7 +34,6 @@
     "languagesStats": "% écrit par langages",
     "someContributions": "Quelques contributions open-source"
   },
-  "tools": "Outils",
   "experience": "Expériences professionnelles",
   "about": {
     "title": "À propos de moi",

@@ -546,6 +546,20 @@ h6 {
   margin: 2px 0 0 0;
 }
 
+.squared-title {
+  padding-left: 70px;
+  position: relative;
+}
+
+.squared-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  background-color: var(--secondary-darker);
+  height: 100%;
+  width: 60px;
+}
+
 .grey {
   color: rgba(0, 0, 0, 0.8);
 }
@@ -1489,18 +1503,7 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
 
 .projects > h4 {
   margin: 36px 0;
-  padding-left: 70px;
-  position: relative;
   background-color: var(--primary);
-}
-
-.projects > h4::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  background-color: var(--secondary-darker);
-  height: 100%;
-  width: 60px;
 }
 
 .projects .block {
@@ -1908,14 +1911,8 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
 }
 
 .skills h4 {
-  z-index: 1;
-  font-size: 18px;
-  text-align: center;
-  width: 160px;
-  padding: 6px 16px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  border-radius : 16px;
-  background-color: var(--primary);
+  font-size: 1rem;
+  align-self: flex-start;
 }
 
 .skills .block:first-of-type img {
@@ -1933,6 +1930,13 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
   }
 }
 
+.skills-listing {
+  background-color: var(--primary-ligther);
+  background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligther) 80%);
+  padding: 48px;
+  margin-bottom: 48px;
+}
+
 .skills .skill {
   transition: opacity 0.4s;
 }
@@ -1943,9 +1947,9 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
 
 .skills .tools {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-top: 32px;
+  margin-top: 48px;
 }
 
 /* SKILL IMAGE */
@@ -1957,7 +1961,7 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
   margin: 0 24px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1010px) {
   .skill {
     margin-bottom: 24px;
   }

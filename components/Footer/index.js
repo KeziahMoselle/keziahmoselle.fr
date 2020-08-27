@@ -212,11 +212,11 @@ function Footer () {
           <span>
             { t('builtWith') }
             <a href="https://nextjs.org/" rel="nofollow noopener noreferrer">
-              <img src="/logos/nextjs.svg" alt="Next.js" style={{ height: '32px' }}/>
+              <img src="/logos/next.svg" alt="Next.js" style={{ height: '32px' }}/>
             </a>
             { t('hostedOn') }
             <a href="https://netlify.com/" rel="nofollow noopener noreferrer">
-              <img src="/logos/netlify.svg" alt="Netlify" style={{ height: '26px' }}/>
+              <img src="/logos/netlify-wordmark.svg" alt="Netlify" style={{ height: '26px' }}/>
             </a>
           </span>
         </p>
