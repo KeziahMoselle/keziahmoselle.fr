@@ -65,7 +65,7 @@ function Experience () {
 
       { experiences.map((experience, index) => (
         <div className="block card column" key={index} data-aos="fade">
-
+          <h4>{ experience.company }</h4>
           <h5>{ experience.title }</h5>
           <h6>{ experience.years }</h6>
           <ul>
