@@ -49,21 +49,28 @@ function Skills () {
     <section id="skills" className="container medium skills">
       <h3>{ t('skills') }</h3>
 
-      <div className="block">
+      <div className="block skills-main">
+
         <div className="flex column center valign">
-          <h4>Front-End</h4>
           <img
             src="/skills/front-end.svg"
             alt="Front-end skills : React.js, Vue.js, JavaScript"
           />
+          <h4 style={{
+            '--degree': '90deg'
+          }}>Front-End</h4>
         </div>
 
+        <div className="flux"></div>
+
         <div className="flex column center valign">
-          <h4>Back-End</h4>
           <img
             src="/skills/back-end.svg"
             alt="Back-end skills : Node.js, PHP, MySQL"
           />
+          <h4 style={{
+            '--degree': '270deg'
+          }}>Back-End</h4>
         </div>
       </div>
 

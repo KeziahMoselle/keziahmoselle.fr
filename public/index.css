@@ -273,7 +273,7 @@ svg {
 
 
 /* Tablet */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1199px) {
   .container {
     width: auto;
     padding: 0 24px;
@@ -1002,7 +1002,7 @@ input:focus, textarea:focus {
  */
 
 .sticky-header {
-  z-index: 3;
+  z-index: 10;
   position: sticky;
   top: 0;
   background-color: var(--primary);
@@ -1924,7 +1924,6 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
 
 .skills h4 {
   font-size: 1rem;
-  align-self: flex-start;
 }
 
 .skills .block:first-of-type img {
@@ -1940,6 +1939,64 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
     height: 400px;
     margin: 0;
   }
+}
+
+.skills-main {
+  position: relative;
+}
+
+.skills-main > .flex {
+  z-index: 2;
+}
+
+@media only screen and (max-width: 1200px) {
+  .skills-main .flex {
+    flex-direction: column-reverse;
+  }
+}
+
+.flux {
+  display: none;
+}
+
+@media only screen and (min-width: 1201px) {
+  .flux {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 500px;
+    background-color: var(--primary-ligther);
+    overflow: hidden;
+  }
+  
+  .flux::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 32px;
+    background-color: var(--secondary);
+    top: 0;
+    animation: translationX ease 2.5s infinite alternate;
+  }
+  
+  @keyframes translationX {
+    from {
+      transform: translateX(-32px);
+    }
+    to  {
+      transform: translateX(532px);
+    }
+  }
+}
+
+.skills-main h4 {
+  background-color: var(--primary-ligther);
+  background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligther) 80%);
+  padding: 24px 48px;
 }
 
 .skills-listing {
