@@ -11,7 +11,7 @@ function Chip ({ link, company }) {
       target="_blank"
       rel="nofollow noopener noreferrer">
       <FiLink size={24} />
-      <span className="visually-hidden">En lire plus sur { company }</span>
+      <span className="visually-hidden">Voir le site de { company }</span>
     </a>
   )
 }

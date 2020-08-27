@@ -5,6 +5,16 @@ import Planet from '../../Planet'
 
 const experiences = [
   {
+    company: 'Valanka',
+    title: 'Développeur Full-Stack',
+    years: 'Avril 2020',
+    url: 'https://valanka.fr/',
+    facts: [
+      'Réalisation d\'un blog avec <strong>Ghost CMS</strong>',
+      'Réalisation d\'un module de <strong>newsletter</strong>'
+    ]
+  },
+  {
     company: 'vanessamoselle photographie',
     title: 'Développeur Full-Stack',
     years: 'Octobre 2019',
@@ -26,7 +36,7 @@ const experiences = [
   {
     company: 'Groupement d\'Action Sociale de Colmar',
     title: 'Développeur Full-Stack',
-    years: '2018-2019',
+    years: '2018-2020',
     url: null,
     facts: [
       'Refonte du site <strong>Joomla vers PHP 7</strong> (migrations base de données)',
@@ -55,7 +65,7 @@ function Experience () {
 
       { experiences.map((experience, index) => (
         <div className="block card column" key={index} data-aos="fade">
-          <h4>{ experience.company }</h4>
+
           <h5>{ experience.title }</h5>
           <h6>{ experience.years }</h6>
           <ul>
@@ -67,6 +77,12 @@ function Experience () {
               </li>
             )) }
           </ul>
+          { experience.url && (
+            <Chip
+              link={experience.url}
+              company={experience.company}
+            />
+          )}
         </div>
       ))}
 
