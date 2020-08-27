@@ -9,7 +9,7 @@ tags:
   - API
 stack:
   - JavaScript
-  - Electron.js
+  - Electron
   - Materialize
 ---
 

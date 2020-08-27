@@ -8,7 +8,7 @@ tags:
   - Front-End
 stack:
   - React.js
-  - Electron.js
+  - Electron
 isBigProject: true
 ---
 
