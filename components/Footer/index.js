@@ -101,7 +101,9 @@ function Footer () {
     }
   }
 
-  async function send () {
+  async function send (event) {
+    event.preventDefault()
+
     if (!email || !message) return setStatus('missing_fields') // Missing fields
     if (status === 'loading') return // Prevent multiple submit
     setStatus('loading')
