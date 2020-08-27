@@ -52,7 +52,14 @@ NODE_VERSION=              Specify the Node version to use
 EMAIL_VALANKA=             Specific endpoint
 ```
 
-3. Run Next and Netlify functions
+3. Init Netlify dev :
+```sh
+> npx netlify link
+```
+
+And link it to your Netlify website
+
+4. Run Next and Netlify functions
 ```sh
 > yarn start
 ```
