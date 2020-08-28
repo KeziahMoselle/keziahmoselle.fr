@@ -34,8 +34,8 @@ export function Main ({ projects, codeStats, latestBlogPost }) {
       <Projects projects={projects} />
       <Skills />
       <Experience />
-      <Achievements />
       <Talks />
+      <Achievements />
       <LatestPost latestBlogPost={latestBlogPost} />
       <Code codeStats={codeStats} />
       <Formations />
