@@ -431,6 +431,10 @@ a.chip-inline:hover {
   background-color: var(--primary-darker);
 }
 
+a.chip-inline:focus {
+  box-shadow: 0 0 0 0.2em var(--accent);
+}
+
 .chip-inline:hover {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12);
 }
@@ -1546,6 +1550,7 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
 }
 
 .project > a {
+  position: relative;
   display: block;
   border-radius: 6px;
 }
@@ -1719,6 +1724,23 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
   align-items: center;
   justify-content: space-between;
   margin-top: 18px;
+}
+
+.project-footer a.chip-inline {
+  background-color: var(--secondary-dark);
+  color: var(--primary);
+}
+
+.project-footer a.chip-inline:hover {
+  box-shadow: 0 0 0 0.2em var(--accent);
+}
+
+.project-footer .chip-inline {
+  margin-bottom: 4px;
+}
+
+.project-footer a.chip-inline > svg {
+  margin: 0 6px 0 0;
 }
 
 .project-stack img {

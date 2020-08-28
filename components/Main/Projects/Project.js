@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { GoStar, GoRepoForked } from 'react-icons/go'
+import { FiGithub, FiBook } from 'react-icons/fi'
 import toFilename from '../../utils/toFilename'
 import Icon from '../../Icon'
 
@@ -34,19 +35,54 @@ function Project ({
     />
   ))
 
+  const tagsLinks = [(
+    <a
+      key="github"
+      href={`https://github.com/${github}`}
+      className="chip-inline hide-on-med-and-down"
+    >
+      <FiGithub />
+      GitHub
+    </a>
+  ), (
+    <a
+      key="case-study"
+      href={`/project/${slug}`}
+      className="chip-inline hide-on-med-and-down"
+    >
+      <FiBook />
+      { t('seeCasestudy') }
+    </a>
+  )]
+
   const tagsChips = tags.map((tag, index) => (
     <span key={index} className="chip-inline">{ tag }</span>
   ))
+
+  const allTags = tagsLinks.concat(tagsChips)
 
   return (
     <article className="project" data-aos="fade">
 
       <div className="project-header show-on-med-and-down">
-        <h3>{ title }</h3>
-        <h4 className="grey">{ t(`projects.descriptions.${title}`) }</h4>
+        <div className="flex space-between valign">
+          <div>
+            <h3>{ title }</h3>
+            <h4 className="grey">{ t(`projects.descriptions.${title}`) }</h4>
+          </div>
+
+          <a
+            href={`https://github.com/${github}`}
+            className="chip"
+            rel="nofollow noopener noreferrer"
+          >
+            <FiGithub size={26} />
+          </a>
+        </div>
+
         <div className="project-header-supplementary">
           <div>
-            { tagsChips }
+            { allTags }
             <span className="chip-inline">
               { repository.stargazers.totalCount }
               <GoStar />
@@ -97,7 +133,7 @@ function Project ({
       </Link>
 
       <div className="project-footer">
-        <div className="hide-on-med-and-down">{ tagsChips }</div>
+        <div className="hide-on-med-and-down">{ allTags }</div>
 
         <a
           className="pill show-on-med-and-down"
