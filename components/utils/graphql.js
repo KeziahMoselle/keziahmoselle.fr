@@ -108,27 +108,64 @@ export async function getUserStats () {
           }
         }
       }
-      repositoriesContributedTo(first: 100, orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC, contributionTypes: COMMIT) {
-        nodes {
-          owner {
-            avatarUrl
-          }
-          nameWithOwner
-          primaryLanguage {
-            color
-          }
-          stargazers {
-            totalCount
-          }
-          url
-        }
-      }
-    }
   }`
 
   const response = await graphql.request(query)
 
   return response
+}
+
+export async function getAllRepositoriesContributedTo () {
+  const allContributions = []
+
+  const currentYear = new Date().toISOString()
+  const numberOfYears = currentYear - signedUpYear
+  const years = Array.from(
+    { length: numberOfYears },
+    (v, i) => i
+  )
+
+  for (const year of years) {
+    const repositories = await getRepositoriesByYear(year)
+    allContributions.push(repositories)
+  }
+
+  console.log(allContributions)
+
+  async function getRepositoriesByYear (year) {
+    const from = currentYear - year
+
+    const variables = {
+      from,
+      to: from + 1
+    }
+
+    const query = /* GraphQL */ `query getRepositoriesByYear {
+      viewer {
+        contributionsCollection(from: $from, to: $to) {
+          commitContributionsByRepository(maxRepositories: 100) {
+            repository {
+              owner {
+                avatarUrl
+              }
+              nameWithOwner
+              primaryLanguage {
+                color
+              }
+              stargazers {
+                totalCount
+              }
+              url
+            }
+          }
+        }
+      }
+    }`
+
+    const response = await graphql.request(query)
+
+    return response
+  }
 }
 
 export async function getCaseStudyInfo (github) {

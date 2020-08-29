@@ -9,6 +9,8 @@ import ContributedTo from './ContributedTo'
 function Code ({ codeStats }) {
   const { t } = useTranslation()
 
+  console.log(codeStats)
+
   const pullRequest = codeStats.mostActivePR.user.contributionsCollection.popularPullRequestContribution.pullRequest
 
   const userStats = codeStats.userStats.viewer
