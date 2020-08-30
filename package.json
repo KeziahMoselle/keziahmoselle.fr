@@ -1,49 +1,54 @@
 {
   "name": "keziahmoselle.fr",
-  "version": "2.0.0",
-  "description": "My portfolio",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "next dev",
-    "start": "netlify dev",
-    "build": "next build && next export",
-    "lint": "eslint components functions lang pages --fix"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@crello/react-lottie": "^0.0.9",
-    "aos": "^3.0.0-beta.6",
-    "aws-sdk": "^2.739.0",
-    "axios": "^0.18.1",
-    "copy-to-clipboard": "^3.3.1",
-    "dotenv": "^6.2.0",
-    "graphql-request": "^1.8.2",
-    "gray-matter": "^4.0.2",
-    "i18next": "^19.0.0",
-    "i18next-browser-languagedetector": "^4.0.1",
-    "mailgun-js": "^0.22.0",
-    "marked": "^1.1.0",
-    "medium-zoom": "^1.0.6",
-    "next": "^9.3.2",
-    "raw-loader": "^4.0.0",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-i18next": "^11.0.1",
-    "react-icons": "^3.11.0",
-    "react-markdown": "^4.3.1",
-    "react-spring": "^8.0.7",
-    "react-use": "^13.27.0"
+    "baffle": "^0.3.6",
+    "materialize-css": "^1.0.0",
+    "vue": "^2.5.17",
+    "vue-i18n": "^8.3.1",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-standard": "^4.0.1",
-    "netlify-cli": "^2.17.0"
+    "@vue/cli-plugin-babel": "^3.1.1",
+    "@vue/cli-plugin-eslint": "^3.1.1",
+    "@vue/cli-service": "^3.1.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.17"
   },
-  "repository": "https://github.com/KeziahMoselle/keziahmoselle.fr.git",
-  "author": "KeziahMoselle <keziah.moselle@gmail.com>",
-  "license": "MIT",
-  "private": true
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-useless-escape": "off"
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
