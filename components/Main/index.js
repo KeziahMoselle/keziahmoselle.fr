@@ -22,7 +22,8 @@ export const sections = [
   'Talks',
   'Article',
   'Code',
-  'Formations'
+  'Formations',
+  'Socials'
 ]
 
 export function Main ({ projects, codeStats, latestBlogPost }) {
@@ -34,8 +35,8 @@ export function Main ({ projects, codeStats, latestBlogPost }) {
       <Projects projects={projects} />
       <Skills />
       <Experience />
-      <Talks />
       <Achievements />
+      <Talks />
       <LatestPost latestBlogPost={latestBlogPost} />
       <Code codeStats={codeStats} />
       <Formations />
