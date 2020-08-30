@@ -1,0 +1,99 @@
+{
+  "title": "Front-end developer",
+  "description": "Self-taught of {{age}} years, I have been passionate about web development, UI/UX and accessibility for {{sinceDate}} years.",
+  "contactMe": "Contact me",
+  "resume": "Resume",
+  "translateTo": {
+    "english": "Translate to english",
+    "french": "Traduire en français"
+  },
+  "projects": {
+    "title": "Case studies of personal projects",
+    "subtitle": "Here is a selection of personal projects 👨🏽‍💻",
+    "big": "Big projects",
+    "small": "Small projects",
+    "descriptions": {
+      "Tempus": "A simple yet featureful pomodoro in the tray/menubar",
+      "Ribbon": "A bookmark manager app with reminders and pinned bookmarks",
+      "Export GitHub Stars": "View / Sort / Export your starred repositories.",
+      "Gelbooru Client": "A material client to explore an image board."
+    }
+  },
+  "seeWebsite": "See on the website",
+  "seeRepo": "See on GitHub",
+  "seeCasestudy": "Read more",
+  "viewProject": "See project",
+  "skills": "My skills",
+  "workedWith": "Worked with these technologies",
+  "workedWithServices": "I've worked with these services",
+  "workedWithTools": "The tools I use",
+  "code": {
+    "title": "GitHub statistics",
+    "mostActivePR": "Most active PR",
+    "userStats": "Stats",
+    "languagesStats": "% of bytes written by languages",
+    "someContributions": "Some OSS contributions"
+  },
+  "experience": "Work experience",
+  "about": {
+    "title": "About Me",
+    "description": "<p>I am passionate about <strong>front-end development</strong> and <strong>web design</strong>, <strong>user experience</strong> and <strong>accessibility</strong> I develop <strong>Human-centered</strong> projects.</p> <p>I'm also involved in <strong>open-source</strong>, I am a contributor to several projects and I'm also interested about <strong>teaching</strong> (talks, articles, mentoring).</p>"
+  },
+  "education": {
+    "title": "Education",
+    "selfTaught": "Self Taught",
+    "learning": "Constantly learning...",
+    "bachelor": "Baccalaureate",
+    "good": "Acknowledgement"
+  },
+  "achievements": {
+    "title": "Achievements",
+    "descriptions": {
+      "Hacktoberfest 2018": "The Hacktoberfest 2018 was the first edition in which I participated. I contributed to 10 projects including Streaker a software that tracks your daily contributions on GitHub.",
+      "Hacktoberfest 2019": "For this second edition I contributed to 4 projects including the Node.js site where I added a feature to display a random contributor in the footer.",
+      "GitHub Game Off": "The GitHub Game Off contest consists in creating a video game in 1 month. I decided to participate 1 week before it closes and I was able to discover the beginnings of the development of a video game.",
+      "Climate Fixathon": "The Climate Fixathon is a hackaton that encourages the creation of innovative projects to reduce global warming. We have created a team consisting of a designer and two developers. The project was an application to build better habits and share them in a social network way. https://purposehabits.com/",
+      "GitHub Education #PinsToWin": "The #PinsToWin contest organized by GitHub Education consists of decorating your profile with Gists. I made a gist that displayed my last activity on Twitter and another one for GitHub.",
+      "#100DaysOfCode": "The #100DaysOfCode movement consists in developing a minimum of 1 hour a day in order to learn and share one's learning on the networks. I did this movement 2 times."
+    }
+  },
+  "talks": "My talks",
+  "form": {
+    "defaultMessage": "Or, if you prefer a form",
+    "email": "john@doe.fr",
+    "message": "What do you want to say ?",
+    "sending": "Sending...",
+    "success": "Message sent! Thank you",
+    "error": "There's been an error, feel free to try again later.",
+    "missingFields": "Please fill in all fields.",
+    "send": "Submit",
+    "copied": "Email copied to clipboard",
+    "emailError": "Email address is invalid.",
+    "messageError": "Your message is empty."
+  },
+  "latestPost": "My last blog post",
+  "readArticle": "Read post",
+  "published": "published on",
+  "builtWith": "Built with",
+  "hostedOn": "and hosted on",
+  "footNote": "<span>This website has been made by hand and does not collect anything. You can find the source code on <a href='https://github.com/KeziahMoselle/keziahmoselle.fr'>GitHub</a>. Thank you for stopping by, have a great day ! 👋</span>",
+  "services": {
+    "title": "My services",
+    "applications": {
+      "title": "Applications",
+      "description": "Developing all kind of websites, e-commerces, mainly web applications, mobile and desktop applications."
+    },
+    "uiux": {
+      "title": "User Experience & Design",
+      "description": "Client-focused, user-friendly experiences. beautifully crafted."
+    },
+    "accessibility": {
+      "title": "Accessibility in mind",
+      "description": "We all have the right to explore the web. Using different techniques like ARIA and semantic HTML where needed."
+    }
+  },
+  "socials": {
+    "title": "Social networks & Links",
+    "description": "You can find me on these platforms 👇"
+  }
+}
