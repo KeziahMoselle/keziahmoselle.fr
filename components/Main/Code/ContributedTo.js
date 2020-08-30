@@ -5,7 +5,8 @@ import { GoStar } from 'react-icons/go'
 function ContributedTo ({ repositories }) {
   const { t } = useTranslation()
 
-  const contributedRepos = repositories.filter(repository => repository.stargazers.totalCount > 1)
+  const contributedRepos = repositories
+    .sort((a, b) => b.stargazers.totalCount - a.stargazers.totalCount)
 
   return (
     <div className="block column valign">

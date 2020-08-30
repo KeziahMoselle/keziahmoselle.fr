@@ -108,6 +108,7 @@ export async function getUserStats () {
           }
         }
       }
+    }
   }`
 
   const response = await graphql.request(query)
@@ -116,55 +117,85 @@ export async function getUserStats () {
 }
 
 export async function getAllRepositoriesContributedTo () {
-  const allContributions = []
-
-  const currentYear = new Date().toISOString()
+  const signedUpYear = new Date('2014').getFullYear()
+  const currentYear = new Date().getFullYear()
   const numberOfYears = currentYear - signedUpYear
-  const years = Array.from(
-    { length: numberOfYears },
-    (v, i) => i
+  const years = Array.from({ length: numberOfYears }, (v, i) => currentYear - i - 1).map(
+    (lastYear) => ({
+      from: new Date(`${lastYear}`).toISOString(),
+      to: new Date(`12/31/${lastYear}`).toISOString()
+    })
   )
 
-  for (const year of years) {
-    const repositories = await getRepositoriesByYear(year)
-    allContributions.push(repositories)
-  }
+  const fetches = years.map((variables) => getRepositoriesByYear(variables))
 
-  console.log(allContributions)
+  const response = await Promise.all(fetches)
 
-  async function getRepositoriesByYear (year) {
-    const from = currentYear - year
+  const ignoreRepositories = ['KeziahMoselle', 'shrokopsif', 'purpose-fixathon']
 
-    const variables = {
-      from,
-      to: from + 1
-    }
+  const allContributions = response
+    .flatMap((result) => result.viewer.contributionsCollection.commitContributionsByRepository)
+    .map((result) => result.repository)
+    .filter((repository) => {
+      for (const ignoredRepo of ignoreRepositories) {
+        if (repository.nameWithOwner.startsWith(ignoredRepo)) return false
+      }
+      return true
+    })
+    .filter((repository) => {
+      if (repository.isPrivate || repository.isArchived) return false
+      return true
+    })
 
-    const query = /* GraphQL */ `query getRepositoriesByYear {
-      viewer {
-        contributionsCollection(from: $from, to: $to) {
-          commitContributionsByRepository(maxRepositories: 100) {
-            repository {
-              owner {
-                avatarUrl
+  const filteredContributions = removeDuplicates(allContributions, 'nameWithOwner')
+
+  return filteredContributions
+
+  async function getRepositoriesByYear (variables) {
+    const query = /* GraphQL */ `
+      query getRepositoriesByYear($from: DateTime!, $to: DateTime!) {
+        viewer {
+          contributionsCollection(from: $from, to: $to) {
+            commitContributionsByRepository(maxRepositories: 100) {
+              repository {
+                isPrivate
+                isArchived
+                owner {
+                  avatarUrl
+                }
+                nameWithOwner
+                primaryLanguage {
+                  color
+                }
+                stargazers {
+                  totalCount
+                }
+                url
               }
-              nameWithOwner
-              primaryLanguage {
-                color
-              }
-              stargazers {
-                totalCount
-              }
-              url
             }
           }
         }
       }
-    }`
+    `
 
-    const response = await graphql.request(query)
+    const response = await graphql.request(query, variables)
 
     return response
+  }
+
+  function removeDuplicates (originalArray, prop) {
+    const newArray = []
+    const lookupObject = {}
+
+    for (var i in originalArray) {
+      lookupObject[originalArray[i][prop]] = originalArray[i]
+    }
+
+    for (i in lookupObject) {
+      newArray.push(lookupObject[i])
+    }
+
+    return newArray
   }
 }
 
