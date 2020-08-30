@@ -11,21 +11,17 @@ function Code ({ codeStats }) {
 
   const pullRequest = codeStats.mostActivePR.user.contributionsCollection.popularPullRequestContribution.pullRequest
 
-  const userStats = codeStats.userStats.viewer
-
-  const repositoriesContributedTo = codeStats.userStats.viewer.repositoriesContributedTo.nodes
-
   return (
     <section id="code" className="container medium code">
       <h3>{ t('code.title') }</h3>
 
-      <UserStats userStats={userStats} />
+      <UserStats userStats={codeStats.userStats.viewer} />
 
       <MostActivePR pullRequest={pullRequest} />
 
-      <LanguagesStats userStats={userStats} />
+      <LanguagesStats userStats={codeStats.userStats.viewer} />
 
-      <ContributedTo repositories={repositoriesContributedTo} />
+      <ContributedTo repositories={codeStats.repositoriesContributedTo} />
     </section>
   )
 }

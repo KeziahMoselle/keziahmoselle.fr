@@ -108,27 +108,95 @@ export async function getUserStats () {
           }
         }
       }
-      repositoriesContributedTo(first: 100, orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC, contributionTypes: COMMIT) {
-        nodes {
-          owner {
-            avatarUrl
-          }
-          nameWithOwner
-          primaryLanguage {
-            color
-          }
-          stargazers {
-            totalCount
-          }
-          url
-        }
-      }
     }
   }`
 
   const response = await graphql.request(query)
 
   return response
+}
+
+export async function getAllRepositoriesContributedTo () {
+  const signedUpYear = new Date('2014').getFullYear()
+  const currentYear = new Date().getFullYear()
+  const numberOfYears = currentYear - signedUpYear
+  const years = Array.from({ length: numberOfYears }, (v, i) => currentYear - i - 1).map(
+    (lastYear) => ({
+      from: new Date(`${lastYear}`).toISOString(),
+      to: new Date(`12/31/${lastYear}`).toISOString()
+    })
+  )
+
+  const fetches = years.map((variables) => getRepositoriesByYear(variables))
+
+  const response = await Promise.all(fetches)
+
+  const ignoreRepositories = ['KeziahMoselle', 'shrokopsif', 'purpose-fixathon']
+
+  const allContributions = response
+    .flatMap((result) => result.viewer.contributionsCollection.commitContributionsByRepository)
+    .map((result) => result.repository)
+    .filter((repository) => {
+      for (const ignoredRepo of ignoreRepositories) {
+        if (repository.nameWithOwner.startsWith(ignoredRepo)) return false
+      }
+      return true
+    })
+    .filter((repository) => {
+      if (repository.isPrivate || repository.isArchived) return false
+      return true
+    })
+
+  const filteredContributions = removeDuplicates(allContributions, 'nameWithOwner')
+
+  return filteredContributions
+
+  async function getRepositoriesByYear (variables) {
+    const query = /* GraphQL */ `
+      query getRepositoriesByYear($from: DateTime!, $to: DateTime!) {
+        viewer {
+          contributionsCollection(from: $from, to: $to) {
+            commitContributionsByRepository(maxRepositories: 100) {
+              repository {
+                isPrivate
+                isArchived
+                owner {
+                  avatarUrl
+                }
+                nameWithOwner
+                primaryLanguage {
+                  color
+                }
+                stargazers {
+                  totalCount
+                }
+                url
+              }
+            }
+          }
+        }
+      }
+    `
+
+    const response = await graphql.request(query, variables)
+
+    return response
+  }
+
+  function removeDuplicates (originalArray, prop) {
+    const newArray = []
+    const lookupObject = {}
+
+    for (var i in originalArray) {
+      lookupObject[originalArray[i][prop]] = originalArray[i]
+    }
+
+    for (i in lookupObject) {
+      newArray.push(lookupObject[i])
+    }
+
+    return newArray
+  }
 }
 
 export async function getCaseStudyInfo (github) {

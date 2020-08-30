@@ -5,7 +5,8 @@ import matter from 'gray-matter'
 import {
   getMostPopularPullRequest,
   getRepoInfo,
-  getUserStats
+  getUserStats,
+  getAllRepositoriesContributedTo
 } from '../components/utils/graphql'
 import getLatestPost from '../components/utils/getLatestPost'
 import Layout from '../components/Layout'
@@ -28,10 +29,16 @@ export default function Index (props) {
 
 export async function getStaticProps () {
   const projects = getProjectsData()
-  const [mostActivePR, userStats, latestBlogPost] = await Promise.all([
+  const [
+    mostActivePR,
+    userStats,
+    latestBlogPost,
+    repositoriesContributedTo
+  ] = await Promise.all([
     getMostPopularPullRequest(),
     getUserStats(),
-    getLatestPost()
+    getLatestPost(),
+    getAllRepositoriesContributedTo()
   ])
 
   for (const project of projects) {
@@ -43,14 +50,16 @@ export async function getStaticProps () {
 
   const codeStats = {
     mostActivePR,
-    userStats
+    userStats,
+    repositoriesContributedTo
   }
 
   return {
     props: {
       projects,
       codeStats,
-      latestBlogPost
+      latestBlogPost,
+      repositoriesContributedTo
     }
   }
 }
