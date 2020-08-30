@@ -1620,6 +1620,15 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
   .projects-small .project-info {
     font-size: 0.8rem;
   }
+
+  .projects-small .project-footer > .hide-on-med-and-down {
+    max-width: 400px;
+  }
+
+  .projects-small .chip-inline {
+    height: 30px;
+    padding: 8px 10px;
+  }
 }
 
 
