@@ -47,7 +47,7 @@ function Talks () {
 
   return (
     <section id="talks" className="container medium talks">
-      <h3>{ t('talks') }</h3>
+      <h3>{ t('talks.title') }</h3>
 
       <div className="block">
         { talksList }
