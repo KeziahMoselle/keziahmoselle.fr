@@ -19,6 +19,8 @@
       "Gelbooru Client": "A material client to explore an image board."
     }
   },
+  "knowMore": "Read more",
+  "aboutSomething": "about",
   "seeWebsite": "See on the website",
   "seeRepo": "See on GitHub",
   "seeCasestudy": "Read more",
