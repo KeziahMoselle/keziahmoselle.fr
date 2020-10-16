@@ -11,7 +11,7 @@ const graphql = new GraphQLClient(GITHUB_GRAPHQL_ENDPOINT, {
 export async function getMostPopularPullRequest () {
   const query = /* GraphQL */ `query MostPopularPullRequest($github_username: String!) {
     user(login: $github_username) {
-      contributionsCollection {
+      contributionsCollection(from: "2019-08-16T17:05:15.662Z", to: "2020-08-16T17:05:15.662Z") {
         popularPullRequestContribution {
           pullRequest {
             bodyText
