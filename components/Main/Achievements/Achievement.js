@@ -82,7 +82,7 @@ function Achievement ({
               onFocus={() => setIsExtended(true)}
               onBlur={() => setIsExtended(false)}
             >
-              En savoir plus <span className="visually-hidden">sur { name }</span>
+              { t('knowMore') } <span className="visually-hidden">{ t('aboutSomething') } { name }</span>
             </a>
           </div>
         }

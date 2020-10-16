@@ -4,24 +4,22 @@ import { useTranslation } from 'react-i18next'
 
 const allTalks = [
   {
-    title: 'Comment rendre ses sites plus accessibles',
-    imgSlug: 'accessibility-react-vue',
+    slug: 'accessibility-react-vue',
     date: '2020-03-05',
     at: 'Alsacréations, Strasbourg',
     group: 'VueStrasbourg',
-    groupUrl: 'https://vue.alsace/',
+    groupUrl: 'https://twitter.com/VueStrasbourg',
     slides: 'https://slides.com/keziahmoselle/an-introduction-to-accessibility-in-react-and-vue#/',
     repository: 'https://github.com/VueStrasbourg/alsacreations-accessibility-react-vue',
     url: 'https://www.meetup.com/fr-FR/StrasbourgJS/events/268379010/',
     video: 'https://youtu.be/8GiLpgGmOw4'
   },
   {
-    title: 'Advanced JavaScript and design patterns',
-    imgSlug: 'advanced-js-patterns',
+    slug: 'advanced-js-patterns',
     date: '2019-12-04',
     at: 'Plage Digitale, Strasbourg',
     group: 'VueStrasbourg',
-    groupUrl: 'https://vue.alsace/',
+    groupUrl: 'https://twitter.com/VueStrasbourg',
     slides: 'https://slides.com/edimitchel/advancedjs-design-pattern/#/1',
     repository: 'https://github.com/VueStrasbourg/alsacreations-accessibility-react-vue',
     url: 'https://www.meetup.com/fr-FR/StrasbourgJS/events/266231677/',

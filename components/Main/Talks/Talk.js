@@ -1,12 +1,12 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { FiYoutube } from 'react-icons/fi'
 import { MdSlideshow } from 'react-icons/md'
 import { FaMeetup } from 'react-icons/fa'
 import Icon from '../../Icon'
 
 function Talk ({
-  title,
-  imgSlug,
+  slug,
   date,
   at,
   group,
@@ -17,6 +17,10 @@ function Talk ({
   video,
   intl
 }) {
+  const { t } = useTranslation()
+
+  console.log(slug)
+
   return (
     <div className="talk card inverted">
 
@@ -34,7 +38,7 @@ function Talk ({
       </div>
 
       <div className="talk-body">
-        <h4>{ title }</h4>
+        <h4>{ t(`talks.${slug}`) }</h4>
       </div>
 
       <div className="talk-footer">
