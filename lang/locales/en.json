@@ -57,7 +57,11 @@
       "#100DaysOfCode": "The #100DaysOfCode movement consists in developing a minimum of 1 hour a day in order to learn and share one's learning on the networks. I did this movement 2 times."
     }
   },
-  "talks": "My talks",
+  "talks": {
+    "title": "My talks",
+    "accessibility-react-vue": "How to make your sites more accessible ?",
+    "advanced-js-patterns": "Advanced JavaScript and design patterns"
+  },
   "form": {
     "defaultMessage": "Or, if you prefer a form",
     "email": "john@doe.fr",

@@ -19,6 +19,7 @@
       "Gelbooru Client": "Un client Material Design pour explorer des images"
     }
   },
+  "knowMore": "En savoir plus",
   "seeWebsite": "Voir le site",
   "seeRepo": "Voir sur GitHub",
   "seeCasestudy": "Lire l'étude",
@@ -57,7 +58,11 @@
       "#100DaysOfCode": "Le mouvement #100DaysOfCode consiste à développer minimum 1h par jour dans le but d'apprendre et de partager son apprentissage sur les réseaux. J'ai réalisé ce mouvement 2x."
     }
   },
-  "talks": "Mes talks",
+  "talks": {
+    "title": "Mes talks",
+    "accessibility-react-vue": "Comment rendre ses sites plus accessibles ?",
+    "advanced-js-patterns": "JavaScript et design patterns avancés"
+  },
   "form": {
     "defaultMessage": "Ou, si vous préférez un formulaire",
     "email": "john@doe.fr",
