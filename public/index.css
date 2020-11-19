@@ -118,6 +118,10 @@ code {
   box-shadow: 0 0 0 0.2rem var(--accent);
 }
 
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
 .visually-hidden:not(:focus):not(:active) { 
   position: absolute !important;
   height: 1px; 
@@ -1307,21 +1311,26 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
  *
  */
 
+.experience .card {
+  position: relative;
+  padding: 100px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.experience .card-body {
+  position: relative;
+  background-color: var(--primary);
+  color: var(--secondary);
+  margin: 12px 12px 6px 12px;
+}
+
 .experience h4 {
-  margin-bottom: 8px;
 }
 
 .experience h5 {
-  margin-bottom: 6px;
-}
 
-@media only screen and (min-width: 1200px) {
-  .experience h6 {
-    position: absolute;
-    left: -24px;
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-  }
 }
 
 .experience ul {
@@ -1331,6 +1340,12 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
 .experience ul li {
   font-size: 16px;
   margin-top: 6px;
+}
+
+.experience .chip {
+  position: absolute;
+  right: 28px;
+  top: -42px;
 }
 
 
