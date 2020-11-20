@@ -26,38 +26,40 @@ function Experience () {
     <section id="experience" className="container medium experience relative">
       <h3>{ t('experience') }</h3>
 
-      { experiences.map((experience, index) => (
-        <React.Fragment>
-          <div
-            className="block card big column mb-0" key={index}
-            data-aos="fade"
-            style={{
-              backgroundImage: `url('/experience/${experience.backgroundImage}')`
-            }}>
-          </div>
-          <div class="card-body">
-            <h4>{ experience.company }</h4>
-            <h5>{ experience.title }</h5>
-            <h6>{ experience.years }</h6>
-            { experience.facts && (<ul>
-              { experience.facts.map((fact, index) => (
-                <li
-                  key={index}
-                  dangerouslySetInnerHTML={{ __html: fact }}
-                >
-                </li>
-              )) }
-            </ul>)
-            }
-            { experience.url && (
-              <Chip
-                link={experience.url}
-                company={experience.company}
-              />
-            )}
-          </div>
-        </React.Fragment>
-      ))}
+      <div>
+        { experiences.map((experience, index) => (
+          <React.Fragment>
+            <div
+              className="block card big column mb-0" key={index}
+              data-aos="fade"
+              style={{
+                backgroundImage: `url('/experience/${experience.backgroundImage}')`
+              }}>
+            </div>
+            <div class="card-body">
+              <h4>{ experience.company }</h4>
+              <h5>{ experience.title }</h5>
+              <h6>{ experience.years }</h6>
+              { experience.facts && (<ul>
+                { experience.facts.map((fact, index) => (
+                  <li
+                    key={index}
+                    dangerouslySetInnerHTML={{ __html: fact }}
+                  >
+                  </li>
+                )) }
+              </ul>)
+              }
+              { experience.url && (
+                <Chip
+                  link={experience.url}
+                  company={experience.company}
+                />
+              )}
+            </div>
+          </React.Fragment>
+        ))}
+      </div>
 
       <Planet
         style={{

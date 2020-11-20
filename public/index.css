@@ -1311,6 +1311,11 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
  *
  */
 
+.experience > div {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .experience .card {
   position: relative;
   padding: 100px 0;
