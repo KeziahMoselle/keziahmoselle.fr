@@ -1175,8 +1175,12 @@ nav.show {
   flex-direction: column;
 }
 
-.menu-body li:hover {
+.menu-body li:hover, .menu-body li a:focus {
   background-color: #f5f5f5;
+}
+
+.menu-body li a:focus {
+  box-shadow: 0 0 0 0.2rem var(--secondary) inset;
 }
 
 .menu-body a, .menu-body button {
@@ -1329,13 +1333,6 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
   background-color: var(--primary);
   color: var(--secondary);
   margin: 12px 12px 6px 12px;
-}
-
-.experience h4 {
-}
-
-.experience h5 {
-
 }
 
 .experience ul {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useTranslation } from 'react-i18next'
-import { FiFile } from 'react-icons/fi'
+import { FiGithub } from 'react-icons/fi'
 import Planet from '../../Planet'
 
 function Hero () {
@@ -30,12 +30,12 @@ function Hero () {
         </button>
 
         <a
-          href="/keziah-moselle-cv-fr.pdf"
+          href="https://github.com/KeziahMoselle"
           target="_blank"
           className="btn white bordered translate-y"
         >
-          <FiFile className="left" />
-          { t('resume') }
+          <FiGithub className="left" />
+          GitHub
         </a>
       </div>
 
