@@ -25,7 +25,7 @@ const SOCIALS = [
     Icon: FiTwitter
   },
   {
-    name: 'Nemesis#6631',
+    name: 'Keziah#6631',
     color: '#2D52A9',
     Icon: SiDiscord
   },
