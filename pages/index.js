@@ -44,7 +44,7 @@ export async function getStaticProps () {
   for (const project of projects) {
     if (!project.github) continue
 
-    const repo = await getRepoInfo(project.github)
+    const repo = await getRepoInfo(project.github, project.isOrganization)
     project.repo = repo
   }
 

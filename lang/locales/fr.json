@@ -14,6 +14,9 @@
     "small": "Petits projets",
     "descriptions": {
       "Tempus": "Un pomodoro dans votre barre des tâches",
+      "nierrein": {
+        "guide": "Un fansite pour le jeu NieR Re[in]carnation"
+      },
       "Ribbon": "Gestion de signets avec des rappels et des favoris",
       "Export GitHub Stars": "Liste / Trier / Exporter vos starred repositories",
       "Gelbooru Client": "Un client Material Design pour explorer des images"
@@ -62,7 +65,8 @@
   "talks": {
     "title": "Mes talks",
     "accessibility-react-vue": "Comment rendre ses sites plus accessibles ?",
-    "advanced-js-patterns": "JavaScript et design patterns avancés"
+    "advanced-js-patterns": "JavaScript et design patterns avancés",
+    "methodology-js-toolkit": "Harmoniser nos méthodologies de développement JavaScript, du besoin à l'outil"
   },
   "form": {
     "defaultMessage": "Ou, si vous préférez un formulaire",

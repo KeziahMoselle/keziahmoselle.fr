@@ -16,7 +16,10 @@
       "Tempus": "A simple yet featureful pomodoro in the tray/menubar",
       "Ribbon": "A bookmark manager app with reminders and pinned bookmarks",
       "Export GitHub Stars": "View / Sort / Export your starred repositories.",
-      "Gelbooru Client": "A material client to explore an image board."
+      "Gelbooru Client": "A material client to explore an image board.",
+      "nierrein": {
+        "guide": "A fansite for the game NieR Re[in]carnation"
+      }
     }
   },
   "knowMore": "Read more",
@@ -62,7 +65,8 @@
   "talks": {
     "title": "My talks",
     "accessibility-react-vue": "How to make your sites more accessible ?",
-    "advanced-js-patterns": "Advanced JavaScript and design patterns"
+    "advanced-js-patterns": "Advanced JavaScript and design patterns",
+    "methodology-js-toolkit": "Harmonize our JavaScript development methodologies, from need to tool"
   },
   "form": {
     "defaultMessage": "Or, if you prefer a form",

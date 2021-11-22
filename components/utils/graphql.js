@@ -56,11 +56,11 @@ export async function getMostPopularPullRequest () {
   return response
 }
 
-export async function getRepoInfo (nameWithOwner) {
-  const [, name] = nameWithOwner.split('/')
+export async function getRepoInfo (nameWithOwner, isOrganization) {
+  const [owner, name] = nameWithOwner.split('/')
 
   const query = /* GraphQL */ `query listRepos ($github_username: String! $repository_name: String!) {
-    user(login: $github_username) {
+    ${isOrganization ? 'organization' : 'user'}(login: $github_username) {
       repository(name: $repository_name) {
         name
         nameWithOwner
@@ -76,11 +76,16 @@ export async function getRepoInfo (nameWithOwner) {
   }`
 
   const variables = {
-    github_username: process.env.GITHUB_USERNAME,
+    github_username: owner || process.env.GITHUB_USERNAME,
     repository_name: name
   }
 
   const response = await graphql.request(query, variables)
+
+  if (isOrganization) {
+    response.user = response.organization
+    delete response.organization
+  }
 
   return response
 }

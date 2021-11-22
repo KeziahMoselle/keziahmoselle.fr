@@ -24,6 +24,17 @@ const allTalks = [
     repository: 'https://github.com/VueStrasbourg/alsacreations-accessibility-react-vue',
     url: 'https://www.meetup.com/fr-FR/StrasbourgJS/events/266231677/',
     video: 'https://youtu.be/UEOV1HQIEug'
+  },
+  {
+    slug: 'methodology-js-toolkit',
+    date: '2021-11-18',
+    at: 'Studio Meta, Strasbourg',
+    group: 'wdstr',
+    groupUrl: 'https://twitter.com/wdstr',
+    slides: 'https://app.ludus.one/wdstr-2021-js-toolkit',
+    repository: null,
+    url: 'https://www.helloasso.com/associations/wdstr/evenements/wdstr-79-echange-methodes-de-partage-entre-designer-et-develop-studio-meta',
+    video: null
   }
 ]
 

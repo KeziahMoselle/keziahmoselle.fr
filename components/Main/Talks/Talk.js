@@ -19,8 +19,6 @@ function Talk ({
 }) {
   const { t } = useTranslation()
 
-  console.log(slug)
-
   return (
     <div className="talk card inverted">
 
@@ -31,7 +29,7 @@ function Talk ({
           rel="nofollow noopener noreferrer"
           className="img-container"
         >
-          <img src="/logos/vuestrasbourg.png" alt={group} />
+          <img src={`/logos/${group.toLowerCase()}.png`} alt={group} />
         </a>
 
         <time dateTime={date}>{ intl.format(new Date(date)) }</time>
