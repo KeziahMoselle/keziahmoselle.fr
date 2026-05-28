@@ -2,7 +2,7 @@
 title: vanessamoselle
 date: 2025
 github: null
-url: https://shop.vanessamoselle.fr/
+url: https://shop.vanessamoselle.com/
 tags:
   - Front-End
   - Back-End
