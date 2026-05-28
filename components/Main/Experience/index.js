@@ -7,7 +7,7 @@ const experiences = [
   {
     company: 'Studio Meta',
     title: 'Développeur Front-End',
-    years: 'Octobre 2020 - Aujourd\'hui',
+    years: 'Octobre 2020 - Janvier 2025',
     url: 'https://studiometa.fr/',
     backgroundImage: 'studiometa.jpg'
   },
