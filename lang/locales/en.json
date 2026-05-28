@@ -8,9 +8,9 @@
     "french": "Traduire en français"
   },
   "projects": {
-    "title": "Case studies of personal projects",
+    "title": "My personal projects",
     "subtitle": "Here is a selection of personal projects 👨🏽‍💻",
-    "big": "Big projects",
+    "big": "My personal projects",
     "small": "Small projects",
     "descriptions": {
       "Tempus": "A simple yet featureful pomodoro in the tray/menubar",
@@ -18,9 +18,20 @@
       "Export GitHub Stars": "View / Sort / Export your starred repositories.",
       "Gelbooru Client": "A material client to explore an image board.",
       "nierrein": {
-        "guide": "A fansite for the game NieR Re[in]carnation"
-      }
+        "guide": "The main guide and wiki for the game NieR Re[in]carnation"
+      },
+      "soulsborne": {
+        "build": "A website to share your builds and fashion dedicated to FROMSOFTWARE games."
+      },
+      "SD": "A private Final Fantasy XIV mod archive. ",
+      "PippiTrack": "A Twitch extension to track scores done during the stream as well as a Discord Bot.",
+      "vanessamoselle": "An e-commerce website for a renowned french artist photographer.",
+      "purrfect": "Our temporary development studio for a few projects."
     }
+  },
+  "analytics": {
+    "visitors": "visitors",
+    "pageviews": "page views"
   },
   "knowMore": "Read more",
   "aboutSomething": "about",

@@ -10,6 +10,7 @@ stack:
   - React.js
   - Electron
 isBigProject: true
+order: 7
 ---
 
 ## Concept
@@ -86,7 +87,7 @@ Cela permet à certaines personnes de se motiver pour ne pas perdre ce streak.
 
 #### Cycles
 
-Les cycles permettent de répéter un nombre défini de fois le pomodoro.  
+Les cycles permettent de répéter un nombre défini de fois le pomodoro.
 (Exemple : répéter qu'une fois la séquence : 25 minutes et 5 minutes de pause sans redémarrer le compteur à chaque fois)
 
 ![Cycles](/projects/tempus/cycles.gif)
@@ -178,7 +179,7 @@ En dessous se trouve le bouton pour initialiser un pomodoro qui durera jusqu'à 
 
 Actuellement Tempus est sous un grand refactoring qui permettra la création de l'application web sur navigateur et une application mobile.
 
-Pour cela le projet utilise maintenant les workspaces de Yarn pour séparer l'application en 3 packages : 
+Pour cela le projet utilise maintenant les workspaces de Yarn pour séparer l'application en 3 packages :
 
 - @tempus/app
 - @tempus/core

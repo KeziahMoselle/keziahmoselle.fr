@@ -11,6 +11,8 @@ stack:
   - JavaScript
   - Electron
   - Materialize
+isBigProject: true
+order: 9
 ---
 
 ## Concept

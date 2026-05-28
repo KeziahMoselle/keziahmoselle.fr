@@ -12,6 +12,7 @@ import getLatestPost from '../components/utils/getLatestPost'
 import Layout from '../components/Layout'
 import { Main } from '../components/Main'
 import Seo from '../components/Seo'
+import { getStats } from '../components/utils/getAnalytics'
 
 export default function Index (props) {
   return (
@@ -43,8 +44,13 @@ export async function getStaticProps () {
 
   for (const project of projects) {
     if (!project.github) continue
+    project.analytics = null
+    project.repo = null
 
     const repo = await getRepoInfo(project.github, project.isOrganization)
+    if (project.umamiId) {
+      project.analytics = await getStats(project.umamiId)
+    }
     project.repo = repo
   }
 

@@ -8,19 +8,30 @@
     "french": "Traduire en français"
   },
   "projects": {
-    "title": "Études de projets personnels",
+    "title": "Mes projets personnels",
     "subtitle": "Voici une sélection de projets personnels 👨🏽‍💻",
-    "big": "Gros projets",
+    "big": "Mes projets personnels",
     "small": "Petits projets",
     "descriptions": {
       "Tempus": "Un pomodoro dans votre barre des tâches",
       "nierrein": {
-        "guide": "Un fansite pour le jeu NieR Re[in]carnation"
+        "guide": "Le guide et wiki du jeu NieR Re[in]carnation"
       },
       "Ribbon": "Gestion de signets avec des rappels et des favoris",
       "Export GitHub Stars": "Liste / Trier / Exporter vos starred repositories",
-      "Gelbooru Client": "Un client Material Design pour explorer des images"
+      "Gelbooru Client": "Un client Material Design pour explorer des images",
+      "soulsborne": {
+        "build": "Un site web pour partager vos builds et tenues dédiées aux jeux de FROMSOFTWARE."
+      },
+      "SD": "Une archive de mods privés pour Final Fantasy XIV. (585 mods et 21GB de fichiers)",
+      "PippiTrack": "Une extension Twitch pour tracker les scores réalisés pendant le stream ainsi qu'un bot Discord.",
+      "vanessamoselle": "Un site e-commerce pour une photographe française renommée.",
+      "purrfect": "Notre studio de développement temporaire pour quelques projets."
     }
+  },
+  "analytics": {
+    "visitors": "visiteurs",
+    "pageviews": "pages vues"
   },
   "knowMore": "En savoir plus",
   "aboutSomething": "à propos de",

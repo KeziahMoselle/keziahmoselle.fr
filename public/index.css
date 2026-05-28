@@ -122,9 +122,9 @@ code {
   margin-bottom: 0 !important;
 }
 
-.visually-hidden:not(:focus):not(:active) { 
+.visually-hidden:not(:focus):not(:active) {
   position: absolute !important;
-  height: 1px; 
+  height: 1px;
   width: 1px;
   overflow: hidden;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -410,7 +410,7 @@ svg {
  *
  */
 
- 
+
 .chip-inline {
   display: inline-flex;
   align-items: center;
@@ -737,6 +737,10 @@ ul {
    display: flex;
  }
 
+ .flex-none {
+  flex: none;
+ }
+
 .center {
   justify-content: center;
 }
@@ -767,6 +771,10 @@ ul {
 
 .text-center {
   text-align: center;
+}
+
+.gradient {
+  background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligther) 80%);
 }
 
 
@@ -1449,7 +1457,7 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
     top: 0;
     animation: translationY ease 2.5s infinite;
   }
-  
+
   @keyframes translationY {
     from {
       transform: translateY(-32px);
@@ -1560,12 +1568,6 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
   margin-bottom: 64px;
 }
 
-@media only screen and (max-width: 600px) {
-  .project {
-    margin-bottom: 32px;
-  }
-}
-
 .project > a {
   position: relative;
   display: block;
@@ -1629,7 +1631,7 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
   .projects-small h3 {
     font-size: 1.3rem;
   }
-  
+
   .projects-small h4 {
     font-size: 0.9rem;
   }
@@ -2020,7 +2022,7 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
     background-color: var(--primary-ligther);
     overflow: hidden;
   }
-  
+
   .flux::before {
     content: '';
     position: absolute;
@@ -2030,7 +2032,7 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
     top: 0;
     animation: translationX ease 2.5s infinite alternate;
   }
-  
+
   @keyframes translationX {
     from {
       transform: translateX(-32px);
@@ -2206,7 +2208,7 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
 }
 
 .OPEN, .additions {
-  fill: #2cbe4e; 
+  fill: #2cbe4e;
 }
 
 .inverted .additions {

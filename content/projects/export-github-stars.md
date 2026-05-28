@@ -10,6 +10,8 @@ tags:
 stack:
   - Vue.js
   - Vuetify
+isBigProjects: true
+order: 10
 ---
 
 ## Concept

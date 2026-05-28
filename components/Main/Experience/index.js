@@ -36,7 +36,7 @@ function Experience () {
                 backgroundImage: `url('/experience/${experience.backgroundImage}')`
               }}>
             </div>
-            <div class="card-body">
+            <div className="card-body">
               <h4>{ experience.company }</h4>
               <h5>{ experience.title }</h5>
               <h6>{ experience.years }</h6>

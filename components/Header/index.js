@@ -99,91 +99,14 @@ function Header ({ navLinks = sections, goBack }) {
               <button onClick={handleTranslating} className="flex valign chip-inline bordered">
                 <MdTranslate />
                 { i18n.language === 'fr'
-                  ? 'Français'
-                  : 'English'
+                  ? 'Translate to English'
+                  : 'Traduire en français'
                 }
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => setIsMenuExpanded(!isMenuExpanded)}
-                aria-label="Menu"
-                aria-expanded={isMenuExpanded}
-                aria-controls="menu"
-              >
-                <FiMenu size={28} />
               </button>
             </li>
           </ul>
         )}
-
-        <nav id="menu" className={`menu ${isMenuExpanded ? 'show' : ''}`}>
-          <div className="menu-header">
-            <button
-              onClick={() => setIsMenuExpanded(!isMenuExpanded)}
-              aria-label="Menu"
-              aria-expanded={isMenuExpanded}
-              aria-controls="menu"
-            >
-              <FiX size={28} />
-            </button>
-          </div>
-
-          <div className="menu-body">
-
-            <ul>
-
-              { navLinks.map((section, index) => (
-                <li key={index}>
-                  <Link href={`#${section.toLowerCase()}`}>
-                    <a>
-                      { section }
-                    </a>
-                  </Link>
-                </li>
-              ))}
-
-            </ul>
-
-            <ul>
-              <li>
-                <a
-                  href="https://blog.keziahmoselle.fr/"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/KeziahMoselle"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                >
-                  <img src="/logos/github.svg" alt="My GitHub profile" />
-                </a>
-              </li>
-              <li>
-                <button onClick={handleTranslating}>
-                  <MdTranslate size={32} />
-                  { i18n.language === 'fr'
-                    ? t('translateTo.english')
-                    : t('translateTo.french')
-                  }
-                </button>
-              </li>
-            </ul>
-
-          </div>
-        </nav>
       </header>
-
-      <div
-        onClick={() => setIsMenuExpanded(false)}
-        className={`menu-overlay ${isMenuExpanded ? 'opened' : ''}`}
-      >
-      </div>
     </div>
   )
 }

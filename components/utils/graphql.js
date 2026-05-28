@@ -80,7 +80,10 @@ export async function getRepoInfo (nameWithOwner, isOrganization) {
     repository_name: name
   }
 
-  const response = await graphql.request(query, variables)
+  const response = await graphql.request(query, variables).catch(error => {
+    console.warn(`GitHub repository skipped for ${nameWithOwner}: ${error.message}`)
+    return null
+  })
 
   if (isOrganization) {
     response.user = response.organization

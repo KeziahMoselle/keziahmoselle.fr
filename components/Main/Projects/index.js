@@ -5,35 +5,20 @@ import Project from './Project'
 function Projects ({ projects }) {
   const { t } = useTranslation()
 
-  const bigProjects = projects
+  const MyProjects = projects
     .reduce((acc, project, index) => {
       if (project.isBigProject) {
         acc.push(<Project key={index} {...project} />)
       }
       return acc
     }, [])
-    .sort((a, b) => b.props.repo.user.repository.stargazers.totalCount - a.props.repo.user.repository.stargazers.totalCount)
-
-  const smallProjects = projects.reduce((acc, project, index) => {
-    if (!project.isBigProject) {
-      acc.push(<Project key={index} {...project} />)
-    }
-    return acc
-  }, [])
+    .sort((a, b) => a.props.order - b.props.order)
 
   return (
     <section id="projects" className="container projects">
       <h3>{ t('projects.title') }</h3>
-      <p>{ t('projects.subtitle') }</p>
-
-      <h4 className="squared-title">{ t('projects.big') }</h4>
       <div className="block">
-        { bigProjects }
-      </div>
-
-      <h4 className="squared-title">{ t('projects.small') }</h4>
-      <div className="projects-small grid">
-        { smallProjects }
+        { MyProjects }
       </div>
     </section>
   )
