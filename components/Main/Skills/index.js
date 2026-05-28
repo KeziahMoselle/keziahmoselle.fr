@@ -6,12 +6,13 @@ const tools = [
   'Git',
   'GitHub',
   'SASS',
+  'Vite',
   'Webpack',
   'Gulp'
 ]
 
 const services = [
-  'EC2',
+  'Cloudflare',
   'Lambda',
   'Ghost',
   'Netlify',
@@ -21,13 +22,18 @@ const services = [
 ]
 
 const technologies = [
-  'Electron',
-  'Gatsby',
+  'Wordpress',
+  'PayloadCMS',
   'Next.js',
-  'React Native',
-  'jQuery',
+  'Nuxt.js',
   'TypeScript',
-  'GraphQL'
+  'Astro',
+  'Gatsby',
+  'Tailwind',
+  'React Native',
+  'Electron',
+  'GraphQL',
+  'jQuery'
 ]
 
 const allTools = tools.map(tool => (

@@ -2069,6 +2069,7 @@ background: linear-gradient(var(--degree), var(--primary) 0%, var(--primary-ligt
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-top: 48px;
+  gap: 24px;
 }
 
 /* SKILL IMAGE */
